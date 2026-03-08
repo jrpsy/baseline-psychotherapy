@@ -56,7 +56,8 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .nav.scrolled{border-bottom-color:var(--border);box-shadow:0 1px 20px rgba(0,0,0,.04)}
 .nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 clamp(20px,4vw,40px);display:flex;align-items:center;justify-content:space-between;height:72px}
 .nav-brand{display:flex;align-items:center;gap:14px}
-.nav-brand-logo{width:42px;height:42px;object-fit:cover;border:2px solid var(--navy);border-radius:50%}
+.nav-brand-logo{width:42px;height:42px;border:2px solid var(--navy);border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.nav-brand-logo img{width:200%;height:200%;object-fit:contain}
 .nav-brand-text{font-family:var(--sans);font-size:.95rem;font-weight:600;color:var(--navy);line-height:1.2}
 .nav-links{display:flex;align-items:center;gap:32px;list-style:none}
 .nav-links a{font-size:.88rem;font-weight:500;color:var(--text);transition:color .2s;position:relative}
@@ -322,7 +323,7 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="#" class="nav-brand">
-      <img src="LOGO.webp" alt="Baseline Psychotherapy" class="nav-brand-logo">
+      <div class="nav-brand-logo"><img src="LOGO.webp" alt="Baseline Psychotherapy"></div>
       <div class="nav-brand-text">Baseline Psychotherapy</div>
     </a>
     <ul class="nav-links" id="navLinks">
@@ -713,7 +714,7 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
         </div>
         <div class="book-info">
           <h3>Toto's Journey Through Emotions</h3>
-          <p>A story for young children about what emotions are, where they come from, and why every one of them matters. Designed for parents who want to give their children an early foundation in emotional intelligence — because regulation is a skill that builds over a lifetime. Available in English and Spanish.</p>
+          <p>A story for young children about what emotions are, where they come from, and why every one of them matters. Designed for parents who want to give their children an early foundation in emotional intelligence — regulation is a skill that builds over a lifetime. Available in English and Spanish.</p>
           <a href="https://www.amazon.com/stores/JR-Hernandez/author/B0CZ9S1983?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true&ccs_id=99e31aa9-eab5-4168-9df4-76b53cb83968" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Get It on Amazon</a>
         </div>
       </div>
