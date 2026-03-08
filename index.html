@@ -3,14 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baseline Psychotherapy — J.R. Hernandez, Psychotherapist</title>
-  <meta name="description" content="Structured psychotherapy for burnout, anxiety, emotional dysregulation, and relationship distress. Online sessions worldwide in English and Spanish. J.R. Hernandez, Psychotherapist.">
-  <meta name="keywords" content="psychotherapy, burnout, anxiety, depression, emotional regulation, online therapy, English, Spanish, J.R. Hernandez">
+  <title>Online Psychotherapy for Burnout & Anxiety | J.R. Hernandez — Baseline Psychotherapy</title>
+  <meta name="description" content="Evidence-based online psychotherapy for burnout, anxiety, depression, emotional dysregulation & couples. Process-based therapy with J.R. Hernandez — worldwide in English & Spanish. Book a free consultation.">
+  <meta name="keywords" content="online psychotherapy, burnout specialist, burnout therapy online, anxiety therapy online, depression therapy, emotional dysregulation, couples therapy online, process-based therapy, psychotherapist Singapore, English Spanish therapy, emotional intelligence, J.R. Hernandez, Baseline Psychotherapy">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="J.R. Hernandez">
+  <link rel="canonical" href="https://baselinepsychotherapy.com/">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Online Psychotherapy for Burnout & Anxiety | Baseline Psychotherapy">
+  <meta property="og:description" content="Process-based psychotherapy for burnout, anxiety, depression & relationship distress. Online sessions worldwide in English & Spanish. J.R. Hernandez, Psychotherapist.">
+  <meta property="og:url" content="https://baselinepsychotherapy.com/">
+  <meta property="og:site_name" content="Baseline Psychotherapy">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://baselinepsychotherapy.com/HERO.webp">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Online Psychotherapy for Burnout & Anxiety | Baseline Psychotherapy">
+  <meta name="twitter:description" content="Process-based psychotherapy for burnout, anxiety, depression & relationship distress. Online worldwide in English & Spanish.">
+  <meta name="twitter:image" content="https://baselinepsychotherapy.com/HERO.webp">
+  <!-- Geo -->
+  <meta name="geo.region" content="SG">
+  <meta name="geo.placename" content="Singapore">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="HERO.webp">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
   <style>
 :root{--navy:#14202E;--slate:#1E3A4F;--text:#2B4257;--gold:#C9A84C;--gold-light:#D4B76A;--gold-subtle:rgba(201,168,76,.12);--bg:#FAFBFC;--bg-warm:#F5F7FA;--white:#FFF;--border:#E2E8F0;--border-light:#EDF2F7;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;--max-w:1200px;--section-py:clamp(80px,10vw,140px)}
+.skip-nav{position:absolute;top:-100px;left:16px;background:var(--navy);color:var(--white);padding:12px 24px;z-index:2000;border-radius:4px;font-size:.9rem;transition:top .2s}.skip-nav:focus{top:16px}
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased}
 body{font-family:var(--sans);color:var(--text);background:var(--bg);line-height:1.7;overflow-x:hidden}
@@ -21,7 +42,7 @@ h1{font-size:clamp(2.6rem,5vw,4rem);letter-spacing:-.02em}
 h2{font-size:clamp(2rem,3.5vw,2.8rem);letter-spacing:-.01em}
 h3{font-size:clamp(1.3rem,2vw,1.6rem)}
 p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
-.label{font-family:var(--sans);font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold)}
+.label{font-family:var(--sans);font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:block}
 .section-intro{max-width:680px;margin:0 auto;text-align:center}.section-intro p{margin-top:20px;opacity:.85}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;font-family:var(--sans);font-size:.95rem;font-weight:600;border-radius:4px;transition:all .3s ease;letter-spacing:.01em}
 .btn-primary{background:var(--navy);color:var(--white)}.btn-primary:hover{background:var(--slate);transform:translateY(-1px);box-shadow:0 4px 20px rgba(20,32,46,.25)}
@@ -35,15 +56,14 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .nav.scrolled{border-bottom-color:var(--border);box-shadow:0 1px 20px rgba(0,0,0,.04)}
 .nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 clamp(20px,4vw,40px);display:flex;align-items:center;justify-content:space-between;height:72px}
 .nav-brand{display:flex;align-items:center;gap:14px}
-.nav-brand-logo{width:36px;height:36px;background:var(--navy);border-radius:4px;display:flex;align-items:center;justify-content:center;color:var(--gold);font-family:var(--serif);font-size:1.3rem;font-weight:700}
+.nav-brand-logo{width:36px;height:36px;object-fit:contain}
 .nav-brand-text{font-family:var(--sans);font-size:.95rem;font-weight:600;color:var(--navy);line-height:1.2}
-.nav-brand-text span{display:block;font-size:.72rem;font-weight:400;color:var(--text);opacity:.7;letter-spacing:.04em}
 .nav-links{display:flex;align-items:center;gap:32px;list-style:none}
 .nav-links a{font-size:.88rem;font-weight:500;color:var(--text);transition:color .2s;position:relative}
 .nav-links a:hover{color:var(--navy)}
 .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--gold);transition:width .3s ease}
 .nav-links a:hover::after{width:100%}
-.nav-cta{margin-left:8px}.nav-cta .btn{padding:10px 24px;font-size:.85rem}
+.nav-cta{margin-left:8px}.nav-cta .btn{padding:10px 24px;font-size:.85rem;background:var(--navy);color:var(--gold)}.nav-cta .btn:hover{background:var(--slate);color:var(--gold-light)}
 .nav-mobile-toggle{display:none;flex-direction:column;gap:5px;padding:8px}
 .nav-mobile-toggle span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;transition:all .3s ease}
 
@@ -55,9 +75,10 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .hero-label{margin-bottom:24px}
 .hero h1{margin-bottom:28px}
 .hero-sub{font-size:clamp(1.05rem,1.3vw,1.15rem);line-height:1.8;color:var(--text);margin-bottom:16px}
-.hero-markers{display:flex;gap:24px;margin-bottom:40px;flex-wrap:wrap}
-.hero-markers span{font-size:.85rem;color:var(--text);opacity:.7;display:flex;align-items:center;gap:8px}
-.hero-markers span::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.hero-markers{display:flex;gap:10px;margin-bottom:40px;flex-wrap:wrap;align-items:center}
+.hero-markers span{font-size:.85rem;color:var(--text);opacity:.7;display:flex;align-items:center;gap:10px}
+.hero-markers span:not(:last-child)::after{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.hero-markers span:first-child::before{display:none}
 .hero-actions{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
 .hero-image{position:relative;display:flex;justify-content:center}
 .hero-image-frame{position:relative;width:100%;max-width:460px;aspect-ratio:4/5;border-radius:8px;overflow:hidden;background:var(--border-light);box-shadow:0 20px 60px rgba(20,32,46,.12)}
@@ -67,19 +88,24 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .hero-image-accent{position:absolute;bottom:-16px;right:-16px;width:120px;height:120px;border:2px solid var(--gold);border-radius:8px;z-index:-1}
 
 /* ABOUT */
-.about{padding:var(--section-py) 0;background:var(--navy);color:var(--white)}
-.about-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(40px,6vw,80px);align-items:start}
-.about-image-frame{width:100%;aspect-ratio:3/4;border-radius:6px;overflow:hidden;background:var(--slate)}
-.about-image-frame img{width:100%;height:100%;object-fit:cover}
-.about .label{color:var(--gold)}.about h2{color:var(--white);margin:16px 0 28px}
-.about p{color:rgba(255,255,255,.82);margin-bottom:20px;font-size:1rem;line-height:1.85}
-.about-spanish{margin-top:32px;padding:20px 24px;background:rgba(201,168,76,.1);border-left:3px solid var(--gold);border-radius:0 6px 6px 0}
+.about{padding:var(--section-py) 0;background:var(--navy);color:var(--white);position:relative;overflow:hidden}
+.about-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.15;pointer-events:none}
+.about-content{position:relative;z-index:2;max-width:760px;margin:0 auto;text-align:center}
+.about .label{color:var(--gold);text-align:center}.about h2{color:var(--white);margin:16px 0 36px}
+.about p{color:rgba(255,255,255,.82);margin-bottom:20px;font-size:1rem;line-height:1.85;text-align:left}
+.about-spanish{margin-top:32px;padding:20px 24px;background:rgba(201,168,76,.1);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;text-align:left}
 .about-spanish p{font-size:.92rem;color:rgba(255,255,255,.75);margin:0}.about-spanish strong{color:var(--gold)}
-.credentials{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.credential-card{padding:24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:6px;transition:background .3s}
+.credentials{margin-top:48px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.credential-card{padding:24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:6px;transition:background .3s;cursor:pointer;text-align:left}
 .credential-card:hover{background:rgba(255,255,255,.08)}
-.credential-card h4{color:var(--white);font-family:var(--sans);font-size:.88rem;font-weight:600;margin-bottom:6px}
-.credential-card p{font-size:.82rem;color:rgba(255,255,255,.55);margin:0;line-height:1.5}
+.credential-card-header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.credential-card h4{color:var(--white);font-family:var(--sans);font-size:.88rem;font-weight:600;margin-bottom:4px}
+.credential-card .credential-subtitle{font-size:.82rem;color:rgba(255,255,255,.55);margin:0;line-height:1.5}
+.credential-toggle{color:var(--gold);font-size:1.2rem;flex-shrink:0;transition:transform .3s ease;line-height:1}
+.credential-card.open .credential-toggle{transform:rotate(45deg)}
+.credential-detail{max-height:0;overflow:hidden;transition:max-height .4s ease,opacity .3s ease;opacity:0}
+.credential-card.open .credential-detail{max-height:400px;opacity:1}
+.credential-detail p{font-size:.85rem;color:rgba(255,255,255,.7);margin:16px 0 0;line-height:1.75}
 
 /* PROCESS */
 .process{padding:var(--section-py) 0;background:var(--bg)}
@@ -88,24 +114,36 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .process-step{text-align:center;position:relative}
 .process-step-number{width:80px;height:80px;margin:0 auto 28px;display:flex;align-items:center;justify-content:center;background:var(--white);border:2px solid var(--border);border-radius:50%;font-family:var(--serif);font-size:1.8rem;font-weight:700;color:var(--gold);position:relative;z-index:2;transition:all .3s ease}
 .process-step:hover .process-step-number{border-color:var(--gold);background:var(--gold-subtle)}
-.process-step h3{margin-bottom:14px}
+.process-step h3{margin-bottom:8px}
+.process-phase{display:inline-block;font-family:var(--sans);font-size:.75rem;font-weight:600;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
 .process-step p{font-size:.92rem;line-height:1.7;max-width:320px;margin:0 auto}
 
 /* ISSUES */
 .issues{padding:var(--section-py) 0;background:var(--bg-warm)}
 .issues-grid{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.issue-card{background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:36px 30px;transition:all .3s ease;position:relative;overflow:hidden}
+.issue-card{background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:36px 30px;transition:all .3s ease;position:relative;overflow:hidden;cursor:pointer}
 .issue-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);opacity:0;transition:opacity .3s ease}
 .issue-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(20,32,46,.08);border-color:transparent}
 .issue-card:hover::before{opacity:1}
+.issue-card.open{transform:none;box-shadow:0 12px 40px rgba(20,32,46,.08);border-color:var(--gold)}
+.issue-card.open::before{opacity:1}
+.issue-card-header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
 .issue-card h3{margin-bottom:12px;font-size:1.25rem}
 .issue-card p{font-size:.9rem;line-height:1.7;opacity:.8}
+.issue-toggle{color:var(--gold);font-size:1.2rem;flex-shrink:0;transition:transform .3s ease;line-height:1;font-weight:600}
+.issue-card.open .issue-toggle,.workshop-card.open .issue-toggle{transform:rotate(45deg)}
+.issue-detail{max-height:0;overflow:hidden;transition:max-height .5s ease,opacity .3s ease;opacity:0}
+.issue-card.open .issue-detail,.pricing-card.open .issue-detail,.package-card.open .issue-detail,.workshop-card.open .issue-detail{max-height:1200px;opacity:1}
+.issue-detail h4{font-family:var(--sans);font-size:.82rem;font-weight:600;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin:20px 0 8px}
+.issue-detail p{font-size:.88rem;line-height:1.75;opacity:.85;margin-bottom:4px}
+.issue-detail .issue-note{font-size:.82rem;color:var(--text);opacity:.6;margin-top:16px;font-style:italic}
 
 /* PRICING */
 .pricing{padding:var(--section-py) 0;background:var(--bg)}
 .pricing-grid{margin-top:56px;display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
-.pricing-card{background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:40px 36px;position:relative;transition:all .3s ease}
+.pricing-card{background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:40px 36px;position:relative;transition:all .3s ease;cursor:pointer}
 .pricing-card:hover{box-shadow:0 8px 30px rgba(20,32,46,.07)}
+.pricing-card.open{box-shadow:0 8px 30px rgba(20,32,46,.07)}
 .pricing-card.featured{border-color:var(--gold);box-shadow:0 8px 30px rgba(201,168,76,.12)}
 .pricing-card.featured::before{content:'Most common';position:absolute;top:-1px;right:28px;background:var(--gold);color:var(--navy);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:0 0 6px 6px}
 .pricing-card-header{margin-bottom:24px}.pricing-card-header h3{margin-bottom:4px}.pricing-card-header .format{font-size:.82rem;color:var(--text);opacity:.6}
@@ -115,7 +153,8 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .pricing-card p{font-size:.9rem;margin-bottom:28px;line-height:1.7}
 .pricing-card .btn{width:100%;justify-content:center}
 .package-row{margin-top:28px;display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
-.package-card{background:var(--navy);color:var(--white);border-radius:8px;padding:40px 36px}
+.package-card{background:var(--navy);color:var(--white);border-radius:8px;padding:40px 36px;cursor:pointer;position:relative;overflow:hidden}
+.package-featured::before{content:'Recommended';position:absolute;top:-1px;right:28px;background:var(--gold);color:var(--navy);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 16px;border-radius:0 0 6px 6px}
 .package-card .label{color:var(--gold);margin-bottom:12px;display:block}
 .package-card h3{color:var(--white);margin-bottom:8px}
 .package-card .format{font-size:.82rem;color:rgba(255,255,255,.5);margin-bottom:16px}
@@ -135,30 +174,26 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 /* BOOKS */
 .books{padding:var(--section-py) 0;background:var(--bg)}
 .books-grid{margin-top:48px;display:grid;grid-template-columns:repeat(2,1fr);gap:40px}
-.book-card{display:grid;grid-template-columns:180px 1fr;gap:28px;align-items:center;background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:28px}
+.book-card{display:grid;grid-template-columns:180px 1fr;gap:28px;align-items:start;background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:28px}
 .book-cover{width:180px;aspect-ratio:2/3;border-radius:4px;overflow:hidden;background:var(--border-light);box-shadow:4px 4px 20px rgba(0,0,0,.1)}
 .book-cover img{width:100%;height:100%;object-fit:cover}
 .book-info h3{margin-bottom:10px;font-size:1.2rem}.book-info p{font-size:.88rem;margin-bottom:20px}
 
-/* TESTS */
-.tests{padding:var(--section-py) 0;background:var(--navy);color:var(--white)}
-.tests .section-intro p{color:rgba(255,255,255,.7)}.tests h2{color:var(--white)}
-.tests-grid{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.test-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:36px 28px;transition:all .3s ease}
-.test-card:hover{background:rgba(255,255,255,.08);transform:translateY(-2px)}
-.test-card h3{color:var(--white);margin-bottom:12px;font-size:1.2rem}
-.test-card p{color:rgba(255,255,255,.65);font-size:.88rem;margin-bottom:24px}
-.test-card .btn-outline{color:var(--white);border-color:rgba(255,255,255,.25);font-size:.85rem}
-.test-card .btn-outline:hover{background:var(--white);color:var(--navy);border-color:var(--white)}
-
 /* REVIEWS */
-.reviews{padding:var(--section-py) 0;background:var(--bg)}
-.reviews-grid{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.review-card{background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:32px 28px}
+.reviews{padding:var(--section-py) 0;background:var(--navy);position:relative;overflow:hidden}
+.reviews-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.12;pointer-events:none}
+.reviews .section-intro{position:relative;z-index:2}
+.reviews .section-intro p{color:rgba(255,255,255,.7)}
+.reviews h2{color:var(--white)}
+.reviews-grid{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;z-index:2}
+.review-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:32px 28px;backdrop-filter:blur(4px)}
 .review-stars{color:var(--gold);font-size:1rem;margin-bottom:16px;letter-spacing:2px}
-.review-card blockquote{font-size:.92rem;line-height:1.75;color:var(--text);margin-bottom:20px;font-style:italic}
-.review-author{font-size:.85rem;font-weight:600;color:var(--navy)}
-.review-location{font-size:.78rem;color:var(--text);opacity:.6}
+.review-card blockquote{font-size:.92rem;line-height:1.75;color:rgba(255,255,255,.85);margin-bottom:20px;font-style:italic}
+.review-author{font-size:.85rem;font-weight:600;color:var(--white)}
+.review-source{font-size:.78rem;color:rgba(255,255,255,.5)}
+.reviews-footer{margin-top:40px;text-align:center;position:relative;z-index:2}
+.reviews-footer a{font-size:.88rem;color:var(--gold);text-decoration:underline;text-underline-offset:4px;transition:color .2s}
+.reviews-footer a:hover{color:var(--gold-light)}
 
 /* FAQ */
 .faq{padding:var(--section-py) 0;background:var(--bg-warm)}
@@ -176,7 +211,7 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .cta{padding:var(--section-py) 0;background:var(--navy);text-align:center;color:var(--white);position:relative;overflow:hidden}
 .cta::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:800px;height:400px;background:radial-gradient(ellipse,rgba(201,168,76,.08) 0%,transparent 70%);pointer-events:none}
 .cta h2{color:var(--white);margin-bottom:16px}
-.cta>div>p{color:rgba(255,255,255,.7);max-width:560px;margin:0 auto 40px;font-size:1.05rem}
+.cta p{color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 40px;font-size:1.05rem}
 .cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 .cta-info{margin-top:40px;display:flex;gap:40px;justify-content:center;flex-wrap:wrap}
 .cta-info span{font-size:.85rem;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:8px}
@@ -197,6 +232,10 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .whatsapp-btn:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(37,211,102,.45)}
 .whatsapp-btn svg{width:30px;height:30px;fill:white}
 
+/* FOCUS */
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:2px}
+button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
 /* ANIMATIONS */
 .fade-up{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
 .fade-up.visible{opacity:1;transform:translateY(0)}
@@ -205,7 +244,6 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 @media(max-width:1024px){
   .hero-grid{grid-template-columns:1fr;gap:48px}.hero-image{order:-1}.hero-image-frame{max-width:340px;margin:0 auto}
   .hero{min-height:auto;padding-top:120px;padding-bottom:60px}
-  .about-grid{grid-template-columns:1fr}.about-image-frame{max-width:400px}
   .credentials{grid-template-columns:1fr}.workshops-grid{grid-template-columns:1fr}.workshops-image-frame{max-width:400px}
 }
 @media(max-width:768px){
@@ -214,31 +252,87 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
   .process-steps{grid-template-columns:1fr;gap:40px}.process-steps::before{display:none}
   .issues-grid{grid-template-columns:1fr}.pricing-grid{grid-template-columns:1fr}.package-row{grid-template-columns:1fr}
   .books-grid{grid-template-columns:1fr}.book-card{grid-template-columns:120px 1fr;gap:20px}.book-cover{width:120px}
-  .tests-grid{grid-template-columns:1fr}.reviews-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr;gap:32px}
   .hero-actions{flex-direction:column;align-items:flex-start}
   .cta-info{flex-direction:column;align-items:center;gap:16px}
+  .package-row{grid-template-columns:1fr}
 }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Baseline Psychotherapy",
+    "url": "https://baselinepsychotherapy.com",
+    "description": "Process-based online psychotherapy for burnout, anxiety, depression, emotional dysregulation, and relationship distress. Serving clients worldwide in English and Spanish.",
+    "founder": {
+      "@type": "Person",
+      "name": "J.R. Hernandez",
+      "jobTitle": "Psychotherapist",
+      "url": "https://baselinepsychotherapy.com",
+      "knowsAbout": ["Burnout Recovery", "Anxiety Therapy", "Depression Treatment", "Emotional Dysregulation", "Couples Therapy", "Emotional Intelligence", "Process-Based Therapy"],
+      "alumniOf": [
+        {"@type": "EducationalOrganization", "name": "The School of Positive Psychology of Singapore"},
+        {"@type": "EducationalOrganization", "name": "Instituto de Estudios Psicológicos de España"},
+        {"@type": "EducationalOrganization", "name": "Duke University School of Medicine"}
+      ],
+      "knowsLanguage": ["English", "Spanish"]
+    },
+    "areaServed": {"@type": "Place", "name": "Worldwide"},
+    "availableLanguage": ["English", "Spanish"],
+    "isAcceptingNewPatients": true,
+    "priceRange": "$$",
+    "telephone": "+6593729100",
+    "email": "jr@baselinepsychotherapy.com",
+    "address": {"@type": "PostalAddress", "addressCountry": "SG"},
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Psychotherapy Services",
+      "itemListElement": [
+        {"@type": "Offer", "name": "Individual Psychotherapy Session", "price": "120", "priceCurrency": "USD", "description": "60-minute structured online psychotherapy session via Google Meet"},
+        {"@type": "Offer", "name": "Couples Psychotherapy Session", "price": "170", "priceCurrency": "USD", "description": "75-minute structured online couples therapy session via Google Meet"},
+        {"@type": "Offer", "name": "Monthly Psychotherapy Plan", "price": "430", "priceCurrency": "USD", "description": "4 weekly psychotherapy sessions per month with priority scheduling"},
+        {"@type": "Offer", "name": "Burnout Recovery Program", "price": "1200", "priceCurrency": "USD", "description": "12-session comprehensive burnout recovery program covering assessment, intervention, and sustained recovery"}
+      ]
+    }
+  }
+  </script>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Is online therapy as effective as in-person therapy?", "acceptedAnswer": {"@type": "Answer", "text": "Research consistently shows that online psychotherapy produces equivalent outcomes to in-person therapy for anxiety, depression, burnout, and relationship distress. This practice has been delivering structured clinical sessions online since 2019 via Google Meet, across every time zone."}},
+      {"@type": "Question", "name": "What is the difference between a psychotherapist and a psychiatrist?", "acceptedAnswer": {"@type": "Answer", "text": "A psychotherapist provides structured psychological intervention through evidence-based methods — cognitive-behavioral therapy, emotion-focused techniques, and somatic regulation. A psychiatrist is a medical doctor who can prescribe medication. If medication is relevant to your case, I coordinate with a psychiatrist to ensure your treatment plan is aligned."}},
+      {"@type": "Question", "name": "What is the difference between therapy and coaching?", "acceptedAnswer": {"@type": "Answer", "text": "Psychotherapy treats clinical conditions — burnout, anxiety, depression, emotional dysregulation — using structured, evidence-based interventions. Coaching supports goal-setting and performance optimization in people who are already functioning well. This practice provides psychotherapy: clinical assessment, targeted intervention, and measurable outcomes."}},
+      {"@type": "Question", "name": "How do I know if I have burnout or just stress?", "acceptedAnswer": {"@type": "Answer", "text": "Stress is a temporary response that resolves when the stressor is removed. Burnout is a neurophysiological state where the body's recovery system has been overwhelmed — rest alone does not restore it. If you are experiencing persistent exhaustion, cognitive fog, emotional flatness, or detachment from work despite breaks, that pattern points to burnout and benefits from structured clinical intervention."}},
+      {"@type": "Question", "name": "What should I expect in my first online therapy session?", "acceptedAnswer": {"@type": "Answer", "text": "The first session is a structured clinical assessment. We map what is happening — symptoms, patterns, history, physiology — to build a clear picture of what is maintaining the problem. You will leave with an initial formulation and a defined direction for the work ahead."}},
+      {"@type": "Question", "name": "Do I need therapy or am I overreacting?", "acceptedAnswer": {"@type": "Answer", "text": "If what you are experiencing is disrupting your sleep, your concentration, your relationships, or your ability to function at the level you expect from yourself — that is enough. Therapy is appropriate when a pattern is persistent and self-correction has not resolved it. A free 15-minute consultation can help clarify whether this is the right step."}},
+      {"@type": "Question", "name": "What if I have tried therapy before and it did not work?", "acceptedAnswer": {"@type": "Answer", "text": "The effectiveness of therapy depends on the fit between the method and the problem. A previous experience that lacked structure, clear targets, or measurable tracking may not reflect what a process-based approach delivers. This practice begins with a clinical assessment that identifies what is maintaining the difficulty — so the intervention targets the right mechanism from the start."}},
+      {"@type": "Question", "name": "Can I do therapy in Spanish?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. All sessions — individual, couples, and the Burnout Recovery Program — are available in both English and Spanish. Working in your first language can improve emotional precision and reduce the cognitive load of processing difficult material in a second language."}}
+    ]
+  }
+  </script>
 </head>
 <body>
+<a href="#home" class="skip-nav">Skip to content</a>
 
 <!-- NAV -->
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="#" class="nav-brand">
-      <!-- REPLACE: Add your logo image here instead of the B square -->
-      <div class="nav-brand-logo">B</div>
-      <div class="nav-brand-text">Baseline Psychotherapy<span>J.R. Hernandez</span></div>
+      <img src="LOGO.webp" alt="Baseline Psychotherapy" class="nav-brand-logo">
+      <div class="nav-brand-text">Baseline Psychotherapy</div>
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#process">Approach</a></li>
       <li><a href="#pricing">Services</a></li>
       <li><a href="#workshops">Workshops</a></li>
-      <li><a href="#resources">Resources</a></li>
+      <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li class="nav-cta"><a href="#contact" class="btn btn-primary btn-sm">Book a Consultation</a></li>
+      <li class="nav-cta"><a href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Get Started</a></li>
     </ul>
     <button class="nav-mobile-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -249,23 +343,22 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
   <div class="container">
     <div class="hero-grid">
       <div class="hero-content fade-up">
-        <p class="label hero-label">Psychotherapist · Burnout Specialist</p>
-        <h1>Clarity first.<br>Then progress.</h1>
-        <p class="hero-sub">Structured psychotherapy for burnout, anxiety, emotional dysregulation, and relationship distress. A clinical assessment, a focused plan, and observable results — tracked every session.</p>
+        <p class="label hero-label">J.R. Hernandez · Psychotherapist · Burnout Specialist</p>
+        <h1>Map the problem.<br>Build the plan.<br>Track the change.</h1>
+        <p class="hero-sub">A process-based psychotherapy practice for burnout, anxiety, emotional dysregulation, and relationship distress: clinical assessment, evidence-based intervention, and measurable outcomes.</p>
         <div class="hero-markers">
-          <span>Online worldwide</span>
+          <span>Online & Worldwide</span>
           <span>English & Spanish</span>
-          <span>Confidential</span>
+          <span>Case-Specific & Confidential</span>
         </div>
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">Book a Free Consultation <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+          <a href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation." target="_blank" rel="noopener" class="btn btn-primary">Start with a Free 15-Min Consultation <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
           <a href="#process" class="btn btn-outline btn-sm">How it works</a>
         </div>
       </div>
       <div class="hero-image fade-up" style="transition-delay:.15s">
         <div class="hero-image-frame">
-          <!-- REPLACE: src="img/hero-photo.jpg" — Professional headshot, direct eye contact, neutral background -->
-          <div class="img-placeholder"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0"/></svg><span>Your professional headshot<br><code>img/hero-photo.jpg</code></span></div>
+          <img src="HERO.webp" alt="J.R. Hernandez — online psychotherapist and burnout specialist" loading="eager" fetchpriority="high" width="460" height="575">
         </div>
         <div class="hero-image-accent"></div>
       </div>
@@ -275,37 +368,66 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 
 <!-- ABOUT -->
 <section class="about" id="about">
+  <div class="about-bg" style="background-image:url('ABOUT_BG.webp')"></div>
   <div class="container">
-    <div class="about-grid">
-      <div class="fade-up">
-        <div class="about-image-frame">
-          <!-- REPLACE: src="img/about-photo.jpg" — Secondary photo, candid or office style -->
-          <div class="img-placeholder" style="background:linear-gradient(135deg,#1E3A4F,#14202E)"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,.3)" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0"/></svg><span style="color:rgba(255,255,255,.3)">Secondary photo<br><code>img/about-photo.jpg</code></span></div>
+    <div class="about-content fade-up">
+      <p class="label">About</p>
+      <h2>J.R. Hernandez, Psychotherapist</h2>
+      <p>I have spent the last decade living across six countries on three continents — Venezuela, Chile, France, the United States, Singapore, and Russia. I understand the specific pressures of building a life far from home: the reinvention, the invisible exhaustion, the grief you carry while performing competence. That lived experience shapes every clinical decision I make.</p>
+      <p>I built this practice for people who want a clear assessment of what is happening, a focused plan to address it, and honest tracking of whether it is working. My work is process-based, case-specific, and consultation-led. We define the problem precisely, reduce noise, and focus on what is most likely to change the outcome.</p>
+      <p>I am explicit about what this work can and cannot do. You will always know the focus, the next step, and what progress should look like in your daily life — so you can make informed decisions with confidence.</p>
+      <div class="credentials">
+        <div class="credential-card" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+          <div class="credential-card-header">
+            <div>
+              <h4>International Online Practice Since 2019</h4>
+              <p class="credential-subtitle">Baseline Psychotherapy · 7+ Years Worldwide</p>
+            </div>
+            <span class="credential-toggle">+</span>
+          </div>
+          <div class="credential-detail">
+            <p>This practice was born during the onset of the COVID-19 pandemic — a moment that exposed how many people had no access to structured psychological support that worked through a screen. The model was built for online delivery from day one, and over seven years across multiple time zones, every element of the methodology has been refined around what actually produces change in remote sessions: precise assessment, targeted intervention, and consistent follow-through between sessions. The result is a practice built for people who need effective, accessible support on their schedule — wherever they are.</p>
+          </div>
+        </div>
+        <div class="credential-card" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+          <div class="credential-card-header">
+            <div>
+              <h4>Counselling and Psychotherapy Training</h4>
+              <p class="credential-subtitle">The School of Positive Psychology of Singapore</p>
+            </div>
+            <span class="credential-toggle">+</span>
+          </div>
+          <div class="credential-detail">
+            <p>This is the clinical backbone of how every case moves from first contact to measurable change. The training is grounded in evidence-informed counselling that prioritizes structure: what is maintaining the problem, what specific skills will shift it, and how to track whether the intervention is landing. It shapes how sessions are organized, how the therapeutic relationship is used as a tool, and how clients build the capacity to act differently in the situations that brought them in. This is where the assessment-first, outcome-tracked approach originates.</p>
+          </div>
+        </div>
+        <div class="credential-card" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+          <div class="credential-card-header">
+            <div>
+              <h4>Master in Emotional Intelligence</h4>
+              <p class="credential-subtitle">Instituto de Estudios Psicológicos de España</p>
+            </div>
+            <span class="credential-toggle">+</span>
+          </div>
+          <div class="credential-detail">
+            <p>A postgraduate degree in the science of emotions — how they are generated, how they dysregulate, and how they can be worked with systematically in therapy. This is the foundation for emotion-focused intervention across burnout, anxiety, and depression. It supports the ability to trace emotional patterns to their neurophysiological source — activation, appraisal, relational triggers — and intervene at the right level. When a client is stuck in emotional reactivity, shutdown, or chronic overwhelm, this training informs how that pattern is mapped, understood, and changed.</p>
+          </div>
+        </div>
+        <div class="credential-card" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+          <div class="credential-card-header">
+            <div>
+              <h4>Medical Neuroscience Training</h4>
+              <p class="credential-subtitle">Duke University School of Medicine, USA</p>
+            </div>
+            <span class="credential-toggle">+</span>
+          </div>
+          <div class="credential-detail">
+            <p>A medical-level neuroscience foundation that bridges the gap between mind and body in clinical work. This training covers how the central nervous system organizes attention, arousal, emotion, and recovery — and what happens when those systems are under sustained strain. It is the basis for the integrative, somatic dimension of this practice: understanding why burnout is neurophysiological, why anxiety lives in the body before it reaches conscious thought, and why sleep disruption, cognitive fatigue, and emotional reactivity are connected at the level of neural circuitry. This is what makes the clinical work genuinely integrative — grounded in the biological architecture that connects behavior, emotion, and physiology.</p>
+          </div>
         </div>
       </div>
-      <div class="fade-up" style="transition-delay:.12s">
-        <p class="label">About</p>
-        <h2>J.R. Hernandez</h2>
-        <p>I built this practice for people who want real answers and a clear way forward. My work is process-based, case-specific, and consultation-led. We define the problem precisely, reduce noise, and focus on what is most likely to change the outcome.</p>
-        <p>You will always know what we are focusing on, what the next step is, and what progress should look like in your day-to-day life. Confidentiality and professional boundaries are central, and I am explicit about what this work can and cannot do — so you can make informed decisions with confidence.</p>
-        <p>I have spent the last decade living across six countries on three continents — Venezuela, Chile, France, the United States, Singapore, and Russia. I understand the specific pressures of building a life far from home: the reinvention, the invisible exhaustion, the grief you carry while performing competence. That experience is a clinical advantage.</p>
-        <div class="about-spanish">
-          <p><strong>También disponible en español.</strong> Sesiones de psicoterapia online para hispanohablantes en cualquier parte del mundo.</p>
-        </div>
-        <div class="credentials">
-          <div class="credential-card">
-            <h4>The School of Positive Psychology</h4>
-            <p>Counselling & Psychotherapy Training — Singapore</p>
-          </div>
-          <div class="credential-card">
-            <h4>ISEP — Spain</h4>
-            <p>M.A. Emotional Intelligence & Personal Development</p>
-          </div>
-          <div class="credential-card">
-            <h4>Duke University</h4>
-            <p>Medical Neuroscience — School of Medicine, USA</p>
-          </div>
-        </div>
+      <div class="about-spanish">
+        <p><strong>También disponible en español.</strong> Sesiones online para hispanohablantes en cualquier parte del mundo.</p>
       </div>
     </div>
   </div>
@@ -316,62 +438,153 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
   <div class="container">
     <div class="section-intro fade-up">
       <p class="label">Approach</p>
-      <h2>How This Work Is Structured</h2>
-      <p>Clear assessment, practical next steps, and follow-through — built around what actually fits your case.</p>
+      <h2>How This Work Is Different</h2>
+      <p>Every case follows the same clinical logic — and the plan is built around your specific situation.</p>
     </div>
     <div class="process-steps">
       <div class="process-step fade-up">
         <div class="process-step-number">01</div>
-        <h3>Consultation-Style Assessment</h3>
-        <p>We map symptoms, habits, history, and physiology to identify what is maintaining the problem — so the intervention targets the right mechanisms from the start.</p>
+        <h3>Clinical Assessment</h3>
+        <span class="process-phase">Sessions 1–4</span>
+        <p>We assess symptoms, patterns, history, and physiology to identify what is maintaining the difficulty — so the intervention targets the right mechanisms from the start.</p>
       </div>
       <div class="process-step fade-up" style="transition-delay:.1s">
         <div class="process-step-number">02</div>
-        <h3>Focused Intervention Plan</h3>
-        <p>Based on what the assessment reveals, we build a targeted plan drawing from CBT, ACT, and somatic regulation — adapted to your specific case, with clear priorities and direction.</p>
+        <h3>Evidence-Based Intervention</h3>
+        <span class="process-phase">Sessions 5–12</span>
+        <p>Based on what the assessment reveals, we design a targeted plan drawing from CBT, ACT, and somatic regulation — with clear priorities and a defined direction for each session.</p>
       </div>
       <div class="process-step fade-up" style="transition-delay:.2s">
         <div class="process-step-number">03</div>
-        <h3>Track and Adjust</h3>
-        <p>Progress is measured in observable terms: fewer spirals, better sleep, faster recovery after triggers, more reliable follow-through. If something is not working, we adjust. Every week.</p>
+        <h3>Measurable Outcomes</h3>
+        <span class="process-phase">Session 12+</span>
+        <p>Progress is tracked in observable terms: fewer spirals, better sleep, faster recovery after triggers, more reliable follow-through. If something is not working, we adjust. Every week.</p>
       </div>
+    </div>
+    <div class="process-cta fade-up" style="text-align:center;margin-top:48px">
+      <a href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation." target="_blank" rel="noopener" class="btn btn-primary">Start with a Free 15-Min Consultation <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
     </div>
   </div>
 </section>
 
-<!-- WHAT I HELP WITH -->
+<!-- WHAT I WORK WITH -->
 <section class="issues" id="issues">
   <div class="container">
     <div class="section-intro fade-up">
       <p class="label">Specializations</p>
-      <h2>What I Help With</h2>
-      <p>If what you are dealing with is on this list, you are in the right place. If it is not, we will map what is happening and decide the next step.</p>
+      <h2>What I Work With</h2>
+      <p>These are the most common starting points — but symptoms often signal something deeper. Part of the work is identifying what is actually driving the problem, so the intervention reaches the right level.</p>
     </div>
     <div class="issues-grid">
-      <div class="issue-card fade-up">
-        <h3>Burnout & Chronic Stress</h3>
-        <p>Your system has been running on overdrive for so long that rest alone does not fix it. Exhaustion, irritability, fog, and a nervous system stuck on alert.</p>
+
+      <div class="issue-card fade-up" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+        <div class="issue-card-header">
+          <h3>Burnout & Chronic Stress</h3>
+          <span class="issue-toggle">+</span>
+        </div>
+        <p>Your system has been running on overdrive for so long that rest alone does not restore it. Exhaustion, irritability, cognitive fog, and a nervous system stuck on alert.</p>
+        <div class="issue-detail">
+          <p>Burnout is a neurophysiological state — the result of sustained stress that exceeds the body's capacity to recover. It affects sleep architecture, attention, emotional reactivity, and decision-making at a biological level. Unlike depression, which is pervasive and often independent of context, burnout is tied to specific chronic demands — and it responds to targeted clinical intervention when the right mechanisms are addressed. If you recognize yourself in this description, what you are experiencing is real, measurable, and treatable with the right approach.</p>
+          <h4>Assessment · Sessions 1–4</h4>
+          <p>We map stress load, sleep quality, nervous system activation, cognitive patterns, and the specific demands keeping the cycle alive — work, relational, financial, or health-related. The goal is a clear clinical picture of what is maintaining the burnout, so we intervene where it matters most.</p>
+          <h4>Intervention · Sessions 5–12</h4>
+          <p>Targeted downregulation of the stress response through somatic techniques, behavioral restructuring of recovery habits, and cognitive work on the patterns that sustain the overload. Each session has a defined focus and builds on the previous one.</p>
+          <h4>Sustained Recovery · Session 12+</h4>
+          <p>Tracking recovery markers — sleep depth, energy stability, emotional reactivity, and follow-through under pressure — to confirm gains are holding in real-world conditions and prevent relapse into the same cycle.</p>
+          <p class="issue-note">Session estimates may vary depending on the complexity of the case.</p>
+        </div>
       </div>
-      <div class="issue-card fade-up" style="transition-delay:.05s">
-        <h3>Anxiety & Nervous System Dysregulation</h3>
+
+      <div class="issue-card fade-up" style="transition-delay:.05s" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+        <div class="issue-card-header">
+          <h3>Anxiety & Nervous System Dysregulation</h3>
+          <span class="issue-toggle">+</span>
+        </div>
         <p>Racing thoughts, tension, hypervigilance — your body stays in alert mode even when there is no immediate threat. The signal has gotten stuck.</p>
+        <div class="issue-detail">
+          <p>Anxiety becomes clinical when the threat-detection system stays activated beyond the situation that triggered it. It is a dysregulation of the nervous system's alarm response — affecting breathing, muscle tension, sleep, concentration, and the ability to distinguish real danger from perceived danger. If this is what you are living with, it is a pattern that can be identified and changed.</p>
+          <h4>Assessment · Sessions 1–4</h4>
+          <p>We identify the anxiety profile — triggers, physiological activation patterns, avoidance behaviors, and the cognitive loops that keep the threat signal firing. This includes screening for whether the anxiety is primary or being driven by another underlying condition.</p>
+          <h4>Intervention · Sessions 5–12</h4>
+          <p>Graded exposure to disrupt avoidance cycles, cognitive restructuring of threat appraisals, and somatic regulation techniques to retrain the nervous system's baseline response. The plan is adapted to the severity and specific expression of your anxiety.</p>
+          <h4>Sustained Recovery · Session 12+</h4>
+          <p>Building reliable self-regulation under real-world conditions — faster recovery after activation, fewer avoidance cycles, and a measurable reduction in baseline anxiety. The goal is that you can manage activation independently.</p>
+          <p class="issue-note">Session estimates may vary depending on the complexity of the case.</p>
+        </div>
       </div>
-      <div class="issue-card fade-up" style="transition-delay:.1s">
-        <h3>Depression & Low Drive</h3>
-        <p>Flatness, withdrawal, loss of motivation. A system that has shut down to protect itself, now making daily functioning harder than it should be.</p>
+
+      <div class="issue-card fade-up" style="transition-delay:.1s" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+        <div class="issue-card-header">
+          <h3>Depression & Motivation Loss</h3>
+          <span class="issue-toggle">+</span>
+        </div>
+        <p>Flatness, withdrawal, loss of drive. A system that has shut down to protect itself, now making daily functioning harder than it should be.</p>
+        <div class="issue-detail">
+          <p>Depression is a state of functional shutdown — the nervous system's response to sustained overload, loss, or helplessness. It affects energy, sleep, concentration, motivation, and the capacity to experience pleasure or meaning. If you have been living in this state, what you are experiencing is a recognizable clinical pattern with a defined pathway out.</p>
+          <h4>Assessment · Sessions 1–4</h4>
+          <p>We assess mood patterns, behavioral withdrawal, sleep architecture, cognitive rigidity, and the specific factors maintaining the depressive cycle — including relational isolation, contextual stressors, and whether the depression is reactive or part of a longer pattern.</p>
+          <h4>Intervention · Sessions 5–12</h4>
+          <p>Behavioral activation targeting the withdrawal-avoidance loop, cognitive work on hopelessness and self-criticism patterns, and physiological stabilization of sleep and energy. Progress is tracked weekly in functional terms.</p>
+          <h4>Sustained Recovery · Session 12+</h4>
+          <p>Tracking functional improvement — consistent engagement, stable mood, restored initiative — and building relapse prevention strategies that hold when external pressure returns.</p>
+          <p class="issue-note">Session estimates may vary depending on the complexity of the case.</p>
+        </div>
       </div>
-      <div class="issue-card fade-up" style="transition-delay:.15s">
-        <h3>Emotional Regulation</h3>
-        <p>Reactions that feel disproportionate, emotional numbness, overwhelm — emotions that run you instead of informing you. Regulation can be trained.</p>
+
+      <div class="issue-card fade-up" style="transition-delay:.15s" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+        <div class="issue-card-header">
+          <h3>Emotional Dysregulation</h3>
+          <span class="issue-toggle">+</span>
+        </div>
+        <p>Reactions that feel disproportionate, emotional numbness, overwhelm — emotions that run you instead of informing you. Regulation is a trainable skill.</p>
+        <div class="issue-detail">
+          <p>Emotional dysregulation means the system that processes and modulates emotional responses is operating outside a workable range. This can show up as explosive reactivity, chronic overwhelm, emotional numbness, or rapid oscillation between states. If you find yourself asking why you cannot control your emotions despite knowing better — the issue is not willpower. It is a pattern in how activation, appraisal, and response are wired together, and it responds to structured, skill-based intervention.</p>
+          <h4>Assessment · Sessions 1–4</h4>
+          <p>We map emotional triggers, activation thresholds, the specific dysregulation pattern (reactivity, shutdown, or oscillation), and the relational or physiological contexts where regulation breaks down. This includes identifying whether the dysregulation is primary or secondary to another condition.</p>
+          <h4>Intervention · Sessions 5–12</h4>
+          <p>Emotion-focused techniques to build awareness of early signals, increase tolerance of activation, and develop deliberate response strategies that replace reactive patterns. This draws directly from the neuroscience of emotional processing and affect regulation.</p>
+          <h4>Sustained Recovery · Session 12+</h4>
+          <p>Tracking regulation capacity under real-life pressure — fewer escalations, faster return to baseline, and more consistent follow-through in high-emotion situations. The goal is durable self-regulation.</p>
+          <p class="issue-note">Session estimates may vary depending on the complexity of the case.</p>
+        </div>
       </div>
-      <div class="issue-card fade-up" style="transition-delay:.2s">
-        <h3>Relationship Patterns</h3>
+
+      <div class="issue-card fade-up" style="transition-delay:.2s" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+        <div class="issue-card-header">
+          <h3>Couples & Relationship Distress</h3>
+          <span class="issue-toggle">+</span>
+        </div>
         <p>Repeating cycles of conflict, emotional distance, avoidance, or the same argument with different words. The pattern is the problem, and patterns can be mapped.</p>
+        <div class="issue-detail">
+          <p>Relationship distress becomes clinical when the same interaction cycle repeats despite both partners knowing it is destructive. Pursue/withdraw, criticize/defend, escalate/shut down — these are protective strategies under stress that lock both people into a loop neither can exit alone. Recognizing the cycle is the first step; changing it requires structured intervention.</p>
+          <h4>Assessment · Sessions 1–4</h4>
+          <p>We identify the interaction cycle — the triggers that activate it, the emotional responses beneath the surface conflict, and the protective strategies each partner defaults to under stress. This includes individual assessment of each partner's regulatory capacity.</p>
+          <h4>Intervention · Sessions 5–12</h4>
+          <p>Interrupting the cycle through shared regulation skills, structured communication repair, and targeted work on the emotional drivers beneath the surface-level arguments. Both partners learn to de-escalate in real time and re-engage after rupture.</p>
+          <h4>Sustained Recovery · Session 12+</h4>
+          <p>Building sustainable repair capacity — the ability to recognize activation early, de-escalate without withdrawal, and maintain connection under real-world stress. Progress is tracked through observable changes in conflict frequency, recovery speed, and emotional accessibility.</p>
+          <p class="issue-note">Session estimates may vary depending on the complexity of the case.</p>
+        </div>
       </div>
-      <div class="issue-card fade-up" style="transition-delay:.25s">
-        <h3>Life Transitions & Identity</h3>
+
+      <div class="issue-card fade-up" style="transition-delay:.25s" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+        <div class="issue-card-header">
+          <h3>Life Transitions & Identity</h3>
+          <span class="issue-toggle">+</span>
+        </div>
         <p>Relocation, breakups, career shifts, grief, cultural adjustment — rebuilding stability and direction when the ground shifts beneath you.</p>
+        <div class="issue-detail">
+          <p>Major transitions destabilize the internal model your mind relies on to predict and navigate daily life — routines, roles, belonging, and meaning can all shift at once. When adjustment demands exceed your recovery capacity, the result is persistent preoccupation, impaired functioning, and a sense of being stuck between who you were and who you are becoming. This is a recognizable pattern, and it responds to structured support.</p>
+          <h4>Assessment · Sessions 1–4</h4>
+          <p>We assess the scope of disruption — what has been lost, what is destabilizing daily functioning, and whether the transition has activated deeper patterns such as anxiety, depression, or identity confusion that need to be addressed alongside the adjustment.</p>
+          <h4>Intervention · Sessions 5–12</h4>
+          <p>Stabilization of immediate functioning (sleep, routine, social engagement), processing of loss or grief where present, and structured rebuilding of direction and identity in the new context. The work is practical and oriented toward forward movement.</p>
+          <h4>Sustained Recovery · Session 12+</h4>
+          <p>Tracking adaptation markers — stable functioning, reduced preoccupation with what was lost, and active investment in the present — to confirm the transition is being integrated and the new foundation is holding.</p>
+          <p class="issue-note">Session estimates may vary depending on the complexity of the case.</p>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -381,39 +594,61 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
   <div class="container">
     <div class="section-intro fade-up">
       <p class="label">Services & Pricing</p>
-      <h2>Sessions & Plans</h2>
-      <p>All sessions are online via secure video. Prices are transparent. A free initial consultation is available for all new clients.</p>
+      <h2>Online Psychotherapy Sessions & Plans</h2>
+      <p>My fees reflect the level of structure, preparation, and clinical focus that goes into each session. A free 15-minute consultation is available for all new clients — contact me on WhatsApp to schedule.</p>
     </div>
     <div class="pricing-grid">
-      <div class="pricing-card featured fade-up">
-        <div class="pricing-card-header"><h3>Individual Session</h3><p class="format">Online · 55 minutes</p></div>
+      <div class="pricing-card featured fade-up" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+        <div class="pricing-card-header"><h3>Individual Psychotherapy Session</h3><p class="format">Online via Google Meet · 60 minutes</p></div>
         <div class="pricing-amount"><span class="price">$120</span><span class="per">USD / session</span></div>
-        <p>Structured 1:1 psychotherapy. Assessment-driven, progress-tracked. Each session has a defined focus and practical direction.</p>
-        <a href="#contact" class="btn btn-primary btn-sm">Book a session</a>
+        <p>Structured 1:1 psychotherapy. Assessment-driven, progress-tracked. Each session has a defined focus and builds toward measurable outcomes.</p>
+        <div class="issue-detail">
+          <h4>What each session includes</h4>
+          <p>Every session follows a defined structure: review of progress since the last session, a focused clinical target for the current session, practical tools or interventions applied in real time, and a clear direction for what to work on between sessions. You will always know what we are doing and why.</p>
+          <h4>Who this is for</h4>
+          <p>Adults dealing with burnout, anxiety, depression, emotional dysregulation, relationship distress, or life transitions. Sessions are available in English and Spanish, worldwide.</p>
+        </div>
+        <a href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Start with a Free 15-Min Consultation</a>
       </div>
-      <div class="pricing-card fade-up" style="transition-delay:.08s">
-        <div class="pricing-card-header"><h3>Couples Session</h3><p class="format">Online · 75 minutes</p></div>
+      <div class="pricing-card fade-up" style="transition-delay:.08s" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+        <div class="pricing-card-header"><h3>Couples Psychotherapy Session</h3><p class="format">Online via Google Meet · 75 minutes</p></div>
         <div class="pricing-amount"><span class="price">$170</span><span class="per">USD / session</span></div>
-        <p>Communication repair, conflict mapping, and shared regulation skills. A structured process for couples under real pressure.</p>
-        <a href="#contact" class="btn btn-outline btn-sm">Book a session</a>
+        <p>Communication repair, conflict mapping, and shared regulation skills. A structured process for couples working through recurring patterns under real pressure.</p>
+        <div class="issue-detail">
+          <h4>What each session includes</h4>
+          <p>Sessions follow a structured format: mapping the interaction cycle, identifying each partner's triggers and protective strategies, practicing de-escalation and repair in real time, and building shared regulation skills that transfer to daily life. Both partners receive clear direction between sessions.</p>
+          <h4>Who this is for</h4>
+          <p>Couples experiencing communication breakdown, recurring conflict, emotional distance, or relocation-related relationship stress. Both partners must be present for every session.</p>
+        </div>
+        <a href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation%20for%20couples%20therapy." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Start with a Free 15-Min Consultation</a>
       </div>
     </div>
     <div class="package-row">
-      <div class="package-card fade-up">
-        <span class="label">Recommended</span>
+      <div class="package-card fade-up" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
         <h3>Burnout Recovery Program</h3>
-        <p class="format">6 sessions · Online · 55 minutes each</p>
-        <p>A focused 6-week protocol: comprehensive assessment, targeted intervention, stabilization, and a maintenance plan for sustained recovery.</p>
-        <div class="pricing-amount"><span class="price">$650</span><span class="per">USD / program</span></div>
-        <a href="#contact" class="btn btn-gold btn-sm">Start the program</a>
+        <p class="format">12 sessions · Online via Google Meet · 60 minutes each</p>
+        <p>A complete clinical program covering all three phases: assessment, targeted intervention, and sustained recovery. Designed for professionals who want to commit to the full process and see it through.</p>
+        <div class="issue-detail" style="--detail-color:rgba(255,255,255,.65)">
+          <h4 style="color:var(--gold)">What the program covers</h4>
+          <p style="color:rgba(255,255,255,.75)">Sessions 1–4 map the clinical picture — stress load, nervous system state, sleep, cognitive patterns, and the demands maintaining the burnout. Sessions 5–12 deliver focused intervention: somatic downregulation, behavioral restructuring, and cognitive work on the patterns that sustain the overload. The final phase confirms that recovery markers are holding under real-world conditions.</p>
+          <h4 style="color:var(--gold)">Why commit to 12 sessions</h4>
+          <p style="color:rgba(255,255,255,.75)">Burnout recovery requires sustained intervention across biological, behavioral, and psychological levels. A 12-session commitment ensures the work reaches all three phases — and at $100 per session (vs. $120 individually), the program reflects that commitment with a reduced rate. Payment can be split into two installments: the first at the start, the second at session six.</p>
+        </div>
+        <div class="pricing-amount"><span class="price">$1,200</span><span class="per">USD / program · $100/session</span></div>
+        <a href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27m%20interested%20in%20the%20Burnout%20Recovery%20Program." target="_blank" rel="noopener" class="btn btn-gold btn-sm">Get Started</a>
       </div>
-      <div class="package-card fade-up" style="transition-delay:.08s">
-        <span class="label">Continuity</span>
-        <h3>Monthly Plan</h3>
-        <p class="format">4 sessions / month · Online · 55 minutes each</p>
-        <p>Weekly sessions for sustained therapeutic work. Priority scheduling and consistent follow-through across sessions.</p>
-        <div class="pricing-amount"><span class="price">$430</span><span class="per">USD / month</span></div>
-        <a href="#contact" class="btn btn-gold btn-sm">Get started</a>
+      <div class="package-card package-featured fade-up" style="transition-delay:.08s" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+        <h3>Monthly Psychotherapy Plan</h3>
+        <p class="format">4 sessions / month · Online via Google Meet · 60 minutes each</p>
+        <p>Weekly sessions for sustained clinical work. Priority scheduling, consistent follow-through, and a written session summary after every session — so you can track your own progress between meetings and stay aligned with the plan.</p>
+        <div class="issue-detail" style="--detail-color:rgba(255,255,255,.65)">
+          <h4 style="color:var(--gold)">What the plan includes</h4>
+          <p style="color:rgba(255,255,255,.75)">Four weekly sessions per month with priority scheduling. Each session follows the same structured format — defined focus, progress tracking, and practical direction. After every session, you receive a written summary documenting what was covered, what was identified, and what to focus on before the next session. This is clinical documentation designed for you — a tool for continuity and self-tracking.</p>
+          <h4 style="color:var(--gold)">Who this is for</h4>
+          <p style="color:rgba(255,255,255,.75)">Clients who have completed assessment and are in active intervention, or those in sustained recovery who benefit from weekly structure. The monthly commitment ensures the work builds consistently, which is critical when addressing burnout, anxiety, depression, or relational patterns. At $107.50 per session (vs. $120 individually), the plan rewards consistent engagement. Billed monthly.</p>
+        </div>
+        <div class="pricing-amount"><span class="price">$430</span><span class="per">USD / month · $107.50/session</span></div>
+        <a href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27m%20interested%20in%20the%20Monthly%20Plan." target="_blank" rel="noopener" class="btn btn-gold btn-sm">Get Started</a>
       </div>
     </div>
   </div>
@@ -425,25 +660,28 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
     <div class="workshops-grid">
       <div>
         <p class="label fade-up">For Teams & Organizations</p>
-        <h2 class="fade-up" style="margin:16px 0 20px">Workshops & Training</h2>
-        <p class="fade-up" style="margin-bottom:36px">Skills-based group training with practical takeaways. Designed for real work environments — leadership, collaboration, and daily human friction.</p>
+        <h2 class="fade-up" style="margin:16px 0 20px">Workplace Mental Health Training</h2>
+        <p class="fade-up" style="margin-bottom:36px">Evidence-based group training designed for real work environments. Grounded in international occupational health standards, including WHO workplace mental health guidelines and psychosocial risk frameworks.</p>
         <div class="workshop-list">
-          <div class="workshop-card fade-up">
-            <h3>Mental Health Foundations</h3>
-            <p>A practical training on emotions through neuroscience: what emotions are, how the brain generates them, and how stress physiology shapes mood, behavior, and performance. Participants learn to read emotional signals in real time and improve regulation, recovery, and decision-making.</p>
-            <p class="label">Contact for availability and pricing</p>
-          </div>
-          <div class="workshop-card fade-up" style="transition-delay:.08s">
-            <h3>EQ for Leaders & Teams</h3>
-            <p>Regulation under pressure, communication protocols that prevent escalation, and frameworks for building cooperative dynamics. Built for teams that need to perform under real constraints.</p>
-            <p class="label">Contact for availability and pricing</p>
+          <div class="workshop-card fade-up" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}" style="cursor:pointer">
+            <div class="issue-card-header">
+              <h3>Burnout Prevention, Stress Management & Emotional Intelligence for Teams</h3>
+              <span class="issue-toggle">+</span>
+            </div>
+            <p>A structured training program addressing the neurophysiology of workplace stress, early identification of burnout risk factors, and practical regulation strategies that teams can apply immediately. Designed for organizations that take psychosocial risk management seriously — aligned with WHO guidelines on mental health at work and evidence-based occupational health frameworks.</p>
+            <div class="issue-detail">
+              <h4>What participants learn</h4>
+              <p>How chronic workplace stress becomes burnout at a neurophysiological level — and how to identify early warning signals before performance and health deteriorate. Practical regulation techniques for high-pressure environments. Communication frameworks that reduce interpersonal friction and prevent escalation. How to build sustainable recovery habits within a demanding work culture.</p>
+              <h4>Format & delivery</h4>
+              <p>Available as a half-day or full-day session, online or on-site. Designed for teams of 8–30 participants. Each session combines psychoeducation with applied exercises and a structured takeaway toolkit. Custom formats available for leadership teams, HR departments, or organization-wide implementation. Aligned with psychosocial risk assessment best practices for organizations meeting ISO 45003 or equivalent compliance requirements.</p>
+            </div>
+            <a href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27m%20interested%20in%20your%20workplace%20mental%20health%20training%20for%20our%20team." target="_blank" rel="noopener" class="btn btn-primary btn-sm" onclick="event.stopPropagation()">Inquire About Availability</a>
           </div>
         </div>
       </div>
       <div class="fade-up" style="transition-delay:.15s">
         <div class="workshops-image-frame">
-          <!-- REPLACE: src="img/workshop.jpg" — Workshop or training environment photo -->
-          <div class="img-placeholder"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197"/></svg><span>Workshop photo<br><code>img/workshop.jpg</code></span></div>
+          <img src="WORKSHOP_FOTO.webp" alt="Workplace mental health training session led by J.R. Hernandez" loading="lazy" decoding="async" width="500" height="500">
         </div>
       </div>
     </div>
@@ -454,106 +692,79 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 <section class="books" id="resources">
   <div class="container">
     <div class="section-intro fade-up">
-      <p class="label">Resources</p>
-      <h2>Books</h2>
-      <p>Practical reading for learning outside sessions.</p>
+      <p class="label">Published Work</p>
+      <h2>Emotional Intelligence Books</h2>
+      <p>Two books on emotional intelligence — one for adults navigating stress, anxiety, and low mood, and one for parents who want to give their children an early foundation. Available in English and Spanish on Amazon.</p>
     </div>
     <div class="books-grid">
       <div class="book-card fade-up">
         <div class="book-cover">
-          <!-- REPLACE: src="img/book-1.jpg" -->
-          <div class="img-placeholder" style="font-size:.75rem"><span>Book cover<br><code>img/book-1.jpg</code></span></div>
+          <img src="EI_BOOK.webp" alt="Emotional Intelligence and Behavioral Therapies book by J.R. Hernandez" loading="lazy" decoding="async" width="180" height="270">
         </div>
         <div class="book-info">
           <h3>Emotional Intelligence & Behavioral Therapies</h3>
-          <p>A practical, structured 10-step guide with strategies grounded in cognitive-behavioral work and emotional skills training.</p>
-          <!-- REPLACE: Your Amazon link -->
-          <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Get it on Amazon</a>
+          <p>A 10-step guide to understanding and managing stress, anxiety, and depression through emotional intelligence and cognitive-behavioral strategies. Each step is structured, practical, and designed for independent application. Available in English and Spanish.</p>
+          <a href="https://www.amazon.com/stores/JR-Hernandez/author/B0CZ9S1983?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true&ccs_id=99e31aa9-eab5-4168-9df4-76b53cb83968" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Get It on Amazon</a>
         </div>
       </div>
       <div class="book-card fade-up" style="transition-delay:.08s">
         <div class="book-cover">
-          <!-- REPLACE: src="img/book-2.jpg" -->
-          <div class="img-placeholder" style="font-size:.75rem"><span>Book cover<br><code>img/book-2.jpg</code></span></div>
+          <img src="CHILDS_BOOK.webp" alt="Toto's Journey Through Emotions — emotional intelligence book for children by J.R. Hernandez" loading="lazy" decoding="async" width="180" height="270">
         </div>
         <div class="book-info">
           <h3>Toto's Journey Through Emotions</h3>
-          <p>A children's story designed to help kids name emotions, understand them, and feel proud of having them.</p>
-          <!-- REPLACE: Your Amazon link -->
-          <a href="#" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Get it on Amazon</a>
+          <p>A story for young children about what emotions are, where they come from, and why every one of them matters. Designed for parents who want to give their children an early foundation in emotional intelligence — because regulation is a skill that builds over a lifetime. Available in English and Spanish.</p>
+          <a href="https://www.amazon.com/stores/JR-Hernandez/author/B0CZ9S1983?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true&ccs_id=99e31aa9-eab5-4168-9df4-76b53cb83968" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Get It on Amazon</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TESTS -->
-<section class="tests" id="tests">
-  <div class="container">
-    <div class="section-intro fade-up">
-      <p class="label" style="color:var(--gold)">Self-Assessment Tools</p>
-      <h2>Tests</h2>
-      <p>Educational, not diagnostic. Click a test to open it in a separate page.</p>
-    </div>
-    <div class="tests-grid">
-      <div class="test-card fade-up">
-        <h3>Personality (Cluster)</h3>
-        <p>Maps broad personality patterns across Clusters A, B, and C. Educational, not diagnostic.</p>
-        <!-- REPLACE: Link to your test page -->
-        <a href="#" class="btn btn-outline btn-sm" target="_blank">Open test</a>
-      </div>
-      <div class="test-card fade-up" style="transition-delay:.08s">
-        <h3>Emotional Quotient</h3>
-        <p>Screens perceived emotional skills: attention, clarity, and regulation. Highlights growth areas.</p>
-        <a href="#" class="btn btn-outline btn-sm" target="_blank">Open test</a>
-      </div>
-      <div class="test-card fade-up" style="transition-delay:.16s">
-        <h3>Attachment Style</h3>
-        <p>Explores relational patterns — security, anxiety, avoidance, and more. Results are indicative, not definitive.</p>
-        <a href="#" class="btn btn-outline btn-sm" target="_blank">Open test</a>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- REVIEWS -->
 <section class="reviews">
+  <div class="reviews-bg" style="background-image:url('REVIEW_BG.webp')"></div>
   <div class="container">
     <div class="section-intro fade-up">
-      <p class="label">Client Reviews</p>
-      <h2>What Clients Say</h2>
+      <p class="label" style="color:var(--gold)">Client Reviews</p>
+      <h2>Online Psychotherapy Reviews</h2>
+      <p>Clear feedback from people who wanted clarity, structure, and follow-through.</p>
     </div>
     <div class="reviews-grid">
       <div class="review-card fade-up">
         <div class="review-stars">★★★★★</div>
-        <blockquote>"Working with this practitioner has been transformative. I finally feel like someone truly understands what I've been going through. The clarity I've gained about my anxiety patterns has been life-changing."</blockquote>
-        <p class="review-author">Sarah M.</p><p class="review-location">London, UK</p>
+        <blockquote>"I've had therapy before both in Singapore and abroad and I can say that my experience with JR is by far the best I've ever had. His approach to therapy is very practical — his methods really helped me get better and track my progress and see how far I got."</blockquote>
+        <p class="review-author">Anna Vergés</p><p class="review-source">Google Reviews</p>
       </div>
       <div class="review-card fade-up" style="transition-delay:.06s">
         <div class="review-stars">★★★★★</div>
-        <blockquote>"As an expat dealing with multiple relocations, I needed someone who could help me make sense of the emotional upheaval. These sessions provided exactly that — a space to think clearly and feel understood."</blockquote>
-        <p class="review-author">David K.</p><p class="review-location">Singapore</p>
+        <blockquote>"Super professional, he took the time to listen to me and provide guidance to face concerns that caused me anxiety and stress. He helped me identify and put into words those intrusive thoughts that affected my peace of mind and mental health."</blockquote>
+        <p class="review-author">Julia Herrera</p><p class="review-source">Google Reviews</p>
       </div>
       <div class="review-card fade-up" style="transition-delay:.12s">
         <div class="review-stars">★★★★★</div>
-        <blockquote>"I came in feeling overwhelmed by work stress and uncertain about my relationships. Six months later, I have tools I never knew I needed and a much deeper understanding of myself."</blockquote>
-        <p class="review-author">Emma R.</p><p class="review-location">Melbourne, Australia</p>
+        <blockquote>"I visited this counselor when I was in Singapore by recommendation and I liked his way of working so much that I continue to do online therapy with him even when I left the country."</blockquote>
+        <p class="review-author">Venny Sanjaya</p><p class="review-source">Google Reviews</p>
       </div>
       <div class="review-card fade-up" style="transition-delay:.18s">
         <div class="review-stars">★★★★★</div>
-        <blockquote>"The online sessions worked perfectly for my international schedule. What impressed me most was the depth of insight and the complete absence of generic therapy talk."</blockquote>
-        <p class="review-author">Michael T.</p><p class="review-location">New York, USA</p>
+        <blockquote>"It has been one of the most rewarding journeys of self-discovery I have ever had. At first I was reluctant to do online sessions, but after a couple of sessions I found it even more convenient than in-person sessions."</blockquote>
+        <p class="review-author">David Bruzual</p><p class="review-source">Google Reviews</p>
       </div>
       <div class="review-card fade-up" style="transition-delay:.24s">
         <div class="review-stars">★★★★★</div>
-        <blockquote>"I was skeptical about counselling, but this approach is different. It's intelligent, grounded, and genuinely helpful. I feel more emotionally capable than I ever have."</blockquote>
-        <p class="review-author">Priya S.</p><p class="review-location">Dubai, UAE</p>
+        <blockquote>"J.R. has been my official therapist for a while and I wouldn't change him for anyone else. He has helped me with anxiety and depression and I am grateful for that."</blockquote>
+        <p class="review-author">Alberto Chan</p><p class="review-source">Google Reviews</p>
       </div>
       <div class="review-card fade-up" style="transition-delay:.3s">
         <div class="review-stars">★★★★★</div>
-        <blockquote>"After years of trying to figure things out on my own, it was a relief to work with someone who could see patterns I couldn't. Highly professional and deeply human."</blockquote>
-        <p class="review-author">James L.</p><p class="review-location">Toronto, Canada</p>
+        <blockquote>"I decided to choose JR as my psychological counselor and this has been one of the best decisions I could have made. He was very attentive, he made me feel valued and he helped me to overcome the bad moment I was going through."</blockquote>
+        <p class="review-author">Sofia Barreto</p><p class="review-source">Google Reviews</p>
       </div>
+    </div>
+    <div class="reviews-footer fade-up">
+      <a href="https://g.page/r/CQd8xXTT59B-EBM/review" target="_blank" rel="noopener">Leave a review</a>
     </div>
   </div>
 </section>
@@ -563,16 +774,17 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
   <div class="container">
     <div class="section-intro fade-up">
       <p class="label">FAQ</p>
-      <h2>Common Questions</h2>
-      <p>Quick answers first. If something is still unclear, reach out directly.</p>
+      <h2>Frequently Asked Questions</h2>
     </div>
     <div class="faq-list">
-      <div class="faq-item fade-up"><button class="faq-question">Do you work with established diagnoses?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Yes. If you already have a diagnosis (anxiety disorder, depression, ADHD, PTSD, etc.), we can work with it directly — reviewing what has been tried, what is currently maintaining symptoms, and building a focused plan from there. If something falls outside my scope of practice, I will tell you clearly and refer you to the appropriate specialist.</p></div></div>
-      <div class="faq-item fade-up"><button class="faq-question">What is this, exactly?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>This is a psychotherapy practice. I provide structured, evidence-informed psychological sessions for individuals and couples dealing with burnout, anxiety, depression, emotional regulation difficulties, relationship distress, and life transitions. All sessions are conducted online via secure video.</p></div></div>
-      <div class="faq-item fade-up"><button class="faq-question">Do you prescribe medication?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>No. Psychotherapists do not prescribe medication. If medication is relevant to your case, I will refer you to a psychiatrist and coordinate with them as needed to ensure your treatment is aligned.</p></div></div>
-      <div class="faq-item fade-up"><button class="faq-question">What is your approach?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Process-based therapy. The method adapts to the case — drawing from cognitive-behavioral therapy (CBT), acceptance and commitment therapy (ACT), somatic regulation, and psychoeducation, depending on what the clinical assessment reveals. Sessions are consultation-style: structured, with defined targets and observable progress metrics.</p></div></div>
-      <div class="faq-item fade-up"><button class="faq-question">Confidentiality and records<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>All sessions are strictly confidential. I maintain professional records securely, and no information is shared without your explicit written consent. Professional boundaries and ethical standards govern every aspect of this work.</p></div></div>
-      <div class="faq-item fade-up"><button class="faq-question">How do online sessions work?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Sessions are conducted via secure video call. You need a stable internet connection and a private space where you can speak freely. I work across all time zones — we will find a slot that fits your schedule.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-question">Is online therapy as effective as in-person therapy?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Research consistently shows that online psychotherapy produces equivalent outcomes to in-person therapy for anxiety, depression, burnout, and relationship distress. This practice has been delivering structured clinical sessions online since 2019 via Google Meet, across every time zone.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-question">What is the difference between a psychotherapist and a psychiatrist?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>A psychotherapist provides structured psychological intervention through evidence-based methods — cognitive-behavioral therapy, emotion-focused techniques, and somatic regulation. A psychiatrist is a medical doctor who can prescribe medication. If medication is relevant to your case, I coordinate with a psychiatrist to ensure your treatment plan is aligned.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-question">What is the difference between therapy and coaching?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Psychotherapy treats clinical conditions — burnout, anxiety, depression, emotional dysregulation — using structured, evidence-based interventions. Coaching supports goal-setting and performance optimization in people who are already functioning well. This practice provides psychotherapy: clinical assessment, targeted intervention, and measurable outcomes.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-question">How do I know if I have burnout or just stress?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Stress is a temporary response that resolves when the stressor is removed. Burnout is a neurophysiological state where the body's recovery system has been overwhelmed — rest alone does not restore it. If you are experiencing persistent exhaustion, cognitive fog, emotional flatness, or detachment from work despite breaks, that pattern points to burnout and benefits from structured clinical intervention.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-question">What should I expect in my first online therapy session?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>The first session is a structured clinical assessment. We map what is happening — symptoms, patterns, history, physiology — to build a clear picture of what is maintaining the problem. You will leave with an initial formulation and a defined direction for the work ahead. It is not a casual conversation; it is the diagnostic foundation for everything that follows.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-question">Do I need therapy or am I overreacting?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>If what you are experiencing is disrupting your sleep, your concentration, your relationships, or your ability to function at the level you expect from yourself — that is enough. Therapy is appropriate when a pattern is persistent and self-correction has not resolved it. A free 15-minute consultation can help clarify whether this is the right step.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-question">What if I have tried therapy before and it did not work?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>The effectiveness of therapy depends on the fit between the method and the problem. A previous experience that lacked structure, clear targets, or measurable tracking may not reflect what a process-based approach delivers. This practice begins with a clinical assessment that identifies what is maintaining the difficulty — so the intervention targets the right mechanism from the start.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-question">Can I do therapy in Spanish?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Yes. All sessions — individual, couples, and the Burnout Recovery Program — are available in both English and Spanish. Working in your first language can improve emotional precision and reduce the cognitive load of processing difficult material in a second language.</p></div></div>
     </div>
   </div>
 </section>
@@ -582,24 +794,19 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
   <div class="container">
     <div class="fade-up">
       <p class="label" style="color:var(--gold);margin-bottom:16px">Get Started</p>
-      <h2>Book a Free Initial Consultation</h2>
-      <p>A brief 15-minute conversation to understand your situation and determine the best next step. No commitment required.</p>
+      <h2>Start with a Free 15-Min Consultation</h2>
+      <p>A brief conversation to understand your situation and determine whether this practice is the right fit. No commitment required.</p>
       <div class="cta-actions">
-        <!-- REPLACE: YOUR_PHONE_NUMBER with your actual WhatsApp number (with country code, no + or spaces) -->
-        <a href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi%20J.R.%2C%20I%20would%20like%20to%20book%20a%20free%20consultation." class="btn btn-gold" target="_blank" rel="noopener">
+        <a href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation." class="btn btn-gold" target="_blank" rel="noopener">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.685-1.408A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.607-.798-6.38-2.144l-.29-.222-3.042.914.85-3.117-.234-.299A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
           WhatsApp
         </a>
-        <!-- REPLACE: your@email.com -->
-        <a href="mailto:your@email.com?subject=Consultation%20inquiry" class="btn btn-outline" style="color:var(--white);border-color:rgba(255,255,255,.3)">Email</a>
-        <!-- REPLACE: Your Setmore booking URL -->
-        <a href="#" class="btn btn-outline" style="color:var(--white);border-color:rgba(255,255,255,.3)" target="_blank" rel="noopener">Book with Card (Setmore)</a>
+        <a href="mailto:jr@baselinepsychotherapy.com?subject=Consultation%20inquiry" class="btn btn-outline" style="color:var(--white);border-color:rgba(255,255,255,.3)">Email</a>
       </div>
       <div class="cta-info">
         <span>Free 15-minute consultation</span>
-        <span>Online worldwide</span>
+        <span>Online via Google Meet</span>
         <span>English & Spanish</span>
-        <span>Confidential</span>
       </div>
     </div>
   </div>
@@ -611,39 +818,39 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
     <div class="footer-grid">
       <div class="footer-brand">
         <h4>Baseline Psychotherapy</h4>
-        <p>Structured psychotherapy grounded in psychological expertise and medical neuroscience. Supporting individuals, couples, and organizations worldwide since 2019.</p>
-        <!-- REPLACE: Link to your service policies page -->
-        <p style="margin-top:12px"><a href="#" style="color:var(--gold);font-size:.82rem">Service policies & refund notice</a></p>
+        <p>Process-based psychotherapy for burnout, anxiety, depression, emotional dysregulation, and relationship distress. Online worldwide in English and Spanish since 2019.</p>
+        <p style="margin-top:12px"><a href="mailto:jr@baselinepsychotherapy.com" style="color:var(--gold);font-size:.82rem">jr@baselinepsychotherapy.com</a></p>
+        <p style="margin-top:8px"><a href="policies.html" style="color:rgba(255,255,255,.45);font-size:.78rem;text-decoration:underline;text-underline-offset:3px">Service Policies & Refund Notice</a></p>
       </div>
       <div>
         <h5>Services</h5>
         <ul class="footer-links">
-          <li><a href="#pricing">Individual Sessions</a></li>
-          <li><a href="#pricing">Couples Sessions</a></li>
-          <li><a href="#workshops">Workshops & Training</a></li>
-          <li><a href="#pricing">Plans & Packages</a></li>
+          <li><a href="#pricing">Individual Psychotherapy</a></li>
+          <li><a href="#pricing">Couples Psychotherapy</a></li>
+          <li><a href="#pricing">Monthly Plan</a></li>
+          <li><a href="#pricing">Burnout Recovery Program</a></li>
+          <li><a href="#workshops">Workplace Training</a></li>
         </ul>
       </div>
       <div>
         <h5>Practice</h5>
         <ul class="footer-links">
-          <li><a href="#process">Clinical Approach</a></li>
           <li><a href="#about">About J.R. Hernandez</a></li>
-          <li><a href="#resources">Books & Resources</a></li>
-          <li><a href="#tests">Self-Assessment Tools</a></li>
+          <li><a href="#process">Clinical Approach</a></li>
+          <li><a href="#issues">Specializations</a></li>
+          <li><a href="#resources">Books</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2019–2026 Baseline Psychotherapy — J.R. Hernandez. All sessions conducted with professional confidentiality and ethical standards. Online and worldwide, in English and Spanish.</p>
+      <p>&copy; 2019–2026 Baseline Psychotherapy — J.R. Hernandez, Psychotherapist. All sessions conducted with professional confidentiality and ethical standards.</p>
     </div>
   </div>
 </footer>
 
 <!-- WHATSAPP FLOATING BUTTON -->
-<!-- REPLACE: YOUR_PHONE_NUMBER -->
-<a href="https://wa.me/YOUR_PHONE_NUMBER?text=Hi%20J.R.%2C%20I%20would%20like%20to%20book%20a%20free%20consultation." class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Contact via WhatsApp">
+<a href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation." class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Contact via WhatsApp">
   <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.685-1.408A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.607-.798-6.38-2.144l-.29-.222-3.042.914.85-3.117-.234-.299A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
 </a>
 
