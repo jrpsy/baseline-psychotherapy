@@ -146,6 +146,8 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .issue-detail h4{font-family:var(--sans);font-size:.82rem;font-weight:600;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin:20px 0 8px}
 .issue-detail p{font-size:.88rem;line-height:1.75;opacity:.85;margin-bottom:4px}
 .issue-detail .issue-note{font-size:.82rem;color:var(--text);opacity:.6;margin-top:16px;font-style:italic}
+.issue-learn{font-size:.8rem;font-weight:600;color:var(--gold);text-align:right;margin-top:12px;letter-spacing:.05em}
+.issue-card.open .issue-learn{display:none}
 
 /* PRICING */
 .pricing{padding:var(--section-py) 0;background:var(--bg)}
@@ -610,120 +612,126 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
   <div class="container">
     <div class="section-intro fade-up">
       <p class="label">Specializations</p>
-      <h2>What I Work With</h2>
-      <p>These are the most common presenting patterns. Identifying what is actually driving the problem — not just the most visible symptom — is where the clinical work begins.</p>
+      <h2>Burnout, Anxiety & Related Conditions</h2>
+      <p>Most people arrive knowing something is wrong — but not exactly what is driving it. Burnout rarely surfaces alone; it emerges alongside other conditions, or a loss of direction that has been building longer than they realize. The areas below represent the most common clinical presentations in this practice. Identifying what is actually driving the problem — not just the most visible symptom — is where the clinical work begins.</p>
     </div>
     <div class="issues-grid">
 
-      <div class="issue-card fade-up" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
-        <div class="issue-card-header">
-          <h3>Burnout & Chronic Stress</h3>
-          <span class="issue-toggle">+</span>
-        </div>
-        <p>Burnout does not arrive overnight. It builds through months of overextension until exhaustion becomes your baseline and detachment feels like the only option left. Therapy targets the cycle directly — identifying what sustains the pattern, rebuilding capacity for rest without guilt, and developing concrete strategies to function at a sustainable level. Burnout recovery is possible even while you keep working.</p>
-        <div class="issue-detail">
-          <p>Burnout is a neurophysiological state — the result of sustained stress that exceeds the body's capacity to recover. It affects sleep architecture, attention, emotional reactivity, and decision-making at a biological level. Unlike depression, which is pervasive and often independent of context, burnout is tied to specific chronic demands — and it responds to targeted clinical intervention when the right mechanisms are addressed. If you recognize yourself in this description, what you are experiencing is real, measurable, and treatable with the right approach.</p>
-          <h4>Assessment · Sessions 1–4</h4>
-          <p>We map stress load, sleep quality, nervous system activation, cognitive patterns, and the specific demands keeping the cycle alive — work, relational, financial, or health-related. The goal is a clear clinical picture of what is maintaining the burnout, so we intervene where it matters most.</p>
-          <h4>Intervention · Sessions 5–12</h4>
-          <p>Targeted downregulation of the stress response through somatic techniques, behavioral restructuring of recovery habits, and cognitive work on the patterns that sustain the overload. Each session has a defined focus and builds on the previous one.</p>
-          <h4>Sustained Recovery · Session 12+</h4>
-          <p>Tracking recovery markers — sleep depth, energy stability, emotional reactivity, and follow-through under pressure — to confirm gains are holding in real-world conditions and prevent relapse into the same cycle.</p>
-          <p class="issue-note">Session estimates may vary depending on the complexity of the case.</p>
-        </div>
-      </div>
-
-      <div class="issue-card fade-up" style="transition-delay:.05s" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
-        <div class="issue-card-header">
-          <h3>Anxiety & Nervous System</h3>
-          <span class="issue-toggle">+</span>
-        </div>
-        <p>Anxiety often operates below conscious awareness — a tightness in the chest, racing thoughts at 3 a.m., hypervigilance that never fully shuts off. Work here focuses on understanding how your nervous system learned to stay on alert and retraining that response through evidence-based techniques. The goal is not eliminating stress but restoring your capacity to regulate it.</p>
-        <div class="issue-detail">
-          <p>Anxiety becomes clinical when the threat-detection system stays activated beyond the situation that triggered it. It is a dysregulation of the nervous system's alarm response — affecting breathing, muscle tension, sleep, concentration, and the ability to distinguish real danger from perceived danger. If this is what you are living with, it is a pattern that can be identified and changed.</p>
-          <h4>Assessment · Sessions 1–4</h4>
-          <p>We identify the anxiety profile — triggers, physiological activation patterns, avoidance behaviors, and the cognitive loops that keep the threat signal firing. This includes screening for whether the anxiety is primary or being driven by another underlying condition.</p>
-          <h4>Intervention · Sessions 5–12</h4>
-          <p>Graded exposure to disrupt avoidance cycles, cognitive restructuring of threat appraisals, and somatic regulation techniques to retrain the nervous system's baseline response. The plan is adapted to the severity and specific expression of your anxiety.</p>
-          <h4>Sustained Recovery · Session 12+</h4>
-          <p>Building reliable self-regulation under real-world conditions — faster recovery after activation, fewer avoidance cycles, and a measurable reduction in baseline anxiety. The goal is that you can manage activation independently.</p>
-          <p class="issue-note">Session estimates may vary depending on the complexity of the case.</p>
-        </div>
-      </div>
-
-      <div class="issue-card fade-up" style="transition-delay:.1s" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
-        <div class="issue-card-header">
-          <h3>Depression & Low Drive</h3>
-          <span class="issue-toggle">+</span>
-        </div>
-        <p>When motivation disappears and everything feels heavy, it is easy to assume something is fundamentally wrong with you. Depression has structure — it follows identifiable cognitive and behavioral patterns that respond to targeted intervention. Sessions focus on reconnecting you with drive and meaning through structured activation, thought work, and rebuilding daily rhythms that support sustained emotional stability.</p>
-        <div class="issue-detail">
-          <p>Depression is a state of functional shutdown — the nervous system's response to sustained overload, loss, or helplessness. It affects energy, sleep, concentration, motivation, and the capacity to experience pleasure or meaning. If you have been living in this state, what you are experiencing is a recognizable clinical pattern with a defined pathway out.</p>
-          <h4>Assessment · Sessions 1–4</h4>
-          <p>We assess mood patterns, behavioral withdrawal, sleep architecture, cognitive rigidity, and the specific factors maintaining the depressive cycle — including relational isolation, contextual stressors, and whether the depression is reactive or part of a longer pattern.</p>
-          <h4>Intervention · Sessions 5–12</h4>
-          <p>Behavioral activation targeting the withdrawal-avoidance loop, cognitive work on hopelessness and self-criticism patterns, and physiological stabilization of sleep and energy. Progress is tracked weekly in functional terms.</p>
-          <h4>Sustained Recovery · Session 12+</h4>
-          <p>Tracking functional improvement — consistent engagement, stable mood, restored initiative — and building relapse prevention strategies that hold when external pressure returns.</p>
-          <p class="issue-note">Session estimates may vary depending on the complexity of the case.</p>
-        </div>
-      </div>
-
-      <div class="issue-card fade-up" style="transition-delay:.15s" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
-        <div class="issue-card-header">
-          <h3>Emotional Regulation</h3>
-          <span class="issue-toggle">+</span>
-        </div>
-        <p>Emotional regulation is the capacity to experience strong feelings without being overtaken by them. When that capacity breaks down, reactions become disproportionate, relationships suffer, and self-trust erodes. Therapy builds concrete skills for identifying emotional triggers, tolerating distress, and responding rather than reacting — drawing on both cognitive strategies and body-based techniques grounded in current neuroscience research.</p>
-        <div class="issue-detail">
-          <p>Emotional dysregulation means the system that processes and modulates emotional responses is operating outside a workable range. This can show up as explosive reactivity, chronic overwhelm, emotional numbness, or rapid oscillation between states. If you find yourself asking why you cannot control your emotions despite knowing better — the issue is not willpower. It is a pattern in how activation, appraisal, and response are wired together, and it responds to structured, skill-based intervention.</p>
-          <h4>Assessment · Sessions 1–4</h4>
-          <p>We map emotional triggers, activation thresholds, the specific dysregulation pattern (reactivity, shutdown, or oscillation), and the relational or physiological contexts where regulation breaks down. This includes identifying whether the dysregulation is primary or secondary to another condition.</p>
-          <h4>Intervention · Sessions 5–12</h4>
-          <p>Emotion-focused techniques to build awareness of early signals, increase tolerance of activation, and develop deliberate response strategies that replace reactive patterns. This draws directly from the neuroscience of emotional processing and affect regulation.</p>
-          <h4>Sustained Recovery · Session 12+</h4>
-          <p>Tracking regulation capacity under real-life pressure — fewer escalations, faster return to baseline, and more consistent follow-through in high-emotion situations. The goal is durable self-regulation.</p>
-          <p class="issue-note">Session estimates may vary depending on the complexity of the case.</p>
-        </div>
-      </div>
-
-      <div class="issue-card fade-up" style="transition-delay:.2s" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
-        <div class="issue-card-header">
-          <h3>Couples & Relationship Distress</h3>
-          <span class="issue-toggle">+</span>
-        </div>
-        <p>Relationship distress rarely comes from a single argument. It builds through repeated cycles of disconnection, unspoken resentment, or emotional withdrawal that neither partner knows how to interrupt. Couples therapy here identifies those cycles, restores communication patterns that actually work, and addresses the underlying emotional needs driving the conflict — with both partners as active participants in every session.</p>
-        <div class="issue-detail">
-          <p>Relationship distress becomes clinical when the same interaction cycle repeats despite both partners knowing it is destructive. Pursue/withdraw, criticize/defend, escalate/shut down — these are protective strategies under stress that lock both people into a loop neither can exit alone. Recognizing the cycle is the first step; changing it requires structured intervention.</p>
-          <h4>Assessment · Sessions 1–4</h4>
-          <p>We identify the interaction cycle — the triggers that activate it, the emotional responses beneath the surface conflict, and the protective strategies each partner defaults to under stress. This includes individual assessment of each partner's regulatory capacity.</p>
-          <h4>Intervention · Sessions 5–12</h4>
-          <p>Interrupting the cycle through shared regulation skills, structured communication repair, and targeted work on the emotional drivers beneath the surface-level arguments. Both partners learn to de-escalate in real time and re-engage after rupture.</p>
-          <h4>Sustained Recovery · Session 12+</h4>
-          <p>Building sustainable repair capacity — the ability to recognize activation early, de-escalate without withdrawal, and maintain connection under real-world stress. Progress is tracked through observable changes in conflict frequency, recovery speed, and emotional accessibility.</p>
-          <p class="issue-note">Session estimates may vary depending on the complexity of the case.</p>
-        </div>
-      </div>
-
-      <div class="issue-card fade-up" style="transition-delay:.25s" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
-        <div class="issue-card-header">
-          <h3>Life Transitions & Expat Adjustment</h3>
-          <span class="issue-toggle">+</span>
-        </div>
-        <p>Relocating across cultures, changing careers, or navigating a major life shift can destabilize your sense of identity in ways that catch you off guard. Therapy provides structured support for the disorientation, grief, and identity questions that come with transition — particularly for expats and global professionals managing adaptation, isolation, and the pressure of rebuilding a life abroad.</p>
-        <div class="issue-detail">
-          <p>Major transitions destabilize the internal model your mind relies on to predict and navigate daily life — routines, roles, belonging, and meaning can all shift at once. When adjustment demands exceed your recovery capacity, the result is persistent preoccupation, impaired functioning, and a sense of being stuck between who you were and who you are becoming. This is a recognizable pattern, and it responds to structured support.</p>
-          <h4>Assessment · Sessions 1–4</h4>
-          <p>We assess the scope of disruption — what has been lost, what is destabilizing daily functioning, and whether the transition has activated deeper patterns such as anxiety, depression, or identity confusion that need to be addressed alongside the adjustment.</p>
-          <h4>Intervention · Sessions 5–12</h4>
-          <p>Stabilization of immediate functioning (sleep, routine, social engagement), processing of loss or grief where present, and structured rebuilding of direction and identity in the new context. The work is practical and oriented toward forward movement.</p>
-          <h4>Sustained Recovery · Session 12+</h4>
-          <p>Tracking adaptation markers — stable functioning, reduced preoccupation with what was lost, and active investment in the present — to confirm the transition is being integrated and the new foundation is holding.</p>
-          <p class="issue-note">Session estimates may vary depending on the complexity of the case.</p>
-        </div>
-      </div>
-
+  <div class="issue-card fade-up" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+    <div class="issue-card-header">
+      <h3>Burnout & Chronic Stress</h3>
+      <span class="issue-toggle">+</span>
     </div>
+    <p>Your system has been running on overdrive for so long that rest alone does not restore it. Exhaustion, irritability, cognitive fog, and a nervous system stuck on alert.</p>
+    <p class="issue-learn">Learn more →</p>
+    <div class="issue-detail">
+      <p>Burnout is a neurophysiological state — the result of sustained stress that exceeds the body's capacity to recover. It affects sleep architecture, attention, emotional reactivity, and decision-making at a biological level. Unlike depression, which is pervasive and often independent of context, burnout is tied to specific chronic demands — and it responds to targeted clinical intervention when the right mechanisms are addressed. If you recognize yourself in this description, what you are experiencing is real, measurable, and treatable with the right approach.</p>
+      <h4>Assessment · Sessions 1–4</h4>
+      <p>We map stress load, sleep quality, nervous system activation, cognitive patterns, and the specific demands keeping the cycle alive — work, relational, financial, or health-related. The goal is a clear clinical picture of what is maintaining the burnout, so we intervene where it matters most.</p>
+      <h4>Intervention · Sessions 5–12</h4>
+      <p>Targeted downregulation of the stress response through somatic techniques, behavioral restructuring of recovery habits, and cognitive work on the patterns that sustain the overload. Each session has a defined focus and builds on the previous one.</p>
+      <h4>Sustained Recovery · Session 12+</h4>
+      <p>Tracking recovery markers — sleep depth, energy stability, emotional reactivity, and follow-through under pressure — to confirm gains are holding in real-world conditions and prevent relapse into the same cycle.</p>
+      <p class="issue-note">Session estimates may vary depending on the complexity of the case.</p>
+    </div>
+  </div>
+
+  <div class="issue-card fade-up" style="transition-delay:.05s" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+    <div class="issue-card-header">
+      <h3>Anxiety & Nervous System</h3>
+      <span class="issue-toggle">+</span>
+    </div>
+    <p>Racing thoughts, tension, hypervigilance — your body stays in alert mode even when there is no immediate threat. The signal has gotten stuck.</p>
+    <p class="issue-learn">Learn more →</p>
+    <div class="issue-detail">
+      <p>Anxiety becomes clinical when the threat-detection system stays activated beyond the situation that triggered it. It is a dysregulation of the nervous system's alarm response — affecting breathing, muscle tension, sleep, concentration, and the ability to distinguish real danger from perceived danger. If this is what you are living with, it is a pattern that can be identified and changed.</p>
+      <h4>Assessment · Sessions 1–4</h4>
+      <p>We identify the anxiety profile — triggers, physiological activation patterns, avoidance behaviors, and the cognitive loops that keep the threat signal firing. This includes screening for whether the anxiety is primary or being driven by another underlying condition.</p>
+      <h4>Intervention · Sessions 5–12</h4>
+      <p>Graded exposure to disrupt avoidance cycles, cognitive restructuring of threat appraisals, and somatic regulation techniques to retrain the nervous system's baseline response. The plan is adapted to the severity and specific expression of your anxiety.</p>
+      <h4>Sustained Recovery · Session 12+</h4>
+      <p>Building reliable self-regulation under real-world conditions — faster recovery after activation, fewer avoidance cycles, and a measurable reduction in baseline anxiety. The goal is that you can manage activation independently.</p>
+      <p class="issue-note">Session estimates may vary depending on the complexity of the case.</p>
+    </div>
+  </div>
+
+  <div class="issue-card fade-up" style="transition-delay:.1s" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+    <div class="issue-card-header">
+      <h3>Depression & Low Drive</h3>
+      <span class="issue-toggle">+</span>
+    </div>
+    <p>Flatness, withdrawal, loss of drive. A system that has shut down to protect itself, now making daily functioning harder than it should be.</p>
+    <p class="issue-learn">Learn more →</p>
+    <div class="issue-detail">
+      <p>Depression is a state of functional shutdown — the nervous system's response to sustained overload, loss, or helplessness. It affects energy, sleep, concentration, motivation, and the capacity to experience pleasure or meaning. If you have been living in this state, what you are experiencing is a recognizable clinical pattern with a defined pathway out.</p>
+      <h4>Assessment · Sessions 1–4</h4>
+      <p>We assess mood patterns, behavioral withdrawal, sleep architecture, cognitive rigidity, and the specific factors maintaining the depressive cycle — including relational isolation, contextual stressors, and whether the depression is reactive or part of a longer pattern.</p>
+      <h4>Intervention · Sessions 5–12</h4>
+      <p>Behavioral activation targeting the withdrawal-avoidance loop, cognitive work on hopelessness and self-criticism patterns, and physiological stabilization of sleep and energy. Progress is tracked weekly in functional terms.</p>
+      <h4>Sustained Recovery · Session 12+</h4>
+      <p>Tracking functional improvement — consistent engagement, stable mood, restored initiative — and building relapse prevention strategies that hold when external pressure returns.</p>
+      <p class="issue-note">Session estimates may vary depending on the complexity of the case.</p>
+    </div>
+  </div>
+
+  <div class="issue-card fade-up" style="transition-delay:.15s" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+    <div class="issue-card-header">
+      <h3>Emotional Regulation</h3>
+      <span class="issue-toggle">+</span>
+    </div>
+    <p>Reactions that feel disproportionate, emotional numbness, overwhelm — emotions that run you instead of informing you. Regulation is a trainable skill.</p>
+    <p class="issue-learn">Learn more →</p>
+    <div class="issue-detail">
+      <p>Emotional dysregulation means the system that processes and modulates emotional responses is operating outside a workable range. This can show up as explosive reactivity, chronic overwhelm, emotional numbness, or rapid oscillation between states. If you find yourself asking why you cannot control your emotions despite knowing better — the issue is not willpower. It is a pattern in how activation, appraisal, and response are wired together, and it responds to structured, skill-based intervention.</p>
+      <h4>Assessment · Sessions 1–4</h4>
+      <p>We map emotional triggers, activation thresholds, the specific dysregulation pattern (reactivity, shutdown, or oscillation), and the relational or physiological contexts where regulation breaks down. This includes identifying whether the dysregulation is primary or secondary to another condition.</p>
+      <h4>Intervention · Sessions 5–12</h4>
+      <p>Emotion-focused techniques to build awareness of early signals, increase tolerance of activation, and develop deliberate response strategies that replace reactive patterns. This draws directly from the neuroscience of emotional processing and affect regulation.</p>
+      <h4>Sustained Recovery · Session 12+</h4>
+      <p>Tracking regulation capacity under real-life pressure — fewer escalations, faster return to baseline, and more consistent follow-through in high-emotion situations. The goal is durable self-regulation.</p>
+      <p class="issue-note">Session estimates may vary depending on the complexity of the case.</p>
+    </div>
+  </div>
+
+  <div class="issue-card fade-up" style="transition-delay:.2s" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+    <div class="issue-card-header">
+      <h3>Couples & Relationship Distress</h3>
+      <span class="issue-toggle">+</span>
+    </div>
+    <p>Repeating cycles of conflict, emotional distance, avoidance, or the same argument with different words. The pattern is the problem, and patterns can be mapped.</p>
+    <p class="issue-learn">Learn more →</p>
+    <div class="issue-detail">
+      <p>Relationship distress becomes clinical when the same interaction cycle repeats despite both partners knowing it is destructive. Pursue/withdraw, criticize/defend, escalate/shut down — these are protective strategies under stress that lock both people into a loop neither can exit alone. Recognizing the cycle is the first step; changing it requires structured intervention.</p>
+      <h4>Assessment · Sessions 1–4</h4>
+      <p>We identify the interaction cycle — the triggers that activate it, the emotional responses beneath the surface conflict, and the protective strategies each partner defaults to under stress. This includes individual assessment of each partner's regulatory capacity.</p>
+      <h4>Intervention · Sessions 5–12</h4>
+      <p>Interrupting the cycle through shared regulation skills, structured communication repair, and targeted work on the emotional drivers beneath the surface-level arguments. Both partners learn to de-escalate in real time and re-engage after rupture.</p>
+      <h4>Sustained Recovery · Session 12+</h4>
+      <p>Building sustainable repair capacity — the ability to recognize activation early, de-escalate without withdrawal, and maintain connection under real-world stress. Progress is tracked through observable changes in conflict frequency, recovery speed, and emotional accessibility.</p>
+      <p class="issue-note">Session estimates may vary depending on the complexity of the case.</p>
+    </div>
+  </div>
+
+  <div class="issue-card fade-up" style="transition-delay:.25s" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+    <div class="issue-card-header">
+      <h3>Expat Therapy & Life Transitions</h3>
+      <span class="issue-toggle">+</span>
+    </div>
+    <p>Relocation, breakups, career shifts, grief, cultural adjustment — rebuilding stability and direction when the ground shifts beneath you.</p>
+    <p class="issue-learn">Learn more →</p>
+    <div class="issue-detail">
+      <p>Major transitions destabilize the internal model your mind relies on to predict and navigate daily life — routines, roles, belonging, and meaning can all shift at once. When adjustment demands exceed your recovery capacity, the result is persistent preoccupation, impaired functioning, and a sense of being stuck between who you were and who you are becoming. This is a recognizable pattern, and it responds to structured support.</p>
+      <h4>Assessment · Sessions 1–4</h4>
+      <p>We assess the scope of disruption — what has been lost, what is destabilizing daily functioning, and whether the transition has activated deeper patterns such as anxiety, depression, or identity confusion that need to be addressed alongside the adjustment.</p>
+      <h4>Intervention · Sessions 5–12</h4>
+      <p>Stabilization of immediate functioning (sleep, routine, social engagement), processing of loss or grief where present, and structured rebuilding of direction and identity in the new context. The work is practical and oriented toward forward movement.</p>
+      <h4>Sustained Recovery · Session 12+</h4>
+      <p>Tracking adaptation markers — stable functioning, reduced preoccupation with what was lost, and active investment in the present — to confirm the transition is being integrated and the new foundation is holding.</p>
+      <p class="issue-note">Session estimates may vary depending on the complexity of the case.</p>
+    </div>
+  </div>
+
+</div>
   </div>
 </section>
 
