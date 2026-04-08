@@ -110,8 +110,9 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .credential-card-header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
 .credential-card h4{color:var(--white);font-family:var(--sans);font-size:.88rem;font-weight:600;margin-bottom:4px}
 .credential-card .credential-subtitle{font-size:.82rem;color:rgba(255,255,255,.55);margin:0;line-height:1.5}
-.credential-toggle{color:var(--gold);font-size:1.2rem;flex-shrink:0;transition:transform .3s ease;line-height:1}
+.credential-toggle{color:var(--gold);font-size:.78rem;flex-shrink:0;transition:transform .3s ease;line-height:1}
 .credential-card.open .credential-toggle{transform:rotate(45deg)}
+.credential-card.open .credential-toggle{transform:none}
 .credential-detail{max-height:0;overflow:hidden;transition:max-height .4s ease,opacity .3s ease;opacity:0}
 .credential-card.open .credential-detail{max-height:400px;opacity:1}
 .credential-detail p{font-size:.85rem;color:rgba(255,255,255,.7);margin:16px 0 0;line-height:1.75}
@@ -487,86 +488,85 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
   <div class="container">
     <div class="about-content fade-up">
       <p class="label">About</p>
-      <h2>J.R. Hernandez, Psychotherapist & Burnout Specialist</h2>
-      <p>J.R. Hernandez is a psychotherapist and burnout specialist who works with adults navigating burnout, anxiety, and the emotional weight of high-demand lives. Trained at Duke University in neuroscience and the University of Minnesota in integrative medicine, with advanced clinical credentials from ISEP España, J.R. brings a cross-cultural, evidence-based lens to every session. Clients include professionals, expats, and individuals across time zones who need more than surface-level support. The work draws on emotional intelligence research, nervous system science, and structured clinical frameworks — grounded in what the evidence says works, adapted to who you actually are.</p>
+      <h2>J.R. Hernandez,<br>Psychotherapist & Burnout Specialist</h2>
+      <p>I founded Baseline Psychotherapy after a decade living across six countries on three continents — Venezuela, Chile, France, the United States, Singapore, Russia. The reinvention, the invisible exhaustion, the grief you carry while performing competence — I've navigated all of it. I built this practice for professionals, expats, and high-performers whose burnout runs deeper than a vacation can fix. The work is evidence-based, cross-cultural, and grounded in emotional intelligence research and neuroscience.</p>
       <div class="credentials">
-        <div class="credential-card" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
-          <div class="credential-card-header">
-            <div>
-              <h4>Anxiety and Mood Disorders Specialization</h4>
-              <p class="credential-subtitle">American Psychological Association (APA)</p>
-            </div>
-            <span class="credential-toggle">+</span>
-          </div>
-          <div class="credential-detail">
-            <p>A specialization in the diagnostic frameworks and clinical profiles of anxiety disorders, mood disorders, substance use disorders, and addictive behaviors. This credential supports the ability to differentiate between conditions that often overlap in presentation: burnout from clinical depression, primary anxiety from stress-driven activation, and mood instability from emotional dysregulation. In practice, it sharpens the assessment phase — ensuring the intervention targets the correct condition from the start, not just the most visible symptom.</p>
-          </div>
-        </div>
-        <div class="credential-card" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
-          <div class="credential-card-header">
-            <div>
-              <h4>Counselling and Psychotherapy Training</h4>
-              <p class="credential-subtitle">The School of Positive Psychology of Singapore</p>
-            </div>
-            <span class="credential-toggle">+</span>
-          </div>
-          <div class="credential-detail">
-            <p>This is the clinical backbone of how every case moves from first contact to measurable change. The training is grounded in evidence-informed counselling that prioritizes structure: what is maintaining the problem, what specific skills will shift it, and how to track whether the intervention is landing. It shapes how sessions are organized, how the therapeutic relationship is used as a tool, and how clients build the capacity to act differently in the situations that brought them in. This is where the assessment-first, outcome-tracked approach originates.</p>
-          </div>
-        </div>
-        <div class="credential-card" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
-          <div class="credential-card-header">
-            <div>
-              <h4>Master in Emotional Intelligence</h4>
-              <p class="credential-subtitle">Instituto de Estudios Psicológicos de España</p>
-            </div>
-            <span class="credential-toggle">+</span>
-          </div>
-          <div class="credential-detail">
-            <p>A postgraduate degree in the science of emotions — how they are generated, how they dysregulate, and how they can be worked with systematically in therapy. This is the foundation for emotion-focused intervention across burnout, anxiety, and depression. It supports the ability to trace emotional patterns to their neurophysiological source — activation, appraisal, relational triggers — and intervene at the right level. When a client is stuck in emotional reactivity, shutdown, or chronic overwhelm, this training informs how that pattern is mapped, understood, and changed - contributing to relapse prevention.</p>
-          </div>
-        </div>
-        <div class="credential-card" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
-          <div class="credential-card-header">
-            <div>
-              <h4>Medical Neuroscience Training</h4>
-              <p class="credential-subtitle">Duke University School of Medicine, USA</p>
-            </div>
-            <span class="credential-toggle">+</span>
-          </div>
-          <div class="credential-detail">
-            <p>A medical-level neuroscience foundation that bridges the gap between mind and body in clinical work. This training covers how the central nervous system organizes attention, arousal, emotion, and recovery — and what happens when those systems are under sustained strain. It is the basis for the integrative, somatic dimension of this practice: understanding why burnout is neurophysiological, why anxiety lives in the body before it reaches conscious thought, and why sleep disruption, cognitive fatigue, and emotional reactivity are connected at the level of neural circuitry. This is what makes the clinical work genuinely integrative.</p>
-          </div>
-        </div>
-        <div class="credential-card" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
-          <div class="credential-card-header">
-            <div>
-              <h4>Integrative Medicine Specialization</h4>
-              <p class="credential-subtitle">University of Minnesota, USA</p>
-            </div>
-            <span class="credential-toggle">+</span>
-          </div>
-          <div class="credential-detail">
-            <p>The practice incorporates complementary approaches where the evidence supports their use — as adjuncts that address mechanisms alongside standard psychotherapy. This specialization provides the clinical framework for that decision-making: how to assess whether a specific therapy is appropriate for a given case, evaluate its evidence base, educate clients about benefit and risk, and measure whether it produced the intended effect. Guided imagery and mindfulness — covered in depth in this program — are among the most evidence-supported tools for downregulating the nervous system in burnout and chronic stress, and their integration into the intervention phase of this practice is grounded in that training.</p>
-          </div>
-        </div>
-        <div class="credential-card" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
-          <div class="credential-card-header">
-            <div>
-              <h4>Telehealth Specialization</h4>
-              <p class="credential-subtitle">Duke University, USA</p>
-            </div>
-            <span class="credential-toggle">+</span>
-          </div>
-          <div class="credential-detail">
-            <p>Delivering psychotherapy online requires more than technical access — it requires clinical competence in remote assessment, structured video-based interaction, and the ability to conduct evaluations that typically rely on physical presence. This specialization covers the clinical essentials of telehealth delivery: proper session preparation, patient-centered communication, and the neurological assessment skills needed to identify cognitive and physiological presentations through a screen. The neurological exam component is directly relevant to this practice: when a client presents with cognitive fog, fatigue, or sleep disruption, the ability to screen for neurological contributors — remotely and systematically — adds a layer of clinical precision that a purely psychological assessment would miss.</p>
-          </div>
-        </div>
+  <div class="credential-card" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+    <div class="credential-card-header">
+      <div>
+        <h4>Counselling and Psychotherapy Training</h4>
+        <p class="credential-subtitle">The School of Positive Psychology of Singapore</p>
       </div>
+      <span class="credential-toggle">Learn more →</span>
+    </div>
+    <div class="credential-detail">
+      <p>The clinical backbone of how every case moves from first contact to measurable change. This training prioritizes structure over intuition: identifying what is maintaining the problem, determining which specific skills will shift it, and tracking whether the intervention is landing. It shapes how sessions are organized, how the therapeutic relationship functions as a clinical tool, and how clients build capacity to act differently in the situations that brought them in. Every assessment-first, outcome-tracked element of this practice traces back to this training.</p>
+    </div>
+  </div>
+  <div class="credential-card" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+    <div class="credential-card-header">
+      <div>
+        <h4>Anxiety and Mood Disorders Specialization</h4>
+        <p class="credential-subtitle">American Psychological Association (APA)</p>
+      </div>
+      <span class="credential-toggle">Learn more →</span>
+    </div>
+    <div class="credential-detail">
+      <p>A specialization in the diagnostic frameworks and clinical profiles of anxiety disorders, mood disorders, and related conditions. This credential sharpens the ability to differentiate between presentations that often overlap: burnout from clinical depression, primary anxiety from stress-driven activation, mood instability from emotional dysregulation. In practice, this precision matters most at the assessment stage — ensuring the intervention targets what is actually driving the problem, not just the most visible symptom. Getting the formulation right at the start determines whether the work produces lasting change.</p>
+    </div>
+  </div>
+  <div class="credential-card" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+    <div class="credential-card-header">
+      <div>
+        <h4>Medical Neuroscience Training</h4>
+        <p class="credential-subtitle">Duke University School of Medicine, USA</p>
+      </div>
+      <span class="credential-toggle">Learn more →</span>
+    </div>
+    <div class="credential-detail">
+      <p>A medical-level neuroscience foundation that bridges mind and body in clinical work. This training covers how the central nervous system organizes attention, arousal, emotion, and recovery — and what happens when those systems sustain prolonged strain. It is the basis for the integrative, somatic dimension of this practice: understanding why burnout is neurophysiological, why anxiety activates the body before it reaches conscious thought, and why sleep disruption, cognitive fatigue, and emotional reactivity connect at the level of neural circuitry. This is what makes the clinical work genuinely integrative.</p>
+    </div>
+  </div>
+  <div class="credential-card" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+    <div class="credential-card-header">
+      <div>
+        <h4>Integrative Medicine Specialization</h4>
+        <p class="credential-subtitle">University of Minnesota, USA</p>
+      </div>
+      <span class="credential-toggle">Learn more →</span>
+    </div>
+    <div class="credential-detail">
+      <p>This specialization provides the clinical framework for incorporating complementary approaches alongside standard psychotherapy — where the evidence supports their use. The focus is on rigorous decision-making: assessing whether a specific tool is appropriate for a given case, evaluating its evidence base, educating clients about benefit and risk, and measuring whether it produced the intended effect. Guided imagery and mindfulness — covered in depth in this program — are among the most evidence-supported methods for downregulating the nervous system in burnout and chronic stress. Their integration here is grounded in that training.</p>
+    </div>
+  </div>
+  <div class="credential-card" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+    <div class="credential-card-header">
+      <div>
+        <h4>Master in Emotional Intelligence</h4>
+        <p class="credential-subtitle">Instituto de Estudios Psicológicos de España</p>
+      </div>
+      <span class="credential-toggle">Learn more →</span>
+    </div>
+    <div class="credential-detail">
+      <p>A postgraduate degree in the science of emotions — how they are generated, how they dysregulate, and how they can be worked with systematically in therapy. This credential forms the foundation for emotion-focused intervention across burnout, anxiety, and depression. It supports the ability to trace emotional patterns to their neurophysiological source — activation, appraisal, relational triggers — and intervene at the correct level. When a client presents with reactivity, emotional shutdown, or chronic overwhelm, this training determines how that pattern is identified, mapped, and systematically changed.</p>
+    </div>
+  </div>
+  <div class="credential-card" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+    <div class="credential-card-header">
+      <div>
+        <h4>Telehealth Specialization</h4>
+        <p class="credential-subtitle">Duke University, USA</p>
+      </div>
+      <span class="credential-toggle">Learn more →</span>
+    </div>
+    <div class="credential-detail">
+      <p>Delivering psychotherapy online requires more than technical access — it requires clinical competence in remote assessment, structured video-based interaction, and the ability to conduct evaluations that typically depend on physical presence. This specialization covers the essentials of telehealth delivery: proper session preparation, patient-centered communication, and the neurological screening skills needed to identify cognitive and physiological presentations through a screen. When a client presents with cognitive fog, fatigue, or sleep disruption, the ability to screen for neurological contributors remotely adds a layer of clinical precision that a standard assessment would miss.</p>
+    </div>
+  </div>
+</div>
       <div class="about-spanish">
-        <p><strong>También disponible en español.</strong> Sesiones online para hispanohablantes en cualquier parte del mundo.</p>
-        <p style="margin-top:10px"><a href="https://baselinepsychotherapy.com/es/" style="color:var(--gold);text-decoration:underline;text-underline-offset:3px">Cambiar a Español →</a></p>
-      </div>
+  <p><strong>También disponible en español.</strong> Sesiones online para hispanohablantes en cualquier parte del mundo. <a href="https://baselinepsychotherapy.com/es/" style="color:var(--gold);text-decoration:underline;text-underline-offset:3px">Cambiar a Español →</a></p>
+</div>
     </div>
   </div>
 </section>
