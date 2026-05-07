@@ -116,6 +116,14 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://baselinepsychotherapy.com/es/libros-inteligencia-emocional/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/libros-inteligencia-emocional/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/emotional-intelligence-books/"/>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://baselinepsychotherapy.com/emotional-intelligence-books/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/emotional-intelligence-books/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/libros-inteligencia-emocional/"/>
