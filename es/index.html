@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-00D52WK9X7"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-00D52WK9X7');
+  window.dataLayer=window.dataLayer||[];
+  window.gtag=function(){dataLayer.push(arguments)};
+  window._cbGet=function(n){var m=document.cookie.match('(?:^|; )'+n+'=([^;]*)');return m?decodeURIComponent(m[1]):null};
+  window._loadAnalytics=function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-00D52WK9X7';document.head.appendChild(s);window.gtag('js',new Date());window.gtag('config','G-00D52WK9X7');(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wz4n6u4j3h")};
+  if(window._cbGet('cookie_consent')==='accepted'){window._loadAnalytics()}
   </script>
-  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window, document, "clarity", "script", "wz4n6u4j3h");</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Terapia Online para Burnout y Ansiedad | J.R. Hernandez, Psicoterapeuta</title>
@@ -295,6 +293,13 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 }
 @media(min-width:769px){.mobile-cta-bar{display:none!important}}
   .cta .btn-outline:hover{background:rgba(255,255,255,.12);border-color:var(--white);color:var(--white)}
+#cookieBanner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:960;background:var(--navy);padding:14px clamp(20px,4vw,40px);align-items:center;gap:20px;box-shadow:0 -2px 20px rgba(0,0,0,.25);font-family:var(--sans)}
+#cookieBanner p{margin:0;font-size:.84rem;line-height:1.5;color:rgba(255,255,255,.82);flex:1}
+.cb-actions{display:flex;gap:10px;flex-shrink:0}
+.cb-btn{padding:9px 20px;font-family:var(--sans);font-size:.82rem;font-weight:600;border-radius:4px;cursor:pointer;border:none;transition:all .2s}
+.cb-accept{background:var(--gold);color:var(--navy)}.cb-accept:hover{background:var(--gold-light,#D4B76A)}
+.cb-decline{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.35)}.cb-decline:hover{border-color:var(--white);background:rgba(255,255,255,.08)}
+@media(max-width:768px){#cookieBanner{flex-direction:column;align-items:flex-start;bottom:68px;gap:12px}.cb-actions{width:100%}}
   </style>
   <script type="application/ld+json">
 {
@@ -1055,6 +1060,16 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click'
   },{threshold:0.05});
   obs.observe(contact);
 })();
+</script>
+<div id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <p>This site uses cookies for analytics (Google Analytics and Microsoft Clarity) to improve your experience. No personal data is sold or shared with advertisers.</p>
+  <div class="cb-actions">
+    <button class="cb-btn cb-accept" id="cookieAccept">Accept</button>
+    <button class="cb-btn cb-decline" id="cookieDecline">Decline</button>
+  </div>
+</div>
+<script>
+(function(){var b=document.getElementById('cookieBanner');if(window._cbGet('cookie_consent')){return}b.style.display='flex';function cbSet(v){var d=new Date();d.setTime(d.getTime()+365*864e5);document.cookie='cookie_consent='+v+';expires='+d.toUTCString()+';path=/;SameSite=Lax'}document.getElementById('cookieAccept').onclick=function(){cbSet('accepted');b.style.display='none';window._loadAnalytics()};document.getElementById('cookieDecline').onclick=function(){cbSet('declined');b.style.display='none'}})();
 </script>
 </body>
 </html>
