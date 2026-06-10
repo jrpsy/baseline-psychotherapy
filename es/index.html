@@ -300,6 +300,12 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 .cb-accept{background:var(--gold);color:var(--navy)}.cb-accept:hover{background:var(--gold-light,#D4B76A)}
 .cb-decline{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.35)}.cb-decline:hover{border-color:var(--white);background:rgba(255,255,255,.08)}
 @media(max-width:768px){#cookieBanner{flex-direction:column;align-items:flex-start;bottom:68px;gap:12px}.cb-actions{width:100%}.whatsapp-btn{display:none!important}}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.marquee-bar{background:var(--gold);padding:14px 0;overflow:hidden;position:relative}
+.marquee-track{display:flex;animation:marquee 25s linear infinite;width:max-content}
+.marquee-content{display:flex;align-items:center;gap:48px;padding:0 24px;white-space:nowrap}
+.marquee-content span{font-family:var(--sans);font-size:.88rem;font-weight:600;color:var(--white)}
+.marquee-sep{font-size:.88rem;color:rgba(255,255,255,.4);font-weight:400}
   </style>
   <script type="application/ld+json">
 {
@@ -504,6 +510,8 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
     </div>
   </div>
 </section>
+
+<div class="marquee-bar"><div class="marquee-track"><div class="marquee-content"><span>5.0 ★ Google Reviews</span><span class="marquee-sep">|</span><span>21+ Países Atendidos</span><span class="marquee-sep">|</span><span>5.000+ Horas de Experiencia en Terapia</span><span class="marquee-sep">|</span><span>10.000+ Horas de Formación Profesional</span><span class="marquee-sep">|</span><span>Formación Médica</span></div><div class="marquee-content"><span>5.0 ★ Google Reviews</span><span class="marquee-sep">|</span><span>21+ Países Atendidos</span><span class="marquee-sep">|</span><span>5.000+ Horas de Experiencia en Terapia</span><span class="marquee-sep">|</span><span>10.000+ Horas de Formación Profesional</span><span class="marquee-sep">|</span><span>Formación Médica</span></div></div></div>
 
 <!-- ABOUT -->
 <section class="about" id="about">
