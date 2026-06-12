@@ -308,6 +308,11 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 .marquee-content{display:flex;align-items:center;gap:48px;padding:0 24px;white-space:nowrap}
 .marquee-content span{font-family:var(--sans);font-size:.88rem;font-weight:600;color:var(--white)}
 .marquee-sep{font-size:1.2rem;color:rgba(255,255,255,.7);font-weight:400}
+@media(prefers-reduced-motion:reduce){
+  .fade-up{opacity:1;transform:none;transition:none}
+  .marquee-track{animation:none}
+  *{scroll-behavior:auto!important}
+}
   </style>
   <script type="application/ld+json">
 {

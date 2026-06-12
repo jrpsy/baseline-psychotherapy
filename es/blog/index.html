@@ -55,6 +55,11 @@
 .cb-accept{background:var(--gold);color:var(--navy)}.cb-accept:hover{background:var(--gold-light,#D4B76A)}
 .cb-decline{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.35)}.cb-decline:hover{border-color:var(--white);background:rgba(255,255,255,.08)}
 @media(max-width:768px){#cookieBanner{flex-direction:column;align-items:flex-start;bottom:68px;gap:12px}.cb-actions{width:100%}.whatsapp-btn{display:none!important}}
+@media(prefers-reduced-motion:reduce){
+  .fade-up{opacity:1;transform:none;transition:none}
+  .marquee-track{animation:none}
+  *{scroll-behavior:auto!important}
+}
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio","item":"https://baselinepsychotherapy.com/es/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://baselinepsychotherapy.com/es/blog/"}]}</script>
 </head>
