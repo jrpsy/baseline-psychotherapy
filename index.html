@@ -222,6 +222,11 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .review-card blockquote{font-size:.92rem;line-height:1.75;color:rgba(255,255,255,.85);margin-bottom:20px;font-style:italic}
 .review-author{font-size:.85rem;font-weight:600;color:var(--white)}
 .review-source{font-size:.78rem;color:rgba(255,255,255,.5)}
+.review-card{position:relative}
+.review-card::before{content:'\201C';position:absolute;top:8px;right:20px;font-family:var(--serif);font-size:5rem;line-height:1;color:var(--gold);opacity:.15;pointer-events:none}
+.review-card.featured{grid-column:span 2}
+.review-card.featured blockquote{font-size:1.05rem;line-height:1.7}
+@media(max-width:768px){.review-card.featured{grid-column:span 1}}
 .reviews-footer{margin-top:40px;text-align:center;position:relative;z-index:2}
 .reviews-footer a{font-size:.88rem;color:var(--gold);text-decoration:underline;text-underline-offset:4px;transition:color .2s}
 .reviews-footer a:hover{color:var(--gold-light)}
@@ -927,8 +932,9 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
       <h2>Online Psychotherapy Reviews</h2>
       <p>Clients who came looking for structure, clarity, and a therapist willing to be direct about what the work would require, and what it would produce.</p>
     </div>
+    <div class="reviews-aggregate fade-up" style="display:flex;align-items:center;gap:16px;justify-content:center;margin-top:32px"><span style="font-family:var(--serif);font-size:3.2rem;font-weight:700;color:var(--gold);line-height:1">5.0</span><div><div class="review-stars" style="margin-bottom:2px">★★★★★</div><span style="font-size:.82rem;color:rgba(255,255,255,.6)">18 Google Reviews</span></div></div>
     <div class="reviews-grid">
-      <div class="review-card fade-up">
+      <div class="review-card featured fade-up">
         <div class="review-stars">★★★★★</div>
         <blockquote>"I've had therapy before both in Singapore and abroad and I can say that my experience with JR is by far the best I've ever had. His approach to therapy is very practical, his methods really helped me get better and track my progress and see how far I got."</blockquote>
         <p class="review-author">Anna Vergés</p><p class="review-source">Google Reviews</p>

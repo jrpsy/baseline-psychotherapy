@@ -222,6 +222,11 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .review-card blockquote{font-size:.92rem;line-height:1.75;color:rgba(255,255,255,.85);margin-bottom:20px;font-style:italic}
 .review-author{font-size:.85rem;font-weight:600;color:var(--white)}
 .review-source{font-size:.78rem;color:rgba(255,255,255,.5)}
+.review-card{position:relative}
+.review-card::before{content:'\201C';position:absolute;top:8px;right:20px;font-family:var(--serif);font-size:5rem;line-height:1;color:var(--gold);opacity:.15;pointer-events:none}
+.review-card.featured{grid-column:span 2}
+.review-card.featured blockquote{font-size:1.05rem;line-height:1.7}
+@media(max-width:768px){.review-card.featured{grid-column:span 1}}
 .reviews-footer{margin-top:40px;text-align:center;position:relative;z-index:2}
 .reviews-footer a{font-size:.88rem;color:var(--gold);text-decoration:underline;text-underline-offset:4px;transition:color .2s}
 .reviews-footer a:hover{color:var(--gold-light)}
@@ -926,8 +931,9 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
       <h2>Reseñas de Psicoterapia Online</h2>
       <p>Clientes que llegaron buscando estructura, claridad y un terapeuta dispuesto a ser directo sobre lo que el trabajo requiere, y lo que produce.</p>
     </div>
+    <div class="reviews-aggregate fade-up" style="display:flex;align-items:center;gap:16px;justify-content:center;margin-top:32px"><span style="font-family:var(--serif);font-size:3.2rem;font-weight:700;color:var(--gold);line-height:1">5.0</span><div><div class="review-stars" style="margin-bottom:2px">★★★★★</div><span style="font-size:.82rem;color:rgba(255,255,255,.6)">18 Google Reviews</span></div></div>
     <div class="reviews-grid">
-      <div class="review-card fade-up">
+      <div class="review-card featured fade-up">
         <div class="review-stars">★★★★★</div>
         <blockquote>"He hecho terapia antes, tanto en Singapur como en el extranjero, y puedo decir que mi experiencia con JR es, con diferencia, la mejor que he tenido. Su enfoque terapéutico es muy práctico, sus métodos realmente me ayudaron a mejorar y a registrar mi progreso y ver lo lejos que llegué."</blockquote>
         <p class="review-author">Anna Vergés</p><p class="review-source">Google Reviews</p>
