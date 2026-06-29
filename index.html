@@ -315,6 +315,7 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 .cb-accept{background:var(--gold);color:var(--navy)}.cb-accept:hover{background:var(--gold-light,#D4B76A)}
 .cb-decline{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.35)}.cb-decline:hover{border-color:var(--white);background:rgba(255,255,255,.08)}
 @media(max-width:768px){#cookieBanner{flex-direction:column;align-items:flex-start;bottom:68px;gap:12px}.cb-actions{width:100%}.whatsapp-btn{display:none!important}}
+@media(max-width:768px){.clinical-work div[style*="grid-template-columns"]{grid-template-columns:1fr!important}}
 @keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 .marquee-bar{background:var(--gold);padding:14px 0;overflow:hidden;position:relative}
 .marquee-track{display:flex;animation:marquee 25s linear infinite;width:max-content}
@@ -848,6 +849,32 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
         <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27m%20interested%20in%20the%20Monthly%20Plan." target="_blank" rel="noopener" class="btn btn-gold btn-sm">Get Started</a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- CLINICAL WORK -->
+<section class="clinical-work" style="padding:var(--section-py) 0;background:var(--navy);position:relative;overflow:hidden">
+  <div class="container">
+    <div class="section-intro fade-up">
+      <p class="label" style="color:var(--gold);text-align:center">From the Practice</p>
+      <h2 style="color:var(--white)">Clinical Work</h2>
+      <p style="color:rgba(255,255,255,.6)">Real cases, anonymized. Each one required a different formulation, a different intervention, and a different clinical path. What they share is the same principle: identify the mechanism, target it precisely, and track whether the change holds.</p>
+    </div>
+    <div style="margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:32px 28px" class="fade-up">
+        <p style="font-size:.82rem;font-weight:600;color:var(--gold);margin-bottom:16px;letter-spacing:.02em">Male, mid-30s · Finance · North America</p>
+        <p style="font-size:.9rem;line-height:1.75;color:rgba(255,255,255,.72)">Came in during an acute occupational crisis after years of accumulated burnout he had not recognized as burnout. He presented with insomnia, emotional numbness, chronic fatigue, and a nervous system that would not stand down. Assessment revealed that the distress went beyond the workplace situation: his identity structure and value system were in conflict in ways that had been quietly eroding him for years. The intervention integrated cognitive restructuring, values work, self-compassion, and processing of deeper patterns maintaining the cycle. He recovered fully, reorganized his professional life around what genuinely matters to him, and committed to continuing the deeper work that the process opened up. He described his experience as a restorative process that helped him find himself.</p>
+      </div>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:32px 28px" class="fade-up" style="transition-delay:.08s">
+        <p style="font-size:.82rem;font-weight:600;color:var(--gold);margin-bottom:16px;letter-spacing:.02em">Female, late 30s · Healthcare · Western Europe</p>
+        <p style="font-size:.9rem;line-height:1.75;color:rgba(255,255,255,.72)">Came in with chronic anxiety, panic episodes, insomnia, and depressive symptoms that had persisted for over a decade despite previous treatment. She had been through medication and therapy before, with limited results. Assessment revealed that what had been consistently read as depression by previous clinicians was actually being maintained by unprocessed complex trauma. The correct formulation changed the entire direction of the intervention. The work was layered: biological stabilization and sleep first, then targeted tools for managing panic, then cognitive and identity work, followed by deep trauma processing. She resolved the trauma that had been running her life for years, reorganized her identity and narrative, and moved from surviving each day to living with agency, self-worth, and direction.</p>
+      </div>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:32px 28px" class="fade-up" style="transition-delay:.16s">
+        <p style="font-size:.82rem;font-weight:600;color:var(--gold);margin-bottom:16px;letter-spacing:.02em">Male, mid-40s · Tech · Asia</p>
+        <p style="font-size:.9rem;line-height:1.75;color:rgba(255,255,255,.72)">Came in after eighteen months of progressive energy loss, emotional disconnection, loss of direction, and a sense that the internal engine driving his career had simply shut off. What looked like burnout on the surface turned out to be maintained by deeper structural factors beyond occupational stress. The intervention was layered: biological stabilization first, then behavioral reactivation, then targeted work on the cognitive loop and identity patterns keeping him stuck. He had recovered energy, agency, and motivation, started a new professional project on his own initiative, and is independently managing the thought patterns that had previously run his days. With the presenting concerns resolved, he committed to continuing the deeper structural work beyond what originally brought him to therapy.</p>
+      </div>
+    </div>
+    <p class="fade-up" style="font-size:.78rem;color:rgba(255,255,255,.3);text-align:center;margin-top:36px;font-style:italic">All identifying details have been changed. Profiles are representative, not exact.</p>
   </div>
 </section>
 
