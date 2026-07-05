@@ -309,7 +309,19 @@
   </url>
   <url>
     <loc>https://baselinepsychotherapy.com/policies.html</loc>
-    <lastmod>2026-03-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/policies.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/politicas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/policies.html"/>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://baselinepsychotherapy.com/es/politicas.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/policies.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/politicas.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/policies.html"/>
+    <lastmod>2026-07-05</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
