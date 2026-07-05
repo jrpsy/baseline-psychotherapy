@@ -122,7 +122,7 @@ navLinks.querySelectorAll('a').forEach(l=>{l.addEventListener('click',()=>{navLi
 const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
 (function(){var bar=document.getElementById('mobileCTABar');var contact=document.getElementById('contact');if(!bar||!contact)return;var cObs=new IntersectionObserver(function(entries){entries.forEach(function(e){bar.classList.toggle('hidden',e.isIntersecting)})},{threshold:0.05});cObs.observe(contact)})();
 </script>
-<div id="cookieBanner" role="dialog" aria-label="Cookie consent">
+<div id="cookieBanner" role="dialog" aria-label="Consentimiento de cookies">
   <p>Este sitio utiliza cookies de analítica (Google Analytics y Microsoft Clarity) para mejorar su experiencia. No se venden ni comparten datos personales con anunciantes.</p>
   <div class="cb-actions">
     <button class="cb-btn cb-accept" id="cookieAccept">Aceptar</button>
