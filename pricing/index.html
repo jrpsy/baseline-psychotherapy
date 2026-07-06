@@ -190,9 +190,9 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
   .nav-links.active{display:flex;flex-direction:column;align-items:flex-start;position:absolute;top:72px;left:0;right:0;background:var(--white);padding:24px;gap:20px;border-bottom:1px solid var(--border);box-shadow:0 8px 30px rgba(0,0,0,.08);max-height:calc(100vh - 72px);overflow-y:auto}
   .nav-links.active .nav-cta{display:block;margin-left:0;width:100%}
   .nav-links.active .nav-cta .btn{width:100%;justify-content:center;padding:14px 24px;font-size:.95rem}
-  .nav-links.active .dropdown{position:static;transform:none;opacity:1;visibility:visible;box-shadow:none;border:none;padding:8px 0 0 16px;min-width:0}
+  .nav-links.active .dropdown{display:none;position:static;transform:none;opacity:1;visibility:visible;box-shadow:none;border:none;padding:8px 0 0 16px;min-width:0}
   .nav-links.active .dropdown a{padding:14px 0}
-  .nav-links.active .has-dropdown>a .caret{display:none}
+  .nav-links.active .has-dropdown.open .dropdown{display:block}.nav-links.active .has-dropdown.open>a .caret{transform:rotate(180deg)}
   .price-row{grid-template-columns:1fr}
   .price-row .price-card:last-child{max-width:none}
   .pricing-hero{padding-top:112px}
@@ -508,7 +508,9 @@ navToggle.addEventListener('click',()=>{
   const s=navToggle.querySelectorAll('span');
   if(navLinks.classList.contains('active')){s[0].style.transform='rotate(45deg) translate(5px,5px)';s[1].style.opacity='0';s[2].style.transform='rotate(-45deg) translate(5px,-5px)'}
   else{s[0].style.transform='';s[1].style.opacity='';s[2].style.transform=''}
+  navLinks.querySelectorAll('.open').forEach(o=>o.classList.remove('open'));
 });
+navLinks.querySelectorAll('.has-dropdown>a').forEach(l=>{l.addEventListener('click',e=>{if(navLinks.classList.contains('active')){e.preventDefault();l.parentElement.classList.toggle('open')}})});
 document.querySelectorAll('.faq-question').forEach(b=>{b.addEventListener('click',()=>{const i=b.parentElement,w=i.classList.contains('active');document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('active'));if(!w)i.classList.add('active')})});
 const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
