@@ -196,6 +196,8 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 @media(max-width:768px){
   .nav-links{display:none}.nav-cta{display:none}.nav-mobile-toggle{display:flex}
   .nav-links.active{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--white);padding:24px;gap:20px;border-bottom:1px solid var(--border);box-shadow:0 8px 30px rgba(0,0,0,.08);max-height:calc(100vh - 72px);overflow-y:auto}
+  .nav-links.active .nav-cta{display:block;margin-left:0;width:100%}
+  .nav-links.active .nav-cta .btn{width:100%;justify-content:center;padding:14px 24px;font-size:.95rem}
   .symptoms-grid{grid-template-columns:1fr}
   .process-steps{grid-template-columns:1fr;gap:40px}
   .process-steps::before{display:none}
