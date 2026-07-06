@@ -49,8 +49,8 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .label{font-family:var(--sans);font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:block}
 .section-intro{max-width:680px;margin:0 auto;text-align:center}.section-intro p{margin-top:20px;opacity:.85}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;font-family:var(--sans);font-size:.95rem;font-weight:600;border-radius:4px;transition:all .3s ease;letter-spacing:.01em}
-.btn-primary{background:var(--navy);color:var(--white)}.btn-primary:hover{background:var(--slate);transform:translateY(-1px);box-shadow:0 4px 20px rgba(20,32,46,.25)}
-.btn-gold{background:var(--gold);color:var(--navy)}.btn-gold:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 4px 20px rgba(201,168,76,.3)}
+.btn-primary{background:var(--navy);color:var(--white)}@media(hover:hover){.btn-primary:hover{background:var(--slate);transform:translateY(-1px);box-shadow:0 4px 20px rgba(20,32,46,.25)}}
+.btn-gold{background:var(--gold);color:var(--navy)}@media(hover:hover){.btn-gold:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 4px 20px rgba(201,168,76,.3)}}
 .btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}.btn-outline:hover{background:var(--navy);color:var(--white)}
 .btn-sm{padding:12px 24px;font-size:.88rem}
 .btn svg{width:18px;height:18px;transition:transform .3s ease}.btn:hover svg{transform:translateX(3px)}
@@ -94,7 +94,7 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .price-section{padding:32px 0 clamp(60px,7vw,90px);background:var(--bg)}
 .price-row{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;align-items:stretch}
 .price-card{background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:34px 26px 28px;display:flex;flex-direction:column;position:relative;transition:all .3s ease}
-.price-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(20,32,46,.08)}
+@media(hover:hover){.price-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(20,32,46,.08)}}
 .price-card.featured{border-color:var(--gold);box-shadow:0 8px 30px rgba(201,168,76,.12)}
 .price-card.featured::before{content:'Most common';position:absolute;top:-1px;right:20px;background:var(--gold);color:var(--navy);font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 13px;border-radius:0 0 6px 6px}
 .price-card h3{font-size:1.15rem;margin-bottom:12px;line-height:1.25}
@@ -148,13 +148,13 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .cta-info span::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold)}
 
 /* FOOTER */
-.footer{padding:60px 0 32px;background:#0C1620;color:rgba(255,255,255,.5)}
+.footer{padding:60px 0 32px;background:#0C1620;color:rgba(255,255,255,.65)}
 .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;margin-bottom:48px}
 .footer-brand h4{color:var(--white);font-family:var(--sans);font-size:1rem;margin-bottom:12px}
-.footer-brand p{font-size:.85rem;line-height:1.7;color:rgba(255,255,255,.45)}
+.footer-brand p{font-size:.85rem;line-height:1.7;color:rgba(255,255,255,.6)}
 .footer h5{color:var(--white);font-family:var(--sans);font-size:.85rem;font-weight:600;margin-bottom:20px;letter-spacing:.05em}
 .footer-links{list-style:none}.footer-links li{margin-bottom:10px}
-.footer-links a{font-size:.85rem;color:rgba(255,255,255,.5);transition:color .2s}.footer-links a:hover{color:var(--gold)}
+.footer-links a{font-size:.85rem;color:rgba(255,255,255,.65);transition:color .2s}.footer-links a:hover{color:var(--gold)}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;font-size:.85rem;text-align:center}
 
 /* WHATSAPP */

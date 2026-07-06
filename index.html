@@ -60,8 +60,8 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .label{font-family:var(--sans);font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:block}
 .section-intro{max-width:680px;margin:0 auto;text-align:center}.section-intro p{margin-top:20px;opacity:.85}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;font-family:var(--sans);font-size:.95rem;font-weight:600;border-radius:4px;transition:all .3s ease;letter-spacing:.01em}
-.btn-primary{background:var(--navy);color:var(--white)}.btn-primary:hover{background:var(--slate);transform:translateY(-1px);box-shadow:0 4px 20px rgba(20,32,46,.25)}
-.btn-gold{background:var(--gold);color:var(--navy)}.btn-gold:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 4px 20px rgba(201,168,76,.3)}
+.btn-primary{background:var(--navy);color:var(--white)}@media(hover:hover){.btn-primary:hover{background:var(--slate);transform:translateY(-1px);box-shadow:0 4px 20px rgba(20,32,46,.25)}}
+.btn-gold{background:var(--gold);color:var(--navy)}@media(hover:hover){.btn-gold:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 4px 20px rgba(201,168,76,.3)}}
 .btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}.btn-outline:hover{background:var(--navy);color:var(--white)}
 .btn-sm{padding:12px 24px;font-size:.88rem}
 .btn svg{width:18px;height:18px;transition:transform .3s ease}.btn:hover svg{transform:translateX(3px)}
@@ -149,7 +149,7 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .issues-grid{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .issue-card{background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:36px 30px;transition:all .3s ease;position:relative;overflow:hidden;cursor:pointer;box-shadow:var(--shadow-rest)}
 .issue-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold);opacity:0;transition:opacity .3s ease}
-.issue-card:hover{transform:translateY(var(--lift));box-shadow:var(--shadow-lift);border-color:var(--border-light)}
+@media(hover:hover){.issue-card:hover{transform:translateY(var(--lift));box-shadow:var(--shadow-lift);border-color:var(--border-light)}}
 .issue-card:hover::before{opacity:1}
 .issue-card.open{transform:none;box-shadow:0 12px 40px rgba(20,32,46,.08);border-color:var(--gold)}
 .issue-card.open::before{opacity:1}
@@ -197,7 +197,7 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .workshops-grid{margin-top:48px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}
 .workshop-list{display:flex;flex-direction:column;gap:24px}
 .workshop-card{background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:32px;box-shadow:var(--shadow-rest);transition:all .3s ease}
-.workshop-card:hover{box-shadow:var(--shadow-lift);transform:translateY(var(--lift))}
+@media(hover:hover){.workshop-card:hover{box-shadow:var(--shadow-lift);transform:translateY(var(--lift))}}
 .workshop-card h3{margin-bottom:10px}.workshop-card p{font-size:.9rem;margin-bottom:16px}.workshop-card .label{font-size:.78rem}
 .workshops-image-frame{width:100%;aspect-ratio:4/5;border-radius:8px;overflow:hidden;background:var(--border-light)}
 .workshops-image-frame img{width:100%;height:100%;object-fit:cover}
@@ -206,7 +206,7 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .books{padding:var(--section-py) 0;background:var(--bg)}
 .books-grid{margin-top:48px;display:grid;grid-template-columns:repeat(2,1fr);gap:40px}
 .book-card{display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:center;background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:28px;box-shadow:var(--shadow-rest);transition:all .3s ease}
-.book-card:hover{box-shadow:var(--shadow-lift);transform:translateY(var(--lift))}
+@media(hover:hover){.book-card:hover{box-shadow:var(--shadow-lift);transform:translateY(var(--lift))}}
 .book-cover{width:200px;height:200px;border-radius:4px;overflow:hidden;background:var(--border-light);box-shadow:4px 4px 20px rgba(0,0,0,.1);flex-shrink:0}
 .book-cover img{width:100%;height:100%;object-fit:cover}
 .book-info h3{margin-bottom:10px;font-size:1.2rem}.book-info p{font-size:.88rem;margin-bottom:20px}
@@ -255,13 +255,13 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .cta-info span::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold)}
 
 /* FOOTER */
-.footer{border-top:1px solid rgba(255,255,255,.07);padding:48px 0 28px;background:#0C1620;color:rgba(255,255,255,.5)}
+.footer{border-top:1px solid rgba(255,255,255,.07);padding:48px 0 28px;background:#0C1620;color:rgba(255,255,255,.65)}
 .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;margin-bottom:40px}
 .footer-brand h4{color:var(--white);font-family:var(--sans);font-size:1rem;margin-bottom:12px}
-.footer-brand p{font-size:.85rem;line-height:1.7;color:rgba(255,255,255,.45)}
+.footer-brand p{font-size:.85rem;line-height:1.7;color:rgba(255,255,255,.6)}
 .footer h5{color:var(--white);font-family:var(--sans);font-size:.85rem;font-weight:600;margin-bottom:20px;letter-spacing:.05em}
 .footer-links{list-style:none}.footer-links li{margin-bottom:10px}
-.footer-links a{display:inline-block;font-size:.85rem;color:rgba(255,255,255,.5);transition:color .2s,transform .2s}.footer-links a:hover{color:var(--gold);transform:translateX(3px)}
+.footer-links a{display:inline-block;font-size:.85rem;color:rgba(255,255,255,.65);transition:color .2s,transform .2s}.footer-links a:hover{color:var(--gold);transform:translateX(3px)}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;font-size:.85rem;text-align:center}
 
 /* WHATSAPP */

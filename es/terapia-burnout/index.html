@@ -48,8 +48,8 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .label{font-family:var(--sans);font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:block}
 .section-intro{max-width:680px;margin:0 auto;text-align:center}.section-intro p{margin-top:20px;opacity:.85}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;font-family:var(--sans);font-size:.95rem;font-weight:600;border-radius:4px;transition:all .3s ease;letter-spacing:.01em}
-.btn-primary{background:var(--navy);color:var(--white)}.btn-primary:hover{background:var(--slate);transform:translateY(-1px);box-shadow:0 4px 20px rgba(20,32,46,.25)}
-.btn-gold{background:var(--gold);color:var(--navy)}.btn-gold:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 4px 20px rgba(201,168,76,.3)}
+.btn-primary{background:var(--navy);color:var(--white)}@media(hover:hover){.btn-primary:hover{background:var(--slate);transform:translateY(-1px);box-shadow:0 4px 20px rgba(20,32,46,.25)}}
+.btn-gold{background:var(--gold);color:var(--navy)}@media(hover:hover){.btn-gold:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 4px 20px rgba(201,168,76,.3)}}
 .btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}.btn-outline:hover{background:var(--navy);color:var(--white)}
 .btn-sm{padding:12px 24px;font-size:.88rem}
 .btn svg{width:18px;height:18px;transition:transform .3s ease}.btn:hover svg{transform:translateX(3px)}
@@ -100,7 +100,7 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .about-therapist-content .about-link{font-size:.85rem;font-weight:600;color:var(--gold);text-decoration:underline;text-underline-offset:3px}
 .symptoms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
 .symptom-card{background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:32px 26px;position:relative;overflow:hidden;box-shadow:var(--shadow-rest);transition:all .3s ease}
-.symptom-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift)}
+@media(hover:hover){.symptom-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift)}}
 .symptom-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold)}
 .symptom-card h3{font-size:1.15rem;margin-bottom:12px}
 .symptom-card p{font-size:.9rem;line-height:1.75;opacity:.8}
@@ -152,7 +152,7 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .related-services{padding:60px 0 var(--section-py);background:var(--bg-warm)}
 .related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px}
 .related-card{background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:28px 24px;box-shadow:var(--shadow-rest);transition:all .3s ease;display:block}
-.related-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift);border-color:var(--gold)}
+@media(hover:hover){.related-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift);border-color:var(--gold)}}
 .related-card h3{font-size:1.1rem;margin-bottom:8px}
 .related-card p{font-size:.85rem;line-height:1.65;opacity:.7;margin-bottom:14px}
 .related-card .link{font-size:.82rem;font-weight:600;color:var(--gold)}
@@ -164,13 +164,13 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .cta-info{margin-top:40px;display:flex;gap:40px;justify-content:center;flex-wrap:wrap}
 .cta-info span{font-size:.85rem;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:8px}
 .cta-info span::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold)}
-.footer{border-top:1px solid rgba(255,255,255,.07);padding:48px 0 28px;background:#0C1620;color:rgba(255,255,255,.5)}
+.footer{border-top:1px solid rgba(255,255,255,.07);padding:48px 0 28px;background:#0C1620;color:rgba(255,255,255,.65)}
 .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;margin-bottom:40px}
 .footer-brand h4{color:var(--white);font-family:var(--sans);font-size:1rem;margin-bottom:12px}
-.footer-brand p{font-size:.85rem;line-height:1.7;color:rgba(255,255,255,.45)}
+.footer-brand p{font-size:.85rem;line-height:1.7;color:rgba(255,255,255,.6)}
 .footer h5{color:var(--white);font-family:var(--sans);font-size:.85rem;font-weight:600;margin-bottom:20px;letter-spacing:.05em}
 .footer-links{list-style:none}.footer-links li{margin-bottom:10px}
-.footer-links a{display:inline-block;font-size:.85rem;color:rgba(255,255,255,.5);transition:color .2s,transform .2s}.footer-links a:hover{color:var(--gold);transform:translateX(3px)}
+.footer-links a{display:inline-block;font-size:.85rem;color:rgba(255,255,255,.65);transition:color .2s,transform .2s}.footer-links a:hover{color:var(--gold);transform:translateX(3px)}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;font-size:.85rem;text-align:center}
 .whatsapp-btn{position:fixed;bottom:28px;right:28px;z-index:900;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.35);transition:all .3s ease}
 .whatsapp-btn:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(37,211,102,.45)}
@@ -201,7 +201,7 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
   .process-steps::before{display:none}
   .reviews-grid{grid-template-columns:1fr}
   .related-grid{grid-template-columns:1fr}
-  .page-hero .hero-actions{flex-direction:column;align-items:center}
+  .page-hero .hero-actions{flex-direction:column;align-items:center}.page-hero .hero-actions .btn{width:100%;max-width:380px;justify-content:center}
   .cta-info{flex-direction:column;align-items:center;gap:16px}
   .footer-grid{grid-template-columns:1fr;gap:32px}.footer-links a{padding:6px 0}.footer-links li{margin-bottom:4px}.footer{padding-bottom:100px}
 }
