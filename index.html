@@ -333,7 +333,7 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 .btn:active{transform:scale(.985);transition-duration:.1s}
 .issue-card:active,.book-card:active{transform:scale(.99);transition-duration:.1s}
 .faq-question:active{color:var(--gold)}
-</style>
+@media(max-width:768px){.clinical-work [style*="padding:32px 28px"] p:last-child{display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden}.clinical-work [style*="padding:32px 28px"].open p:last-child{-webkit-line-clamp:unset}}</style>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1058,5 +1058,6 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click'
 <script>
 (function(){var b=document.getElementById('cookieBanner');if(window._cbGet('cookie_consent')){return}b.style.display='flex';function cbSet(v){var d=new Date();d.setTime(d.getTime()+365*864e5);document.cookie='cookie_consent='+v+';expires='+d.toUTCString()+';path=/;SameSite=Lax'}document.getElementById('cookieAccept').onclick=function(){cbSet('accepted');b.style.display='none';window._loadAnalytics()};document.getElementById('cookieDecline').onclick=function(){cbSet('declined');b.style.display='none'}})();
 </script>
+<script>if(window.innerWidth<=768){document.querySelectorAll('.clinical-work [style*="padding:32px 28px"]').forEach(function(c){c.style.cursor='pointer';c.addEventListener('click',function(){this.classList.toggle('open')})})}</script>
 </body>
 </html>
