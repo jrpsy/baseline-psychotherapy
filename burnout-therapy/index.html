@@ -143,17 +143,17 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .price-card .btn{width:100%;justify-content:center}
 
 /* REVIEWS */
-.reviews,.reviews-section{padding:var(--section-py) 0;background:var(--navy);position:relative;overflow:hidden}
+.reviews,.reviews-section{padding:var(--section-py) 0;background:var(--navy);position:relative;overflow:hidden}.reviews::after{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:80px;height:3px;background:var(--gold);z-index:3}
 .reviews-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.12;pointer-events:none}
-.reviews-section .section-intro{position:relative;z-index:2}
-.reviews-section .section-intro p{color:rgba(255,255,255,.7)}
-.reviews-section h2{color:var(--white)}
+.reviews .section-intro,.reviews-section .section-intro{position:relative;z-index:2}
+.reviews .section-intro p,.reviews-section .section-intro p{color:rgba(255,255,255,.7)}
+.reviews h2,.reviews-section h2{color:var(--white)}
 .reviews-grid{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;z-index:2}
 .review-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:32px 28px;backdrop-filter:blur(12px)}
 .review-stars{color:var(--gold);font-size:1rem;margin-bottom:16px;letter-spacing:2px}
 .review-card blockquote{font-size:.92rem;line-height:1.75;color:rgba(255,255,255,.85);margin-bottom:20px;font-style:italic}
 .review-author{font-size:.85rem;font-weight:600;color:var(--white)}
-.review-source{font-size:.78rem;color:rgba(255,255,255,.5)}
+.review-source{font-size:.78rem;color:rgba(255,255,255,.5)}.review-card{position:relative}.review-card::before{content:'\201C';position:absolute;top:8px;right:20px;font-family:var(--serif);font-size:5rem;line-height:1;color:var(--gold);opacity:.15;pointer-events:none}.review-card.featured{grid-column:span 2}.review-card.featured blockquote{font-size:1.05rem;line-height:1.7}
 .reviews-footer{margin-top:40px;text-align:center;position:relative;z-index:2}
 .reviews-footer a{font-size:.88rem;color:var(--gold);text-decoration:underline;text-underline-offset:4px;transition:color .2s}
 .reviews-footer a:hover{color:var(--gold-light)}
@@ -234,7 +234,7 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
   .symptoms-grid{grid-template-columns:1fr}
   .process-steps{grid-template-columns:1fr;gap:40px}
   .process-steps::before{display:none}
-  .reviews-grid{grid-template-columns:1fr}
+  .reviews-grid{grid-template-columns:1fr}.review-card.featured{grid-column:span 1}
   .related-grid{grid-template-columns:1fr}
   .page-hero .hero-actions{flex-direction:column;align-items:center}.page-hero .hero-actions .btn{width:100%;max-width:380px;justify-content:center}
   .cta-info{flex-direction:column;align-items:center;gap:16px}
