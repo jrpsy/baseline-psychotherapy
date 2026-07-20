@@ -50,7 +50,7 @@
 .footer{border-top:1px solid rgba(255,255,255,.07);padding:48px 0 28px;background:#0C1620;color:rgba(255,255,255,.65)}.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;margin-bottom:40px}.footer-brand h4{color:var(--white);font-family:var(--sans);font-size:1rem;margin-bottom:12px}.footer-brand p{font-size:.85rem;line-height:1.7;color:rgba(255,255,255,.6)}.footer h5{color:var(--white);font-family:var(--sans);font-size:.85rem;font-weight:600;margin-bottom:20px;letter-spacing:.05em}.footer-links{list-style:none}.footer-links li{margin-bottom:10px}.footer-links a{display:inline-block;font-size:.85rem;color:rgba(255,255,255,.65);transition:color .2s,transform .2s}.footer-links a:hover{color:var(--gold);transform:translateX(3px)}.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;font-size:.85rem;text-align:center}
 .whatsapp-btn{position:fixed;bottom:28px;right:28px;z-index:900;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.35);transition:all .3s ease}.whatsapp-btn:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(37,211,102,.45)}.whatsapp-btn svg{width:30px;height:30px;fill:white}
 :focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:2px}button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
-.fade-up{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}.fade-up.visible{opacity:1;transform:translateY(0)}
+html.js-anim .fade-up{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 @media(max-width:1024px){.related-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:768px){.nav-links{display:none}.nav-cta{display:none}.nav-mobile-toggle{display:flex}.nav-links.active{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--white);padding:24px;gap:20px;border-bottom:1px solid var(--border);box-shadow:0 8px 30px rgba(0,0,0,.08);max-height:calc(100vh - 72px);overflow-y:auto}
   .nav-links.active .nav-cta{display:block;margin-left:0;width:100%}
@@ -64,7 +64,7 @@
 .cb-decline{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.35)}.cb-decline:hover{border-color:var(--white);background:rgba(255,255,255,.08)}
 @media(max-width:768px){#cookieBanner{flex-direction:column;align-items:flex-start;bottom:76px;gap:12px;padding:10px 16px}.cb-actions{width:100%}.whatsapp-btn{display:none!important}}
 @media(prefers-reduced-motion:reduce){
-  .fade-up{opacity:1;transform:none;transition:none}
+  html.js-anim .fade-up{opacity:1;transform:none;transition:none}
   .marquee-track{animation:none}
   *{scroll-behavior:auto!important}
 }
@@ -225,7 +225,10 @@ const nav=document.getElementById('nav');window.addEventListener('scroll',()=>{n
 const navToggle=document.getElementById('navToggle'),navLinks=document.getElementById('navLinks');navToggle.addEventListener('click',()=>{navLinks.classList.toggle('active');const s=navToggle.querySelectorAll('span');if(navLinks.classList.contains('active')){s[0].style.transform='rotate(45deg) translate(5px,5px)';s[1].style.opacity='0';s[2].style.transform='rotate(-45deg) translate(5px,-5px)'}else{s[0].style.transform='';s[1].style.opacity='';s[2].style.transform=''}});
 navLinks.querySelectorAll('a').forEach(l=>{l.addEventListener('click',e=>{const li=l.parentElement;if(li.classList.contains('has-dropdown')&&navLinks.classList.contains('active')){e.preventDefault();li.classList.toggle('open');return}navLinks.classList.remove('active');const s=navToggle.querySelectorAll('span');s[0].style.transform='';s[1].style.opacity='';s[2].style.transform=''})});
 navToggle.addEventListener('click',()=>{navLinks.querySelectorAll('.open').forEach(o=>o.classList.remove('open'))});
-const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+try{
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});document.documentElement.classList.add('js-anim');
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+}catch(e){}
 (function(){var bar=document.getElementById('mobileCTABar');if(!bar)return;var heroGone=false,contactVisible=false;function update(){bar.classList.toggle('hidden',!heroGone||contactVisible)}var hero=document.querySelector('.hero,.page-hero,.article-hero,.pricing-hero');if(hero){new IntersectionObserver(function(e){heroGone=!e[0].isIntersecting;update()},{threshold:0}).observe(hero)}else{heroGone=true;update()}var contact=document.getElementById('contact')||document.getElementById('contacto');if(contact){new IntersectionObserver(function(e){contactVisible=e[0].isIntersecting;update()},{threshold:0.05}).observe(contact)}})();
 </script>
 <div id="cookieBanner" role="dialog" aria-label="Consentimiento de cookies">

@@ -176,9 +176,9 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 
 /* ANIMATIONS */
-.fade-up{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
-.fade-up.visible{opacity:1;transform:translateY(0)}
-@media(prefers-reduced-motion:reduce){.fade-up{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+html.js-anim .fade-up{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
+@media(prefers-reduced-motion:reduce){html.js-anim .fade-up{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
 
 /* RESPONSIVE */
 @media(max-width:1180px){
@@ -521,8 +521,11 @@ navToggle.addEventListener('click',()=>{
 });
 navLinks.querySelectorAll('.has-dropdown>a').forEach(l=>{l.addEventListener('click',e=>{if(navLinks.classList.contains('active')){e.preventDefault();l.parentElement.classList.toggle('open')}})});
 document.querySelectorAll('.faq-question').forEach(b=>{b.addEventListener('click',()=>{const i=b.parentElement,w=i.classList.contains('active');document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('active'));if(!w)i.classList.add('active')})});
+try{
 const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.documentElement.classList.add('js-anim');
 document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+}catch(e){}
 
 // Mobile sticky CTA bar visibility
 (function(){var bar=document.getElementById('mobileCTABar');if(!bar)return;var heroGone=false,contactVisible=false;function update(){bar.classList.toggle('hidden',!heroGone||contactVisible)}var hero=document.querySelector('.hero,.page-hero,.article-hero,.pricing-hero');if(hero){new IntersectionObserver(function(e){heroGone=!e[0].isIntersecting;update()},{threshold:0}).observe(hero)}else{heroGone=true;update()}var contact=document.getElementById('contact')||document.getElementById('contacto');if(contact){new IntersectionObserver(function(e){contactVisible=e[0].isIntersecting;update()},{threshold:0.05}).observe(contact)}})();

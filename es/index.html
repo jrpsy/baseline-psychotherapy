@@ -274,8 +274,8 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 
 /* ANIMATIONS */
-.fade-up{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
-.fade-up.visible{opacity:1;transform:translateY(0)}
+html.js-anim .fade-up{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 
 /* RESPONSIVE */
 @media(max-width:1024px){
@@ -325,7 +325,7 @@ button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 .marquee-content span{font-family:var(--sans);font-size:.88rem;font-weight:600;color:var(--white)}
 .marquee-sep{font-size:1.2rem;color:rgba(255,255,255,.7);font-weight:400}
 @media(prefers-reduced-motion:reduce){
-  .fade-up{opacity:1;transform:none;transition:none}
+  html.js-anim .fade-up{opacity:1;transform:none;transition:none}
   .marquee-track{animation:none}
   *{scroll-behavior:auto!important}
 }
@@ -1033,8 +1033,11 @@ navToggle.addEventListener('click',()=>{
 navLinks.querySelectorAll('a').forEach(l=>{l.addEventListener('click',e=>{const li=l.parentElement;if(li.classList.contains('has-dropdown')&&navLinks.classList.contains('active')){e.preventDefault();li.classList.toggle('open');return}navLinks.classList.remove('active');const s=navToggle.querySelectorAll('span');s[0].style.transform='';s[1].style.opacity='';s[2].style.transform=''})});
 navToggle.addEventListener('click',()=>{navLinks.querySelectorAll('.open').forEach(o=>o.classList.remove('open'))});
 document.querySelectorAll('.faq-question').forEach(b=>{b.addEventListener('click',()=>{const i=b.parentElement,w=i.classList.contains('active');document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('active'));if(!w)i.classList.add('active')})});
+try{
 const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.documentElement.classList.add('js-anim');
 document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+}catch(e){}
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',function(e){e.preventDefault();const t=document.querySelector(this.getAttribute('href'));if(t){window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'})}})});
 </script>
 <div class="mobile-cta-bar hidden" id="mobileCTABar" role="complementary" aria-label="Reservar una consulta">
