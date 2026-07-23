@@ -391,4 +391,22 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://baselinepsychotherapy.com/blog/high-functioning-anxiety-finance/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/blog/high-functioning-anxiety-finance/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/blog/ansiedad-alto-funcionamiento-finanzas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/blog/high-functioning-anxiety-finance/"/>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baselinepsychotherapy.com/es/blog/ansiedad-alto-funcionamiento-finanzas/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/blog/high-functioning-anxiety-finance/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/blog/ansiedad-alto-funcionamiento-finanzas/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/blog/high-functioning-anxiety-finance/"/>
+    <lastmod>2026-07-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
