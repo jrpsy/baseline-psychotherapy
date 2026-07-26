@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found | Baseline Psychotherapy</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --navy:#14202E; --slate:#1E3A4F; --gold:#C9A84C; --gold-light:#D4B76A;
+      --bg:#FAFBFC; --bg-warm:#F7F5F0; --text:#2B4257; --border:#E2E8F0;
+      --radius:8px; --serif:'Cormorant Garamond',Georgia,serif;
+      --sans:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family:var(--sans); color:var(--text); background:var(--bg);
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+      display:flex; flex-direction:column; min-height:100vh;
+      background-image:radial-gradient(circle at 50% -10%, rgba(201,168,76,.06), transparent 60%);
+    }
+    a{color:inherit; text-decoration:none}
+    :focus-visible{outline:2px solid var(--gold); outline-offset:3px; border-radius:3px}
+    .site-head{padding:28px clamp(20px,5vw,48px)}
+    .brand{
+      font-family:var(--serif); font-weight:600; font-size:1.2rem;
+      color:var(--navy); letter-spacing:.01em;
+      display:inline-flex; align-items:center; gap:10px;
+    }
+    .brand .pulse{width:9px; height:9px; border-radius:50%; background:var(--gold); flex:none}
+    main{
+      flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center;
+      text-align:center; padding:40px clamp(20px,5vw,48px) 64px;
+    }
+    .code{
+      font-family:var(--serif); font-weight:500; color:var(--navy);
+      font-size:clamp(5.5rem,20vw,11rem); line-height:.9; letter-spacing:.01em;
+    }
+    .code-rule{width:64px; height:2px; background:var(--gold); margin:22px auto 52px; border:0}
+    .blocks{display:flex; flex-direction:column; gap:44px; width:100%; max-width:560px}
+    .block h1,.block h2{
+      font-family:var(--serif); font-weight:600; color:var(--navy);
+      font-size:clamp(1.5rem,4.5vw,2.05rem); line-height:1.2; margin-bottom:14px;
+    }
+    .block p{font-size:1.02rem; line-height:1.6; color:var(--text); max-width:44ch; margin:0 auto 22px}
+    .links{display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:10px 20px}
+    .links a{
+      font-weight:500; font-size:.98rem; color:var(--slate);
+      padding-bottom:3px; border-bottom:2px solid transparent; transition:border-color .18s ease, color .18s ease;
+    }
+    .links a:hover{color:var(--navy); border-bottom-color:var(--gold)}
+    .links a.primary{color:var(--navy); border-bottom-color:var(--gold-light)}
+    .divider{width:100%; max-width:560px; height:1px; background:var(--border)}
+    .site-foot{
+      text-align:center; padding:26px 20px 32px; color:#7C8B99;
+      font-size:.82rem; border-top:1px solid var(--border);
+    }
+    .site-foot .sep{opacity:.5; margin:0 8px}
+    @media (max-width:520px){
+      .block p{font-size:1rem}
+      .links{gap:8px 16px}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-head">
+    <a class="brand" href="/"><span class="pulse" aria-hidden="true"></span>Baseline Psychotherapy</a>
+  </header>
+  <main>
+    <div class="code">404</div>
+    <hr class="code-rule" aria-hidden="true">
+    <div class="blocks">
+      <section class="block" lang="en">
+        <h1>This page isn't where it used to be.</h1>
+        <p>The link may be broken, or the page may have moved. Let's get you back on track.</p>
+        <nav class="links" aria-label="Recovery links (English)">
+          <a class="primary" href="/">Home</a>
+          <a href="/blog/">Blog</a>
+          <a href="/faq/">FAQ</a>
+        </nav>
+      </section>
+      <hr class="divider" aria-hidden="true">
+      <section class="block" lang="es">
+        <h2>Esta página ya no está aquí.</h2>
+        <p>El enlace puede estar roto o la página se movió. Te ayudo a volver al camino.</p>
+        <nav class="links" aria-label="Enlaces de rescate (español)">
+          <a class="primary" href="/es/">Inicio</a>
+          <a href="/es/blog/">Blog</a>
+          <a href="/es/preguntas-frecuentes/">Preguntas frecuentes</a>
+        </nav>
+      </section>
+    </div>
+  </main>
+  <footer class="site-foot">
+    Baseline Psychotherapy <span class="sep">·</span> J.R. Hernandez, Psychotherapist <span class="sep">·</span> TIN: 20297925
+  </footer>
+</body>
+</html>
