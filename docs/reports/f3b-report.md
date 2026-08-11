@@ -94,3 +94,38 @@ Anglicismo "feedback" (formacion ES, línea ~163); CSS muerto `.price-card.featu
 3. `curl .../es/terapia-parejas/ | grep -c "Condiciones Relacionadas con"` → ≥ 1
 4. `curl .../es/regulacion-emocional/ | grep -c "arousal"` → 0
 5. `curl .../es/terapia-burnout/ | grep -c "El burnout rara vez viaja solo"` → ≥ 1
+
+---
+
+# Decisiones aplicadas + doble auditoría (2026-08-11, segunda pasada)
+
+## Decisiones del estratega aplicadas (B1-B8 + menor)
+
+- **B1 (burnout EN, doctrina cápsula)**: tratamiento completo OMS/CIE-11 en la sección de diferenciación **con el enlace S3 reubicado ahí desde el hero**; hero y mecanismo a referencia breve ("When the three WHO-defined dimensions of burnout converge and persist..."); FAQ reformulada como cápsula con otras palabras ("In the WHO's ICD-11 classification... three markers: energy that stays drained, growing mental distance from the job, and a felt drop in professional efficacy"), resync incluido.
+- **B2 (burnout ES)**: glosas repetidas del eje HPA y la corteza prefrontal retiradas de la segunda mención (los datos nuevos de esa sección se conservan).
+- **B3 (anxiety/depression EN)**: criterios completos del DSM-5 en la intro de síntomas (depression ganó la lista parentética); FAQs reformuladas como cápsulas ("worry becomes hard to switch off and shows up in the body..." / "low mood or a marked loss of interest has settled in alongside at least four other changes..."), resync incluido.
+- **B4 (diferenciación positiva)**: couples y workshop con los textos fijados por el estratega. Redacciones propias bajo el principio, para lectura en el diff: **burnout EN** "Specialist training means the intervention starts from the specific mechanism driving the exhaustion, not from the surface symptoms alone." · **expat EN (FAQ+schema)** "Expat therapy works from a dedicated framework for how relocation destabilizes the internal model the mind relies on to predict and navigate daily life."
+- **B5**: H2 de parejas ampliado en ambos idiomas ("¿Crisis Pasajera, Patrón Instalado o Ruptura de Confianza?" / "A Passing Crisis, an Established Pattern, or Broken Trust?").
+- **B6 (formacion ES)**: Módulo 1 conserva su frase; bullet de neurofisiología con teaser distinto; ISO 45003 completa solo en la tarjeta de riesgo, referencia en el bullet ("es la pieza documentada de esa inversión"), cápsula reformulada en la FAQ ("deja constancia formal, con base en evidencia..."), resync incluido.
+- **B7**: cargo canónico en las **14** páginas (las 12 de servicio + los 2 talleres, que comparten la plantilla "Your Trainer"): "Psychotherapist · Burnout and Mood Disorders Specialist" / "Psicoterapeuta · Especialista en Burnout y Trastornos del Estado de Ánimo".
+- **B8**: "It also often coexists with anxiety and emotional numbness."
+- **Menor autorizado**: "El feedback" → "La retroalimentación" (formacion ES).
+- **Espejo ES de B4 descubierto al aplicar**: formacion ES tenía la frase "La mayoría de los talleres corporativos de bienestar ofrecen contenido superficial..." (FAQ+schema) → sustituida por el espejo del texto fijado: "Esta formación es contenido clínico adaptado a entornos organizacionales, no programación genérica de bienestar."
+- **Doctrina intra-página, hallazgo mecánico nuevo**: es/terapia-expatriados duplicaba verbatim "El procesamiento emocional es más profundo en el idioma con el que creciste" entre cuerpo y FAQ → cápsula FAQ reformulada: "Las emociones se procesan con más profundidad en la lengua materna."
+
+## Doble auditoría (5.5) y correcciones derivadas
+
+La auditoría independiente detectó ejecución desigual de las doctrinas entre pares EN/ES (los espejos ES de los claims B4 y varias duplicaciones cápsula-sección seguían vivos). Al ser las mismas clases ya decididas, se aplicaron y quedan aquí para lectura en el diff:
+
+- **es/terapia-burnout**: espejo completo de B1 (hero a referencia sin enlace; enlace S3 a la sección de diferenciación con CIE-11; mecanismo a referencia; FAQ cápsula "En la clasificación CIE-11 de la OMS... energía que no se recupera, creciente distancia mental... caída percibida del rendimiento profesional") + espejo de B4: "La formación especializada hace que la intervención parta del mecanismo específico que mantiene el agotamiento, no solo de los síntomas superficiales."
+- **es/terapia-ansiedad**: cápsula DSM-5 reformulada ("Según el DSM-5, la ansiedad generalizada se diagnostica cuando la preocupación se vuelve difícil de apagar y se expresa en el cuerpo...").
+- **couples EN + es/terapia-parejas**: la frase bilingüe duplicada bio↔FAQ reformulada en la FAQ de ambos idiomas ("In session, the language can shift from one exchange to the next..." / "En sesión, el idioma puede cambiar de un intercambio al siguiente..."); es/terapia-parejas además tenía el ataque a terceros que el EN ya había limpiado → espejo del texto fijado: "Este trabajo apunta al motor del conflicto, no solo al patrón de interacción visible en la superficie."
+- **es/terapia-expatriados (el más grave de la auditoría)**: "La terapia regular puede no considerar estos factores porque el terapeuta no tiene un marco..." (FAQ visible + schema) → espejo del fix EN: "La terapia para expatriados trabaja desde un marco propio para entender cómo la reubicación desestabiliza el modelo interno..."; la continuación legítima ("Un terapeuta con experiencia intercultural reconoce...") se conserva.
+- **expat EN**: bloque bio↔FAQ casi idéntico → cápsula FAQ reformulada ("working in your first language matters clinically: emotions carry more depth in the language you grew up with").
+- **workplace EN**: los dos triples (claim ISO ×3 y "becomes burnout at a biological level" ×3) resueltos con el patrón que la auditoría elogió en la página ES: completa en la tarjeta de riesgo / referencia en el bullet ("it is the documented piece of that investment") / cápsula en la FAQ ("leaves a formal, evidence-based record..."); teaser del bullet de neurofisiología sin la frase del Módulo 1.
+
+Menores de la auditoría, solo reportados: "y ofrezca resultados reales" (es/regulacion-emocional, coletilla); "occupational phenomenon, not a psychiatric diagnosis" repetido tolerable (burnout EN); "es la pieza documentada" levemente elíptica (formacion ES); el cargo canónico no replica literalmente las etiquetas de los H2 de ansiedad/depresión/IE (el texto que sigue tiende el puente; la auditoría no lo considera bloqueante).
+
+## Suite final (estado del commit)
+
+126 JSON-LD 0 errores · schema=visible 0 desync · duplicación cápsula-sección >12 palabras: 0 · claims a terceros: 0 · em dashes 0 · wa.me 387 · blockquotes 146 · precios 2/2 · H1 14/14 intactos · lastmod 2026-08-11.
