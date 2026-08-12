@@ -1,6 +1,6 @@
 # Reporte Comando F3-R · Ronda del dueño (main + about + transversales)
 
-Fecha: 2026-08-12 · Base: `75f7f0f` (main) · Rama: `f3r-review` · **1 bloqueante esperando insumo del dueño (URLs de Google Play)**; el resto completo.
+Fecha: 2026-08-12 · Base: `75f7f0f` (main) · Rama: `f3r-review` · **Sin bloqueantes abiertos** (el de Google Play se resolvió como texto descriptivo verificado por el estratega); trabajo completo.
 
 ## Pre-flight
 
@@ -29,7 +29,7 @@ Inventario y tratamiento: tarjetas renombradas **"Focused Session"/"Full Program
 
 1. **RESUELTO** · Fuga de "half-day/full-day/media jornada/jornada completa" en los prefills de WhatsApp del taller → alineados a la oferta renombrada.
 2. **RESUELTO** · Los resúmenes del taller en ambas homes contradecían la política nueva (visible + JSON-LD) → erradicados.
-3. **ESPERANDO INSUMO** · **"Amazon and Google Play" sin enlace accionable**: el texto es el mandado por el dueño (T1.3), pero las páginas solo tienen botones "Get It on Amazon"/"Consíguelo en Amazon"; `play.google` no existe en el repo. **Se necesitan las URLs de Google Play de los dos libros** para añadir el botón/enlace (propuesto para F3-C o mensaje siguiente). El texto mandado queda publicado en la rama tal como se ordenó.
+3. **RESUELTO (sin código)** · **"Amazon and Google Play" sin enlace accionable**: el texto es el mandado por el dueño (T1.3), pero las páginas solo tienen botones "Get It on Amazon"/"Consíguelo en Amazon"; `play.google` no existe en el repo. **RESUELTO SIN CAMBIOS DE CÓDIGO (decisión del estratega, 2026-08-12)**: la mención queda como texto descriptivo; verificado que ambos libros tienen su enlace de Google Play en las páginas de libros (IDs ddDvEQAAQBAJ y 2B_wEQAAQBAJ), la afirmación es verdadera y la ruta existe vía la sección de libros.
 
 Menores aplicados: capitalización del H2 del CTA de es/sobre-mi igualada a la home ("Comienza tu Proceso", bloque compartido). Menores reportados sin tocar: "Mi enfoque es basado en procesos y basado en evidencia" (texto exacto del dueño, calco leve; alternativa "se basa en procesos y en evidencia" si se quiere); discontinuidad 6 tarjetas visibles en home vs 7 en About (decisión de marca del Comando D: la credencial 7 es de segunda línea; el schema de las homes sí lista las 7); prefills de blog/index y es/blog/index divergentes del embudo (junto al CTA de T7, para F3-C).
 
