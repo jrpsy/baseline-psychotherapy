@@ -136,7 +136,7 @@ Checks scriptados: ✓ en las 52 (la batería es global y dio cero defectos; las
 | 38 | es/terapia-burnout | APROBADA (corr.) | corr.: no solo, estas, guiones-raya (visible+schema). Registro: "corteza prefrontal... déficit crónico" literal ×2; "el descanso no repara" ×5. |
 | 39 | es/terapia-depresion | APROBADA con registro | Criterios DSM-5 casi calcados sección↔FAQ; tríada fase 02 duplicada; "no se levanta" ×3. |
 | 40 | es/terapia-expatriados | APROBADA (corr.) | corr.: "En su lugar,...". Registro: lista de 3 condiciones literal tarjeta↔FAQ (la duplicación más flagrante ES); párrafo bilingüe casi calcado; "disrupción" ×5; 2 niveles vs 3 del post protegido. |
-| 41 | es/terapia-parejas | APROBADA (corr.) | corr.: "Inglés o Ambos" en markers ×2 (la instancia del H1 se REVIRTIÓ: regla de H1 intactos; queda registrada para orden explícita). Registro: tú/ustedes/nosotros mezclados; "participantes en un sistema" en 2 FAQ contiguas. |
+| 41 | es/terapia-parejas | APROBADA (corr.) | corr.: "Inglés o Ambos" en markers ×2 y en el H1 (este último por ORDEN EXPLÍCITA del estratega, 2026-08-18, tras su pasada independiente). Registro: tú/ustedes/nosotros mezclados; "participantes en un sistema" en 2 FAQ contiguas. |
 | 42 | es/blog/index.html | APROBADA con registro | 3 tarjetas titulan distinto que el H1 destino (incluida la del post protegido; la tarjeta es editable con orden). |
 | 43 | es/blog/ansiedad-alto-funcionamiento-finanzas | APROBADA con registro | Voz excelente; "el impuesto que hoy pagas" repetido literal; "pre-viviendo" registrado como neologismo deliberado (voz del post, conservado). |
 | 44 | es/blog/burnout-expatriados | APROBADA · PROTEGIDA | Leída completa: estructura y flujo ejemplares, sin duplicaciones internas. CERO ediciones; diff vs main = 0 bytes. Calcos menores solo registrados ("sobremarcha adaptativa", "el estresante", "meses o años después de la experiencia"). |
@@ -157,7 +157,7 @@ Checks scriptados: ✓ en las 52 (la batería es global y dio cero defectos; las
 
 **EN**: 7 reparaciones de gramática/texto roto (artículo faltante en couples, fragmento "It needs regulation.", concordancia "data... improve", apositivo de expat-therapy, "availability between sessions", serie de expats en does-online-therapy-work, "at the start of the process" ×5 páginas); 17 de puntuación (guiones-raya de burnout-therapy ×2 visible+schema, serial commas en couples ×3 + expat + does-online + el author box de los 10 posts y faq ×11, comillas AmE ×2 y h2 "The" en online-depression-treatment, "60- or 75-minute" ×2 visible+schema); 5 de inglés americano (counseling ×2 en policies con BACP/SAC intactos, vacation/vacations, afterward); 5 apóstrofos tipográficos (&#8217;→' en high-performers). **ES**: 11 tildes en preguntas-frecuentes (cada una ×2, visible+JSON-LD, resync automático por reemplazo total); léxico no-nativo con equivalente inequívoco (el default→el estado por defecto, input→estímulo, compuesto→sereno, expertise→pericia, planitud/planeidad→aplanamiento ×3, desregularse→desactivarse en burnout-vs-depresion, equiparan→se equiparan, "En su lugar," reordenado); puntuación española (comillas de formacion y libros, "Inglés o Ambos/ambos" ×2 en markers, guiones-raya de es/index y es/terapia-burnout ×2 v+s, cognitivo-conductual y Dialéctico-Conductual); plantilla ("Ir al contenido" ×4, "Sin derivación" ×2, footer de es/index a la convención de 24 páginas, "Tu Organización" en el CTA de formacion, "junio de 2026").
 
-**Excepción aplicada y revertida**: la coma del H1 de es/terapia-parejas ("Español, Inglés, o Ambos") entró en el lote y se REVIRTIÓ de inmediato: la regla permanente "H1s y titles intactos salvo orden explícita" manda sobre la excepción de typos. Queda aquí registrada para que el estratega la ordene si quiere (las dos instancias en hero-markers sí quedaron corregidas; el title de la página no tiene la coma).
+**Excepción aplicada, revertida y luego ordenada**: la coma del H1 de es/terapia-parejas ("Español, Inglés, o Ambos") entró en el lote y se REVIRTIÓ de inmediato (la regla permanente "H1s y titles intactos salvo orden explícita" manda sobre la excepción de typos). Tras la pasada independiente del estratega llegó la ORDEN EXPLÍCITA (2026-08-18) y el H1 quedó corregido a "Español, Inglés o Ambos". El title de la página nunca tuvo la coma.
 
 ### Menores registrados sin tocar (58 entradas, 8 familias)
 
@@ -189,7 +189,7 @@ Checks scriptados: ✓ en las 52 (la batería es global y dio cero defectos; las
 6. Doctrina cápsula→referencia: las FAQ son cápsulas autocontenidas; cápsula y sección dicen los mismos hechos con PALABRAS DISTINTAS.
 7. Diferenciación positiva: no atribuir fallas a terceros.
 8. Reseñas de clientes byte-intocables (146 blockquotes).
-9. H1s y titles intactos salvo orden explícita (aplicada hoy: reversión de la coma del H1 de es/terapia-parejas).
+9. H1s y titles intactos salvo orden explícita (ejercida hoy en ambos sentidos: reversión preventiva de la coma del H1 de es/terapia-parejas y corrección posterior por orden explícita).
 10. Inglés americano; español nativo sin calcos.
 11. sitemap lastmod actualizado en el mismo commit que toque la página.
 12. Kit de citas cerrado S1-S6; máximo 2 enlaces de cita por página; S1 solo ansiedad/depresión (burnout/TEPT/parejas como claims de práctica, "at this practice").
