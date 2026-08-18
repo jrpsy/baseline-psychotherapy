@@ -73,6 +73,26 @@ verificado 0/0 en F3-C sobre esta misma base) · conteo 22: 17/17 · aggregateRa
 H1/titles intactos en los 6 HTML tocados · reseñas byte-idénticas · lastmod 2026-08-18 en los 6
 ```
 
+## Incidente pre-merge: hipótesis de main incompleta · REFUTADA con evidencia (2026-08-18)
+
+Hipótesis del estratega: main (a4b1f4d) no contendría 57eede8 (último commit de F3-C: nota de privacidad, vía/por, y se le atribuían también los footers "y Reembolso", que en realidad viajaron en aee7aae). Forense ejecutado:
+
+```
+git cat-file -p a4b1f4d           -> parent 959f8ec + parent 57eede8 (segundo padre correcto)
+git merge-base --is-ancestor      -> 57eede8 SÍ es ancestro de main
+git diff --stat 57eede8 a4b1f4d   -> VACÍO (árboles idénticos)
+árbol a4b1f4d: es/precios "vía Google Meet" 0 · privacy-policy "Last updated:" 1 · es/terapia-burnout "y Reembolso" 1
+main local == origin/main == a4b1f4d
+EN VIVO: es/precios "por Google Meet" 4 y "vía" 0 · privacy 1/1 nota única (EN/ES) · terapia-burnout "y Reembolso" 1
+```
+
+Veredicto: main y el sitio desplegado contienen TODO F3-C (aee7aae + 57eede8); no hay nada que sanar y el merge de g-review no necesita cumplir función de reparación. Causa raíz más plausible del falso positivo: comparación desde un clon/fetch desactualizado del lado del estratega (un main local en 959f8ec hace que `git diff main f3c-review` muestre el trabajo como "faltante"), o lectura de la vista de comparación de GitHub tras el merge; no es determinable desde este repo. El incidente valida en cualquier caso la utilidad de la regla siguiente.
+
+## REGLA PERMANENTE nueva (vigente desde 2026-08-18)
+
+Antes de ejecutar cualquier merge autorizado: imprimir y comparar el hash de la punta de la rama (`git log --oneline -1 <rama>`) contra el último commit reportado al estratega; si difieren, DETENERSE y reportar antes de tocar main. (Aplicada abajo: la punta de g-review al merge incluye este commit de documentación, posterior al a4600dd reportado; se reporta el hash nuevo en la confirmación.)
+
 ## En vivo previsto (tras merge autorizado)
 
+0. (sanación, pedida por el estratega) es/terapia-burnout grep "Políticas de Servicio y Reembolso" ≥1
 1. home grep `22` en contexto reviews ≥1 · 2. high-performers grep "commonly listed" ≥1 · 3. workplace grep "the therapy practice behind the training" ≥1 · 4. es/formacion grep "detrás de la formación" ≥1 · 5. es/ grep "5.0" ≥1
