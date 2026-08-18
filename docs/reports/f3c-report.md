@@ -1,6 +1,6 @@
 # Reporte Comando F3-C · Blogs y páginas de sistema (cierre del examen F3)
 
-Fecha: 2026-08-18 · Base: `959f8ec` (main) · Rama: `f3c-review` · **1 bloqueante editorial esperando decisión** (redundancia de plantilla en las políticas de privacidad); todo lo demás completo.
+Fecha: 2026-08-18 · Base: `959f8ec` (main) · Rama: `f3c-review` · **Sin bloqueantes abiertos** (el editorial de las políticas de privacidad se resolvió con la opción (b) del estratega, 2026-08-18); trabajo completo y merge autorizado.
 
 ## Pre-flight
 
@@ -38,13 +38,15 @@ Todos los hechos (las 4 ramas con sus déficits nombrados) conservados; paraleli
 
 **Verificaciones de paso**: author box canónico 20/20; los 4 posts con FAQ conservan 3 preguntas (visible+schema).
 
-## BLOQUEANTE editorial (espera decisión)
+## Bloqueante editorial · RESUELTO (opción b del estratega, 2026-08-18)
 
-**Redundancia de plantilla en las políticas de privacidad (ambos idiomas)**: la información "última actualización + contacto" se repite tres veces al final (sección Cambios, sección Contacto y nota de cierre). Es plantilla preexistente del sitio, no defecto de traducción; tocarla es decisión de estructura de contenido. Opciones: (a) dejar como está (redundancia inofensiva en página legal), (b) eliminar la nota de cierre duplicada en ambos idiomas conservando las dos secciones.
+**Redundancia de plantilla en las políticas de privacidad (ambos idiomas)**: la información "última actualización + contacto" se repetía tres veces al final (sección Cambios, sección Contacto y nota de cierre). Aplicado: eliminada la nota de cierre duplicada en `politica-privacidad.html` y `privacy-policy.html`, junto con su `<hr class="policies-divider">` (existía solo para separar esa nota; la regla CSS se conserva y las políticas de servicio conservan el suyo). Las secciones Cambios y Contacto quedan intactas; verificado: 1 sola mención de "última actualización/last updated" por página y HTML balanceado.
 
-## Menores (solo reporte)
+## Menores
 
-"Online vía Google Meet" (terapia-online-profesionales, es/precios) vs "Online por Google Meet" (mayoría de blogs ES); anglicismos de jerga financiera en ansiedad-alto-funcionamiento-finanzas ("after-hours", "P&L") que el examinador recomienda conservar por audiencia; dos oraciones nuevas del párrafo de ansiedad EN empiezan con conjunción (registro editorial válido, patrón a vigilar).
+**"vía Google Meet" → "por Google Meet" (autorizado y aplicado en los 2 desviados)**: `es/blog/terapia-online-profesionales` (1 instancia; el corpus de blogs usa "por" de forma unánime) y `es/precios` (5 instancias: 3 visibles + 2 en descripciones del Service schema, para consistencia interna de la página). **Hallazgo ampliado al ejecutar**: "vía" no era exclusivo de esas 2 páginas; es la convención uniforme de la familia de páginas de servicio ES + preguntas-frecuentes (7 archivos, 15 instancias restantes: terapia-ansiedad, terapia-depresion, terapia-burnout, terapia-parejas, terapia-expatriados, regulacion-emocional, preguntas-frecuentes). Homes + blogs usan "por" (12 archivos). Se aplicó exactamente el alcance autorizado; unificar la familia de servicios queda documentado como candidato para un comando futuro (nota: la instancia de preguntas-frecuentes vive dentro de una cápsula FAQ visible+schema, requeriría resync).
+
+Conservados por decisión del estratega: anglicismos de jerga financiera ("after-hours", "P&L"); conjunciones iniciales del párrafo de ansiedad EN registradas como estilo a vigilar.
 
 ## Veredictos de página (resumen)
 
@@ -57,6 +59,9 @@ Greps T1-T4: 16/16 en el valor esperado · cierre case-insensitive de invocacion
 126 JSON-LD 0 errores · schema=visible 0 · FAQ dup 0 (163 preguntas) · em dashes 0 ·
 wa.me 387 · blockquotes 146 · precios 2/2 · H1 y titles intactos en todas las tocadas ·
 author boxes 20/20 · lastmod 2026-08-18 en las 30 tocadas · post protegido diff 0 bytes
+Post-decisión: "última actualización/last updated" 1 por página de privacidad · HTML balanceado ·
+"vía Google Meet" 0 en los 2 desviados (15 restantes = familia de servicios, documentado) ·
+privacy-policy.html añadido al lastmod 2026-08-18
 ```
 
 ## En vivo previsto (tras merge autorizado)
