@@ -1,6 +1,6 @@
 # Reporte Comando PG-1 · Verdades únicas (post-graduación)
 
-Fecha: 2026-08-18 · Base: `a10ef34` (main) · Rama: `pg1-review` · **2 decisiones esperando al estratega** (ninguna bloquea el contenido aplicado; detalle abajo).
+Fecha: 2026-08-18 · Base: `a10ef34` (main) · Rama: `pg1-review` · **2 decisiones resueltas por el estratega el 2026-08-19** (ambas: CONSERVAR; detalle en T3 y B3). Merge autorizado.
 
 ## T1 · Cifras de ciudad: un solo canon (tabla)
 
@@ -23,7 +23,7 @@ Tarjetas reescritas en `emotional-regulation-therapy` y `es/regulacion-emocional
 
 **10 retiradas** (no 8: faq y es/preguntas-frecuentes cuentan doble por visible+schema, resync automático por reemplazo total): faq ×2, does-online-therapy-work ×2, online-therapy-high-performers ×1, es/preguntas-frecuentes ×2, es/blog/funciona-la-terapia-online ×2, es/blog/terapia-online-profesionales ×1. La auditoría leyó las 10 frases resultantes: gramática natural, cero comas cojas, paridad EN/ES.
 
-**DECISIÓN PENDIENTE 1 (hallazgo de alcance)**: quedan exactamente **4 menciones** en el repo, todas en la FAQ diagnóstica "Is emotional dysregulation a diagnosis?/¿La desregulación emocional es un diagnóstico?" del par de regulación emocional (visible+schema, simétricas EN/ES): "...aparece en múltiples condiciones, incluyendo trastornos de ansiedad, depresión, TDAH, trastorno límite de personalidad, TEPT y burnout." Es una enumeración DSM-5 descriptiva (junto a TDAH y TLP, que tampoco son servicios), no una enumeración de lo que la práctica trata: no es lanza. El comando no nombró esta superficie y su puerta esperaba supervivientes solo en reseñas. Opciones: (a) conservarlas como supervivientes legítimos (recomendado: retirar TEPT de una lista diagnóstica junto a TDAH/TLP la haría clínicamente coja); (b) retirarlas también (requiere resync FAQ, trivial). En reseñas: 0 menciones.
+**DECISIÓN 1 — RESUELTA (estratega, 2026-08-19): CONSERVAR (excepción documentada)**: quedan exactamente **4 menciones** en el repo, todas en la FAQ diagnóstica "Is emotional dysregulation a diagnosis?/¿La desregulación emocional es un diagnóstico?" del par de regulación emocional (visible+schema, simétricas EN/ES): "...aparece en múltiples condiciones, incluyendo trastornos de ansiedad, depresión, TDAH, trastorno límite de personalidad, TEPT y burnout." Es una enumeración DSM-5 descriptiva en contexto educativo diferencial (junto a TDAH y TLP, que tampoco son servicios), no una lista de servicios de la práctica: no es lanza. El estratega confirma la opción (a): estas 4 menciones se conservan como supervivientes legítimos — retirar TEPT de una lista diagnóstica junto a TDAH/TLP la haría clínicamente coja. Esta FAQ queda registrada como la única excepción autorizada a la regla "TEPT/PTSD fuera de enumeraciones". En reseñas: 0 menciones.
 
 ## T4 · Par expat a tres niveles
 
@@ -33,7 +33,7 @@ Tarjetas reescritas en `emotional-regulation-therapy` y `es/regulacion-emocional
 
 - **B1 (sitemap "no hecho") — FALSO BLOQUEANTE, documentado**: las 13 tocadas ya llevaban lastmod 2026-08-18 estampado hoy mismo por el merge de graduación; el paso corrió, reescribió valores idénticos y por eso el sitemap no aparece en el diff. Verificado explícitamente: 13/13 tocadas en 2026-08-18. Las 5 URLs con fechas anteriores (2026-08-12/13) son páginas NO tocadas hoy: correcto por diseño (lastmod = último cambio real).
 - **B2 (blog ES con doctrina vieja) — CORREGIDO** (extensión de clase, arriba).
-- **B3 (hub EN sin pregunta puente) — DECISIÓN PENDIENTE 2**: faq EN define regulación con la definición amplia clásica y no tiene la pregunta de gestión que el hub ES sí tiene (asimetría 19/20 preguntas, decisión deliberada del Comando D). La tarjeta nueva EN no la contradice frontalmente (la definición amplia del hub es de capacidad; la tarjeta describe el proceso), pero la tensión que señala la auditoría es real y la cura limpia es añadir al hub EN la pregunta puente espejo ("What is emotional management for adults...?", cápsula propia, resync, restaura paridad 20/20). Tocar la arquitectura del hub excede este comando: espera orden.
+- **B3 (hub EN sin pregunta puente) — DECISIÓN 2 RESUELTA (estratega, 2026-08-19): CONSERVAR la asimetría 19/20**: es diseño de datos deliberado — la búsqueda "gestión emocional en adultos" solo existe en español, por lo que la pregunta puente solo tiene razón de ser en el hub ES. El hub EN se queda en 19 preguntas por diseño; no se añade la pregunta espejo. La tarjeta nueva EN no contradice frontalmente la definición amplia del hub (capacidad vs proceso), así que no queda tensión bloqueante. Asimetría registrada como intencional.
 
 Menores registrados: margen de $5 en "less than half" (M3); "$300 mid-range" vs punto medio $325 (M4); "(dólares de Singapur)" tras la segunda cifra y también en es/precios (M5); eco fondo/base en la tarjeta ES (M6); &pound; en blogs vs £ literal en pricing (M7, preexistente).
 
