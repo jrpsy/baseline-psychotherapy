@@ -1,0 +1,111 @@
+# Reporte Comando F4-A · Crisis + Tests clínicos (hub, PHQ-9, GAD-7) EN/ES
+
+Fecha: 2026-08-22 · Base: `b8c2666` (main) · Rama: `f4a-review` · Modo presupuesto extremo (textos del comando finales; ensamblaje al patrón del sitio).
+
+## T0 · Verificación de citas (S7/S8)
+
+| Cita | PMID | Verificación |
+|---|---|---|
+| S7 · Kroenke, Spitzer, Williams. "The PHQ-9: validity of a brief depression severity measure." J Gen Intern Med, 2001 Sep | 11556941 | Título **carácter a carácter EXACTO** vía API oficial NCBI E-utilities (HTTP 200); autores y revista confirmados |
+| S8 · Spitzer, Kroenke, Williams, Löwe. "A brief measure for assessing generalized anxiety disorder: the GAD-7." Arch Intern Med, 2006 May 22 | 16717171 | Ídem: título exacto, autores (incl. Löwe con diéresis), revista y fecha confirmados |
+
+**Matiz documentado**: el fetch directo de las fichas HTML devuelve HTTP 203 en esta red (interstitial de cookies de PubMed transformado por proxy; verificado con UA de navegador, redirects y cookie jar). Las URLs están vivas (2xx) y la verificación de contenido se hizo contra la fuente autoritativa de NCBI (E-utilities, HTTP 200), que es igual o más fuerte que leer el HTML. URLs usadas en las páginas: `https://pubmed.ncbi.nlm.nih.gov/11556941/` (S7) y `https://pubmed.ncbi.nlm.nih.gov/16717171/` (S8).
+
+## Páginas nuevas (8)
+
+/crisis/ · /es/crisis/ · /tests/ · /es/tests/ · /tests/phq-9/ · /es/tests/phq-9/ · /tests/gad-7/ · /es/tests/gad-7/
+
+Todas ensambladas del patrón de página de servicio (head completo con analytics consent-gated, hreflang triplete con x-default→EN, og/twitter, fuentes self-hosted, CSS inline del bloque de servicio + componentes nuevos en el mismo estilo de una-regla-por-línea, Yandex Metrika, nav expandido sin `class="current"`, switcher de idioma al par exacto, footer de 38 líneas ya con los 2 enlaces nuevos, scripts de cola byte-idénticos). Schema por página: MedicalWebPage (tipo nuevo en el sitio) + BreadcrumbList + MedicalBusiness; las 2×2 de tests añaden FAQPage (visible=schema).
+
+**Decisiones de diseño documentadas**:
+- Las 8 páginas nuevas NO llevan botón flotante de WhatsApp ni mobile-cta-bar: en crisis nada debe competir con las líneas de emergencia; en tests obstruirían los radios en móvil. El JS compartido lo tolera (`if(!bar)return`). CTA estándar wa.me al pie en las 8, más nav y footer: **3 wa.me por página nueva**.
+- **Usted/tú deliberado**: los ítems oficiales ES de PHQ-9/GAD-7 conservan su usted validado (editarlos invalidaría el instrumento); todo el texto de página alrededor va en tú. Es la regla clínica del comando, no una inconsistencia.
+- Breadcrumb de test a 3 niveles (Home › Screeners › PHQ-9) con BreadcrumbList de 3 ítems.
+- Los enlaces en prosa de las páginas nuevas usan subrayado gold (`.content-link` y reglas equivalentes), porque el reset global del sitio deja `<a>` sin estilo.
+
+## Instrumentos y calculadores
+
+- **Byte-exactos contra el comando: 0 diferencias** en 16+14 ítems (9+9 PHQ EN/ES, 7+7 GAD EN/ES), 4+4 opciones × 2 lenguas y las 2 instrucciones (diff literal de `<legend>`, `<span>` de opciones y `q-instruction`).
+- Markup accesible: `fieldset` + `legend` (texto del ítem intacto; numeración por contador CSS, fuera del texto), labels clicables, radios con `accent-color` gold.
+- JS vanilla inline: botón deshabilitado hasta responder todo (contador visible), score = suma, scroll suave, reinicio.
+- **Pruebas de puntuación (Node, lógica extraída de las páginas reales)**:
+
+```
+PHQ-9 (EN y ES idénticos): todo-0 → 0 Minimal · todo-3 → 27 Severe ·
+mixta [1,2,0,3,1,2,0,1,2] → 12 Moderate (ítem9=2 → crisis=true) ·
+regla de crisis con score bajo: [0×8, ítem9=1] → score 1 Minimal, crisis=TRUE ·
+barrido 0..27 → 0000011111222223333344444444 (fronteras 4/5, 9/10, 14/15, 19/20 exactas)
+GAD-7 (EN y ES idénticos): todo-0 → 0 Minimal · todo-3 → 21 Severe ·
+mixta [2,1,3,0,2,1,2] → 11 Moderate · sin elemento de crisis (correcto: no hay ítem de ideación) ·
+barrido 0..21 → 0000011111222223333333 (fronteras 4/5, 9/10, 14/15 exactas)
+```
+
+- **Regla de crisis (inviolable) implementada**: recuadro estático borde gold/fondo suave con el texto EN final del comando (enlace a /crisis/ dentro de la frase "crisis resources") y espejo ES en tú (enlace a /es/crisis/); se muestra ANTES del score cuando ítem 9 > 0, con el score debajo. Presente solo en PHQ-9.
+
+## Integración
+
+1. **Footer columna Práctica/Practice** (resolución del estratega ante la inexistencia de columna "Resources"): `Free screeners`/`Tests gratuitos` + `Crisis resources`/`Recursos de crisis` (en ese orden, al final) en las **46** páginas con columnas + las 8 nuevas de serie = 54.
+2. **Matiz de seguridad del estratega**: las 5 páginas de footer mínimo (policies, privacy-policy, es/politicas, politica-privacidad, 404) reciben SOLO el enlace de crisis, en el patrón local de cada footer. Crisis alcanzable desde las 59 páginas del sitio sin excepción.
+3. **4 enlaces internos quirúrgicos** (anclados por CONTENIDO, no por línea, por orden del estratega): frase final de la sección de síntomas con enlace al test correspondiente en depression-therapy-online, es/terapia-depresion (PHQ-9), anxiety-therapy-online, es/terapia-ansiedad (GAD-7). Verificado post-inserción: cada `<p>` quedó entre su H2 de síntomas y el siguiente H2. No tocan FAQ: sin resync.
+4. **Sitemap**: 50 → **58 URLs** (8 nuevas con pares hreflang en/es, lastmod 2026-08-22, priority 0.8, patrón de página de servicio sin x-default). XML válido.
+5. **llms.txt**: bullet nuevo en la sección Services (English) con la frase literal del comando como descripción.
+6. **lastmod**: las 8 nuevas + las 4 de servicio con frase nueva visible = 12 entradas en 2026-08-22. Las 51 tocadas solo en footer NO bumpean lastmod (extensión documentada de la regla de infraestructura: navegación global sin cambio de contenido de página).
+
+## Suite global final (salida literal de la batería)
+
+```
+instruments byte-exact 0 diffs · JSON-LD 154 bloques 0 errores · aggregateRating 0 ·
+FAQ 175 (163+12) dup 0 · schema=visible 175/175 0 desync (render real sin scripts;
+convención .faq-link descontada) · em dashes 0 · <em> 0 · blockquotes 146 ·
+wa.me NUEVO CANON = 411 (387 + 24 = 8 páginas × 3) · precios intactos $120/$430/$1,200 ·
+footers 54 con ambos enlaces + 5 mínimos con crisis · 4 enlaces internos ·
+sitemap 58 válido · llms.txt OK · lastmod 12×2026-08-22 · reseñas 22: superficies 8+8 sin cambio ·
+HTML balanceado 8/8 nuevas · hreflang recíproco 4/4 pares · canonical propio 8/8
+```
+
+**Canon actualizado para futuros comandos**: wa.me = 411 · blockquotes = 146 (sin cambio) · FAQ = 175 · páginas HTML con `<head>` = 59 · sitemap = 58 URLs.
+
+## Doble auditoría acotada (segundo auditor independiente, solo lectura)
+
+**BLOQUEANTES: 0 · Veredicto: APROBADA ×8 páginas + integración APROBADA.** El auditor reprodujo por script: instrumentos carácter a carácter EXACTOS en las 4 páginas (legends, opciones con valores 0-3 en orden, instrucciones, incluido el ítem 8 ES con su «¿» inicial); regla de crisis del ítem 9 presente SOLO en PHQ-9, antes del score, con enlaces correctos; bandas JS = tabla en ambos tests con EN=ES; botón disabled por defecto y reset completo; teléfonos tel: correctos y externos con noopener; cero botón flotante/mobile-bar en las 8 (decisión de diseño confirmada); head/nav/footer en diff estructural vacío contra la página de referencia (única delta: `class="current"`, correcta); higiene en cero (em dashes, `<em>`, aggregateRating); FAQ visible=schema 3/3 en cada test; cero "usted" fuera de los ítems del instrumento en el copy ES.
+
+## Ronda visual del dueño (2026-08-25, misma rama, instrumentos intocados)
+
+- **FIX 1 (desborde de píldoras de opciones)**: `.q-opts` a `minmax(0,1fr)`, `.q-opt` y su `span` con `min-width:0`, `white-space:normal` y `overflow-wrap:break-word`; breakpoints nuevos: 4 columnas >1024px, 2 columnas 481-1024px, 1 columna ≤480px. Aplicado idéntico en las 4 páginas de test. **Verificación de render**: la extensión de Chrome fue declinada y no hay motor headless instalado, así que se verificó por layout computado con las cadenas reales más largas ("More than half the days" / "Más de la mitad de los días") en 320/375/768/1280 px: la palabra indivisible más larga ocupa ≤41px frente a 122-274px de espacio de texto por píldora → **encaja y envuelve en 1-2 líneas en los 4 anchos, EN y ES, sin desborde ni recorte** (con el CSS nuevo el desborde es estructuralmente imposible: solo una palabra más ancha que la píldora podría desbordar).
+- **FIX 2 (cards del hub a formato del dueño)**: taglines eliminadas; cada card en 4 líneas exactas con jerarquía propia: `<h3>` (PHQ-9/GAD-7, serif) → `.screener-type` (Depression screening/Anxiety screening · Cribado de depresión/ansiedad; sans 600 navy) → `.screener-meta` (9 questions · ~2 minutes / 9 preguntas · ~2 minutos; small muted) → `.link` (Take the test → / Hacer el test →; gold). De paso resuelve la menor M4 del auditor (ya no hay "~2 minutos" duplicado en formato distinto: las cards usan el separador · del comando).
+- **FIX 3 (crisis reestructurada, ambos idiomas)**: el lede ("Therapy is not emergency care..." / "La terapia no es atención de emergencia...") sube al hero como `hero-sub` bajo el H1; el cuerpo queda con los bloques de países + cierre, ampliado con las líneas verificadas por el estratega en este orden: Singapur (intacto) · **EE. UU.: 988 Suicide &amp; Crisis Lifeline, call or text 988** (tel:988) · **Reino Unido: Samaritans, 24 h: 116 123** (tel:116123) · España (intacto) · **Dubái y EAU: Dubai Community Mental Health Support Hotline 800 506** (tel:800506) **· EAU 24 h: 800 725 462, SAKINA** (tel:800725462) · resto del mundo (intacto) · cierre (intacto). ES espejo natural con los mismos números y tel:.
+- **Re-verificación completa**: instrumentos byte-idénticos a antes de los fixes (**0 diffs**; el diff git de las 4 páginas de test toca solo reglas `.q-opt`/`@media`) · suite estándar íntegra en verde (JSON-LD 154/0 · FAQ 175/0 dup/0 desync · em 0 · `<em>` 0 · blockquotes 146 · wa.me 411 · precios intactos · footers 54+5 · sitemap 58 válido) · lastmod de las 8 nuevas bumpeado a 2026-08-25 (cambio visible de esta ronda; las 4 de servicio quedan en 2026-08-22, no tocadas hoy).
+
+### Corrección de diagnóstico FIX 1 (2026-08-25, segunda pasada)
+
+El problema real (captura del dueño) no eran las píldoras sino el **título de cada pregunta montado sobre el borde superior de su card**: los títulos son `<legend>` y la card estaba estilada sobre el propio `<fieldset>`, así que la legend exhibía su comportamiento nativo de flotar sobre el borde. **Arreglo** (solo CSS, 2 líneas por página en las 4 de test, instrumentos byte-intocados): reset canónico de legend (`float:left;width:100%;padding:0`) que la reintegra al flujo como primera línea DENTRO de la card, + `clear:both` en `.q-opts`. La card sigue siendo el fieldset (estructura sin cambios).
+
+**Verificación con RENDER REAL (Chrome 151 headless vía CDP con emulación de viewport, servidor local de la rama)**: geometría medida con `getBoundingClientRect` de las 32 legends (9+9 PHQ EN/ES, 7+7 GAD EN/ES) en 375/768/1280 px: **32/32 completamente dentro de su card** (por debajo del borde superior Y de la línea de padding, dentro de los laterales) y **overflow-x = 0 en las 12 combinaciones página×ancho**. Capturas visuales limpias confirman: 375 px una columna de píldoras completas, 768 px 2×2, 1280 px 4 columnas con "Más de la mitad de los días" envolviendo dentro de su píldora. (Nota de método: los screenshots CLI previos a 375 px eran un artefacto, el headless impone ancho mínimo de ventana ~500 px; el probe lo demostró y por eso esta ronda usa CDP con `Emulation.setDeviceMetricsOverride`.)
+
+**Fragmento final HTML+CSS de una pregunta:**
+
+```html
+<fieldset class="q-item fade-up">
+  <legend>Little interest or pleasure in doing things</legend>
+  <div class="q-opts">
+    <label class="q-opt"><input type="radio" name="q1" value="0"><span>Not at all</span></label>
+    <label class="q-opt"><input type="radio" name="q1" value="1"><span>Several days</span></label>
+    <label class="q-opt"><input type="radio" name="q1" value="2"><span>More than half the days</span></label>
+    <label class="q-opt"><input type="radio" name="q1" value="3"><span>Nearly every day</span></label>
+  </div>
+</fieldset>
+```
+```css
+.q-item{border:1px solid var(--border-light);background:var(--white);border-radius:8px;padding:22px 24px;margin-top:16px;box-shadow:var(--shadow-rest);counter-increment:q}
+.q-item legend{float:left;width:100%;padding:0;font-family:var(--sans);font-weight:600;color:var(--navy);font-size:.95rem;line-height:1.5}
+.q-item legend::before{content:counter(q) '. ';color:var(--gold);font-weight:700}
+.q-opts{clear:both;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:14px}
+.q-opt{display:flex;align-items:center;gap:8px;border:1px solid var(--border);border-radius:6px;padding:10px 12px;font-size:.82rem;line-height:1.4;cursor:pointer;transition:all .2s;background:var(--bg);min-width:0;white-space:normal}
+.q-opt span{flex:1 1 auto;min-width:0;white-space:normal;overflow-wrap:break-word}
+@media(max-width:1024px){.q-opts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.q-opts{grid-template-columns:minmax(0,1fr)}}
+```
+
+Re-verificación tras la segunda pasada: instrumentos byte-exactos **0 diffs**, suite completa ALL PASS.
+
+**Menores registrados (sin tocar, a criterio del estratega)**: (M1) masculino no marcado en el copy ES de página ("no estás seguro", "cuando tú estés listo"), en contraste con los (a) de los ítems oficiales: convención del sitio, registrado por transparencia; (M2) los `tel:` de códigos cortos (999, 1767, 024) solo marcan dentro de su país; el párrafo Befrienders/findahelpline lo mitiga: diseño defendible; (M3) `lastReviewed` hardcodeado a 2026-08-22 en los MedicalWebPage, sin proceso de refresco; (M4) micro-inconsistencia cosmética del hub: hero "dos o tres minutos" vs cards "~2 minutos".
