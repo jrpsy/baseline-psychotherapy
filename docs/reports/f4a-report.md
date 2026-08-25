@@ -76,4 +76,36 @@ HTML balanceado 8/8 nuevas · hreflang recíproco 4/4 pares · canonical propio 
 - **FIX 3 (crisis reestructurada, ambos idiomas)**: el lede ("Therapy is not emergency care..." / "La terapia no es atención de emergencia...") sube al hero como `hero-sub` bajo el H1; el cuerpo queda con los bloques de países + cierre, ampliado con las líneas verificadas por el estratega en este orden: Singapur (intacto) · **EE. UU.: 988 Suicide &amp; Crisis Lifeline, call or text 988** (tel:988) · **Reino Unido: Samaritans, 24 h: 116 123** (tel:116123) · España (intacto) · **Dubái y EAU: Dubai Community Mental Health Support Hotline 800 506** (tel:800506) **· EAU 24 h: 800 725 462, SAKINA** (tel:800725462) · resto del mundo (intacto) · cierre (intacto). ES espejo natural con los mismos números y tel:.
 - **Re-verificación completa**: instrumentos byte-idénticos a antes de los fixes (**0 diffs**; el diff git de las 4 páginas de test toca solo reglas `.q-opt`/`@media`) · suite estándar íntegra en verde (JSON-LD 154/0 · FAQ 175/0 dup/0 desync · em 0 · `<em>` 0 · blockquotes 146 · wa.me 411 · precios intactos · footers 54+5 · sitemap 58 válido) · lastmod de las 8 nuevas bumpeado a 2026-08-25 (cambio visible de esta ronda; las 4 de servicio quedan en 2026-08-22, no tocadas hoy).
 
+### Corrección de diagnóstico FIX 1 (2026-08-25, segunda pasada)
+
+El problema real (captura del dueño) no eran las píldoras sino el **título de cada pregunta montado sobre el borde superior de su card**: los títulos son `<legend>` y la card estaba estilada sobre el propio `<fieldset>`, así que la legend exhibía su comportamiento nativo de flotar sobre el borde. **Arreglo** (solo CSS, 2 líneas por página en las 4 de test, instrumentos byte-intocados): reset canónico de legend (`float:left;width:100%;padding:0`) que la reintegra al flujo como primera línea DENTRO de la card, + `clear:both` en `.q-opts`. La card sigue siendo el fieldset (estructura sin cambios).
+
+**Verificación con RENDER REAL (Chrome 151 headless vía CDP con emulación de viewport, servidor local de la rama)**: geometría medida con `getBoundingClientRect` de las 32 legends (9+9 PHQ EN/ES, 7+7 GAD EN/ES) en 375/768/1280 px: **32/32 completamente dentro de su card** (por debajo del borde superior Y de la línea de padding, dentro de los laterales) y **overflow-x = 0 en las 12 combinaciones página×ancho**. Capturas visuales limpias confirman: 375 px una columna de píldoras completas, 768 px 2×2, 1280 px 4 columnas con "Más de la mitad de los días" envolviendo dentro de su píldora. (Nota de método: los screenshots CLI previos a 375 px eran un artefacto, el headless impone ancho mínimo de ventana ~500 px; el probe lo demostró y por eso esta ronda usa CDP con `Emulation.setDeviceMetricsOverride`.)
+
+**Fragmento final HTML+CSS de una pregunta:**
+
+```html
+<fieldset class="q-item fade-up">
+  <legend>Little interest or pleasure in doing things</legend>
+  <div class="q-opts">
+    <label class="q-opt"><input type="radio" name="q1" value="0"><span>Not at all</span></label>
+    <label class="q-opt"><input type="radio" name="q1" value="1"><span>Several days</span></label>
+    <label class="q-opt"><input type="radio" name="q1" value="2"><span>More than half the days</span></label>
+    <label class="q-opt"><input type="radio" name="q1" value="3"><span>Nearly every day</span></label>
+  </div>
+</fieldset>
+```
+```css
+.q-item{border:1px solid var(--border-light);background:var(--white);border-radius:8px;padding:22px 24px;margin-top:16px;box-shadow:var(--shadow-rest);counter-increment:q}
+.q-item legend{float:left;width:100%;padding:0;font-family:var(--sans);font-weight:600;color:var(--navy);font-size:.95rem;line-height:1.5}
+.q-item legend::before{content:counter(q) '. ';color:var(--gold);font-weight:700}
+.q-opts{clear:both;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:14px}
+.q-opt{display:flex;align-items:center;gap:8px;border:1px solid var(--border);border-radius:6px;padding:10px 12px;font-size:.82rem;line-height:1.4;cursor:pointer;transition:all .2s;background:var(--bg);min-width:0;white-space:normal}
+.q-opt span{flex:1 1 auto;min-width:0;white-space:normal;overflow-wrap:break-word}
+@media(max-width:1024px){.q-opts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.q-opts{grid-template-columns:minmax(0,1fr)}}
+```
+
+Re-verificación tras la segunda pasada: instrumentos byte-exactos **0 diffs**, suite completa ALL PASS.
+
 **Menores registrados (sin tocar, a criterio del estratega)**: (M1) masculino no marcado en el copy ES de página ("no estás seguro", "cuando tú estés listo"), en contraste con los (a) de los ítems oficiales: convención del sitio, registrado por transparencia; (M2) los `tel:` de códigos cortos (999, 1767, 024) solo marcan dentro de su país; el párrafo Befrienders/findahelpline lo mitiga: diseño defendible; (M3) `lastReviewed` hardcodeado a 2026-08-22 en los MedicalWebPage, sin proceso de refresco; (M4) micro-inconsistencia cosmética del hub: hero "dos o tres minutos" vs cards "~2 minutos".
