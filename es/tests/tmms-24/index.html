@@ -255,6 +255,8 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 .tables-pair{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:36px auto 0}
 @media(max-width:768px){.tables-pair{grid-template-columns:1fr}}
 .tables-pair .bands-table{margin:0}
+.bands-table[hidden]{display:none}
+.tables-pair.single{grid-template-columns:1fr;max-width:520px}
 </style>
   <script type="application/ld+json">
 {
@@ -814,8 +816,12 @@ var dims={at:[1,8],cl:[9,16],re:[17,24]};
 Object.keys(dims).forEach(function(k){var s=0,i;for(i=dims[k][0];i<=dims[k][1];i++){s+=v[i]}
 var b=band(s,CUTS[k][sx]);document.getElementById(k+'Val').textContent=s;document.getElementById(k+'Band').textContent=LABELS[k][b];
 document.querySelectorAll('.bands-table td[data-dim="'+k+'"]').forEach(function(td){td.classList.toggle('current-band',td.getAttribute('data-sex')===sx&&td.getAttribute('data-band')===String(b))})});
+document.getElementById('table-h').hidden=sx!=='h';document.getElementById('table-m').hidden=sx!=='m';
+document.querySelector('.tables-pair').classList.add('single');
 res.hidden=false;res.scrollIntoView({behavior:'smooth'})});
 document.getElementById('resetBtn').addEventListener('click',function(){form.reset();qc.textContent='0';btn.disabled=true;res.hidden=true;
+document.getElementById('table-h').hidden=false;document.getElementById('table-m').hidden=false;
+document.querySelector('.tables-pair').classList.remove('single');
 document.querySelectorAll('.bands-table td[data-dim]').forEach(function(td){td.classList.remove('current-band')});form.scrollIntoView({behavior:'smooth'})});
 })();
 </script>
