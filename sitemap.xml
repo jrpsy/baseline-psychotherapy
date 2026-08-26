@@ -23,7 +23,7 @@
     <loc>https://baselinepsychotherapy.com/burnout-therapy/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/burnout-therapy/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/terapia-burnout/"/>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -31,7 +31,7 @@
     <loc>https://baselinepsychotherapy.com/es/terapia-burnout/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/burnout-therapy/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/terapia-burnout/"/>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -447,7 +447,7 @@
     <loc>https://baselinepsychotherapy.com/tests/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/tests/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/"/>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -455,7 +455,7 @@
     <loc>https://baselinepsychotherapy.com/es/tests/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/tests/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/"/>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -488,6 +488,38 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/tests/gad-7/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/gad-7/"/>
     <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baselinepsychotherapy.com/tests/who-5/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/tests/who-5/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/who-5/"/>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baselinepsychotherapy.com/es/tests/who-5/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/tests/who-5/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/who-5/"/>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baselinepsychotherapy.com/tests/cbi/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/tests/cbi/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/cbi/"/>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baselinepsychotherapy.com/es/tests/cbi/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/tests/cbi/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/cbi/"/>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
