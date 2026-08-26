@@ -10,20 +10,20 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tests Clínicos Gratuitos | Seis Tests Validados Online</title>
-  <meta name="description" content="Seis tests de salud mental validados y gratuitos (PHQ-9, GAD-7, CBI, WHO-5, DASS-21, TMMS-24) puntuados al instante en tu navegador. Sin cuenta y sin guardar datos. En español e inglés.">
+  <title>Test DASS-21: Depresión, Ansiedad y Estrés | Gratis y Privado</title>
+  <meta name="description" content="Haz el DASS-21, el cribador de dominio público de la UNSW que puntúa por separado depresión, ansiedad y estrés. Al instante, en tu navegador, sin guardar datos. En español e inglés.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="J.R. Hernandez">
-  <link rel="canonical" href="https://baselinepsychotherapy.com/es/tests/">
-  <link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/tests/">
-  <link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/">
-  <link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/tests/">
+  <link rel="canonical" href="https://baselinepsychotherapy.com/es/tests/dass-21/">
+  <link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/tests/dass-21/">
+  <link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/dass-21/">
+  <link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/tests/dass-21/">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Tests Clínicos Gratuitos | Seis Tests Validados Online">
-  <meta property="og:description" content="Seis tests de salud mental validados y gratuitos (PHQ-9, GAD-7, CBI, WHO-5, DASS-21, TMMS-24) puntuados al instante en tu navegador. Sin cuenta y sin guardar datos. En español e inglés.">
-  <meta property="og:url" content="https://baselinepsychotherapy.com/es/tests/">
+  <meta property="og:title" content="Test DASS-21: Depresión, Ansiedad y Estrés | Gratis y Privado">
+  <meta property="og:description" content="Haz el DASS-21, el cribador de dominio público de la UNSW que puntúa por separado depresión, ansiedad y estrés. Al instante, en tu navegador, sin guardar datos. En español e inglés.">
+  <meta property="og:url" content="https://baselinepsychotherapy.com/es/tests/dass-21/">
   <meta property="og:site_name" content="Baseline Psychotherapy">
   <meta property="og:locale" content="es_ES">
   <meta property="og:image" content="https://baselinepsychotherapy.com/og-home-es.png">
@@ -220,20 +220,62 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 .content-link,.hero-sub a,.crisis-body a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
 .crisis-body strong{color:var(--navy)}
 .crisis-body p{margin-bottom:20px;text-align:left}
-.screener-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:36px;max-width:800px;margin-left:auto;margin-right:auto}
-.screener-type{font-family:var(--sans);font-size:.95rem;font-weight:600;color:var(--navy);margin-bottom:4px}
-.screener-meta{font-family:var(--sans);font-size:.8rem;color:var(--text);opacity:.6;margin-bottom:14px}
-@media(max-width:768px){.screener-grid{grid-template-columns:1fr}}
+.screener{max-width:760px;margin:40px auto 0;counter-reset:q}
+.q-instruction{max-width:760px;margin:36px auto 0;font-weight:600;color:var(--navy);font-size:1.02rem;text-align:left}
+.q-item{border:1px solid var(--border-light);background:var(--white);border-radius:8px;padding:22px 24px;margin-top:16px;box-shadow:var(--shadow-rest);counter-increment:q}
+.q-item legend{float:left;width:100%;padding:0;font-family:var(--sans);font-weight:600;color:var(--navy);font-size:.95rem;line-height:1.5}
+.q-item legend::before{content:counter(q) '. ';color:var(--gold);font-weight:700}
+.q-opts{clear:both;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:14px}
+.q-opt{display:flex;align-items:center;gap:8px;border:1px solid var(--border);border-radius:6px;padding:10px 12px;font-size:.82rem;line-height:1.4;cursor:pointer;transition:all .2s;background:var(--bg);min-width:0;white-space:normal}
+.q-opt span{flex:1 1 auto;min-width:0;white-space:normal;overflow-wrap:break-word}
+.q-opt:hover{border-color:var(--gold)}
+.q-opt:has(input:checked){border-color:var(--gold);background:var(--gold-subtle)}
+.q-opt input{accent-color:var(--gold);flex-shrink:0}
+.q-progress{text-align:center;font-size:.85rem;opacity:.7;margin-top:20px}
+.screener-actions{display:flex;gap:16px;justify-content:center;margin-top:16px;flex-wrap:wrap}
+.btn[disabled]{opacity:.45;cursor:not-allowed;pointer-events:none}
+.result-card{background:var(--white);border:1px solid var(--border-light);border-left:4px solid var(--gold);border-radius:8px;padding:32px 28px;margin:40px auto 0;max-width:760px;box-shadow:var(--shadow-lift)}
+.result-card[hidden]{display:none}
+.crisis-note{border:2px solid var(--gold);background:var(--gold-subtle);border-radius:8px;padding:22px 24px;margin-bottom:24px}
+.crisis-note[hidden]{display:none}
+.crisis-note p{text-align:left;font-size:.95rem}
+.score-line{font-family:var(--serif);font-size:2.4rem;font-weight:700;color:var(--navy);line-height:1.1}
+.band-texts p{margin-top:16px;text-align:left}
+.band-texts p[hidden]{display:none}
+.bands-table{width:100%;max-width:760px;margin:36px auto 0;border-collapse:collapse;font-size:.9rem;background:var(--white);border:1px solid var(--border-light);border-radius:8px;overflow:hidden;box-shadow:var(--shadow-rest)}
+.bands-table th{background:var(--navy);color:var(--white);font-family:var(--sans);font-weight:600;text-align:left;padding:12px 16px;font-size:.82rem;letter-spacing:.05em;text-transform:uppercase}
+.bands-table td{padding:12px 16px;border-top:1px solid var(--border-light);text-align:left}
+.bands-table tr.current-band td{background:var(--gold-subtle);font-weight:600;color:var(--navy)}
+.disclaimer{max-width:760px;margin:48px auto 0;font-size:.85rem;line-height:1.7;opacity:.75;border:1px solid var(--border);border-radius:8px;padding:18px 22px;background:var(--white);text-align:left}
+@media(max-width:1024px){.q-opts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.q-opts{grid-template-columns:minmax(0,1fr)}}
+.sub-score{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--navy);line-height:1.3;text-align:left}
+.sub-score .sub-band{font-family:var(--sans);font-size:.95rem;font-weight:600;color:var(--gold)}
+.bands-table td.current-band{background:var(--gold-subtle);font-weight:600;color:var(--navy)}
 </style>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  "name": "Tests Clínicos Gratuitos",
-  "url": "https://baselinepsychotherapy.com/es/tests/",
-  "description": "Seis tests de salud mental validados y gratuitos (PHQ-9, GAD-7, CBI, WHO-5, DASS-21, TMMS-24) puntuados al instante en tu navegador.",
+  "name": "Test DASS-21 de Depresión, Ansiedad y Estrés",
+  "url": "https://baselinepsychotherapy.com/es/tests/dass-21/",
+  "description": "El cribador de dominio público DASS-21, puntuado al instante y en privado en tu navegador.",
   "inLanguage": "es",
   "lastReviewed": "2026-08-26",
+  "about": [
+    {
+      "@type": "MedicalCondition",
+      "name": "Depresión"
+    },
+    {
+      "@type": "MedicalCondition",
+      "name": "Ansiedad"
+    },
+    {
+      "@type": "MedicalCondition",
+      "name": "Estrés"
+    }
+  ],
   "reviewedBy": {
     "@type": "Person",
     "@id": "https://baselinepsychotherapy.com/#jr",
@@ -241,6 +283,38 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
     "jobTitle": "Psychotherapist",
     "url": "https://baselinepsychotherapy.com"
   }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Por qué el DASS-21 da tres puntuaciones separadas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Porque depresión, ansiedad y estrés son estados relacionados pero distintos: ánimo bajo y pérdida de impulso, alarma fisiológica y pánico, y tensión sostenida con irritabilidad. Medir cada uno por separado muestra dónde está realmente la carga, algo que una única puntuación combinada ocultaría."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿El DASS-21 diagnostica depresión o ansiedad?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Es una herramienta de cribado que estima la gravedad de los síntomas de la última semana; un diagnóstico requiere una evaluación clínica con un profesional cualificado. En Baseline Psychotherapy, un resultado como este es el punto de partida de la evaluación, nunca la conclusión."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Esta página envía mis respuestas a algún sitio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Las tres puntuaciones se calculan en tu navegador, no se guarda ni se envía nada, y al cerrar la página todo desaparece."
+      }
+    }
+  ]
 }
   </script>
   <script type="application/ld+json">
@@ -259,6 +333,12 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
       "position": 2,
       "name": "Tests Clínicos Gratuitos",
       "item": "https://baselinepsychotherapy.com/es/tests/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "DASS-21",
+      "item": "https://baselinepsychotherapy.com/es/tests/dass-21/"
     }
   ]
 }
@@ -269,7 +349,7 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
   "@type": "MedicalBusiness",
   "@id": "https://baselinepsychotherapy.com/#organization",
   "name": "Baseline Psychotherapy",
-  "url": "https://baselinepsychotherapy.com/es/tests/",
+  "url": "https://baselinepsychotherapy.com/es/tests/dass-21/",
   "logo": {
     "@type": "ImageObject",
     "url": "https://baselinepsychotherapy.com/LOGO.webp"
@@ -311,7 +391,7 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
       <li><a href="/es/blog/">Blog</a></li>
       <li><a href="/es/#contacto">Contacto</a></li>
       <li class="nav-cta"><a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hola%20J.R.%2C%20me%20gustar%C3%ADa%20reservar%20una%20consulta%20gratuita%20de%2015%20minutos." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Comenzar</a></li>
-      <li><a href="/tests/" style="font-size:.82rem;font-weight:600;color:var(--gold)">EN</a></li>
+      <li><a href="/tests/dass-21/" style="font-size:.82rem;font-weight:600;color:var(--gold)">EN</a></li>
     </ul>
     <button class="nav-mobile-toggle" id="navToggle" aria-label="Menú"><span></span><span></span><span></span></button>
   </div>
@@ -319,7 +399,7 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 
 <div class="breadcrumb">
   <div class="container">
-    <a href="/es/">Inicio</a> &rsaquo; Tests Clínicos Gratuitos
+    <a href="/es/">Inicio</a> &rsaquo; <a href="/es/tests/">Tests</a> &rsaquo; DASS-21
   </div>
 </div>
 
@@ -327,60 +407,270 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 <section class="page-hero" id="main">
   <div class="container">
     <div class="page-hero-content fade-up">
-      <span class="kicker">Instrumentos Validados · Privado · Al Instante</span>
-      <h1>Tests Clínicos Gratuitos</h1>
-      <p class="hero-sub">Estos son los mismos cuestionarios validados que se usan en la investigación clínica y en esta consulta: no son quizzes de personalidad. Cada uno toma ~2 minutos, se puntúa al instante y te dice con honestidad qué significa el número y qué no.</p>
-      <p class="hero-sub">Dos cosas antes de empezar. Primera: un test de cribado es un punto de partida, no un diagnóstico; solo una evaluación clínica puede darlo. Segunda, y aquí importa: <strong>nada de lo que respondas sale de tu dispositivo.</strong> Sin cuenta, sin email, sin datos enviados ni guardados. El cálculo ocurre en tu navegador y desaparece al cerrar la página.</p>
+      <span class="kicker">Test Clínico Gratuito · 21 Preguntas · ~4 Minutos</span>
+      <h1>Test DASS-21: Depresión,<br>Ansiedad y Estrés</h1>
+      <p class="hero-sub">El DASS-21 mide tres estados en un solo cuestionario: depresión, ansiedad y estrés, cada uno con su propia puntuación. Desarrollado en la University of New South Wales <a href="https://pubmed.ncbi.nlm.nih.gov/16004657/" target="_blank" rel="noopener">y validado en decenas de idiomas</a>, es de dominio público y se usa en clínicas de todo el mundo. Pregunta por la última semana. Responde con honestidad, no como te gustaría sentirte.</p>
     </div>
   </div>
 </section>
 
-<!-- SCREENERS -->
+<!-- SCREENER -->
 <section class="content-section alt">
   <div class="container">
     <div class="section-intro fade-up">
-      <p class="label">Elige un Test</p>
-      <h2>Seis Tests Validados,<br>Puntuados en Tu Navegador</h2>
+      <p class="label">El Cuestionario</p>
+      <h2>Haz el DASS-21</h2>
     </div>
-    <div class="screener-grid">
-      <a href="/es/tests/phq-9/" class="related-card fade-up">
-        <h3>PHQ-9</h3>
-        <p class="screener-type">Cribado de depresión</p>
-        <p class="screener-meta">9 preguntas · ~2 minutos</p>
-        <span class="link">Hacer el test →</span>
-      </a>
-      <a href="/es/tests/gad-7/" class="related-card fade-up" style="transition-delay:.06s">
-        <h3>GAD-7</h3>
-        <p class="screener-type">Cribado de ansiedad</p>
-        <p class="screener-meta">7 preguntas · ~2 minutos</p>
-        <span class="link">Hacer el test →</span>
-      </a>
-      <a href="/es/tests/cbi/" class="related-card fade-up" style="transition-delay:.12s">
-        <h3>CBI</h3>
-        <p class="screener-type">Cribado de burnout</p>
-        <p class="screener-meta">6 preguntas · ~2 minutos</p>
-        <span class="link">Hacer el test →</span>
-      </a>
-      <a href="/es/tests/who-5/" class="related-card fade-up" style="transition-delay:.18s">
-        <h3>WHO-5</h3>
-        <p class="screener-type">Índice de bienestar</p>
-        <p class="screener-meta">5 preguntas · ~1 minuto</p>
-        <span class="link">Hacer el test →</span>
-      </a>
-      <a href="/es/tests/dass-21/" class="related-card fade-up" style="transition-delay:.24s">
-        <h3>DASS-21</h3>
-        <p class="screener-type">Depresión, ansiedad y estrés</p>
-        <p class="screener-meta">21 preguntas · ~4 minutos</p>
-        <span class="link">Hacer el test →</span>
-      </a>
-      <a href="/es/tests/tmms-24/" class="related-card fade-up" style="transition-delay:.3s">
-        <h3>TMMS-24</h3>
-        <p class="screener-type">Inteligencia emocional</p>
-        <p class="screener-meta">24 preguntas · ~4 minutos</p>
-        <span class="link">Hacer el test →</span>
-      </a>
+    <p class="q-instruction fade-up">Por favor, lea cada una de las siguientes frases y seleccione el número 0, 1, 2 ó 3 que mejor indique en qué medida cada frase ha sido aplicable a usted durante los últimos 7 días. No hay respuestas correctas ni incorrectas. No emplee mucho tiempo en cada frase.</p>
+    <form class="screener" id="screenerForm">
+      <fieldset class="q-item fade-up">
+        <legend>Me ha costado mucho descargar la tensión</legend>
+        <div class="q-opts">
+          <label class="q-opt"><input type="radio" name="q1" value="0"><span>Nada aplicable a mí</span></label>
+          <label class="q-opt"><input type="radio" name="q1" value="1"><span>Aplicable a mí en algún grado, o una pequeña parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q1" value="2"><span>Aplicable a mí en un grado considerable, o una buena parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q1" value="3"><span>Muy aplicable a mí, o aplicable la mayor parte del tiempo</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="q-item fade-up">
+        <legend>He notado la boca seca</legend>
+        <div class="q-opts">
+          <label class="q-opt"><input type="radio" name="q2" value="0"><span>Nada aplicable a mí</span></label>
+          <label class="q-opt"><input type="radio" name="q2" value="1"><span>Aplicable a mí en algún grado, o una pequeña parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q2" value="2"><span>Aplicable a mí en un grado considerable, o una buena parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q2" value="3"><span>Muy aplicable a mí, o aplicable la mayor parte del tiempo</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="q-item fade-up">
+        <legend>No he podido sentir ninguna emoción positiva</legend>
+        <div class="q-opts">
+          <label class="q-opt"><input type="radio" name="q3" value="0"><span>Nada aplicable a mí</span></label>
+          <label class="q-opt"><input type="radio" name="q3" value="1"><span>Aplicable a mí en algún grado, o una pequeña parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q3" value="2"><span>Aplicable a mí en un grado considerable, o una buena parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q3" value="3"><span>Muy aplicable a mí, o aplicable la mayor parte del tiempo</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="q-item fade-up">
+        <legend>He tenido dificultades para respirar (p.ej., respiración excesivamente rápida, falta de aliento sin haber hecho esfuerzo físico)</legend>
+        <div class="q-opts">
+          <label class="q-opt"><input type="radio" name="q4" value="0"><span>Nada aplicable a mí</span></label>
+          <label class="q-opt"><input type="radio" name="q4" value="1"><span>Aplicable a mí en algún grado, o una pequeña parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q4" value="2"><span>Aplicable a mí en un grado considerable, o una buena parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q4" value="3"><span>Muy aplicable a mí, o aplicable la mayor parte del tiempo</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="q-item fade-up">
+        <legend>Me ha resultado difícil tener iniciativa para hacer cosas</legend>
+        <div class="q-opts">
+          <label class="q-opt"><input type="radio" name="q5" value="0"><span>Nada aplicable a mí</span></label>
+          <label class="q-opt"><input type="radio" name="q5" value="1"><span>Aplicable a mí en algún grado, o una pequeña parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q5" value="2"><span>Aplicable a mí en un grado considerable, o una buena parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q5" value="3"><span>Muy aplicable a mí, o aplicable la mayor parte del tiempo</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="q-item fade-up">
+        <legend>He tendido a reaccionar exageradamente ante las situaciones</legend>
+        <div class="q-opts">
+          <label class="q-opt"><input type="radio" name="q6" value="0"><span>Nada aplicable a mí</span></label>
+          <label class="q-opt"><input type="radio" name="q6" value="1"><span>Aplicable a mí en algún grado, o una pequeña parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q6" value="2"><span>Aplicable a mí en un grado considerable, o una buena parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q6" value="3"><span>Muy aplicable a mí, o aplicable la mayor parte del tiempo</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="q-item fade-up">
+        <legend>He tenido temblores (p.ej., en las manos)</legend>
+        <div class="q-opts">
+          <label class="q-opt"><input type="radio" name="q7" value="0"><span>Nada aplicable a mí</span></label>
+          <label class="q-opt"><input type="radio" name="q7" value="1"><span>Aplicable a mí en algún grado, o una pequeña parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q7" value="2"><span>Aplicable a mí en un grado considerable, o una buena parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q7" value="3"><span>Muy aplicable a mí, o aplicable la mayor parte del tiempo</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="q-item fade-up">
+        <legend>He sentido que estaba gastando una gran cantidad de energía</legend>
+        <div class="q-opts">
+          <label class="q-opt"><input type="radio" name="q8" value="0"><span>Nada aplicable a mí</span></label>
+          <label class="q-opt"><input type="radio" name="q8" value="1"><span>Aplicable a mí en algún grado, o una pequeña parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q8" value="2"><span>Aplicable a mí en un grado considerable, o una buena parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q8" value="3"><span>Muy aplicable a mí, o aplicable la mayor parte del tiempo</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="q-item fade-up">
+        <legend>He estado preocupado/a por situaciones en las que pudiera ser presa del pánico y hacer el ridículo</legend>
+        <div class="q-opts">
+          <label class="q-opt"><input type="radio" name="q9" value="0"><span>Nada aplicable a mí</span></label>
+          <label class="q-opt"><input type="radio" name="q9" value="1"><span>Aplicable a mí en algún grado, o una pequeña parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q9" value="2"><span>Aplicable a mí en un grado considerable, o una buena parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q9" value="3"><span>Muy aplicable a mí, o aplicable la mayor parte del tiempo</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="q-item fade-up">
+        <legend>He sentido que no había nada que me ilusionara</legend>
+        <div class="q-opts">
+          <label class="q-opt"><input type="radio" name="q10" value="0"><span>Nada aplicable a mí</span></label>
+          <label class="q-opt"><input type="radio" name="q10" value="1"><span>Aplicable a mí en algún grado, o una pequeña parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q10" value="2"><span>Aplicable a mí en un grado considerable, o una buena parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q10" value="3"><span>Muy aplicable a mí, o aplicable la mayor parte del tiempo</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="q-item fade-up">
+        <legend>Me he sentido agitado/a</legend>
+        <div class="q-opts">
+          <label class="q-opt"><input type="radio" name="q11" value="0"><span>Nada aplicable a mí</span></label>
+          <label class="q-opt"><input type="radio" name="q11" value="1"><span>Aplicable a mí en algún grado, o una pequeña parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q11" value="2"><span>Aplicable a mí en un grado considerable, o una buena parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q11" value="3"><span>Muy aplicable a mí, o aplicable la mayor parte del tiempo</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="q-item fade-up">
+        <legend>Me ha resultado difícil relajarme</legend>
+        <div class="q-opts">
+          <label class="q-opt"><input type="radio" name="q12" value="0"><span>Nada aplicable a mí</span></label>
+          <label class="q-opt"><input type="radio" name="q12" value="1"><span>Aplicable a mí en algún grado, o una pequeña parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q12" value="2"><span>Aplicable a mí en un grado considerable, o una buena parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q12" value="3"><span>Muy aplicable a mí, o aplicable la mayor parte del tiempo</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="q-item fade-up">
+        <legend>Me he sentido desanimado/a y triste</legend>
+        <div class="q-opts">
+          <label class="q-opt"><input type="radio" name="q13" value="0"><span>Nada aplicable a mí</span></label>
+          <label class="q-opt"><input type="radio" name="q13" value="1"><span>Aplicable a mí en algún grado, o una pequeña parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q13" value="2"><span>Aplicable a mí en un grado considerable, o una buena parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q13" value="3"><span>Muy aplicable a mí, o aplicable la mayor parte del tiempo</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="q-item fade-up">
+        <legend>No he tolerado nada que me impidiera seguir con lo que estaba haciendo</legend>
+        <div class="q-opts">
+          <label class="q-opt"><input type="radio" name="q14" value="0"><span>Nada aplicable a mí</span></label>
+          <label class="q-opt"><input type="radio" name="q14" value="1"><span>Aplicable a mí en algún grado, o una pequeña parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q14" value="2"><span>Aplicable a mí en un grado considerable, o una buena parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q14" value="3"><span>Muy aplicable a mí, o aplicable la mayor parte del tiempo</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="q-item fade-up">
+        <legend>He sentido que estaba al borde del pánico</legend>
+        <div class="q-opts">
+          <label class="q-opt"><input type="radio" name="q15" value="0"><span>Nada aplicable a mí</span></label>
+          <label class="q-opt"><input type="radio" name="q15" value="1"><span>Aplicable a mí en algún grado, o una pequeña parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q15" value="2"><span>Aplicable a mí en un grado considerable, o una buena parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q15" value="3"><span>Muy aplicable a mí, o aplicable la mayor parte del tiempo</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="q-item fade-up">
+        <legend>He sido incapaz de entusiasmarme por nada</legend>
+        <div class="q-opts">
+          <label class="q-opt"><input type="radio" name="q16" value="0"><span>Nada aplicable a mí</span></label>
+          <label class="q-opt"><input type="radio" name="q16" value="1"><span>Aplicable a mí en algún grado, o una pequeña parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q16" value="2"><span>Aplicable a mí en un grado considerable, o una buena parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q16" value="3"><span>Muy aplicable a mí, o aplicable la mayor parte del tiempo</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="q-item fade-up">
+        <legend>He sentido que no valía mucho como persona</legend>
+        <div class="q-opts">
+          <label class="q-opt"><input type="radio" name="q17" value="0"><span>Nada aplicable a mí</span></label>
+          <label class="q-opt"><input type="radio" name="q17" value="1"><span>Aplicable a mí en algún grado, o una pequeña parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q17" value="2"><span>Aplicable a mí en un grado considerable, o una buena parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q17" value="3"><span>Muy aplicable a mí, o aplicable la mayor parte del tiempo</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="q-item fade-up">
+        <legend>He tendido a sentirme enfadado/a con facilidad</legend>
+        <div class="q-opts">
+          <label class="q-opt"><input type="radio" name="q18" value="0"><span>Nada aplicable a mí</span></label>
+          <label class="q-opt"><input type="radio" name="q18" value="1"><span>Aplicable a mí en algún grado, o una pequeña parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q18" value="2"><span>Aplicable a mí en un grado considerable, o una buena parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q18" value="3"><span>Muy aplicable a mí, o aplicable la mayor parte del tiempo</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="q-item fade-up">
+        <legend>He notado mi corazón sin hacer esfuerzo físico (p.ej., aumento del ritmo cardíaco, ausencia de algún latido)</legend>
+        <div class="q-opts">
+          <label class="q-opt"><input type="radio" name="q19" value="0"><span>Nada aplicable a mí</span></label>
+          <label class="q-opt"><input type="radio" name="q19" value="1"><span>Aplicable a mí en algún grado, o una pequeña parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q19" value="2"><span>Aplicable a mí en un grado considerable, o una buena parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q19" value="3"><span>Muy aplicable a mí, o aplicable la mayor parte del tiempo</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="q-item fade-up">
+        <legend>Me he sentido asustado/a sin una razón de peso</legend>
+        <div class="q-opts">
+          <label class="q-opt"><input type="radio" name="q20" value="0"><span>Nada aplicable a mí</span></label>
+          <label class="q-opt"><input type="radio" name="q20" value="1"><span>Aplicable a mí en algún grado, o una pequeña parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q20" value="2"><span>Aplicable a mí en un grado considerable, o una buena parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q20" value="3"><span>Muy aplicable a mí, o aplicable la mayor parte del tiempo</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="q-item fade-up">
+        <legend>He sentido que la vida no tenía ningún sentido</legend>
+        <div class="q-opts">
+          <label class="q-opt"><input type="radio" name="q21" value="0"><span>Nada aplicable a mí</span></label>
+          <label class="q-opt"><input type="radio" name="q21" value="1"><span>Aplicable a mí en algún grado, o una pequeña parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q21" value="2"><span>Aplicable a mí en un grado considerable, o una buena parte del tiempo</span></label>
+          <label class="q-opt"><input type="radio" name="q21" value="3"><span>Muy aplicable a mí, o aplicable la mayor parte del tiempo</span></label>
+        </div>
+      </fieldset>
+    </form>
+    <p class="q-progress"><span id="qCount">0</span> / 21 respondidas</p>
+    <div class="screener-actions">
+      <button type="button" class="btn btn-primary" id="scoreBtn" disabled>Ver mis resultados</button>
     </div>
-    <p class="fade-up" style="text-align:center;margin-top:48px;font-size:.9rem;opacity:.85">¿En crisis ahora mismo? No hagas ningún test: ve directo a los <a href="/es/crisis/" class="content-link">recursos de crisis</a>.</p>
+    <div class="result-card" id="resultBlock" hidden>
+      <p class="sub-score">Depresión: <span id="dVal">0</span> / 42 · <span class="sub-band" id="dBand"></span></p>
+      <p class="sub-score">Ansiedad: <span id="aVal">0</span> / 42 · <span class="sub-band" id="aBand"></span></p>
+      <p class="sub-score">Estrés: <span id="sVal">0</span> / 42 · <span class="sub-band" id="sBand"></span></p>
+      <div class="band-texts">
+        <p data-step="normal" hidden>Tus tres puntuaciones están en el rango normal: un registro de bienestar digno de reconocer. Si aun así algo se siente mal, un test de cribado no puede capturarlo todo: confía en esa señal.</p>
+        <p data-step="act" hidden>Al menos una de tus puntuaciones sugiere síntomas leves a moderados. Este suele ser el mejor momento para actuar: los patrones son más fáciles de cambiar antes de que se asienten. Una consulta gratuita de 15 minutos es una forma de bajo riesgo de mirar qué está pasando.</p>
+        <p data-step="severe-d" hidden>Al menos una de tus puntuaciones está en rango grave, con la depresión como la más alta. Tómalo en serio, por favor: este nivel de síntomas merece apoyo profesional, y el tratamiento basado en evidencia funciona. La <a href="/es/terapia-depresion/" style="color:var(--gold);text-decoration:underline;text-underline-offset:3px">terapia estructurada para la depresión</a> es un buen punto de partida, y contactar esta semana es una buena decisión.</p>
+        <p data-step="severe-a" hidden>Al menos una de tus puntuaciones está en rango grave, con la ansiedad como la más alta. Tómalo en serio, por favor: este nivel de síntomas merece apoyo profesional, y el tratamiento basado en evidencia funciona. La <a href="/es/terapia-ansiedad/" style="color:var(--gold);text-decoration:underline;text-underline-offset:3px">terapia estructurada para la ansiedad</a> es un buen punto de partida, y contactar esta semana es una buena decisión.</p>
+        <p data-step="severe-s" hidden>Al menos una de tus puntuaciones está en rango grave, con el estrés como el más alto. Tómalo en serio, por favor: este nivel de tensión sostenida merece apoyo profesional, y el tratamiento basado en evidencia funciona. La <a href="/es/terapia-burnout/" style="color:var(--gold);text-decoration:underline;text-underline-offset:3px">terapia estructurada de burnout</a> es un buen punto de partida, y contactar esta semana es una buena decisión.</p>
+      </div>
+      <p style="margin-top:24px"><button type="button" class="btn btn-outline btn-sm" id="resetBtn">Empezar de nuevo</button></p>
+    </div>
+  </div>
+</section>
+
+<!-- INTERPRETATION -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-intro fade-up">
+      <p class="label">Interpretación</p>
+      <h2>Qué Significan Tus Puntuaciones</h2>
+    </div>
+    <div class="table-scroll fade-up" style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+    <table class="bands-table" style="min-width:520px">
+      <thead>
+        <tr><th>Gravedad</th><th>Depresión</th><th>Ansiedad</th><th>Estrés</th></tr>
+      </thead>
+      <tbody>
+          <tr><td>Normal</td><td data-sub="d" data-band="0">0–9</td><td data-sub="a" data-band="0">0–7</td><td data-sub="s" data-band="0">0–14</td></tr>
+          <tr><td>Leve</td><td data-sub="d" data-band="1">10–13</td><td data-sub="a" data-band="1">8–9</td><td data-sub="s" data-band="1">15–18</td></tr>
+          <tr><td>Moderada</td><td data-sub="d" data-band="2">14–20</td><td data-sub="a" data-band="2">10–14</td><td data-sub="s" data-band="2">19–25</td></tr>
+          <tr><td>Grave</td><td data-sub="d" data-band="3">21–27</td><td data-sub="a" data-band="3">15–19</td><td data-sub="s" data-band="3">26–33</td></tr>
+          <tr><td>Extremadamente grave</td><td data-sub="d" data-band="4">28–42</td><td data-sub="a" data-band="4">20–42</td><td data-sub="s" data-band="4">34–42</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="disclaimer fade-up">El DASS-21 es una herramienta de cribado, no un diagnóstico. Solo una evaluación clínica con un profesional cualificado puede diagnosticar depresión o un trastorno de ansiedad. El instrumento es de dominio público y se reproduce aquí desde el <a href="https://www2.psy.unsw.edu.au/dass/" target="_blank" rel="noopener">sitio oficial del DASS</a> en la UNSW, en la traducción oficial al español de Bados y López que ese sitio distribuye. Tus respuestas se procesan íntegramente en tu navegador: nada se envía, se guarda ni lo ve nadie más que tú.</p>
+    <p class="fade-up" style="text-align:center;margin-top:40px;font-size:.9rem;opacity:.85">Si ahora mismo no te sientes seguro, la página de <a href="/es/crisis/" class="content-link">recursos de crisis</a> lista líneas gratuitas 24 horas.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="content-section alt" id="faq">
+  <div class="container">
+    <div class="section-intro fade-up">
+      <p class="label">Preguntas Sobre Este Test</p>
+      <h2>Preguntas Frecuentes</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item fade-up"><button class="faq-question">¿Por qué el DASS-21 da tres puntuaciones separadas?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Porque depresión, ansiedad y estrés son estados relacionados pero distintos: ánimo bajo y pérdida de impulso, alarma fisiológica y pánico, y tensión sostenida con irritabilidad. Medir cada uno por separado muestra dónde está realmente la carga, algo que una única puntuación combinada ocultaría.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-question">¿El DASS-21 diagnostica depresión o ansiedad?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>No. Es una herramienta de cribado que estima la gravedad de los síntomas de la última semana; un diagnóstico requiere una evaluación clínica con un profesional cualificado. En Baseline Psychotherapy, un resultado como este es el punto de partida de la evaluación, nunca la conclusión.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-question">¿Esta página envía mis respuestas a algún sitio?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>No. Las tres puntuaciones se calculan en tu navegador, no se guarda ni se envía nada, y al cerrar la página todo desaparece.</p></div></div>
+    </div>
   </div>
 </section>
 
@@ -389,14 +679,14 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
   <div class="container">
     <div class="fade-up">
       <p class="label" style="color:var(--gold);margin-bottom:16px">Comenzar</p>
-      <h2>Hablemos de lo Que Significa Tu Puntuación</h2>
-      <p>Un número es información, no una conclusión. El primer paso es una consulta gratuita de 15 minutos para mirar tu situación con un profesional. Sin derivación médica, sin lista de espera. Recibirás respuesta directamente de J.R. Hernandez.</p>
+      <h2>Convierte Tu Resultado del DASS-21 en un Plan</h2>
+      <p>Si tus puntuaciones sugieren que es momento de actuar, el primer paso es una consulta gratuita de 15 minutos para conversar sobre tu situación. Sin derivación médica, sin lista de espera. Recibirás respuesta directamente de J.R. Hernandez.</p>
       <div class="cta-actions">
-        <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hola%20J.R.%2C%20me%20gustar%C3%ADa%20hablar%20sobre%20mis%20resultados%20del%20test." class="btn btn-gold" target="_blank" rel="noopener">
+        <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hola%20J.R.%2C%20me%20gustar%C3%ADa%20hablar%20sobre%20mi%20resultado%20del%20DASS-21." class="btn btn-gold" target="_blank" rel="noopener">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.685-1.408A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.607-.798-6.38-2.144l-.29-.222-3.042.914.85-3.117-.234-.299A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
           WhatsApp
         </a>
-        <a onclick="gtag('event','email_click',{event_category:'conversion',event_label:this.href})" href="mailto:jr@baselinepsychotherapy.com?subject=Consulta%20sobre%20resultados%20del%20test" class="btn btn-outline" style="color:var(--white);border-color:rgba(255,255,255,.3);position:relative;z-index:2">Email</a>
+        <a onclick="gtag('event','email_click',{event_category:'conversion',event_label:this.href})" href="mailto:jr@baselinepsychotherapy.com?subject=Consulta%20resultado%20DASS-21" class="btn btn-outline" style="color:var(--white);border-color:rgba(255,255,255,.3);position:relative;z-index:2">Email</a>
       </div>
       <div class="cta-info">
         <span>Consulta gratuita de 15 minutos</span>
@@ -448,6 +738,28 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 </footer>
 
 <script>
+(function(){
+var N=21,form=document.getElementById('screenerForm'),btn=document.getElementById('scoreBtn'),qc=document.getElementById('qCount'),res=document.getElementById('resultBlock');
+var KEY={d:[3, 5, 10, 13, 16, 17, 21],a:[2, 4, 7, 9, 15, 19, 20],s:[1, 6, 8, 11, 12, 14, 18]};
+var CUTS={d:[9, 13, 20, 27],a:[7, 9, 14, 19],s:[14, 18, 25, 33]};
+var LABELS=["Normal", "Leve", "Moderada", "Grave", "Extremadamente grave"];
+function vals(){var v={},i,e;for(i=1;i<=N;i++){e=form.querySelector('input[name="q'+i+'"]:checked');v[i]=e?parseInt(e.value,10):null}return v}
+function answered(v){var c=0,i;for(i=1;i<=N;i++){if(v[i]!==null)c++}return c}
+function band(x,c){return x<=c[0]?0:x<=c[1]?1:x<=c[2]?2:x<=c[3]?3:4}
+form.addEventListener('change',function(){var a=answered(vals());qc.textContent=a;btn.disabled=a<N});
+btn.addEventListener('click',function(){var v=vals();if(answered(v)<N)return;
+var out={},worst=-1,worstSub='d';['d','a','s'].forEach(function(k){var s=0;KEY[k].forEach(function(i){s+=v[i]});s=s*2;var b=band(s,CUTS[k]);out[k]={s:s,b:b};
+document.getElementById(k+'Val').textContent=s;document.getElementById(k+'Band').textContent=LABELS[b];
+if(b>worst){worst=b;worstSub=k}});
+document.querySelectorAll('.bands-table td[data-sub]').forEach(function(td){td.classList.toggle('current-band',out[td.getAttribute('data-sub')].b===parseInt(td.getAttribute('data-band'),10))});
+var step=worst===0?'normal':worst<=2?'act':'severe-'+worstSub;
+document.querySelectorAll('.band-texts p').forEach(function(p){p.hidden=p.getAttribute('data-step')!==step});
+res.hidden=false;res.scrollIntoView({behavior:'smooth'})});
+document.getElementById('resetBtn').addEventListener('click',function(){form.reset();qc.textContent='0';btn.disabled=true;res.hidden=true;
+document.querySelectorAll('.bands-table td[data-sub]').forEach(function(td){td.classList.remove('current-band')});form.scrollIntoView({behavior:'smooth'})});
+})();
+</script>
+<script>
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>20)});
 const navToggle=document.getElementById('navToggle'),navLinks=document.getElementById('navLinks');
@@ -477,6 +789,7 @@ document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
 <script>
 (function(){var b=document.getElementById('cookieBanner');if(window._cbGet('cookie_consent')){return}b.style.display='flex';function cbSet(v){var d=new Date();d.setTime(d.getTime()+365*864e5);document.cookie='cookie_consent='+v+';expires='+d.toUTCString()+';path=/;SameSite=Lax'}document.getElementById('cookieAccept').onclick=function(){cbSet('accepted');b.style.display='none';window._loadAnalytics()};document.getElementById('cookieDecline').onclick=function(){cbSet('declined');b.style.display='none'}})();
 </script>
+
 
 </body>
 </html>

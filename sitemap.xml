@@ -79,7 +79,7 @@
     <loc>https://baselinepsychotherapy.com/es/regulacion-emocional/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/emotional-regulation-therapy/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/regulacion-emocional/"/>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -519,6 +519,28 @@
     <loc>https://baselinepsychotherapy.com/es/tests/cbi/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/tests/cbi/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/cbi/"/>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baselinepsychotherapy.com/tests/dass-21/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/tests/dass-21/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/dass-21/"/>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baselinepsychotherapy.com/es/tests/dass-21/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/tests/dass-21/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/dass-21/"/>
+    <lastmod>2026-08-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baselinepsychotherapy.com/es/tests/tmms-24/</loc>
     <lastmod>2026-08-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
