@@ -10,20 +10,20 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Clinical Screeners | Six Validated Tests Online</title>
-  <meta name="description" content="Six free validated mental health screeners (PHQ-9, GAD-7, CBI, WHO-5, DASS-21, TMMS-24) scored instantly in your browser. No account, no data stored. English and Spanish.">
+  <title>Guided Breathing Tool | Free, Private, In Your Browser</title>
+  <meta name="description" content="A free guided breathing pacer with three patterns (box, 4-7-8, exhale-weighted), animated in your browser. Nothing recorded, nothing stored. In English and Spanish.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="J.R. Hernandez">
-  <link rel="canonical" href="https://baselinepsychotherapy.com/tests/">
-  <link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/tests/">
-  <link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/">
-  <link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/tests/">
+  <link rel="canonical" href="https://baselinepsychotherapy.com/tests/breathing/">
+  <link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/tests/breathing/">
+  <link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/respiracion/">
+  <link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/tests/breathing/">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Free Clinical Screeners | Six Validated Tests Online">
-  <meta property="og:description" content="Six free validated mental health screeners (PHQ-9, GAD-7, CBI, WHO-5, DASS-21, TMMS-24) scored instantly in your browser. No account, no data stored. English and Spanish.">
-  <meta property="og:url" content="https://baselinepsychotherapy.com/tests/">
+  <meta property="og:title" content="Guided Breathing Tool | Free, Private, In Your Browser">
+  <meta property="og:description" content="A free guided breathing pacer with three patterns (box, 4-7-8, exhale-weighted), animated in your browser. Nothing recorded, nothing stored. In English and Spanish.">
+  <meta property="og:url" content="https://baselinepsychotherapy.com/tests/breathing/">
   <meta property="og:site_name" content="Baseline Psychotherapy">
   <meta property="og:locale" content="en_US">
   <meta property="og:image" content="https://baselinepsychotherapy.com/og-home-en.png">
@@ -220,18 +220,83 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 .content-link,.hero-sub a,.crisis-body a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
 .crisis-body strong{color:var(--navy)}
 .crisis-body p{margin-bottom:20px;text-align:left}
-.screener-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:36px;max-width:800px;margin-left:auto;margin-right:auto}
-.screener-type{font-family:var(--sans);font-size:.95rem;font-weight:600;color:var(--navy);margin-bottom:4px}
-.screener-meta{font-family:var(--sans);font-size:.8rem;color:var(--text);opacity:.6;margin-bottom:14px}
-@media(max-width:768px){.screener-grid{grid-template-columns:1fr}}
+.screener{max-width:760px;margin:40px auto 0;counter-reset:q}
+.q-instruction{max-width:760px;margin:36px auto 0;font-weight:600;color:var(--navy);font-size:1.02rem;text-align:left}
+.q-item{border:1px solid var(--border-light);background:var(--white);border-radius:8px;padding:22px 24px;margin-top:16px;box-shadow:var(--shadow-rest);counter-increment:q}
+.q-item legend{float:left;width:100%;padding:0;font-family:var(--sans);font-weight:600;color:var(--navy);font-size:.95rem;line-height:1.5}
+.q-item legend::before{content:counter(q) '. ';color:var(--gold);font-weight:700}
+.q-opts{clear:both;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:14px}
+.q-opt{display:flex;align-items:center;gap:8px;border:1px solid var(--border);border-radius:6px;padding:10px 12px;font-size:.82rem;line-height:1.4;cursor:pointer;transition:all .2s;background:var(--bg);min-width:0;white-space:normal}
+.q-opt span{flex:1 1 auto;min-width:0;white-space:normal;overflow-wrap:break-word}
+.q-opt:hover{border-color:var(--gold)}
+.q-opt:has(input:checked){border-color:var(--gold);background:var(--gold-subtle)}
+.q-opt input{accent-color:var(--gold);flex-shrink:0}
+.q-progress{text-align:center;font-size:.85rem;opacity:.7;margin-top:20px}
+.screener-actions{display:flex;gap:16px;justify-content:center;margin-top:16px;flex-wrap:wrap}
+.btn[disabled]{opacity:.45;cursor:not-allowed;pointer-events:none}
+.result-card{background:var(--white);border:1px solid var(--border-light);border-left:4px solid var(--gold);border-radius:8px;padding:32px 28px;margin:40px auto 0;max-width:760px;box-shadow:var(--shadow-lift)}
+.result-card[hidden]{display:none}
+.crisis-note{border:2px solid var(--gold);background:var(--gold-subtle);border-radius:8px;padding:22px 24px;margin-bottom:24px}
+.crisis-note[hidden]{display:none}
+.crisis-note p{text-align:left;font-size:.95rem}
+.score-line{font-family:var(--serif);font-size:2.4rem;font-weight:700;color:var(--navy);line-height:1.1}
+.band-texts p{margin-top:16px;text-align:left}
+.band-texts p[hidden]{display:none}
+.bands-table{width:100%;max-width:760px;margin:36px auto 0;border-collapse:collapse;font-size:.9rem;background:var(--white);border:1px solid var(--border-light);border-radius:8px;overflow:hidden;box-shadow:var(--shadow-rest)}
+.bands-table th{background:var(--navy);color:var(--white);font-family:var(--sans);font-weight:600;text-align:left;padding:12px 16px;font-size:.82rem;letter-spacing:.05em;text-transform:uppercase}
+.bands-table td{padding:12px 16px;border-top:1px solid var(--border-light);text-align:left}
+.bands-table tr.current-band td{background:var(--gold-subtle);font-weight:600;color:var(--navy)}
+.disclaimer{max-width:760px;margin:48px auto 0;font-size:.85rem;line-height:1.7;opacity:.75;border:1px solid var(--border);border-radius:8px;padding:18px 22px;background:var(--white);text-align:left}
+@media(max-width:1024px){.q-opts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.q-opts{grid-template-columns:minmax(0,1fr)}}
+.content-link{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.tool-wrap{max-width:560px;margin:40px auto 0}
+.safety-note{max-width:560px;margin:28px auto 0;font-size:.88rem;line-height:1.6;color:var(--text);background:var(--gold-subtle);border-left:3px solid var(--gold);padding:12px 16px;border-radius:0 8px 8px 0;text-align:left}
+.breath-options{display:flex;flex-direction:column;gap:12px;margin:28px auto 0;max-width:560px}
+.breath-choice{width:100%;text-align:left;background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:18px 20px;cursor:pointer;box-shadow:var(--shadow-rest);transition:all .2s}
+.breath-choice:hover{border-color:var(--gold);box-shadow:var(--shadow-lift)}
+.breath-choice .tag{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:4px}
+.breath-choice h3{font-size:1.15rem;margin-bottom:6px}
+.breath-choice p{font-size:.88rem;line-height:1.6;opacity:.8;margin-bottom:6px}
+.breath-choice .pattern{font-size:.78rem;color:var(--text);opacity:.6}
+.pacer-wrap{background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:24px 18px 18px;box-shadow:var(--shadow-rest);margin-top:28px}
+.pacer-wrap[hidden]{display:none}
+.breath-canvas{position:relative;width:100%;max-width:320px;aspect-ratio:320/280;margin:0 auto}
+.breath-svg{position:absolute;inset:0;width:100%;height:100%;display:none}
+.breath-svg.active{display:block}
+.breath-readout{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58%;text-align:center;pointer-events:none}
+.breath-readout .phase{font-family:var(--serif);font-style:italic;font-size:1.03rem;line-height:1.25;color:var(--navy);min-height:2.6em;display:flex;align-items:flex-end;justify-content:center}
+.breath-readout .count{font-family:var(--serif);font-size:2.7rem;font-weight:500;line-height:1;margin-top:7px;color:var(--navy)}
+.breath-readout .seconds{font-family:var(--sans);font-size:.68rem;color:var(--text);opacity:.6;letter-spacing:.08em;text-transform:uppercase}
+.pacer-meta{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;font-family:var(--sans);font-size:.72rem;color:var(--text);opacity:.65;letter-spacing:.04em;margin-top:10px;line-height:1.45}
+.pacer-meta > span:first-child{max-width:72%;text-align:left}
+.change-breath{display:block;margin:14px auto 0;background:none;border:0;color:var(--text);opacity:.6;font-family:var(--sans);font-size:.78rem;cursor:pointer;letter-spacing:.03em;text-decoration:underline;text-underline-offset:3px}
+.change-breath:hover{opacity:1}
+@media (prefers-reduced-motion: reduce){.breath-svg{display:none!important}}
+.meter{position:relative;width:100%;max-width:480px;aspect-ratio:1/1;margin:32px auto 0;border-radius:8px;border:1px solid var(--border);overflow:hidden;cursor:crosshair;box-shadow:var(--shadow-rest);background:linear-gradient(135deg,rgba(165,107,98,.28) 0%,rgba(165,107,98,.09) 47%,rgba(138,153,126,.09) 53%,rgba(138,153,126,.27) 100%),linear-gradient(225deg,rgba(187,159,107,.27) 0%,rgba(187,159,107,.08) 47%,rgba(79,103,129,.08) 53%,rgba(79,103,129,.27) 100%),var(--white)}
+.meter:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.meter .axis-x{position:absolute;left:0;right:0;top:50%;height:1px;background:var(--border)}
+.meter .axis-y{position:absolute;top:0;bottom:0;left:50%;width:1px;background:var(--border)}
+.meter .ql{position:absolute;font-family:var(--sans);font-size:.66rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text);opacity:.7;max-width:45%}
+.meter .ql.tl{top:10px;left:12px;text-align:left}.meter .ql.tr{top:10px;right:12px;text-align:right}
+.meter .ql.bl{bottom:10px;left:12px;text-align:left}.meter .ql.br{bottom:10px;right:12px;text-align:right}
+.meter .marker{position:absolute;width:18px;height:18px;border-radius:50%;transform:translate(-50%,-50%);background:var(--navy);border:3px solid var(--white);box-shadow:0 1px 4px rgba(0,0,0,.25);display:none;pointer-events:none}
+.meter-axes-label{display:flex;justify-content:space-between;max-width:480px;margin:10px auto 0;font-family:var(--sans);font-size:.72rem;color:var(--text);opacity:.65;letter-spacing:.04em}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:16px auto 0;max-width:560px}
+.chip{border:1px solid var(--border);border-radius:999px;padding:8px 16px;font-family:var(--sans);font-size:.88rem;background:var(--bg);cursor:pointer;transition:all .15s;color:var(--text)}
+.chip:hover{border-color:var(--gold)}
+.chip.sel{border-color:var(--gold);background:var(--gold-subtle);color:var(--navy);font-weight:600}
+.meter-result{max-width:560px;margin:24px auto 0;background:var(--white);border:1px solid var(--border-light);border-left:4px solid var(--gold);border-radius:8px;padding:22px 24px;text-align:left;box-shadow:var(--shadow-rest)}
+.meter-result[hidden],.meter-step[hidden]{display:none}
+.tool-note{max-width:560px;margin:28px auto 0;font-size:.85rem;opacity:.75;line-height:1.7}
 </style>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  "name": "Free Clinical Screeners",
-  "url": "https://baselinepsychotherapy.com/tests/",
-  "description": "Six free validated mental health screeners (PHQ-9, GAD-7, CBI, WHO-5, DASS-21, TMMS-24) scored instantly in your browser.",
+  "name": "Guided Breathing Tool",
+  "url": "https://baselinepsychotherapy.com/tests/breathing/",
+  "description": "A free guided breathing pacer with three clinical patterns, running entirely in your browser.",
   "inLanguage": "en",
   "lastReviewed": "2026-08-27",
   "reviewedBy": {
@@ -259,6 +324,12 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
       "position": 2,
       "name": "Free Clinical Screeners",
       "item": "https://baselinepsychotherapy.com/tests/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Breathing",
+      "item": "https://baselinepsychotherapy.com/tests/breathing/"
     }
   ]
 }
@@ -269,7 +340,7 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
   "@type": "MedicalBusiness",
   "@id": "https://baselinepsychotherapy.com/#organization",
   "name": "Baseline Psychotherapy",
-  "url": "https://baselinepsychotherapy.com/tests/",
+  "url": "https://baselinepsychotherapy.com/tests/breathing/",
   "logo": {
     "@type": "ImageObject",
     "url": "https://baselinepsychotherapy.com/LOGO.webp"
@@ -311,7 +382,7 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
       <li><a href="/blog/">Blog</a></li>
       <li><a href="/#contact">Contact</a></li>
       <li class="nav-cta"><a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Get Started</a></li>
-      <li><a href="/es/tests/" style="font-size:.82rem;font-weight:600;color:var(--gold)">ES</a></li>
+      <li><a href="/es/tests/respiracion/" style="font-size:.82rem;font-weight:600;color:var(--gold)">ES</a></li>
     </ul>
     <button class="nav-mobile-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -319,7 +390,7 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 
 <div class="breadcrumb">
   <div class="container">
-    <a href="/">Home</a> &rsaquo; Free Clinical Screeners
+    <a href="/">Home</a> &rsaquo; <a href="/tests/">Screeners</a> &rsaquo; Breathing
   </div>
 </div>
 
@@ -327,84 +398,77 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 <section class="page-hero" id="main">
   <div class="container">
     <div class="page-hero-content fade-up">
-      <span class="kicker">Validated Instruments · Private · Instant</span>
-      <h1>Free Clinical Screeners</h1>
-      <p class="hero-sub">These are the same validated questionnaires used in clinical research and in this practice: not personality quizzes. Each takes ~2 minutes, scores instantly, and tells you honestly what the number means and what it does not.</p>
-      <p class="hero-sub">Two things before you start. First: a screener is a starting point, not a diagnosis; only a clinical evaluation can do that. Second, and it matters here: <strong>nothing you answer leaves your device.</strong> There is no account, no email, no data sent or stored. The calculation happens in your browser and disappears when you close the page.</p>
+      <span class="kicker">Interactive Tool · 3 Patterns · 2–5 Minutes</span>
+      <h1>Guided Breathing</h1>
+      <p class="hero-sub">Paced breathing is one of the few regulation tools that works on the nervous system directly and in real time: a longer exhale engages the parasympathetic brake, and a steady rhythm gives attention one clear thing to follow. This tool guides the rhythm for you. Nothing you do here is recorded.</p>
     </div>
   </div>
 </section>
 
-<!-- SCREENERS -->
+<!-- TOOL -->
 <section class="content-section alt">
   <div class="container">
     <div class="section-intro fade-up">
-      <p class="label">Choose a Screener</p>
-      <h2>Six Validated Tests,<br>Scored in Your Browser</h2>
+      <p class="label">The Tool</p>
+      <h2>Choose a breathing practice</h2>
+      <p>Select the practice that best matches what you need right now.</p>
     </div>
-    <div class="screener-grid">
-      <a href="/tests/phq-9/" class="related-card fade-up">
-        <h3>PHQ-9</h3>
-        <p class="screener-type">Depression screening</p>
-        <p class="screener-meta">9 questions · ~2 minutes</p>
-        <span class="link">Take the test →</span>
-      </a>
-      <a href="/tests/gad-7/" class="related-card fade-up" style="transition-delay:.06s">
-        <h3>GAD-7</h3>
-        <p class="screener-type">Anxiety screening</p>
-        <p class="screener-meta">7 questions · ~2 minutes</p>
-        <span class="link">Take the test →</span>
-      </a>
-      <a href="/tests/cbi/" class="related-card fade-up" style="transition-delay:.12s">
-        <h3>CBI</h3>
-        <p class="screener-type">Burnout screener</p>
-        <p class="screener-meta">6 questions · ~2 minutes</p>
-        <span class="link">Take the test →</span>
-      </a>
-      <a href="/tests/who-5/" class="related-card fade-up" style="transition-delay:.18s">
-        <h3>WHO-5</h3>
-        <p class="screener-type">Wellbeing index</p>
-        <p class="screener-meta">5 questions · ~1 minute</p>
-        <span class="link">Take the test →</span>
-      </a>
-      <a href="/tests/dass-21/" class="related-card fade-up" style="transition-delay:.24s">
-        <h3>DASS-21</h3>
-        <p class="screener-type">Depression, anxiety and stress</p>
-        <p class="screener-meta">21 questions · ~4 minutes</p>
-        <span class="link">Take the test →</span>
-      </a>
-      <a href="/es/tests/tmms-24/" class="related-card fade-up" style="transition-delay:.3s">
-        <h3>TMMS-24</h3>
-        <p class="screener-type">Emotional intelligence (in Spanish)</p>
-        <p class="screener-meta">24 questions · ~4 minutes</p>
-        <span class="link">Take the test →</span>
-      </a>
+    <div class="safety-note fade-up">Keep the breath gentle and comfortable. If you feel dizzy, short of breath, or more anxious, stop and return to normal breathing.</div>
+    <div id="breath-choice-block">
+      <div class="breath-options">
+        <button type="button" class="breath-choice fade-up" onclick="startBreathing('box')">
+          <span class="tag">Rumination</span>
+          <h3>Box Breathing</h3>
+          <p>Useful for structuring attention and shifting away from repetitive thinking, or before a mentally demanding task.</p>
+          <span class="pattern">4s in · hold 4s · 4s out · hold 4s</span>
+        </button>
+        <button type="button" class="breath-choice fade-up" onclick="startBreathing('anxiety')">
+          <span class="tag">Anxiety</span>
+          <h3>4–7–8 Breathing</h3>
+          <p>A slower paced pattern that may help settle arousal when breath-holding feels comfortable. If the holds increase discomfort, choose Baseline breathing instead.</p>
+          <span class="pattern">4s in · hold 7s · 8s out</span>
+        </button>
+        <button type="button" class="breath-choice fade-up" onclick="startBreathing('relaxation')">
+          <span class="tag">Relaxation</span>
+          <h3>Baseline Breathing</h3>
+          <p>A slow, exhale-weighted rhythm for settling into the present and easing bodily tension. Keep the breath comfortable rather than deep.</p>
+          <span class="pattern">4s in · 8s out</span>
+        </button>
+      </div>
     </div>
-    <p class="fade-up" style="text-align:center;margin-top:48px;font-size:.9rem;opacity:.85">In crisis right now? Do not take a test: go straight to the <a href="/crisis/" class="content-link">crisis resources</a>.</p>
-  </div>
-</section>
-
-<!-- INTERACTIVE TOOLS -->
-<section class="content-section">
-  <div class="container">
-    <div class="section-intro fade-up">
-      <p class="label">Beyond the Tests</p>
-      <h2>Interactive Tools</h2>
+    <div class="tool-wrap" id="breath-practice-block" hidden>
+      <h3 id="reg-title" style="text-align:center"></h3>
+      <p id="reg-sub" style="font-size:.9rem;opacity:.8;margin:8px auto 0;max-width:480px"></p>
+      <div class="pacer-wrap">
+        <div class="breath-canvas" aria-live="polite">
+          <svg id="visual-box" class="breath-svg" viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect x="50" y="30" width="220" height="220" rx="8" fill="none" stroke="var(--gold)" stroke-opacity=".28" stroke-width="3"/>
+            <circle id="box-dot" cx="50" cy="250" r="8" fill="var(--gold)"/>
+          </svg>
+          <svg id="visual-anxiety" class="breath-svg" viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="160" cy="140" r="110" fill="none" stroke="var(--border)" stroke-width="2"/>
+            <circle cx="160" cy="140" r="78" fill="none" stroke="var(--gold)" stroke-opacity=".18" stroke-width="2"/>
+            <circle id="anxiety-orb" cx="160" cy="140" r="48" fill="var(--gold-subtle)" stroke="var(--gold)" stroke-opacity=".55" stroke-width="2"/>
+          </svg>
+          <svg id="visual-relaxation" class="breath-svg" viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M30,210 C75,210 110,70 160,70 C215,70 250,210 290,210" fill="none" stroke="var(--gold)" stroke-opacity=".28" stroke-width="3"/>
+            <line x1="30" y1="210" x2="290" y2="210" stroke="var(--border)" stroke-width="1.5"/>
+            <circle id="relax-dot" cx="30" cy="210" r="8" fill="var(--gold)"/>
+          </svg>
+          <div class="breath-readout">
+            <div class="phase" id="pacer-phase"></div>
+            <div class="count" id="pacer-count"></div>
+            <div class="seconds" id="pacer-seconds">s</div>
+          </div>
+        </div>
+        <div class="pacer-meta">
+          <span id="pacer-pattern"></span>
+          <span><span id="cycle-n">0</span>/5 cycles</span>
+        </div>
+      </div>
+      <button type="button" class="change-breath" onclick="changeBreathing()">Choose a different breathing exercise</button>
     </div>
-    <div class="screener-grid">
-      <a href="/tests/breathing/" class="related-card fade-up">
-        <h3>Breathing</h3>
-        <p class="screener-type">Guided regulation exercise</p>
-        <p class="screener-meta">3 patterns · 2–5 minutes</p>
-        <span class="link">Open the tool →</span>
-      </a>
-      <a href="/tests/emotional-meter/" class="related-card fade-up" style="transition-delay:.06s">
-        <h3>Emotional Meter</h3>
-        <p class="screener-type">Name what you feel</p>
-        <p class="screener-meta">~1 minute</p>
-        <span class="link">Open the tool →</span>
-      </a>
-    </div>
+    <p class="tool-note fade-up" style="text-align:center">One honest note: paced breathing regulates the moment, not the pattern underneath it. If the same states keep returning, that pattern is what <a href="/emotional-regulation-therapy/" class="content-link">structured therapy</a> works on.</p>
   </div>
 </section>
 
@@ -413,14 +477,14 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
   <div class="container">
     <div class="fade-up">
       <p class="label" style="color:var(--gold);margin-bottom:16px">Get Started</p>
-      <h2>Talk Through What Your Score Means</h2>
-      <p>A number is information, not a conclusion. The first step is a free 15-minute consultation to look at your situation with a professional. No referral needed, no waitlist. You will hear back directly from J.R. Hernandez.</p>
+      <h2>Work on the Pattern, Not Just the Moment</h2>
+      <p>If you keep needing to downregulate, the useful question is what keeps producing the load. A free 15-minute consultation is a low-stakes way to look at it. No referral needed, no waitlist. You will hear back directly from J.R. Hernandez.</p>
       <div class="cta-actions">
-        <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20discuss%20my%20screener%20results." class="btn btn-gold" target="_blank" rel="noopener">
+        <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation." class="btn btn-gold" target="_blank" rel="noopener">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.685-1.408A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.607-.798-6.38-2.144l-.29-.222-3.042.914.85-3.117-.234-.299A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
           WhatsApp
         </a>
-        <a onclick="gtag('event','email_click',{event_category:'conversion',event_label:this.href})" href="mailto:jr@baselinepsychotherapy.com?subject=Screener%20results%20inquiry" class="btn btn-outline" style="color:var(--white);border-color:rgba(255,255,255,.3);position:relative;z-index:2">Email</a>
+        <a onclick="gtag('event','email_click',{event_category:'conversion',event_label:this.href})" href="mailto:jr@baselinepsychotherapy.com?subject=Consultation%20inquiry" class="btn btn-outline" style="color:var(--white);border-color:rgba(255,255,255,.3);position:relative;z-index:2">Email</a>
       </div>
       <div class="cta-info">
         <span>Free 15-minute consultation</span>
@@ -472,6 +536,41 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 </footer>
 
 <script>
+(function(){
+var BREATHS={"box": {"durations": [4, 4, 4, 4], "title": "Box Breathing", "sub": "Useful for structuring attention and shifting away from repetitive thinking, or before a mentally demanding task.", "pattern": "4s in · hold 4s · 4s out · hold 4s", "phases": ["Inhale", "Hold with air", "Exhale", "Hold without air"], "visual": "visual-box"}, "anxiety": {"durations": [4, 7, 8], "title": "4–7–8 Breathing", "sub": "A slower paced pattern that may help settle arousal when breath-holding feels comfortable. If the holds increase discomfort, choose Baseline breathing instead.", "pattern": "4s in · hold 7s · 8s out", "phases": ["Inhale through your nose", "Hold the breath", "Exhale very slowly through your mouth"], "visual": "visual-anxiety"}, "relaxation": {"durations": [4, 8], "title": "Baseline Breathing", "sub": "A slow, exhale-weighted rhythm for settling into the present and easing bodily tension. Keep the breath comfortable rather than deep.", "pattern": "4s in · 8s out", "phases": ["Inhale through your nose", "Exhale very slowly through your mouth"], "visual": "visual-relaxation"}};
+var COMPLETE="Practice complete",PREP_READY="Get ready",PREP_START="Start!";
+var activeBreath=null,pacerRAF=null,pacerT0=null,cycles=0,lastPhase=-1,pacerPreparing=false,prepStage='ready';
+var PREP=5;
+var ease=function(u){return 0.5-0.5*Math.cos(Math.PI*u)};
+function el(id){return document.getElementById(id)}
+function stopPacer(){if(pacerRAF){cancelAnimationFrame(pacerRAF);pacerRAF=null}pacerT0=null}
+function resetVisual(kind){if(kind==='box'){var d=el('box-dot');d.setAttribute('cx',50);d.setAttribute('cy',250)}else if(kind==='anxiety'){el('anxiety-orb').setAttribute('r',48)}else{var r=el('relax-dot');r.setAttribute('cx',30);r.setAttribute('cy',210)}}
+function locatePhase(ds,p){var s=0;for(var i=0;i<ds.length;i++){var e=s+ds[i];if(p<e||i===ds.length-1){return{index:i,local:p-s,duration:ds[i]}}s=e}}
+function animate(kind,ph,u){if(kind==='box'){var x=50,y=250;if(ph===0){x=50;y=250-220*u}else if(ph===1){x=50+220*u;y=30}else if(ph===2){x=270;y=30+220*u}else{x=270-220*u;y=250}var d=el('box-dot');d.setAttribute('cx',x);d.setAttribute('cy',y)}else if(kind==='anxiety'){var r;if(ph===0)r=48+62*ease(u);else if(ph===1)r=110;else r=110-62*ease(u);el('anxiety-orb').setAttribute('r',r)}else{var x2,y2;if(ph===0){x2=30+130*u;y2=210-140*ease(u)}else{x2=160+130*u;y2=70+140*ease(u)}var d2=el('relax-dot');d2.setAttribute('cx',x2);d2.setAttribute('cy',y2)}}
+function renderPrep(){var p=el('pacer-phase'),c=el('pacer-count');if(prepStage==='start'){p.textContent=PREP_START;c.textContent=''}else{p.textContent=PREP_READY;c.textContent=prepStage==='ready'?'':prepStage}el('pacer-seconds').style.visibility='hidden'}
+window.startBreathing=function(kind){stopPacer();activeBreath=kind;el('breath-choice-block').hidden=true;el('breath-practice-block').hidden=false;
+document.querySelectorAll('.breath-svg').forEach(function(v){v.classList.remove('active')});el(BREATHS[kind].visual).classList.add('active');
+el('reg-title').textContent=BREATHS[kind].title;el('reg-sub').textContent=BREATHS[kind].sub;el('pacer-pattern').textContent=BREATHS[kind].pattern;
+resetVisual(kind);startPacer()};
+window.changeBreathing=function(){stopPacer();activeBreath=null;el('breath-practice-block').hidden=true;el('breath-choice-block').hidden=false};
+function startPacer(){cycles=0;lastPhase=-1;pacerT0=null;pacerPreparing=true;prepStage='ready';el('cycle-n').textContent=0;resetVisual(activeBreath);renderPrep();
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+function frame(ts){if(!activeBreath)return;if(!pacerT0)pacerT0=ts;var elapsed=(ts-pacerT0)/1000;
+if(elapsed<PREP){var ns;if(elapsed<1)ns='ready';else if(elapsed<2)ns='3';else if(elapsed<3)ns='2';else if(elapsed<4)ns='1';else ns='start';
+if(ns!==prepStage){prepStage=ns;renderPrep()}pacerRAF=requestAnimationFrame(frame);return}
+if(pacerPreparing){pacerPreparing=false;lastPhase=-1;el('pacer-seconds').style.visibility='visible'}
+var b=BREATHS[activeBreath],cd=b.durations.reduce(function(a,n){return a+n},0),tt=elapsed-PREP;
+if(tt>=cd*5){el('cycle-n').textContent=5;el('pacer-phase').textContent=COMPLETE;el('pacer-count').textContent='\u2713';el('pacer-seconds').style.visibility='hidden';pacerRAF=null;pacerT0=null;return}
+var c=Math.floor(tt/cd);if(c!==cycles){cycles=c;el('cycle-n').textContent=cycles}
+var p=tt%cd,ph=locatePhase(b.durations,p);
+if(ph.index!==lastPhase){lastPhase=ph.index;el('pacer-phase').textContent=b.phases[ph.index]}
+el('pacer-count').textContent=Math.max(1,Math.ceil(ph.duration-ph.local));
+if(!reduced)animate(activeBreath,ph.index,ph.local/ph.duration);
+pacerRAF=requestAnimationFrame(frame)}
+pacerRAF=requestAnimationFrame(frame)}
+})();
+</script>
+<script>
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>20)});
 const navToggle=document.getElementById('navToggle'),navLinks=document.getElementById('navLinks');
@@ -501,6 +600,7 @@ document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
 <script>
 (function(){var b=document.getElementById('cookieBanner');if(window._cbGet('cookie_consent')){return}b.style.display='flex';function cbSet(v){var d=new Date();d.setTime(d.getTime()+365*864e5);document.cookie='cookie_consent='+v+';expires='+d.toUTCString()+';path=/;SameSite=Lax'}document.getElementById('cookieAccept').onclick=function(){cbSet('accepted');b.style.display='none';window._loadAnalytics()};document.getElementById('cookieDecline').onclick=function(){cbSet('declined');b.style.display='none'}})();
 </script>
+
 
 </body>
 </html>

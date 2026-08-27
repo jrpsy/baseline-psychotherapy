@@ -19,6 +19,7 @@ Credentials of J.R. Hernandez (full profile: https://baselinepsychotherapy.com/a
 - [Pricing](https://baselinepsychotherapy.com/pricing/): Transparent session fees and programs
 - [FAQ](https://baselinepsychotherapy.com/faq/): Common questions about online therapy
 - [Free Clinical Screeners](https://baselinepsychotherapy.com/tests/): Free validated clinical screeners (PHQ-9, GAD-7, CBI, WHO-5, DASS-21, TMMS-24) in English and Spanish, private, browser-only
+- [Interactive Regulation Tools](https://baselinepsychotherapy.com/tests/breathing/): Guided breathing pacer and emotional meter, free and browser-only, in English and Spanish
 
 ## Servicios (Español)
 
