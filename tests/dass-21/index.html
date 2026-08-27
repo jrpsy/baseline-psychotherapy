@@ -5,7 +5,7 @@
   window.dataLayer=window.dataLayer||[];
   window.gtag=function(){dataLayer.push(arguments)};
   window._cbGet=function(n){var m=document.cookie.match('(?:^|; )'+n+'=([^;]*)');return m?decodeURIComponent(m[1]):null};
-  window._loadAnalytics=function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-00D52WK9X7';document.head.appendChild(s);window.gtag('js',new Date());window.gtag('config','G-00D52WK9X7');(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wz4n6u4j3h")};
+  window._loadAnalytics=function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-00D52WK9X7';document.head.appendChild(s);window.gtag('js',new Date());window.gtag('config','G-00D52WK9X7')};
   if(window._cbGet('cookie_consent')==='accepted'){window._loadAnalytics()}
   </script>
   <meta charset="UTF-8">
@@ -361,17 +361,6 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
   "hasMap": "https://g.page/r/CQd8xXTT59B-EBM"
 }
   </script>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-   ym(111712864, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/111712864" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
 </head>
 <body>
 <a href="#main" class="skip-nav">Skip to content</a>
@@ -780,7 +769,7 @@ document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
 (function(){var bar=document.getElementById('mobileCTABar');if(!bar)return;var heroGone=false,contactVisible=false;function update(){bar.classList.toggle('hidden',!heroGone||contactVisible)}var hero=document.querySelector('.hero,.page-hero,.article-hero,.pricing-hero');if(hero){new IntersectionObserver(function(e){heroGone=!e[0].isIntersecting;update()},{threshold:0}).observe(hero)}else{heroGone=true;update()}var contact=document.getElementById('contact')||document.getElementById('contacto');if(contact){new IntersectionObserver(function(e){contactVisible=e[0].isIntersecting;update()},{threshold:0.05}).observe(contact)}})();
 </script>
 <div id="cookieBanner" role="dialog" aria-label="Cookie consent">
-  <p>This site uses cookies for analytics (Google Analytics and Microsoft Clarity) to improve your experience. No personal data is sold or shared with advertisers.</p>
+  <p>This site uses cookies for analytics (Google Analytics) to improve your experience. No personal data is sold or shared with advertisers.</p>
   <div class="cb-actions">
     <button class="cb-btn cb-accept" id="cookieAccept">Accept</button>
     <button class="cb-btn cb-decline" id="cookieDecline">Decline</button>
