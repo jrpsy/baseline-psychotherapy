@@ -103,7 +103,7 @@
     <loc>https://baselinepsychotherapy.com/expat-therapy/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/expat-therapy/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/terapia-expatriados/"/>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -111,7 +111,7 @@
     <loc>https://baselinepsychotherapy.com/es/terapia-expatriados/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/expat-therapy/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/terapia-expatriados/"/>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -431,7 +431,7 @@
     <loc>https://baselinepsychotherapy.com/crisis/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/crisis/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/crisis/"/>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -439,7 +439,7 @@
     <loc>https://baselinepsychotherapy.com/es/crisis/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/crisis/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/crisis/"/>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -594,5 +594,23 @@
     <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baselinepsychotherapy.com/yerevan/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/yerevan/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/yerevan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/yerevan/"/>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baselinepsychotherapy.com/es/yerevan/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/yerevan/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/yerevan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/yerevan/"/>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
