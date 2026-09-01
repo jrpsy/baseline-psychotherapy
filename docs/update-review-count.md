@@ -25,3 +25,5 @@ Eres el ejecutor técnico de baselinepsychotherapy.com. Actualiza el conteo de r
 Si cualquier verificación falla, NO hagas commit: reporta la salida literal y espera.
 
 Nota de mantenimiento: si una futura ronda añade o quita superficies con el conteo (p. ej. una página nueva con bloque agregado), actualiza el inventario de este archivo en el mismo commit.
+
+- NUEVAS SUPERFICIES (YER-1, 2026-09-01): yerevan/index.html contiene "22 Google reviews" (prosa, minúscula) y es/yerevan/index.html contiene "22 reseñas de Google" (prosa). Actualizar junto con las 17 superficies canónicas al cambiar el conteo.
