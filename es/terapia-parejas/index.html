@@ -217,6 +217,14 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 .btn:active{transform:scale(.985);transition-duration:.1s}
 .related-card:active,.symptom-card:active,.price-card:active{transform:scale(.99);transition-duration:.1s}
 .faq-question:active{color:var(--gold)}
+#focusedBar{display:none;position:fixed;top:0;left:0;right:0;z-index:1100;background:var(--navy);color:var(--gold);font-family:var(--sans);font-size:.82rem;letter-spacing:.01em;min-height:40px;align-items:center;justify-content:center;gap:8px;padding:6px 48px 6px 16px;text-align:center}
+#focusedBar a{color:var(--gold);text-decoration:underline;text-underline-offset:3px;font-weight:600;white-space:nowrap}
+#focusedBar button{position:absolute;right:8px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.7);font-size:1.15rem;line-height:1;padding:8px 10px}
+#focusedBar button:hover{color:var(--white)}
+html.has-banner #focusedBar{display:flex}
+html.has-banner .nav{top:40px}
+html.has-banner body{padding-top:40px}
+@media(max-width:768px){#focusedBar{font-size:.72rem;line-height:1.4;min-height:52px}html.has-banner .nav{top:52px}html.has-banner body{padding-top:52px}}
 </style>
   <script type="application/ld+json">
   {
@@ -229,7 +237,7 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
     "areaServed": {"@type": "Place", "name": "Worldwide"},
     "availableChannel": {"@type": "ServiceChannel", "serviceType": "Online", "availableLanguage": ["English", "Spanish"]},
     "offers": [
-      {"@type": "Offer", "name": "Sesión de Terapia de Pareja", "price": "170", "priceCurrency": "USD", "description": "Sesión estructurada de 75 minutos para parejas"},
+      {"@type": "Offer", "name": "Sesión de Terapia de Pareja", "price": "170", "priceCurrency": "USD", "description": "Sesión estructurada de 90 minutos para parejas"},
       {"@type": "Offer", "name": "Plan Mensual de Pareja", "price": "620", "priceCurrency": "USD", "description": "4 sesiones de pareja por mes"}
     ]
   }
@@ -333,6 +341,11 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 <body>
 <a href="#main" class="skip-nav">Ir al contenido</a>
 
+<div id="focusedBar" role="region" aria-label="Anuncio">
+  <span>Nuevo servicio: Sesiones Focales. Un tema, una consulta clínica profesional, enfocada en solucionarlo. <a href="/es/precios/#focused">30 min · $60 →</a></span>
+  <button type="button" aria-label="Cerrar anuncio" onclick="document.documentElement.classList.remove('has-banner');try{sessionStorage.setItem('focusedBarClosed','1')}catch(e){}">×</button>
+</div>
+<script>try{if(!sessionStorage.getItem('focusedBarClosed'))document.documentElement.classList.add('has-banner')}catch(e){}</script>
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="/es/" class="nav-brand">
@@ -514,19 +527,19 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
     <div class="section-intro fade-up">
       <p class="label">Costo de la Terapia de Pareja</p>
       <h2>¿Cuánto Cuesta la Terapia de Pareja?</h2>
-      <p>Lo que cuesta la terapia depende de la formación del especialista y del nivel de implicación clínica detrás de cada sesión. En Baseline Psychotherapy, las sesiones de pareja son de 75 minutos (más largas que las individuales para dar a ambos miembros tiempo adecuado). Cada sesión incluye preparación clínica, la sesión estructurada por videollamada segura y un resumen escrito para ambos. Los honorarios reflejan este nivel de implicación clínica.</p>
+      <p>Lo que cuesta la terapia depende de la formación del especialista y del nivel de implicación clínica detrás de cada sesión. En Baseline Psychotherapy, las sesiones de pareja son de 90 minutos (más largas que las individuales para dar a ambos miembros tiempo adecuado). Cada sesión incluye preparación clínica, la sesión estructurada por videollamada segura y un resumen escrito para ambos. Los honorarios reflejan este nivel de implicación clínica.</p>
     </div>
     <div class="pricing-grid-two">
       <div class="price-card fade-up">
         <h3>Sesión de Pareja</h3>
-        <p class="format">Online vía Google Meet · 75 min</p>
+        <p class="format">Online vía Google Meet · 90 min</p>
         <div class="pricing-amount"><span class="price">$170</span><span class="per">USD / sesión</span></div>
-        <p>Una sesión estructurada de 75 minutos para ambos miembros. Basada en evaluación, facilitada clínicamente y diseñada para producir cambio medible en el patrón de interacción desde la primera cita.</p>
+        <p>Una sesión estructurada de 90 minutos para ambos miembros. Basada en evaluación, facilitada clínicamente y diseñada para producir cambio medible en el patrón de interacción desde la primera cita.</p>
         <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hola%20J.R.%2C%20nos%20gustar%C3%ADa%20reservar%20una%20sesi%C3%B3n%20de%20terapia%20de%20pareja." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Comenzar</a>
       </div>
       <div class="price-card popular fade-up" style="transition-delay:.06s">
         <h3>Plan Mensual de Pareja</h3>
-        <p class="format">4 sesiones / mes · 75 min cada una</p>
+        <p class="format">4 sesiones / mes · 90 min cada una</p>
         <div class="pricing-amount"><span class="price">$620</span><span class="per">USD / mes · $155/sesión</span></div>
         <p>Sesiones semanales con prioridad de agenda y resúmenes escritos de cada sesión. Diseñado para clientes activos que se benefician de un acompañamiento clínico semanal constante. Facturación mensual.</p>
         <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hola%20J.R.%2C%20nos%20interesa%20el%20Plan%20Mensual%20de%20terapia%20de%20pareja." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Comenzar</a>

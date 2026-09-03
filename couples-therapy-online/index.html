@@ -217,6 +217,14 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 .btn:active{transform:scale(.985);transition-duration:.1s}
 .related-card:active,.symptom-card:active,.price-card:active{transform:scale(.99);transition-duration:.1s}
 .faq-question:active{color:var(--gold)}
+#focusedBar{display:none;position:fixed;top:0;left:0;right:0;z-index:1100;background:var(--navy);color:var(--gold);font-family:var(--sans);font-size:.82rem;letter-spacing:.01em;min-height:40px;align-items:center;justify-content:center;gap:8px;padding:6px 48px 6px 16px;text-align:center}
+#focusedBar a{color:var(--gold);text-decoration:underline;text-underline-offset:3px;font-weight:600;white-space:nowrap}
+#focusedBar button{position:absolute;right:8px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.7);font-size:1.15rem;line-height:1;padding:8px 10px}
+#focusedBar button:hover{color:var(--white)}
+html.has-banner #focusedBar{display:flex}
+html.has-banner .nav{top:40px}
+html.has-banner body{padding-top:40px}
+@media(max-width:768px){#focusedBar{font-size:.72rem;line-height:1.4;min-height:52px}html.has-banner .nav{top:52px}html.has-banner body{padding-top:52px}}
 </style>
   <script type="application/ld+json">
   {
@@ -229,7 +237,7 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
     "areaServed": {"@type": "Place", "name": "Worldwide"},
     "availableChannel": {"@type": "ServiceChannel", "serviceType": "Online", "availableLanguage": ["English", "Spanish"]},
     "offers": [
-      {"@type": "Offer", "name": "Couples Therapy Session", "price": "170", "priceCurrency": "USD", "description": "75-minute structured couples session"},
+      {"@type": "Offer", "name": "Couples Therapy Session", "price": "170", "priceCurrency": "USD", "description": "90-minute structured couples session"},
       {"@type": "Offer", "name": "Monthly Couples Plan", "price": "620", "priceCurrency": "USD", "description": "4 couples sessions per month"}
     ]
   }
@@ -333,6 +341,11 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 <body>
 <a href="#main" class="skip-nav">Skip to content</a>
 
+<div id="focusedBar" role="region" aria-label="Announcement">
+  <span>New service: Focused Sessions. One topic, a professional clinical consultation, solution-focused. <a href="/pricing/#focused">30 min · $60 →</a></span>
+  <button type="button" aria-label="Dismiss announcement" onclick="document.documentElement.classList.remove('has-banner');try{sessionStorage.setItem('focusedBarClosed','1')}catch(e){}">×</button>
+</div>
+<script>try{if(!sessionStorage.getItem('focusedBarClosed'))document.documentElement.classList.add('has-banner')}catch(e){}</script>
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="/" class="nav-brand">
@@ -514,19 +527,19 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
     <div class="section-intro fade-up">
       <p class="label">Couples Therapy Cost</p>
       <h2>How Much Does Couples Therapy Cost?</h2>
-      <p>What therapy costs depends on the specialist's training and the level of clinical involvement behind each session. At Baseline Psychotherapy, couples sessions are 75 minutes (longer than individual sessions to allow both partners adequate time). Every session includes clinical preparation, the structured session via secure video, and a written summary for both partners. Fees reflect this level of clinical involvement.</p>
+      <p>What therapy costs depends on the specialist's training and the level of clinical involvement behind each session. At Baseline Psychotherapy, couples sessions are 90 minutes (longer than individual sessions to allow both partners adequate time). Every session includes clinical preparation, the structured session via secure video, and a written summary for both partners. Fees reflect this level of clinical involvement.</p>
     </div>
     <div class="pricing-grid-two">
       <div class="price-card fade-up">
         <h3>Couples Session</h3>
-        <p class="format">Online via Google Meet · 75 min</p>
+        <p class="format">Online via Google Meet · 90 min</p>
         <div class="pricing-amount"><span class="price">$170</span><span class="per">USD / session</span></div>
-        <p>A structured 75-minute session for both partners. Assessment-driven, clinically facilitated, and designed to produce measurable change in the interaction pattern from the first appointment.</p>
+        <p>A structured 90-minute session for both partners. Assessment-driven, clinically facilitated, and designed to produce measurable change in the interaction pattern from the first appointment.</p>
         <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20we%27d%20like%20to%20book%20a%20couples%20therapy%20session." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Get Started</a>
       </div>
       <div class="price-card popular fade-up" style="transition-delay:.06s">
         <h3>Monthly Couples Plan</h3>
-        <p class="format">4 sessions / month · 75 min each</p>
+        <p class="format">4 sessions / month · 90 min each</p>
         <div class="pricing-amount"><span class="price">$620</span><span class="per">USD / month · $155/session</span></div>
         <p>Weekly couples sessions with priority scheduling and written session summaries for both partners. Built for couples in active intervention who benefit from consistent weekly structure. Billed monthly, in advance.</p>
         <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20we%27re%20interested%20in%20the%20Monthly%20Couples%20Plan." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Get Started</a>
