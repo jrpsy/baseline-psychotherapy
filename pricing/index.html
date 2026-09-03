@@ -97,7 +97,7 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 
 /* PRICE CARDS */
 .price-section{padding:32px 0 clamp(60px,7vw,90px);background:var(--bg)}
-.price-row{display:grid;grid-template-columns:repeat(5,1fr);gap:20px;align-items:stretch}
+.price-row{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:stretch}
 .price-card{background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:34px 26px 28px;display:flex;flex-direction:column;position:relative;transition:all .3s ease}
 @media(hover:hover){.price-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(20,32,46,.08)}}
 .price-card.featured{border-color:var(--gold);box-shadow:0 8px 30px rgba(201,168,76,.12)}
@@ -219,6 +219,15 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 .btn:active{transform:scale(.985);transition-duration:.1s}
 .price-card:active{transform:scale(.99);transition-duration:.1s}
 .faq-question:active{color:var(--gold)}
+#focusedBar{display:none;position:fixed;top:0;left:0;right:0;z-index:1100;background:var(--navy);color:var(--gold);font-family:var(--sans);font-size:.82rem;letter-spacing:.01em;min-height:40px;align-items:center;justify-content:center;gap:8px;padding:6px 48px 6px 16px;text-align:center}
+#focusedBar a{color:var(--gold);text-decoration:underline;text-underline-offset:3px;font-weight:600;white-space:nowrap}
+#focusedBar button{position:absolute;right:8px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.7);font-size:1.15rem;line-height:1;padding:8px 10px}
+#focusedBar button:hover{color:var(--white)}
+html.has-banner #focusedBar{display:flex}
+html.has-banner .nav{top:40px}
+html.has-banner body{padding-top:40px}
+@media(max-width:768px){#focusedBar{font-size:.72rem;line-height:1.4;min-height:52px}html.has-banner .nav{top:52px}html.has-banner body{padding-top:52px}}
+#focused{scroll-margin-top:130px}
 </style>
   <script type="application/ld+json">
   {
@@ -255,9 +264,10 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
       "name": "Psychotherapy Services and Plans",
       "itemListElement": [
         {"@type": "Offer", "name": "Individual Psychotherapy Session", "price": "120", "priceCurrency": "USD", "description": "60-minute structured online psychotherapy session via Google Meet for burnout, anxiety, depression, emotional regulation, or life transitions."},
-        {"@type": "Offer", "name": "Couples Psychotherapy Session", "price": "170", "priceCurrency": "USD", "description": "75-minute structured online couples therapy session via Google Meet for communication breakdowns, recurring conflict, emotional distance, or relocation stress."},
+        {"@type": "Offer", "name": "Focused Session", "price": "60", "priceCurrency": "USD", "description": "30-minute focused single-topic session via Google Meet with a professional clinical consultation and solution-focused direction."},
+        {"@type": "Offer", "name": "Couples Psychotherapy Session", "price": "170", "priceCurrency": "USD", "description": "90-minute structured online couples therapy session via Google Meet for communication breakdowns, recurring conflict, emotional distance, or relocation stress."},
         {"@type": "Offer", "name": "Monthly Psychotherapy Plan", "price": "430", "priceCurrency": "USD", "description": "Four weekly 60-minute individual sessions per month with priority scheduling and a written summary after every session."},
-        {"@type": "Offer", "name": "Monthly Couples Plan", "price": "620", "priceCurrency": "USD", "description": "Four weekly 75-minute couples sessions per month with priority scheduling and a written summary with shared direction for both partners."},
+        {"@type": "Offer", "name": "Monthly Couples Plan", "price": "620", "priceCurrency": "USD", "description": "Four weekly 90-minute couples sessions per month with priority scheduling and a written summary with shared direction for both partners."},
         {"@type": "Offer", "name": "Burnout Recovery Program", "price": "1200", "priceCurrency": "USD", "description": "12-session comprehensive burnout recovery program covering assessment, intervention, and sustained recovery tracking. Payment can be split into two installments."}
       ]
     }
@@ -267,7 +277,7 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": [
+  "mainEntity": [{"@type": "Question", "name": "Do you offer shorter or lower-cost sessions?", "acceptedAnswer": {"@type": "Answer", "text": "Yes: the Focused Session (30 minutes, USD $60) covers one specific topic with a professional clinical consultation and clear, solution-focused direction. It works as a starting point, a follow-up, or maintenance. Deeper therapeutic work happens in full 60-minute sessions."}},
     {
       "@type": "Question",
       "name": "Do you accept insurance?",
@@ -313,7 +323,7 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
       "name": "What is the difference between this and a $60/week therapy app?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Subscription apps sell access to a platform: a rotating pool of therapists, sessions that are often 30 minutes with whoever is available, and communication that happens largely through text. Here you work with the same specialist every week in structured 60- or 75-minute video sessions. Each session is prepared in advance, follows a defined clinical focus, and ends with clear direction for the week ahead. The fee reflects clinical depth per session, not access to software."
+        "text": "Subscription apps sell access to a platform: a rotating pool of therapists, sessions that are often 30 minutes with whoever is available, and communication that happens largely through text. Here you work with the same specialist every week in structured 60- or 90-minute video sessions. Each session is prepared in advance, follows a defined clinical focus, and ends with clear direction for the week ahead. The fee reflects clinical depth per session, not access to software."
       }
     }
   ]
@@ -335,6 +345,11 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 <a href="#pricing-top" class="skip-nav">Skip to content</a>
 
 <!-- NAV -->
+<div id="focusedBar" role="region" aria-label="Announcement">
+  <span>New service: Focused Sessions. One topic, a professional clinical consultation, solution-focused. <a href="/pricing/#focused">30 min · $60 →</a></span>
+  <button type="button" aria-label="Dismiss announcement" onclick="document.documentElement.classList.remove('has-banner');try{sessionStorage.setItem('focusedBarClosed','1')}catch(e){}">×</button>
+</div>
+<script>try{if(!sessionStorage.getItem('focusedBarClosed'))document.documentElement.classList.add('has-banner')}catch(e){}</script>
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="/" class="nav-brand">
@@ -391,23 +406,40 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
   <div class="container-wide">
     <div class="price-row">
 
-      <div class="price-card featured fade-up">
-        <h3>Individual Psychotherapy</h3>
-        <p class="price-desc">For burnout, anxiety, depression, emotional regulation, life transitions or cultural adjustment.</p>
+      <div class="price-card fade-up">
+        <h3>Free Consultation</h3>
+        <p class="price-desc">A direct 15-minute conversation to describe what is happening and hear honestly whether and how this practice can help. No referral, no waitlist, no commitment.</p>
+        <div class="price-amount"><span class="price">Free</span><span class="per">15 minutes</span></div>
+        <p class="price-fmt">Online or WhatsApp · English &amp; Spanish</p>
+        <a href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation." target="_blank" rel="noopener" class="btn btn-primary">Book the Free Consultation</a>
+      </div>
+
+      <div class="price-card fade-up" id="focused" style="transition-delay:.05s">
+        <h3>Focused Session</h3>
+        <p class="price-desc">One topic, full attention. A specific decision to untangle, a professional consultation on what you are going through, a follow-up between full sessions, or maintenance after completing a process. Same specialist, same standard, in a focused format.</p>
+        <div class="price-amount"><span class="price">$60</span><span class="per">USD / session</span></div>
+        <p class="price-fmt">30 minutes · Online via Google Meet</p>
+        <p class="price-desc" style="font-size:.78rem;opacity:.7;margin-top:-10px">A focused session gives you direction on one question, solution-focused. Ongoing therapeutic work happens in full sessions, where there is room to work on the mechanism, not just the map.</p>
+        <a href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20Focused%20Session." target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
+      </div>
+
+      <div class="price-card featured fade-up" style="transition-delay:.1s">
+        <h3>Individual Session</h3>
+        <p class="price-desc">The core of the work: a full, structured, evidence-based session with room to go deep. Clinical assessment first, then a plan aimed at what keeps the problem in place, with progress measured session by session.</p>
         <div class="price-amount"><span class="price">$120</span><span class="per">USD / session</span></div>
         <p class="price-fmt">60 minutes · Online via Google Meet · English &amp; Spanish</p>
         <a href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation." target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
       </div>
 
-      <div class="price-card fade-up" style="transition-delay:.05s">
+      <div class="price-card fade-up" style="transition-delay:.15s">
         <h3>Couples Psychotherapy</h3>
         <p class="price-desc">For communication breakdowns, recurring conflict, emotional distance, or relocation stress.</p>
         <div class="price-amount"><span class="price">$170</span><span class="per">USD / session</span></div>
-        <p class="price-fmt">75 minutes · Online via Google Meet · Both partners present</p>
+        <p class="price-fmt">90 minutes · Online via Google Meet · Both partners present</p>
         <a href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation%20for%20couples%20therapy." target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
       </div>
 
-      <div class="price-card dark fade-up" style="transition-delay:.1s">
+      <div class="price-card dark fade-up" style="transition-delay:.2s">
         <h3>Monthly 1:1 Plan</h3>
         <p class="price-desc">Weekly individual sessions with priority scheduling and a written summary after every session.</p>
         <div class="price-amount"><span class="price">$430</span><span class="per">USD / month</span></div>
@@ -416,16 +448,16 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
         <a href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27m%20interested%20in%20the%20Monthly%20Plan." target="_blank" rel="noopener" class="btn btn-gold">Get Started</a>
       </div>
 
-      <div class="price-card dark fade-up" style="transition-delay:.15s">
+      <div class="price-card dark fade-up" style="transition-delay:.25s">
         <h3>Monthly Couples Plan</h3>
         <p class="price-desc">Weekly couples sessions with priority scheduling and a written summary with shared direction for both partners.</p>
         <div class="price-amount"><span class="price">$620</span><span class="per">USD / month</span></div>
         <p class="price-sub">$155 per session</p>
-        <p class="price-fmt">4 sessions / month · 75 minutes each · Billed monthly</p>
+        <p class="price-fmt">4 sessions / month · 90 minutes each · Billed monthly</p>
         <a href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27m%20interested%20in%20the%20Monthly%20Couples%20Plan." target="_blank" rel="noopener" class="btn btn-gold">Get Started</a>
       </div>
 
-      <div class="price-card dark fade-up" style="transition-delay:.2s">
+      <div class="price-card dark fade-up" style="transition-delay:.3s">
         <h3>Burnout Recovery</h3>
         <p class="price-desc">A complete recovery arc: assessment, intervention, and sustained recovery tracking.</p>
         <div class="price-amount"><span class="price">$1,200</span><span class="per">USD / program</span></div>
@@ -477,7 +509,8 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
       <div class="faq-item fade-up"><button class="faq-question">What is the cancellation policy?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Sessions can be rescheduled with at least 48 hours of notice. Late cancellations and no-shows are charged in full, with exceptional circumstances evaluated case by case. For prepaid plans, sessions already delivered are not refundable, and remaining sessions can be rescheduled by mutual agreement. The complete terms are published on the <a href="/policies.html">Service Policies page</a>.</p></div></div>
       <div class="faq-item fade-up"><button class="faq-question">Can I switch between plans?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Yes. Many clients start with individual sessions and move to the Monthly Plan once the work is underway, or complete the Burnout Recovery Program and continue with occasional individual sessions afterward. Plan changes are arranged directly with J.R. and take effect at the next billing point, so you are never locked into a format that no longer matches your clinical needs.</p></div></div>
       <div class="faq-item fade-up"><button class="faq-question">How does the sliding scale work?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Reduced rates are considered case by case for graduate students and individuals experiencing genuine financial hardship. There is no application form. Send a message describing your situation and what you can realistically afford, and you will receive a direct answer. The number of reduced-rate places is limited, so availability varies over time.</p></div></div>
-      <div class="faq-item fade-up"><button class="faq-question">What is the difference between this and a $60/week therapy app?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Subscription apps sell access to a platform: a rotating pool of therapists, sessions that are often 30 minutes with whoever is available, and communication that happens largely through text. Here you work with the same specialist every week in structured 60- or 75-minute video sessions. Each session is prepared in advance, follows a defined clinical focus, and ends with clear direction for the week ahead. The fee reflects clinical depth per session, not access to software.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-question">What is the difference between this and a $60/week therapy app?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Subscription apps sell access to a platform: a rotating pool of therapists, sessions that are often 30 minutes with whoever is available, and communication that happens largely through text. Here you work with the same specialist every week in structured 60- or 90-minute video sessions. Each session is prepared in advance, follows a defined clinical focus, and ends with clear direction for the week ahead. The fee reflects clinical depth per session, not access to software.</p></div></div>
+<div class="faq-item fade-up"><button class="faq-question">Do you offer shorter or lower-cost sessions?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Yes: the Focused Session (30 minutes, USD $60) covers one specific topic with a professional clinical consultation and clear, solution-focused direction. It works as a starting point, a follow-up, or maintenance. Deeper therapeutic work happens in full 60-minute sessions.</p></div></div>
     </div>
   </div>
 </section>

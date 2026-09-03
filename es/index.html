@@ -335,7 +335,15 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 .btn:active{transform:scale(.985);transition-duration:.1s}
 .issue-card:active,.book-card:active{transform:scale(.99);transition-duration:.1s}
 .faq-question:active{color:var(--gold)}
-@media(max-width:768px){.clinical-work [style*="padding:32px 28px"] p:last-child{display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden}.clinical-work [style*="padding:32px 28px"].open p:last-child{-webkit-line-clamp:unset}}.section-intro h2::after{content:'';display:block;width:44px;height:2px;background:var(--gold);margin:20px auto 0}.marquee-bar:hover .marquee-track{animation-play-state:paused}.marquee-bar:active .marquee-track{animation-play-state:paused}</style>
+@media(max-width:768px){.clinical-work [style*="padding:32px 28px"] p:last-child{display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden}.clinical-work [style*="padding:32px 28px"].open p:last-child{-webkit-line-clamp:unset}}.section-intro h2::after{content:'';display:block;width:44px;height:2px;background:var(--gold);margin:20px auto 0}.marquee-bar:hover .marquee-track{animation-play-state:paused}.marquee-bar:active .marquee-track{animation-play-state:paused}#focusedBar{display:none;position:fixed;top:0;left:0;right:0;z-index:1100;background:var(--navy);color:var(--gold);font-family:var(--sans);font-size:.82rem;letter-spacing:.01em;min-height:40px;align-items:center;justify-content:center;gap:8px;padding:6px 48px 6px 16px;text-align:center}
+#focusedBar a{color:var(--gold);text-decoration:underline;text-underline-offset:3px;font-weight:600;white-space:nowrap}
+#focusedBar button{position:absolute;right:8px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.7);font-size:1.15rem;line-height:1;padding:8px 10px}
+#focusedBar button:hover{color:var(--white)}
+html.has-banner #focusedBar{display:flex}
+html.has-banner .nav{top:40px}
+html.has-banner body{padding-top:40px}
+@media(max-width:768px){#focusedBar{font-size:.72rem;line-height:1.4;min-height:52px}html.has-banner .nav{top:52px}html.has-banner body{padding-top:52px}}
+</style>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -627,10 +635,10 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
       },
       {
         "@type": "Offer",
-        "name": "Sesión de Psicoterapia de Pareja",
-        "price": "170",
+        "name": "Sesión Focal",
+        "price": "60",
         "priceCurrency": "USD",
-        "description": "Sesión de psicoterapia de pareja online estructurada de 75 minutos por Google Meet"
+        "description": "Sesión focal de 30 minutos sobre un tema por Google Meet"
       },
       {
         "@type": "Offer",
@@ -786,7 +794,7 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
       "name": "¿Cómo empiezo terapia en Baseline Psychotherapy?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Con una consulta gratuita de 15 minutos reservada directamente por WhatsApp: sin derivación, sin lista de espera, sin formulario de admisión. Esa conversación aclara qué te está pasando y si esta práctica es la opción adecuada. A partir de ahí, las sesiones individuales cuestan $120 USD por 60 minutos y las de pareja $170 USD por 75 minutos, con programas estructurados disponibles para la recuperación del burnout y el trabajo semanal continuado."
+        "text": "Con una consulta gratuita de 15 minutos reservada directamente por WhatsApp: sin derivación, sin lista de espera, sin formulario de admisión. Esa conversación aclara qué te está pasando y si esta práctica es la opción adecuada. A partir de ahí, las sesiones individuales cuestan $120 USD por 60 minutos y las de pareja $170 USD por 90 minutos, con programas estructurados disponibles para la recuperación del burnout y el trabajo semanal continuado."
       }
     }
   ]
@@ -808,6 +816,11 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 <a href="#home" class="skip-nav">Ir al contenido</a>
 
 <!-- NAV -->
+<div id="focusedBar" role="region" aria-label="Anuncio">
+  <span>Nuevo servicio: Sesiones Focales. Un tema, una consulta clínica profesional, enfocada en solucionarlo. <a href="/es/precios/#focused">30 min · $60 →</a></span>
+  <button type="button" aria-label="Cerrar anuncio" onclick="document.documentElement.classList.remove('has-banner');try{sessionStorage.setItem('focusedBarClosed','1')}catch(e){}">×</button>
+</div>
+<script>try{if(!sessionStorage.getItem('focusedBarClosed'))document.documentElement.classList.add('has-banner')}catch(e){}</script>
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="#home" class="nav-brand">
@@ -1085,6 +1098,13 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
       <p>Cada sesión es una cita individual o de pareja por videollamada segura. Las tarifas reflejan la estructura, la preparación y el enfoque clínico que hay antes, durante y después de cada sesión. Comienza con una consulta gratuita de 15 minutos para evaluar si es la opción adecuada para ti.</p>
     </div>
     <div class="pricing-grid">
+      <div class="pricing-card fade-up" style="transition-delay:0s" id="focused">
+        <div class="pricing-card-header"><h3>Sesión Focal</h3><p class="format">Online por Google Meet · 30 minutos</p></div>
+        <div class="pricing-amount"><span class="price">$60</span><span class="per">USD / sesión</span></div>
+        <p>Un tema, atención completa. Una decisión concreta que destrabar, una lectura profesional de lo que estás atravesando, un seguimiento entre sesiones completas, o mantenimiento tras cerrar un proceso. El mismo especialista, el mismo estándar, en formato enfocado.</p>
+        <p style="font-size:.82rem;opacity:.7">La sesión focal te da dirección sobre una pregunta, enfocada en solucionarla. El trabajo terapéutico continuo ocurre en sesiones completas, donde hay espacio para trabajar el mecanismo, no solo el mapa.</p>
+        <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hola%20J.R.%2C%20me%20gustar%C3%ADa%20reservar%20una%20Sesi%C3%B3n%20Focal." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Reservar una Sesión Focal</a>
+      </div>
       <div class="pricing-card featured fade-up" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
         <div class="pricing-card-header"><h3>Sesión de Psicoterapia Individual</h3><p class="format">Online por Google Meet · 60 minutos</p></div>
         <div class="pricing-amount"><span class="price">$120</span><span class="per">USD / sesión</span></div>
@@ -1097,34 +1117,10 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
         </div>
         <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hola%20J.R.%2C%20me%20gustar%C3%ADa%20reservar%20una%20consulta%20gratuita%20de%2015%20minutos." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Consulta Gratuita de 15 min</a>
       </div>
-      <div class="pricing-card fade-up" style="transition-delay:.08s" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
-        <div class="pricing-card-header"><h3>Sesión de Psicoterapia de Pareja</h3><p class="format">Online por Google Meet · 75 minutos</p></div>
-        <div class="pricing-amount"><span class="price">$170</span><span class="per">USD / sesión</span></div>
-        <p>Una sesión estructurada de 75 minutos para ambos miembros de la pareja. Aborda rupturas en la comunicación, desconexión emocional, patrones de conflicto recurrentes y malestar relacional con facilitación clínica activa durante toda la sesión.</p>
-        <div class="issue-detail">
-          <h4>Qué incluye cada sesión</h4>
-          <p>Las sesiones siguen un formato estructurado: mapeo del ciclo de interacción, identificación de los desencadenantes y las estrategias protectoras de cada miembro, práctica de desescalada y reparación en tiempo real y construcción de habilidades de regulación compartida que se transfieren a la vida cotidiana. Ambos miembros reciben una dirección clara entre sesiones.</p>
-          <h4>Para quién es</h4>
-          <p>Parejas que experimentan ruptura de la comunicación, conflicto recurrente, distancia emocional o estrés relacional relacionado con la reubicación. Ambos miembros deben estar presentes en cada sesión.</p>
-        </div>
-        <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hola%20J.R.%2C%20me%20gustar%C3%ADa%20reservar%20una%20consulta%20gratuita%20de%2015%20minutos%20para%20terapia%20de%20pareja." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Consulta Gratuita de 15 min</a>
-      </div>
+      
     </div>
     <div class="package-row">
-      <div class="package-card fade-up" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
-        <h3>Programa de Recuperación del Burnout</h3>
-        <p class="format">12 sesiones · Online por Google Meet · 60 minutos cada una</p>
-        <p>Doce sesiones diseñadas como un arco completo de recuperación del burnout. Incluye evaluación, intervención estructurada, desarrollo de habilidades y seguimiento del progreso con objetivos medibles.</p>
-        <div class="issue-detail" style="--detail-color:rgba(255,255,255,.65)">
-          <h4 style="color:var(--gold)">Qué cubre el programa</h4>
-          <p style="color:rgba(255,255,255,.75)">Las sesiones 1–4 mapean el cuadro clínico: carga de estrés, estado del sistema nervioso, sueño, patrones cognitivos y las demandas que mantienen el burnout. Las sesiones 5–12 ofrecen una intervención enfocada: regulación somática descendente, reestructuración conductual y trabajo cognitivo sobre los patrones que sostienen la sobreexigencia. La fase final confirma que los marcadores de recuperación se mantienen en condiciones del mundo real.</p>
-          <h4 style="color:var(--gold)">Por qué comprometerse con 12 sesiones</h4>
-          <p style="color:rgba(255,255,255,.75)">La recuperación del burnout requiere una intervención sostenida a nivel biológico, conductual y psicológico. Un compromiso de 12 sesiones garantiza que el trabajo alcance las tres fases, y a 100 USD por sesión (frente a 120 USD individualmente), el programa refleja ese compromiso con una tarifa reducida. El pago puede dividirse en dos cuotas: la primera al inicio, la segunda en la sesión seis.</p>
-        </div>
-        <div class="pricing-amount"><span class="price">$1,200</span><span class="per">USD / programa · $100/sesión</span></div>
-        <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hola%20J.R.%2C%20me%20interesa%20el%20Programa%20de%20Recuperaci%C3%B3n%20del%20Burnout." target="_blank" rel="noopener" class="btn btn-gold btn-sm">Comenzar</a>
-      </div>
-      <div class="package-card package-featured fade-up" style="transition-delay:.08s" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+      <div class="package-card package-featured fade-up" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
         <h3>Plan Mensual de Psicoterapia</h3>
         <p class="format">4 sesiones / mes · Online por Google Meet · 60 minutos cada una</p>
         <p>Cuatro sesiones por mes a un ritmo sostenido, una por semana. Diseñado para quienes trabajan depresión, ansiedad, burnout o desafíos continuos y se benefician de un acompañamiento clínico semanal consistente.</p>
@@ -1136,6 +1132,19 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
         </div>
         <div class="pricing-amount"><span class="price">$430</span><span class="per">USD / mes · $107.50/sesión</span></div>
         <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hola%20J.R.%2C%20me%20interesa%20el%20Plan%20Mensual." target="_blank" rel="noopener" class="btn btn-gold btn-sm">Comenzar</a>
+      </div>
+      <div class="package-card fade-up" style="transition-delay:.08s" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+        <h3>Programa de Recuperación del Burnout</h3>
+        <p class="format">12 sesiones · Online por Google Meet · 60 minutos cada una</p>
+        <p>Doce sesiones diseñadas como un arco completo de recuperación del burnout. Incluye evaluación, intervención estructurada, desarrollo de habilidades y seguimiento del progreso con objetivos medibles.</p>
+        <div class="issue-detail" style="--detail-color:rgba(255,255,255,.65)">
+          <h4 style="color:var(--gold)">Qué cubre el programa</h4>
+          <p style="color:rgba(255,255,255,.75)">Las sesiones 1–4 mapean el cuadro clínico: carga de estrés, estado del sistema nervioso, sueño, patrones cognitivos y las demandas que mantienen el burnout. Las sesiones 5–12 ofrecen una intervención enfocada: regulación somática descendente, reestructuración conductual y trabajo cognitivo sobre los patrones que sostienen la sobreexigencia. La fase final confirma que los marcadores de recuperación se mantienen en condiciones del mundo real.</p>
+          <h4 style="color:var(--gold)">Por qué comprometerse con 12 sesiones</h4>
+          <p style="color:rgba(255,255,255,.75)">La recuperación del burnout requiere una intervención sostenida a nivel biológico, conductual y psicológico. Un compromiso de 12 sesiones garantiza que el trabajo alcance las tres fases, y a 100 USD por sesión (frente a 120 USD individualmente), el programa refleja ese compromiso con una tarifa reducida. El pago puede dividirse en dos cuotas: la primera al inicio, la segunda en la sesión seis.</p>
+        </div>
+        <div class="pricing-amount"><span class="price">$1,200</span><span class="per">USD / programa · $100/sesión</span></div>
+        <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hola%20J.R.%2C%20me%20interesa%20el%20Programa%20de%20Recuperaci%C3%B3n%20del%20Burnout." target="_blank" rel="noopener" class="btn btn-gold btn-sm">Comenzar</a>
       </div>
     </div>
   </div>
@@ -1288,7 +1297,7 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
       <div class="faq-item fade-up"><button class="faq-question">¿Cómo funciona la metodología de evaluación primero?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Las primeras sesiones (típicamente de la uno a la cuatro) mapean síntomas, historia, fisiología y los patrones que mantienen la dificultad. Solo cuando ese cuadro está claro se diseña la intervención, con prioridades definidas y una dirección para cada sesión. El progreso se registra en términos observables: mejor sueño, menos espirales, recuperación más rápida tras los detonantes. La fase final confirma que los marcadores de recuperación se mantienen en condiciones de vida real, para que el cambio dure más que la propia terapia.</p></div></div>
       <div class="faq-item fade-up"><button class="faq-question">¿En qué idiomas están disponibles las sesiones?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Las sesiones están disponibles en español e inglés, realizadas de forma nativa en cualquiera de los dos idiomas por el mismo terapeuta bilingüe. Cada cliente elige el idioma en el que piensa y siente, y puede alternar entre ambos cuando un concepto se entiende mejor en uno que en otro, algo especialmente valioso para expatriados y parejas biculturales.</p></div></div>
       <div class="faq-item fade-up"><button class="faq-question">¿Con quién trabaja J.R. Hernandez?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Con adultos de todo el mundo: principalmente profesionales, expatriados y personas de alto rendimiento que enfrentan burnout, ansiedad, depresión, desregulación emocional o grandes transiciones de vida, así como parejas con malestar relacional. Al ser sesiones online, la ubicación no es una barrera: la práctica ha atendido clientes de más de 21 países.</p></div></div>
-      <div class="faq-item fade-up"><button class="faq-question">¿Cómo empiezo terapia en Baseline Psychotherapy?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Con una consulta gratuita de 15 minutos reservada directamente por WhatsApp: sin derivación, sin lista de espera, sin formulario de admisión. Esa conversación aclara qué te está pasando y si esta práctica es la opción adecuada. A partir de ahí, las sesiones individuales cuestan $120 USD por 60 minutos y las de pareja $170 USD por 75 minutos, con programas estructurados disponibles para la recuperación del burnout y el trabajo semanal continuado.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-question">¿Cómo empiezo terapia en Baseline Psychotherapy?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Con una consulta gratuita de 15 minutos reservada directamente por WhatsApp: sin derivación, sin lista de espera, sin formulario de admisión. Esa conversación aclara qué te está pasando y si esta práctica es la opción adecuada. A partir de ahí, las sesiones individuales cuestan $120 USD por 60 minutos y las de pareja $170 USD por 90 minutos, con programas estructurados disponibles para la recuperación del burnout y el trabajo semanal continuado.</p></div></div>
     </div>
   </div>
 </section>

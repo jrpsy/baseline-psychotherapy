@@ -252,6 +252,14 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 .sub-score{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--navy);line-height:1.3;text-align:left}
 .sub-score .sub-band{font-family:var(--sans);font-size:.95rem;font-weight:600;color:var(--gold)}
 .bands-table td.current-band{background:var(--gold-subtle);font-weight:600;color:var(--navy)}
+#focusedBar{display:none;position:fixed;top:0;left:0;right:0;z-index:1100;background:var(--navy);color:var(--gold);font-family:var(--sans);font-size:.82rem;letter-spacing:.01em;min-height:40px;align-items:center;justify-content:center;gap:8px;padding:6px 48px 6px 16px;text-align:center}
+#focusedBar a{color:var(--gold);text-decoration:underline;text-underline-offset:3px;font-weight:600;white-space:nowrap}
+#focusedBar button{position:absolute;right:8px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.7);font-size:1.15rem;line-height:1;padding:8px 10px}
+#focusedBar button:hover{color:var(--white)}
+html.has-banner #focusedBar{display:flex}
+html.has-banner .nav{top:40px}
+html.has-banner body{padding-top:40px}
+@media(max-width:768px){#focusedBar{font-size:.72rem;line-height:1.4;min-height:52px}html.has-banner .nav{top:52px}html.has-banner body{padding-top:52px}}
 </style>
   <script type="application/ld+json">
 {
@@ -365,6 +373,11 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 <body>
 <a href="#main" class="skip-nav">Skip to content</a>
 
+<div id="focusedBar" role="region" aria-label="Announcement">
+  <span>New service: Focused Sessions. One topic, a professional clinical consultation, solution-focused. <a href="/pricing/#focused">30 min · $60 →</a></span>
+  <button type="button" aria-label="Dismiss announcement" onclick="document.documentElement.classList.remove('has-banner');try{sessionStorage.setItem('focusedBarClosed','1')}catch(e){}">×</button>
+</div>
+<script>try{if(!sessionStorage.getItem('focusedBarClosed'))document.documentElement.classList.add('has-banner')}catch(e){}</script>
 <nav class="nav" id="nav">
   <div class="nav-inner">
     <a href="/" class="nav-brand">
