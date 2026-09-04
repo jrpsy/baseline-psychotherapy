@@ -70,7 +70,7 @@ canonical autorreferencial https con barra final: 73/73 (4 legales .html sin bar
 hreflang: 72 páginas con bloque en/es/x-default · 1 sin hreflang: es/tests/tmms-24 (solo-ES, limpia por decisión) ✔
 recíprocos EN↔ES: 36 pares completos, no recíprocos 0 · autoinclusión 72/72 · colgantes hacia páginas inexistentes: 0
 política x-default: →EN en 72/72 (uniforme en páginas)
-sitemap <xhtml:link>: 70 urls con hreflang, 3 sin (tmms-24 + 2?) · x-default presente solo en 34 entradas; en 36 entradas el sitemap
+sitemap <xhtml:link>: 70 urls con hreflang, 3 sin (tmms-24, privacy-policy.html, politica-privacidad.html; las 2 legales SÍ declaran hreflang en página) · x-default presente solo en 34 entradas; en 36 entradas el sitemap
   omite el x-default que la página sí declara (patrón mixto documentado en YER-1). Registrado M2.
 ```
 
