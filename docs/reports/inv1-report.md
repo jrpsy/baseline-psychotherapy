@@ -4,9 +4,9 @@
 
 ## Veredicto ejecutivo
 
-**La capa invisible está limpia en lo estructural**: 0 errores de sintaxis JSON-LD en 73 páginas, 70 Offers con precio schema = precio visible (100%), 216 preguntas FAQ sin duplicados entre páginas, canónicas autorreferenciales 73/73, hreflang recíproco y sin colgantes, sitemap = 73 canónicas exactas, og:image 73/73 resolviendo en repo y en vivo, sameAs con un único conjunto de 10 URLs todas respondiendo, 0 em dashes, 0 hrefs internos rotos, 0 anclas muertas, 0 `target=_blank` sin noopener, guardarraíles intactos (blockquotes 154, wa.me 479, 75-min 0).
+**La capa invisible está limpia en lo estructural**: 0 errores de sintaxis JSON-LD en 73 páginas, 66 de 70 Offers con `price`, 62 con su precio visible en la página (los 4 Offers de $620 de las homes no lo muestran: M11 corregido tras la doble auditoría), 216 preguntas FAQ sin duplicados entre páginas, canónicas autorreferenciales 73/73, hreflang recíproco y sin colgantes, sitemap = 73 canónicas exactas, og:image 73/73 resolviendo en repo y en vivo, sameAs con un único conjunto de 10 URLs todas respondiendo, 0 em dashes, 0 hrefs internos rotos, 0 anclas muertas, 0 `target=_blank` sin noopener, guardarraíles intactos (blockquotes 154, wa.me 479, 75-min 0).
 
-**Deuda registrada para decisión (no bloqueante)**: (1) llms.txt caducado en 5 puntos (sin Sesión Focal, sin Yereván, sección ES incompleta); (2) sitemap sin `x-default` en 36 entradas mientras las páginas sí lo declaran; (3) `twitter:title` solo en 4 de 73 páginas (las 69 restantes caen al fallback og:title); (4) el hub FAQ (EN y ES) lleva en 12+12 respuestas visibles un enlace CTA final que el schema omite; (5) **las 3 ediciones manuales del dueño en /pricing/ no tienen espejo en /es/precios/**; (6) **el objetivo declarado del dueño (Sliding Scale visible en el primer viewport a 1280) NO se cumple: el bloque empieza a 1064px con viewport de 900**; (7) `lastReviewed` de tests/hubs/crisis no se movió con la inserción del banner (regla vs semántica clínica); (8) 17 meta descriptions superan 160 caracteres.
+**Deuda registrada para decisión (no bloqueante)**: (1) llms.txt caducado en 5 puntos (sin Sesión Focal, sin Yereván, sección ES incompleta); (2) sitemap sin `x-default` en 36 entradas mientras las páginas sí lo declaran; (3) `twitter:title` solo en 4 de 73 páginas (las 69 restantes caen al fallback og:title); (4) el hub FAQ (EN y ES) lleva en 12+12 respuestas visibles un enlace CTA final que el schema omite; (5) **las 3 ediciones manuales del dueño en /pricing/ no tienen espejo en /es/precios/**; (6) **el objetivo declarado del dueño (Sliding Scale visible en el primer viewport a 1280) NO se cumple: el bloque empieza a 1064px con viewport de 900**; (7) `lastReviewed` de tests/hubs/crisis no se movió con la inserción del banner (regla vs semántica clínica); (8) 17 meta descriptions superan 160 caracteres; (9) **las dos homes declaran en schema dos Offers "Monthly Plan (Couples)" $620 que la página no muestra** (herencia del swap PR-1: la card de parejas salió de la vitrina, el Offer quedó) y 4 Offers de formación laboral sin `price`.
 
 **Bloqueantes: NO.**
 
@@ -38,8 +38,13 @@ schema=visible (FAQPage): 39 FAQPage · 216 preguntas presentes en el render de 
   Respuestas byte-idénticas: 192/216. Las 24 restantes (12 faq/index.html + 12 es/preguntas-frecuentes/index.html) difieren SOLO
   por un <a class="faq-link"> final en la versión visible ("Learn more about burnout therapy →" / "Más información sobre…") que el
   schema omite. Desync de fondo: 0. Registrado como M4.
-Offers/prices: 70 Offers en 22 páginas · price ∈ {60,120,170,430,620,1200} USD: 70/70 · precio visible en su página: 70/70 OK
-  (index ×10 [Service+OfferCatalog], es/index ×10, pricing ×6, es/precios ×6, 7 pares de servicio ×3 ó ×2). AMD: no hay Offers en AMD.
+Offers/prices: 70 Offers en 22 páginas (index ×12 [Service.offers + OfferCatalog], es/index ×12, pricing ×6, es/precios ×6, 7 pares de servicio ×3 ó ×2)
+  · con `price`: 66/70 (los 4 sin price son "Workplace Mental Health Training"/"Formación en Salud Mental Laboral" ×2 por home: precio a consulta)
+  · price ∈ {60,120,170,430,620,1200} USD: 66/66 · precio visible fuera de <script>/<style> en su página: 62/66
+  · NO visibles: los 4 Offers "Monthly Plan (Couples)" / "Plan Mensual (Pareja)" $620 de index.html y es/index.html (2 por home).
+    Las homes muestran 60/120/170/430/1,200 pero no $620 desde que la card de parejas salió de la vitrina (PR-1). Registrado M11.
+  · Corrección de la doble auditoría: el primer pase contó el "620" del color CSS #0C1620 como visible y omitió los 4 Offers sin price.
+  AMD: no hay Offers en AMD.
 lastReviewed (21 MedicalWebPage): crisis pair 2026-08-22 · tests hubs 2026-08-27 · 5 tests ×2 + tmms-24 2026-08-26 ·
   breathing/emotional-meter pairs 2026-08-27 · yerevan pair 2026-09-01 → FIX T2 → 2026-09-04. Futuros: 0.
 tipos prohibidos: LocalBusiness 0 · Review 0 · AggregateRating 0 · Rating 0. MedicalBusiness 35 nodos = la entidad
@@ -104,7 +109,7 @@ sameAs: 1 único conjunto de 10 URLs, en 4 nodos (index, es/index, about, es/sob
   heallist 200 · internationaltherapistdirectory 200 · mentalzon 200 · share.google 200 (→ google.com/search, perfil GBP) ·
   amazon author 200 · expat.com 200 · psychologytoday 200 (→ /sg/counselling/jesus-hernandez-singapore-sg/1282908) ·
   therapyroute 200 · yandex.ru/profile 200 (→ yandex.com/profile/88929712346) ·
-  linkedin 999 (bloqueo anti-bot estándar de LinkedIn: "verificada por existencia en conversación")
+  linkedin 999 con GET / 405 con HEAD (bloqueo anti-bot estándar de LinkedIn: "verificada por existencia en conversación"); amazon 405 con HEAD / 200 con GET
   Inventario esperado cubierto: Google (share.google) ✔ Yandex ✔ Mentalzon ✔ Expat.com ✔ + sociales/directorios preexistentes ✔
 Person: name "J.R. Hernandez" (alternateName "Jesus Hernandez" donde aplica) · jobTitle "Psychotherapist" ×43 / "Psicoterapeuta" ×20 (0 variantes) ·
   hasCredential 7 (nomenclatura = about/) en index, es/index, about, es/sobre-mi
@@ -156,7 +161,7 @@ Registrado como **M5** (desync EN↔ES de copy: decisión del dueño) y **M6** (
 
 **Triviales corregidos (3)**: T1 `&amp;` en pricing · T2 lastReviewed yerevan pair → 2026-09-04 · T3 sitemap lastmod = git (69 entradas, ver nota de reversión).
 
-**Registrados para decisión (10)**:
+**Registrados para decisión (11)**:
 - **M1 llms.txt caducado**: añadir "Focused Session $60 USD (30 min)" a Key facts; añadir Yereván (presencial con cita) y las páginas ES de tests/herramientas/FAQ/crisis. Propuesta de texto disponible a petición.
 - **M2 sitemap x-default**: 36 entradas sin `x-default` que sus páginas sí declaran; uniformar añadiendo la línea (mecánico, 36 inserciones) o documentar el patrón mixto como aceptado.
 - **M3 twitter:title** ausente en 69/73 (fallback og:title funciona en X/Twitter; añadirlo es mecánico si se quiere la triple unidad literal).
@@ -167,13 +172,24 @@ Registrado como **M5** (desync EN↔ES de copy: decisión del dueño) y **M6** (
 - **M8 meta descriptions >160**: 17 páginas (máx 210). Google trunca; no penaliza.
 - **M9 404.html**: lleva Yandex Metrika pero ni GA ni Clarity (fuera del sitemap).
 - **M10 `&` crudos preexistentes** (28 en 6 páginas, HTML5-válidos): normalizar a `&amp;` si se quiere uniformidad.
+- **M11 Offers $620 en las homes sin precio visible** (index.html y es/index.html, 2 nodos por home: Service.offers y OfferCatalog). Opciones: retirar el Offer de parejas mensual del schema de la home (coherencia estricta schema=visible, como se hizo con la card) o mostrar el precio en la sección de servicios. Los 4 Offers de formación laboral sin `price` son semánticamente correctos (precio a consulta); opcionalmente añadir `priceSpecification` o dejarlos.
 
 **Bloqueantes: 0.**
 
 ## Cánones actualizados (referencia)
 
-wa.me = **479** · blockquotes = **154** (inventario sha1 en el reporte de sesión) · FAQ schema = **216** (39 FAQPage) · Offers = **70** · sitemap = **73** · páginas interactivas sin Clarity/Metrika = **15** · sameAs = **10 URLs** en 4 nodos · MedicalWebPage con lastReviewed = **21** · precios canon: $60 / $120 / $170 / $430 ($107.50) / $620 ($155) / $1,200 ($100) · og:image = 14 archivos, todos en repo · x-default → EN.
+wa.me = **479** · blockquotes = **154** (inventario sha1 en el reporte de sesión) · FAQ schema = **216** (39 FAQPage) · Offers = **70** (66 con price, 62 visibles) · sitemap = **73** · páginas interactivas sin Clarity/Metrika = **15** · sameAs = **10 URLs** en 4 nodos · MedicalWebPage con lastReviewed = **21** · precios canon: $60 / $120 / $170 / $430 ($107.50) / $620 ($155) / $1,200 ($100) · og:image = 14 archivos, todos en repo · x-default → EN.
 
 ## Método
 
 Scripts Python sobre el árbol (parseo JSON-LD, extracción de FAQ visible por `faq-question`/`faq-answer` y `<h3>+<p>` en blogs, metas por regex, resolución de hrefs relativos/absolutos, inventario sha1 de blockquotes) · red con curl (UA Chrome, -L) · render con Chrome headless 152 vía CDP sobre `python3 -m http.server` (servidor apagado al terminar). Salidas completas pre y post-fix conservadas en el scratchpad de sesión (`inv1/static-out.txt`, `inv1/static-out-postfix.txt`, capturas `b7_*`).
+
+---
+
+## Doble auditoría
+
+**Segundo auditor (agente independiente, solo lectura, cifras recomputadas con scripts propios)**: 14 puntos verificados. CONFIRMADOS 13/14: inventario 73/73, JSON-LD 0 err, Question 216, Offer 70, tipos prohibidos 0/0/0 y MedicalBusiness SG 35/35, FAQ 216/216 visibles con las 24 diferencias reducidas al `faq-link` final, canonical 73/73 y hreflang 72 + tmms-24, sitemap x-default 34/36 y lastmod 4/65/4 (= fecha git 73/73), metas, analítica 15/58, higiene (—0, rotos 0, anclas 0, noopener 0, 75-min 0, blockquotes 154, wa.me 479), los 3 fixes T1–T3 y el diff de 5 archivos, las 3 ediciones del dueño sin espejo ES, llms.txt, sameAs 10 URLs vivas, estructura de pricing (6 cards + sliding-scale). M6 (viewport) no re-medido por el auditor: queda como medición del primer pase.
+
+**DISCREPA (1/14, punto 2)**: la afirmación original "70/70 Offers con precio en el canon y visible" era falsa. Cifras correctas: 66/70 con `price`; 62/66 visibles; los 4 Offers "Monthly Plan (Couples)" $620 de las dos homes no aparecen en la página (el primer pase confundió el color CSS `#0C1620` con el precio). Nota menor: LinkedIn/Amazon responden 405 a HEAD y 999/200 a GET.
+
+**Resolución del primer auditor**: discrepancia aceptada íntegramente; Batería 1, veredicto ejecutivo y cánones corregidos en este mismo reporte; nuevo hallazgo **M11** registrado para decisión (no bloqueante: un Offer sin rich result no afecta la indexación, pero rompe la doctrina schema=visible del sitio). Firma del segundo auditor tras la corrección: ver línea final.
