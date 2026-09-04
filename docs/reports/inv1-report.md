@@ -197,3 +197,92 @@ Scripts Python sobre el árbol (parseo JSON-LD, extracción de FAQ visible por `
 **Firma del segundo auditor tras la corrección (commit 7170966, recomputación propia sobre el árbol actual)**: Batería 1 Offers 70 / 66 con price / 66 en canon / 62 visibles CONFIRMADO · veredicto ejecutivo CONFIRMADO · M11 CONFIRMADO · nota LinkedIn/Amazon CONFIRMADO · sección "Doble auditoría" fiel a su veredicto CONFIRMADO. **FIRMA: CONFORME.** Salvedad mantenida: M6 (Sliding Scale fuera del primer viewport) es medición del primer auditor, no re-medida por el segundo.
 
 **Veredicto propuesto al estratega**: capa invisible LIMPIA en lo estructural · 3 fixes triviales aplicados en esta rama (T1–T3) · 11 hallazgos registrados para decisión (M1–M11) · bloqueantes: 0. Sin merge hasta autorización.
+
+---
+
+# RONDA 2 · Decisiones del estratega aplicadas (2026-09-04, misma rama, sin merge)
+
+## D1 · T3 revertido parcialmente: lastmod selectivo (regla ratificada: el chrome no bumpea lastmod)
+
+`git checkout main -- sitemap.xml` y re-aplicación solo a páginas con cambios sustantivos de contenido desde 2026-08-31. Criterio mecánico: por cada página y cada commit de la semana, diff `-U0` filtrando las líneas del banner (`#focusedBar`, `has-banner`, aviso, cierre, script de sessionStorage); si queda residuo, el commit es sustantivo y lastmod = fecha del último commit sustantivo. Salida literal:
+
+```
+Páginas con cambios sustantivos desde 2026-08-31: 69
+== 1. LASTMOD SELECTIVO · páginas con cambios sustantivos desde 2026-08-31: 14
+   about/index.html                         main 2026-08-12 -> 2026-09-01  commits ['042f4bc']
+   couples-therapy-online/index.html        main 2026-09-03 -> 2026-09-03 (sin cambio)  commits ['b08f43a']
+   crisis/index.html                        main 2026-09-01 -> 2026-09-01 (sin cambio)  commits ['042f4bc']
+   es/crisis/index.html                     main 2026-09-01 -> 2026-09-01 (sin cambio)  commits ['042f4bc']
+   es/index.html                            main 2026-09-03 -> 2026-09-03 (sin cambio)  commits ['f752b6b', 'b08f43a', '042f4bc']
+   es/precios/index.html                    main 2026-09-03 -> 2026-09-04  commits ['edd4bb1', 'f752b6b', 'b08f43a']
+   es/sobre-mi/index.html                   main 2026-08-18 -> 2026-09-01  commits ['042f4bc']
+   es/terapia-expatriados/index.html        main 2026-09-01 -> 2026-09-01 (sin cambio)  commits ['042f4bc']
+   es/terapia-parejas/index.html            main 2026-09-03 -> 2026-09-03 (sin cambio)  commits ['b08f43a']
+   es/yerevan/index.html                    main 2026-09-01 -> 2026-09-04  commits ['de23866', 'b08f43a', 'cd0ea04', '39c2985', '32387b4', '042f4bc']
+   expat-therapy/index.html                 main 2026-09-01 -> 2026-09-01 (sin cambio)  commits ['042f4bc']
+   index.html                               main 2026-09-03 -> 2026-09-03 (sin cambio)  commits ['f752b6b', 'b08f43a', '042f4bc']
+   pricing/index.html                       main 2026-09-03 -> 2026-09-04  commits ['f85dcd9', 'edd4bb1', '9f0d973', 'f752b6b', 'b08f43a']
+   yerevan/index.html                       main 2026-09-01 -> 2026-09-04  commits ['de23866', 'b08f43a', 'cd0ea04', '39c2985', '32387b4', '042f4bc']
+   páginas solo-chrome/sin cambios (lastmod intacto): 59
+   lastmod actualizados: 6 | distribución: [('2026-08-12', 3), ('2026-08-18', 27), ('2026-08-22', 4), ('2026-08-25', 4), ('2026-08-26', 9), ('2026-08-27', 12), ('2026-09-01', 6), ('2026-09-03', 4), ('2026-09-04', 4)]
+```
+
+Resultado: 6 lastmod actualizados (pricing pair → 09-04, yerevan pair → 09-04, about pair → 09-01 por la vinculación YER-1 de 042f4bc); 8 ya al día (index pair, couples pair, crisis pair, expat pair); 59 páginas solo-chrome conservan el valor de main. Distribución final: 08-12 ×3 · 08-18 ×27 · 08-22 ×4 · 08-25 ×4 · 08-26 ×9 · 08-27 ×12 · 09-01 ×6 · 09-03 ×4 · 09-04 ×4. Futuros: 0.
+
+## D2 · llms.txt al canon vigente
+
+Diff literal (`git diff main -- llms.txt`, 38 → 44 líneas):
+
+```
+-Key facts: Individual session $120 USD (60 min). Couples session $170 USD (90 min). Free 15-minute consultation. Sessions online via secure video, worldwide, in English and Spanish. Contact: WhatsApp +65 9372 9100, jr@baselinepsychotherapy.com. Rated 5.0 on Google Reviews (22 reviews).
++Key facts: Focused Session $60 USD (30 min, one specific topic). Individual session $120 USD (60 min). Couples session $170 USD (90 min). Monthly plans: individual $430 USD, couples $620 USD. Burnout Recovery Program $1,200 USD (12 sessions). Sliding scale available case by case. Free 15-minute consultation. Sessions online via Google Meet, worldwide, in English and Spanish; in person in Yerevan, Armenia, by appointment and availability. Contact: WhatsApp +65 9372 9100, jr@baselinepsychotherapy.com. Rated 5.0 on Google Reviews (22 reviews).
+-- [Pricing](https://baselinepsychotherapy.com/pricing/): Transparent session fees and programs
++- [Pricing](https://baselinepsychotherapy.com/pricing/): Transparent session fees and programs, from the 30-minute Focused Session ($60) to the 12-session Burnout Recovery Program
++- [Psychotherapist in Yerevan](https://baselinepsychotherapy.com/yerevan/): Online and in-person sessions in Yerevan, Armenia, by appointment and availability, in English and Spanish
+-- [Precios](https://baselinepsychotherapy.com/es/precios/)
++- [Formación en Salud Mental Laboral](https://baselinepsychotherapy.com/es/formacion-salud-mental-laboral/)
++- [Precios](https://baselinepsychotherapy.com/es/precios/): Desde la Sesión Focal de 30 minutos ($60) hasta el Programa de Recuperación de Burnout de 12 sesiones
++- [Preguntas Frecuentes](https://baselinepsychotherapy.com/es/preguntas-frecuentes/)
++- [Tests Clínicos Gratuitos](https://baselinepsychotherapy.com/es/tests/): Seis screeners validados (PHQ-9, GAD-7, CBI, WHO-5, DASS-21, TMMS-24), privados, solo en el navegador
++- [Herramientas de Regulación](https://baselinepsychotherapy.com/es/tests/respiracion/): Respiración guiada y medidor emocional, gratis y solo en el navegador
++- [Psicoterapeuta en Ereván](https://baselinepsychotherapy.com/es/yerevan/): Sesiones online y presenciales en Ereván, Armenia, con cita previa y según disponibilidad
+```
+
+Verificación línea a línea contra el sitio: Sesión Focal $60 / 30 min / un tema = card de pricing ✔ · $120 (60 min) y $170 (90 min) ✔ · planes $430 y $620 = pricing ✔ · programa $1,200 / 12 sesiones ✔ · "sliding scale case by case" = sección Sliding Scale de pricing ✔ · Google Meet = línea meta de todas las cards ✔ · Yereván "in person, by appointment and availability" = lede de /yerevan/ ✔ · "22 reviews" intacto (= index) ✔ · seis screeners y dos herramientas intactos ✔ · paridad: 13 enlaces EN / 13 enlaces ES (ES añade Formación, FAQ, Tests, Herramientas, Ereván; Precios con descriptor) · las 26 URLs existen en repo (0 rotas) · em dashes 0.
+
+## D3 · Sitemap: x-default en las 36 entradas que lo omitían
+
+Política aplicada = la que declara cada página (x-default → URL EN del par, leída del propio `<link hreflang="x-default">` de la página). Resultado: x-default 34 → **70** = todos los bloques con hreflang (70); los 3 sin xhtml:link (tmms-24 solo-ES y las 2 privacidad) quedan como estaban. Sitemap ↔ página: **0 desajustes** (antes 36). XML bien formado.
+
+## D4 · Homes: retirados los Offers "Monthly Plan (Couples)" $620 (ley schema=visible)
+
+index.html y es/index.html: eliminado el nodo multilínea del `Service.offers` y el nodo de una línea del `OfferCatalog` (2 por home, 4 en total). JSON válido tras la edición (0 err). Offers restantes por home: 10 (60/120/430/1,200 ×2 + Couples Session $170, visible ×1 en cada home + 2 de formación sin price). Sitio: Offers 70 → **66**, con price **62**, visibles **62/62** (100% real).
+
+## D5 · es/precios espeja las 3 ediciones manuales del dueño
+
+- Sesión Focal: "…una consulta breve, **un tema específico**, dirigida a objetivos y enfocada en soluciones."
+- Psicoterapia de Pareja, línea meta: "90 minutos · Online por Google Meet · **Inglés y Español**" (antes "Ambos miembros presentes").
+- Recuperación de Burnout: "…evaluación, intervención y seguimiento sostenido, **con prioridad de agenda**."
+
+Paridad EN↔ES de las 6 cards verificada campo a campo (h3, price-fmt, price-desc). M5 cerrado.
+
+## Suite completa post-ronda 2 (salida literal)
+
+```
+html 76 · sitemap 73/73 · JSON-LD err 0 · @type: Question 216 · Offer 66 · Person 69 · FAQPage 39 · MedicalBusiness 35 (SG 35/35) ·
+FAQ dup entre páginas 0 · schema=visible 216/216 preguntas (24 respuestas con CTA final, M4 sin cambio) ·
+Offers 66 · con price 62 · visibles 62/62 · no visibles: [] ·
+titles únicos, 0 >65 · descriptions únicas 73/73 · og:image OK 73/73 · og:url=canonical 73/73 · charset/viewport 73/73 ·
+GA 73/73 · Clarity/Metrika 0/15 interactivas, 58/58 resto ·
+canonical 73/73 · hreflang 72 (+tmms-24 solo-ES) · colgantes 0 · recíprocos OK · x-default→EN 72/72 · sitemap↔página hreflang mismatches 0 ·
+lastmod futuros 0 · lastReviewed futuros 0 ·
+em dashes 0 · &amp;amp; 0 · hrefs rotos 0 · anclas muertas 0 · _blank sin noopener 0 · 75-min 0 · blockquotes 154 · wa.me 479 ·
+render 1280: /pricing/ 6 cards 1 fila 480×6 · /es/precios/ 6 cards 1 fila 570×6 · / 4 cards 2 filas · /es/ 4 cards 2 filas · overflow 0 · imágenes rotas 0
+RESULT: ALL PASS
+```
+
+## Estado de hallazgos tras la ronda 2
+
+Cerrados por decisión: **M1** (llms.txt), **M2** (x-default sitemap), **M5** (paridad pricing ES), **M11** (Offers $620 homes). T3 reformulado a lastmod selectivo (regla: chrome no bumpea). Siguen registrados para decisión: M3 twitter:title, M4 CTA del hub FAQ, M6 Sliding Scale fuera del primer viewport, M7 lastReviewed de tests vs banner (coherente con la regla ratificada: el chrome tampoco debería bumpear lastReviewed), M8 descriptions largas, M9 404.html, M10 `&` crudos preexistentes. Bloqueantes: 0.
+
+Cánones actualizados: Offers = **66** (62 con price, 62 visibles) · sitemap x-default = **70** · llms.txt = **44 líneas, 13+13 enlaces** · resto sin cambio (wa.me 479, blockquotes 154, FAQ 216).
