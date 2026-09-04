@@ -193,3 +193,7 @@ Scripts Python sobre el árbol (parseo JSON-LD, extracción de FAQ visible por `
 **DISCREPA (1/14, punto 2)**: la afirmación original "70/70 Offers con precio en el canon y visible" era falsa. Cifras correctas: 66/70 con `price`; 62/66 visibles; los 4 Offers "Monthly Plan (Couples)" $620 de las dos homes no aparecen en la página (el primer pase confundió el color CSS `#0C1620` con el precio). Nota menor: LinkedIn/Amazon responden 405 a HEAD y 999/200 a GET.
 
 **Resolución del primer auditor**: discrepancia aceptada íntegramente; Batería 1, veredicto ejecutivo y cánones corregidos en este mismo reporte; nuevo hallazgo **M11** registrado para decisión (no bloqueante: un Offer sin rich result no afecta la indexación, pero rompe la doctrina schema=visible del sitio). Firma del segundo auditor tras la corrección: ver línea final.
+
+**Firma del segundo auditor tras la corrección (commit 7170966, recomputación propia sobre el árbol actual)**: Batería 1 Offers 70 / 66 con price / 66 en canon / 62 visibles CONFIRMADO · veredicto ejecutivo CONFIRMADO · M11 CONFIRMADO · nota LinkedIn/Amazon CONFIRMADO · sección "Doble auditoría" fiel a su veredicto CONFIRMADO. **FIRMA: CONFORME.** Salvedad mantenida: M6 (Sliding Scale fuera del primer viewport) es medición del primer auditor, no re-medida por el segundo.
+
+**Veredicto propuesto al estratega**: capa invisible LIMPIA en lo estructural · 3 fixes triviales aplicados en esta rama (T1–T3) · 11 hallazgos registrados para decisión (M1–M11) · bloqueantes: 0. Sin merge hasta autorización.
