@@ -146,6 +146,24 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://baselinepsychotherapy.com/method/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/method/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/metodo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/method/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://baselinepsychotherapy.com/es/metodo/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/method/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/metodo/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/method/"/>
+    <lastmod>2026-09-09</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://baselinepsychotherapy.com/workplace-mental-health-training/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/workplace-mental-health-training/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/formacion-salud-mental-laboral/"/>
