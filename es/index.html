@@ -206,8 +206,8 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 
 /* BOOKS */
 .books{padding:var(--section-py) 0;background:var(--bg)}
-.books-grid{margin-top:48px;display:grid;grid-template-columns:repeat(2,1fr);gap:40px}
-.book-card{display:grid;grid-template-columns:180px 1fr;gap:28px;align-items:center;background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:28px;box-shadow:var(--shadow-rest);transition:all .3s ease}
+.books-grid{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.book-card{display:grid;grid-template-columns:1fr;gap:22px;align-items:start;justify-items:center;text-align:center;background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:28px;box-shadow:var(--shadow-rest);transition:all .3s ease}.book-info>div{justify-content:center;flex-wrap:wrap}
 @media(hover:hover){.book-card:hover{box-shadow:var(--shadow-lift);transform:translateY(var(--lift))}}
 .book-cover{width:180px;height:270px;border-radius:4px;overflow:hidden;background:var(--border-light);box-shadow:4px 4px 20px rgba(0,0,0,.1);flex-shrink:0}
 .book-cover img{width:100%;height:100%;object-fit:cover}
@@ -281,6 +281,7 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 
 /* RESPONSIVE */
 @media(max-width:1024px){
+  .books-grid{grid-template-columns:repeat(2,1fr)}
   .hero-grid{grid-template-columns:1fr;gap:48px}.hero-image-frame{max-width:340px;margin:0 auto}
   .hero{min-height:auto;padding-top:120px;padding-bottom:60px}
   .credentials{grid-template-columns:1fr}.workshops-grid{grid-template-columns:1fr}.workshops-image-frame{max-width:400px}
@@ -293,7 +294,7 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
   .nav-links.active .nav-cta .btn{width:100%;justify-content:center;padding:14px 24px;font-size:.95rem}
   .process-steps{grid-template-columns:1fr;gap:40px}.process-steps::before{display:none}
   .issues-grid{grid-template-columns:1fr}.pricing-grid{grid-template-columns:1fr}.package-row{grid-template-columns:1fr}
-  .books-grid{grid-template-columns:1fr}.book-card{grid-template-columns:120px 1fr;gap:20px}.book-cover{width:120px;height:180px}
+  .books-grid{grid-template-columns:1fr}.book-card{grid-template-columns:120px 1fr;gap:20px;text-align:left;justify-items:start}.book-info>div{justify-content:flex-start}.book-cover{width:120px;height:180px}
   .reviews-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr;gap:32px}.footer-links a{padding:6px 0}.footer-links li{margin-bottom:4px}.footer{padding-bottom:100px}
   .hero-actions{flex-direction:column;align-items:flex-start}
@@ -738,7 +739,7 @@ html.has-banner body{padding-top:40px}
       "name": "¿Quién es J.R. Hernandez?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "J.R. Hernandez es un psicoterapeuta especializado en burnout y trastornos del estado de ánimo, y el fundador de Baseline Psychotherapy. Su formación clínica incluye el Diploma Profesional en Psicoterapia (The School of Positive Psychology of Singapore), Neurociencia Médica (Duke University School of Medicine) y la Especialización en Trastornos de Ansiedad y del Estado de Ánimo (American Psychological Association). Ha vivido en seis países de tres continentes, trabaja en español e inglés, y es autor de dos libros sobre inteligencia emocional."
+        "text": "J.R. Hernandez es un psicoterapeuta especializado en burnout y trastornos del estado de ánimo, y el fundador de Baseline Psychotherapy. Su formación clínica incluye el Diploma Profesional en Psicoterapia (The School of Positive Psychology of Singapore), Neurociencia Médica (Duke University School of Medicine) y la Especialización en Trastornos de Ansiedad y del Estado de Ánimo (American Psychological Association). Ha vivido en seis países de tres continentes, trabaja en español e inglés, y es autor de tres libros, dos de ellos sobre inteligencia emocional."
       }
     },
     {
@@ -1180,33 +1181,46 @@ html.has-banner body{padding-top:40px}
   <div class="container">
     <div class="section-intro fade-up">
       <p class="label">Obra Publicada</p>
-      <h2>Libros de Inteligencia Emocional</h2>
-      <p>Dos libros sobre inteligencia emocional: una guía práctica para adultos que navegan el estrés, la ansiedad y el ánimo bajo, y un cuento que enseña a los niños qué son las emociones y por qué importan. Disponibles en inglés y español en Amazon y Google Play.</p>
+      <h2>Libros de J.R. Hernández</h2>
+      <p>Tres libros: un manual basado en procesos para trabajar con tus propias reacciones, una guía práctica para adultos que navegan el estrés, la ansiedad y el ánimo bajo, y un cuento que enseña a los niños qué son las emociones y por qué importan. Disponibles en inglés y español, en papel y digital.</p>
     </div>
     <div class="books-grid">
       <div class="book-card fade-up">
         <div class="book-cover">
-          <img src="../EI_BOOK.webp" alt="Libro Inteligencia Emocional y Terapias Conductuales de J.R. Hernandez" loading="lazy" decoding="async" width="180" height="270">
+          <img src="../PROTOCOL_COVER.webp" alt="El Protocolo Baseline Psychotherapy, manual basado en procesos de J.R. Hernandez" loading="lazy" decoding="async" width="180" height="270">
         </div>
         <div class="book-info">
-          <h3>Emotional Intelligence &amp; Behavioral Therapies</h3>
-          <p>Una guía de 10 pasos para entender y gestionar el estrés, la ansiedad y la depresión mediante la inteligencia emocional y estrategias de TCC. Cada paso está estructurado, es práctico y está diseñado para la aplicación independiente. Disponible en inglés y español.</p>
+          <h3>El Protocolo Baseline Psychotherapy: Un manual basado en procesos para trabajar con tus propias reacciones</h3>
+          <p>Una herramienta base de esta práctica, ahora en forma de libro: un manual basado en procesos para trabajar con tus propias reacciones.</p>
           <div style="display:flex;gap:12px;align-items:center">
-            <a href="https://www.amazon.com/stores/JR-Hernandez/author/B0CZ9S1983?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true&ccs_id=99e31aa9-eab5-4168-9df4-76b53cb83968" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Consíguelo en Amazon</a>
-            <a href="/es/libros-inteligencia-emocional/" class="btn btn-outline btn-sm" aria-label="Más información sobre los libros de inteligencia emocional">Más Información</a>
+            <a href="https://www.amazon.com/stores/JR-Hernandez/author/B0CZ9S1983" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Consíguelo en Amazon</a>
+            <a href="/es/libros-inteligencia-emocional/" class="btn btn-outline btn-sm" aria-label="Más información sobre los libros de J.R. Hernández">Más Información</a>
           </div>
         </div>
       </div>
       <div class="book-card fade-up" style="transition-delay:.08s">
         <div class="book-cover">
-          <img src="../CHILDS_BOOK.webp" alt="Toto's Journey Through Emotions, libro infantil sobre inteligencia emocional de J.R. Hernandez" loading="lazy" decoding="async" width="180" height="270">
+          <img src="../EI_COVER.webp" alt="Libro Inteligencia Emocional y Terapias Conductuales de J.R. Hernandez" loading="lazy" decoding="async" width="180" height="270">
         </div>
         <div class="book-info">
-          <h3>Toto's Journey Through Emotions</h3>
+          <h3>Inteligencia Emocional y Terapias Conductuales</h3>
+          <p>Una guía de 10 pasos para entender y gestionar el estrés, la ansiedad y la depresión mediante la inteligencia emocional y estrategias de TCC. Cada paso está estructurado, es práctico y está diseñado para la aplicación independiente. Disponible en inglés y español.</p>
+          <div style="display:flex;gap:12px;align-items:center">
+            <a href="https://www.amazon.com/stores/JR-Hernandez/author/B0CZ9S1983" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Consíguelo en Amazon</a>
+            <a href="/es/libros-inteligencia-emocional/" class="btn btn-outline btn-sm" aria-label="Más información sobre los libros de J.R. Hernández">Más Información</a>
+          </div>
+        </div>
+      </div>
+      <div class="book-card fade-up" style="transition-delay:.16s">
+        <div class="book-cover">
+          <img src="../TOTO_COVER.webp" alt="Toto's Journey Through Emotions, libro infantil sobre inteligencia emocional de J.R. Hernandez" loading="lazy" decoding="async" width="180" height="270">
+        </div>
+        <div class="book-info">
+          <h3>El Viaje de Toto por las Emociones</h3>
           <p>Una historia para niños pequeños sobre qué son las emociones, de dónde vienen y por qué cada una de ellas importa. Diseñada para padres que quieren dar a sus hijos una base temprana en inteligencia emocional, porque la regulación es una habilidad que se construye a lo largo de toda la vida. Disponible en inglés y español.</p>
           <div style="display:flex;gap:12px;align-items:center">
-            <a href="https://www.amazon.com/stores/JR-Hernandez/author/B0CZ9S1983?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true&ccs_id=99e31aa9-eab5-4168-9df4-76b53cb83968" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Consíguelo en Amazon</a>
-            <a href="/es/libros-inteligencia-emocional/" class="btn btn-outline btn-sm" aria-label="Más información sobre los libros de inteligencia emocional">Más Información</a>
+            <a href="https://www.amazon.com/stores/JR-Hernandez/author/B0CZ9S1983" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Consíguelo en Amazon</a>
+            <a href="/es/libros-inteligencia-emocional/" class="btn btn-outline btn-sm" aria-label="Más información sobre los libros de J.R. Hernández">Más Información</a>
           </div>
         </div>
       </div>
@@ -1282,7 +1296,7 @@ html.has-banner body{padding-top:40px}
     </div>
     <div class="faq-list">
       <div class="faq-item fade-up"><button class="faq-question">¿Qué es Baseline Psychotherapy?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Baseline Psychotherapy es una práctica privada de psicoterapia online fundada en Nueva York en 2019 y con base actual en Singapur, que atiende a clientes de todo el mundo en español e inglés. Está especializada en burnout, ansiedad, depresión y regulación emocional para profesionales, expatriados y personas de alto rendimiento, con métodos estructurados, basados en evidencia y con resultados medibles. Todas las sesiones son por video seguro, y todo proceso comienza con una consulta gratuita de 15 minutos.</p></div></div>
-      <div class="faq-item fade-up"><button class="faq-question">¿Quién es J.R. Hernandez?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>J.R. Hernandez es un psicoterapeuta especializado en burnout y trastornos del estado de ánimo, y el fundador de Baseline Psychotherapy. Su formación clínica incluye el Diploma Profesional en Psicoterapia (The School of Positive Psychology of Singapore), Neurociencia Médica (Duke University School of Medicine) y la Especialización en Trastornos de Ansiedad y del Estado de Ánimo (American Psychological Association). Ha vivido en seis países de tres continentes, trabaja en español e inglés, y es autor de dos libros sobre inteligencia emocional.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-question">¿Quién es J.R. Hernandez?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>J.R. Hernandez es un psicoterapeuta especializado en burnout y trastornos del estado de ánimo, y el fundador de Baseline Psychotherapy. Su formación clínica incluye el Diploma Profesional en Psicoterapia (The School of Positive Psychology of Singapore), Neurociencia Médica (Duke University School of Medicine) y la Especialización en Trastornos de Ansiedad y del Estado de Ánimo (American Psychological Association). Ha vivido en seis países de tres continentes, trabaja en español e inglés, y es autor de tres libros, dos de ellos sobre inteligencia emocional.</p></div></div>
       <div class="faq-item fade-up"><button class="faq-question">¿Qué hace diferente a Baseline Psychotherapy de otras opciones de terapia online?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Tres cosas. Primera, un especialista único en lugar de una plataforma: trabajas con el mismo clínico desde el primer contacto hasta el alta. Segunda, una práctica genuinamente bilingüe: la terapia se realiza de forma nativa en español o inglés, no a través de traducción. Tercera, un método basado en procesos: cada intervención se elige a partir de una evaluación clínica inicial y el progreso se mide en términos observables. Y detrás de todo, experiencia real como expatriado: el estrés transcultural se trata como realidad clínica, no como nota al pie.</p></div></div>
       <div class="faq-item fade-up"><button class="faq-question">¿Qué es la terapia basada en procesos?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>La terapia basada en procesos apunta a los mecanismos específicos que mantienen un problema, en lugar de aplicar un protocolo fijo a una etiqueta diagnóstica. En la práctica, la evaluación va primero: identificar qué impulsa el burnout, la ansiedad o el ánimo bajo en tu caso particular, seleccionar después intervenciones basadas en evidencia (TCC, ACT, regulación somática) dirigidas a esos mecanismos, y medir si el cambio se sostiene. Dos personas con los mismos síntomas pueden necesitar caminos completamente distintos, y este método está construido para esa realidad.</p></div></div>
       <div class="faq-item fade-up"><button class="faq-question">¿Cómo funciona la metodología de evaluación primero?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Las primeras sesiones (típicamente de la uno a la cuatro) mapean síntomas, historia, fisiología y los patrones que mantienen la dificultad. Solo cuando ese cuadro está claro se diseña la intervención, con prioridades definidas y una dirección para cada sesión. El progreso se registra en términos observables: mejor sueño, menos espirales, recuperación más rápida tras los detonantes. La fase final confirma que los marcadores de recuperación se mantienen en condiciones de vida real, para que el cambio dure más que la propia terapia.</p></div></div>

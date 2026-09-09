@@ -206,8 +206,8 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 
 /* BOOKS */
 .books{padding:var(--section-py) 0;background:var(--bg)}
-.books-grid{margin-top:48px;display:grid;grid-template-columns:repeat(2,1fr);gap:40px}
-.book-card{display:grid;grid-template-columns:180px 1fr;gap:28px;align-items:center;background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:28px;box-shadow:var(--shadow-rest);transition:all .3s ease}
+.books-grid{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.book-card{display:grid;grid-template-columns:1fr;gap:22px;align-items:start;justify-items:center;text-align:center;background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:28px;box-shadow:var(--shadow-rest);transition:all .3s ease}.book-info>div{justify-content:center;flex-wrap:wrap}
 @media(hover:hover){.book-card:hover{box-shadow:var(--shadow-lift);transform:translateY(var(--lift))}}
 .book-cover{width:180px;height:270px;border-radius:4px;overflow:hidden;background:var(--border-light);box-shadow:4px 4px 20px rgba(0,0,0,.1);flex-shrink:0}
 .book-cover img{width:100%;height:100%;object-fit:cover}
@@ -281,6 +281,7 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 
 /* RESPONSIVE */
 @media(max-width:1024px){
+  .books-grid{grid-template-columns:repeat(2,1fr)}
   .hero-grid{grid-template-columns:1fr;gap:48px}.hero-image-frame{max-width:340px;margin:0 auto}
   .hero{min-height:auto;padding-top:120px;padding-bottom:60px}
   .credentials{grid-template-columns:1fr}.workshops-grid{grid-template-columns:1fr}.workshops-image-frame{max-width:400px}
@@ -293,7 +294,7 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
   .nav-links.active .nav-cta .btn{width:100%;justify-content:center;padding:14px 24px;font-size:.95rem}
   .process-steps{grid-template-columns:1fr;gap:40px}.process-steps::before{display:none}
   .issues-grid{grid-template-columns:1fr}.pricing-grid{grid-template-columns:1fr}.package-row{grid-template-columns:1fr}
-  .books-grid{grid-template-columns:1fr}.book-card{grid-template-columns:120px 1fr;gap:20px}.book-cover{width:120px;height:180px}
+  .books-grid{grid-template-columns:1fr}.book-card{grid-template-columns:120px 1fr;gap:20px;text-align:left;justify-items:start}.book-info>div{justify-content:flex-start}.book-cover{width:120px;height:180px}
   .reviews-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr;gap:32px}.footer-links a{padding:6px 0}.footer-links li{margin-bottom:4px}.footer{padding-bottom:100px}
   .hero-actions{flex-direction:column;align-items:flex-start}
@@ -738,7 +739,7 @@ html.has-banner body{padding-top:40px}
       "name": "Who is J.R. Hernandez?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "J.R. Hernandez is a psychotherapist specialized in burnout and mood disorders, and the founder of Baseline Psychotherapy. His clinical training includes a Professional Diploma in Psychotherapy (The School of Positive Psychology of Singapore), Medical Neuroscience (Duke University School of Medicine), and an Anxiety and Mood Disorders Specialization (American Psychological Association). He has lived in six countries on three continents, works in English and Spanish, and is the author of two books on emotional intelligence."
+        "text": "J.R. Hernandez is a psychotherapist specialized in burnout and mood disorders, and the founder of Baseline Psychotherapy. His clinical training includes a Professional Diploma in Psychotherapy (The School of Positive Psychology of Singapore), Medical Neuroscience (Duke University School of Medicine), and an Anxiety and Mood Disorders Specialization (American Psychological Association). He has lived in six countries on three continents, works in English and Spanish, and is the author of three books, including two on emotional intelligence."
       }
     },
     {
@@ -1181,33 +1182,46 @@ html.has-banner body{padding-top:40px}
   <div class="container">
     <div class="section-intro fade-up">
       <p class="label">Published Work</p>
-      <h2>Emotional Intelligence Books</h2>
-      <p>Two books on emotional intelligence: a practical guide for adults navigating stress, anxiety, and low mood, and a story that teaches young children what emotions are and why they matter. Available in English and Spanish on Amazon and Google Play.</p>
+      <h2>Books by J.R. Hernandez</h2>
+      <p>Three books: a process-based manual for working with your own reactions, a practical guide for adults navigating stress, anxiety, and low mood, and a story that teaches young children what emotions are and why they matter. Available in English and Spanish, in print and digital.</p>
     </div>
     <div class="books-grid">
       <div class="book-card fade-up">
         <div class="book-cover">
-          <img src="EI_BOOK.webp" alt="Emotional Intelligence and Behavioral Therapy book by J.R. Hernandez" loading="lazy" decoding="async" width="180" height="270">
+          <img src="PROTOCOL_COVER.webp" alt="The Baseline Psychotherapy Protocol, a process-based manual by J.R. Hernandez" loading="lazy" decoding="async" width="180" height="270">
         </div>
         <div class="book-info">
-          <h3>Emotional Intelligence & Behavioral Therapies</h3>
-          <p>A 10-step guide to understanding and managing stress, anxiety, and depression through emotional intelligence and cognitive-behavioral strategies. Each step is structured, practical, and designed for independent application. Available in English and Spanish.</p>
+          <h3>The Baseline Psychotherapy Protocol: A Process-Based Manual for Working With Your Own Reactions</h3>
+          <p>A working tool of this practice, now in book form: a process-based manual for working with your own reactions.</p>
           <div style="display:flex;gap:12px;align-items:center">
-            <a href="https://www.amazon.com/stores/JR-Hernandez/author/B0CZ9S1983?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true&ccs_id=99e31aa9-eab5-4168-9df4-76b53cb83968" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Get It on Amazon</a>
-            <a href="/emotional-intelligence-books/" class="btn btn-outline btn-sm" aria-label="Learn more about the emotional intelligence books">Learn More</a>
+            <a href="https://www.amazon.com/stores/JR-Hernandez/author/B0CZ9S1983" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Get It on Amazon</a>
+            <a href="/emotional-intelligence-books/" class="btn btn-outline btn-sm" aria-label="Learn more about the books by J.R. Hernandez">Learn More</a>
           </div>
         </div>
       </div>
       <div class="book-card fade-up" style="transition-delay:.08s">
         <div class="book-cover">
-          <img src="CHILDS_BOOK.webp" alt="Toto's Journey Through Emotions, children's book on emotional intelligence by J.R. Hernandez" loading="lazy" decoding="async" width="180" height="270">
+          <img src="EI_COVER.webp" alt="Emotional Intelligence and Behavioral Therapies book by J.R. Hernandez" loading="lazy" decoding="async" width="180" height="270">
+        </div>
+        <div class="book-info">
+          <h3>Emotional Intelligence & Behavioral Therapies</h3>
+          <p>A 10-step guide to understanding and managing stress, anxiety, and depression through emotional intelligence and cognitive-behavioral strategies. Each step is structured, practical, and designed for independent application. Available in English and Spanish.</p>
+          <div style="display:flex;gap:12px;align-items:center">
+            <a href="https://www.amazon.com/stores/JR-Hernandez/author/B0CZ9S1983" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Get It on Amazon</a>
+            <a href="/emotional-intelligence-books/" class="btn btn-outline btn-sm" aria-label="Learn more about the books by J.R. Hernandez">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="book-card fade-up" style="transition-delay:.16s">
+        <div class="book-cover">
+          <img src="TOTO_COVER.webp" alt="Toto's Journey Through Emotions, children's book on emotional intelligence by J.R. Hernandez" loading="lazy" decoding="async" width="180" height="270">
         </div>
         <div class="book-info">
           <h3>Toto's Journey Through Emotions</h3>
           <p>A story for young children about what emotions are, where they come from, and why every one of them matters. Designed for parents who want to give their children an early foundation in emotional intelligence, because regulation is a skill that builds over a lifetime. Available in English and Spanish.</p>
           <div style="display:flex;gap:12px;align-items:center">
-            <a href="https://www.amazon.com/stores/JR-Hernandez/author/B0CZ9S1983?ref=ap_rdr&isDramIntegrated=true&shoppingPortalEnabled=true&ccs_id=99e31aa9-eab5-4168-9df4-76b53cb83968" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Get It on Amazon</a>
-            <a href="/emotional-intelligence-books/" class="btn btn-outline btn-sm" aria-label="Learn more about the emotional intelligence books">Learn More</a>
+            <a href="https://www.amazon.com/stores/JR-Hernandez/author/B0CZ9S1983" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Get It on Amazon</a>
+            <a href="/emotional-intelligence-books/" class="btn btn-outline btn-sm" aria-label="Learn more about the books by J.R. Hernandez">Learn More</a>
           </div>
         </div>
       </div>
@@ -1283,7 +1297,7 @@ html.has-banner body{padding-top:40px}
     </div>
     <div class="faq-list">
       <div class="faq-item fade-up"><button class="faq-question">What is Baseline Psychotherapy?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Baseline Psychotherapy is a private online psychotherapy practice founded in New York in 2019 and now based in Singapore, serving clients worldwide in English and Spanish. It specializes in burnout, anxiety, depression, and emotional regulation for professionals, expats, and high performers, using structured, evidence-based methods with measurable outcomes. All sessions take place via secure video, and every process begins with a free 15-minute consultation.</p></div></div>
-      <div class="faq-item fade-up"><button class="faq-question">Who is J.R. Hernandez?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>J.R. Hernandez is a psychotherapist specialized in burnout and mood disorders, and the founder of Baseline Psychotherapy. His clinical training includes a Professional Diploma in Psychotherapy (The School of Positive Psychology of Singapore), Medical Neuroscience (Duke University School of Medicine), and an Anxiety and Mood Disorders Specialization (American Psychological Association). He has lived in six countries on three continents, works in English and Spanish, and is the author of two books on emotional intelligence.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-question">Who is J.R. Hernandez?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>J.R. Hernandez is a psychotherapist specialized in burnout and mood disorders, and the founder of Baseline Psychotherapy. His clinical training includes a Professional Diploma in Psychotherapy (The School of Positive Psychology of Singapore), Medical Neuroscience (Duke University School of Medicine), and an Anxiety and Mood Disorders Specialization (American Psychological Association). He has lived in six countries on three continents, works in English and Spanish, and is the author of three books, including two on emotional intelligence.</p></div></div>
       <div class="faq-item fade-up"><button class="faq-question">What makes Baseline Psychotherapy different from other online therapy options?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Three things. First, a single specialist instead of a platform: you work with the same clinician from first contact to discharge. Second, a genuinely bilingual practice: therapy is delivered natively in English or Spanish, not through translation. Third, a process-based method: every intervention is selected from an initial clinical assessment and progress is tracked in measurable terms. Behind all of it is lived expat experience, which means cross-cultural stress is treated as clinical reality, not a footnote.</p></div></div>
       <div class="faq-item fade-up"><button class="faq-question">What is process-based therapy?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Process-based therapy targets the specific mechanisms maintaining a problem rather than applying a fixed protocol to a diagnostic label. In practice, assessment comes first: identifying what is driving the burnout, anxiety, or low mood in your particular case, then selecting evidence-based interventions (CBT, ACT, somatic regulation) aimed at those mechanisms, and measuring whether the change holds. Two people with the same symptoms can need entirely different paths, and this method is built for that reality.</p></div></div>
       <div class="faq-item fade-up"><button class="faq-question">How does the assessment-first methodology work?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>The first sessions (typically one to four) map symptoms, history, physiology, and the patterns maintaining the difficulty. Only after that picture is clear is the intervention designed, with defined priorities and a direction for every session. Progress is then tracked in observable terms: better sleep, fewer spirals, faster recovery after triggers. The final phase confirms that recovery markers hold under real-world conditions, so the change lasts beyond the therapy itself.</p></div></div>
