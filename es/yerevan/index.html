@@ -198,8 +198,8 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 
 /* BOOKS */
 .books{padding:var(--section-py) 0;background:var(--bg)}
-.books-grid{margin-top:48px;display:grid;grid-template-columns:repeat(2,1fr);gap:40px}
-.book-card{display:grid;grid-template-columns:180px 1fr;gap:28px;align-items:center;background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:28px;box-shadow:var(--shadow-rest);transition:all .3s ease}
+.books-grid{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.book-card{display:grid;grid-template-columns:1fr;gap:22px;align-items:start;justify-items:center;text-align:center;background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:28px;box-shadow:var(--shadow-rest);transition:all .3s ease}.book-info>div{justify-content:center;flex-wrap:wrap}
 @media(hover:hover){.book-card:hover{box-shadow:var(--shadow-lift);transform:translateY(var(--lift))}}
 .book-cover{width:180px;height:270px;border-radius:4px;overflow:hidden;background:var(--border-light);box-shadow:4px 4px 20px rgba(0,0,0,.1);flex-shrink:0}
 .book-cover img{width:100%;height:100%;object-fit:cover}
@@ -273,6 +273,7 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 
 /* RESPONSIVE */
 @media(max-width:1024px){
+  .books-grid{grid-template-columns:repeat(2,1fr)}
   .hero-grid{grid-template-columns:1fr;gap:48px}.hero-image-frame{max-width:340px;margin:0 auto}
   .hero{min-height:auto;padding-top:120px;padding-bottom:60px}
   .credentials{grid-template-columns:1fr}.workshops-grid{grid-template-columns:1fr}.workshops-image-frame{max-width:400px}
@@ -285,7 +286,7 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
   .nav-links.active .nav-cta .btn{width:100%;justify-content:center;padding:14px 24px;font-size:.95rem}
   .process-steps{grid-template-columns:1fr;gap:40px}.process-steps::before{display:none}
   .issues-grid{grid-template-columns:1fr}.pricing-grid{grid-template-columns:1fr}.package-row{grid-template-columns:1fr}
-  .books-grid{grid-template-columns:1fr}.book-card{grid-template-columns:120px 1fr;gap:20px}.book-cover{width:120px;height:180px}
+  .books-grid{grid-template-columns:1fr}.book-card{grid-template-columns:120px 1fr;gap:20px;text-align:left;justify-items:start}.book-info>div{justify-content:flex-start}.book-cover{width:120px;height:180px}
   .reviews-grid{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr;gap:32px}.footer-links a{padding:6px 0}.footer-links li{margin-bottom:4px}.footer{padding-bottom:100px}
   .hero-actions{flex-direction:column;align-items:flex-start}
@@ -344,7 +345,7 @@ html.has-banner body{padding-top:40px}
   "url": "https://baselinepsychotherapy.com/es/yerevan/",
   "description": "Psicoterapia estructurada y basada en evidencia para la comunidad internacional de Armenia: online y presencial en Ereván, en español e inglés. Consulta gratuita de 15 minutos.",
   "inLanguage": "es",
-  "lastReviewed": "2026-09-04",
+  "lastReviewed": "2026-09-09",
   "reviewedBy": {
     "@type": "Person",
     "@id": "https://baselinepsychotherapy.com/#jr",
@@ -693,6 +694,58 @@ html.has-banner body{padding-top:40px}
     </div>
     <div class="fade-up" style="text-align:center;margin-top:36px">
       <a href="/es/tests/" class="btn btn-primary">Explora los tests gratuitos <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- LIBROS -->
+<section class="books" id="resources">
+  <div class="container">
+    <div class="section-intro fade-up">
+      <p class="label">Obra Publicada</p>
+      <h2>Libros de J.R. Hernández</h2>
+      <p>Tres libros: un manual basado en procesos para trabajar con tus propias reacciones, una guía práctica para adultos que navegan el estrés, la ansiedad y el ánimo bajo, y un cuento que enseña a los niños qué son las emociones y por qué importan. Disponibles en inglés y español, en papel y digital.</p>
+    </div>
+    <div class="books-grid">
+      <div class="book-card fade-up">
+        <div class="book-cover">
+          <img src="/PROTOCOL_COVER.webp" alt="El Protocolo Baseline Psychotherapy, manual basado en procesos de J.R. Hernandez" loading="lazy" decoding="async" width="180" height="270">
+        </div>
+        <div class="book-info">
+          <h3>El Protocolo Baseline Psychotherapy: Un manual basado en procesos para trabajar con tus propias reacciones</h3>
+          <p>Una herramienta base de esta práctica, ahora en forma de libro: un manual basado en procesos para trabajar con tus propias reacciones.</p>
+          <div style="display:flex;gap:12px;align-items:center">
+            <a href="https://www.amazon.com/stores/JR-Hernandez/author/B0CZ9S1983" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Consíguelo en Amazon</a>
+            <a href="/es/libros-inteligencia-emocional/" class="btn btn-outline btn-sm" aria-label="Más información sobre los libros de J.R. Hernández">Más Información</a>
+          </div>
+        </div>
+      </div>
+      <div class="book-card fade-up" style="transition-delay:.08s">
+        <div class="book-cover">
+          <img src="/EI_COVER.webp" alt="Libro Inteligencia Emocional y Terapias Conductuales de J.R. Hernandez" loading="lazy" decoding="async" width="180" height="270">
+        </div>
+        <div class="book-info">
+          <h3>Emotional Intelligence &amp; Behavioral Therapies</h3>
+          <p>Una guía de 10 pasos para entender y gestionar el estrés, la ansiedad y la depresión mediante la inteligencia emocional y estrategias de TCC. Cada paso está estructurado, es práctico y está diseñado para la aplicación independiente. Disponible en inglés y español.</p>
+          <div style="display:flex;gap:12px;align-items:center">
+            <a href="https://www.amazon.com/stores/JR-Hernandez/author/B0CZ9S1983" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Consíguelo en Amazon</a>
+            <a href="/es/libros-inteligencia-emocional/" class="btn btn-outline btn-sm" aria-label="Más información sobre los libros de J.R. Hernández">Más Información</a>
+          </div>
+        </div>
+      </div>
+      <div class="book-card fade-up" style="transition-delay:.16s">
+        <div class="book-cover">
+          <img src="/TOTO_COVER.webp" alt="Toto's Journey Through Emotions, libro infantil sobre inteligencia emocional de J.R. Hernandez" loading="lazy" decoding="async" width="180" height="270">
+        </div>
+        <div class="book-info">
+          <h3>Toto's Journey Through Emotions</h3>
+          <p>Una historia para niños pequeños sobre qué son las emociones, de dónde vienen y por qué cada una de ellas importa. Diseñada para padres que quieren dar a sus hijos una base temprana en inteligencia emocional, porque la regulación es una habilidad que se construye a lo largo de toda la vida. Disponible en inglés y español.</p>
+          <div style="display:flex;gap:12px;align-items:center">
+            <a href="https://www.amazon.com/stores/JR-Hernandez/author/B0CZ9S1983" class="btn btn-primary btn-sm" target="_blank" rel="noopener">Consíguelo en Amazon</a>
+            <a href="/es/libros-inteligencia-emocional/" class="btn btn-outline btn-sm" aria-label="Más información sobre los libros de J.R. Hernández">Más Información</a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
