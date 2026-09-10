@@ -5,25 +5,25 @@
   window.dataLayer=window.dataLayer||[];
   window.gtag=function(){dataLayer.push(arguments)};
   window._cbGet=function(n){var m=document.cookie.match('(?:^|; )'+n+'=([^;]*)');return m?decodeURIComponent(m[1]):null};
-  window._loadAnalytics=function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-00D52WK9X7';document.head.appendChild(s);window.gtag('js',new Date());window.gtag('config','G-00D52WK9X7');(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","wz4n6u4j3h")};
+  window._loadAnalytics=function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-00D52WK9X7';document.head.appendChild(s);window.gtag('js',new Date());window.gtag('config','G-00D52WK9X7')};
   if(window._cbGet('cookie_consent')==='accepted'){window._loadAnalytics()}
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Clinical Screeners | Six Validated Tests Online</title>
-  <meta name="description" content="Six free validated mental health screeners (PHQ-9, GAD-7, CBI, WHO-5, DASS-21, TMMS-24) scored instantly in your browser. No account, no data stored. English and Spanish.">
+  <title>Recovery Half-Life Check: How Long Until You Feel Like You?</title>
+  <meta name="description" content="Eight questions, two minutes: is your recovery after demand stable, stretching, or no longer completing? A reflection tool by psychotherapist J.R. Hernandez.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="J.R. Hernandez">
-  <link rel="canonical" href="https://baselinepsychotherapy.com/tests/">
-  <link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/tests/">
-  <link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/">
-  <link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/tests/">
+  <link rel="canonical" href="https://baselinepsychotherapy.com/tests/recovery-half-life/">
+  <link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/tests/recovery-half-life/">
+  <link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/vida-media-recuperacion/">
+  <link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/tests/recovery-half-life/">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Free Clinical Screeners | Six Validated Tests Online">
-  <meta property="og:description" content="Six free validated mental health screeners (PHQ-9, GAD-7, CBI, WHO-5, DASS-21, TMMS-24) scored instantly in your browser. No account, no data stored. English and Spanish.">
-  <meta property="og:url" content="https://baselinepsychotherapy.com/tests/">
+  <meta property="og:title" content="Recovery Half-Life Check: How Long Until You Feel Like You?">
+  <meta property="og:description" content="Eight questions, two minutes: is your recovery after demand stable, stretching, or no longer completing? A reflection tool by psychotherapist J.R. Hernandez.">
+  <meta property="og:url" content="https://baselinepsychotherapy.com/tests/recovery-half-life/">
   <meta property="og:site_name" content="Baseline Psychotherapy">
   <meta property="og:locale" content="en_US">
   <meta property="og:image" content="https://baselinepsychotherapy.com/og-home-en.png">
@@ -220,10 +220,75 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
 .content-link,.hero-sub a,.crisis-body a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
 .crisis-body strong{color:var(--navy)}
 .crisis-body p{margin-bottom:20px;text-align:left}
-.screener-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:36px;max-width:800px;margin-left:auto;margin-right:auto}
-.screener-type{font-family:var(--sans);font-size:.95rem;font-weight:600;color:var(--navy);margin-bottom:4px}
-.screener-meta{font-family:var(--sans);font-size:.8rem;color:var(--text);opacity:.6;margin-bottom:14px}
-@media(max-width:768px){.screener-grid{grid-template-columns:1fr}}
+.screener{max-width:760px;margin:40px auto 0;counter-reset:q}
+.q-instruction{max-width:760px;margin:36px auto 0;font-weight:600;color:var(--navy);font-size:1.02rem;text-align:left}
+.q-item{border:1px solid var(--border-light);background:var(--white);border-radius:8px;padding:22px 24px;margin-top:16px;box-shadow:var(--shadow-rest);counter-increment:q}
+.q-item legend{float:left;width:100%;padding:0;font-family:var(--sans);font-weight:600;color:var(--navy);font-size:.95rem;line-height:1.5}
+.q-item legend::before{content:counter(q) '. ';color:var(--gold);font-weight:700}
+.q-opts{clear:both;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:14px}
+.q-opt{display:flex;align-items:center;gap:8px;border:1px solid var(--border);border-radius:6px;padding:10px 12px;font-size:.82rem;line-height:1.4;cursor:pointer;transition:all .2s;background:var(--bg);min-width:0;white-space:normal}
+.q-opt span{flex:1 1 auto;min-width:0;white-space:normal;overflow-wrap:break-word}
+.q-opt:hover{border-color:var(--gold)}
+.q-opt:has(input:checked){border-color:var(--gold);background:var(--gold-subtle)}
+.q-opt input{accent-color:var(--gold);flex-shrink:0}
+.q-progress{text-align:center;font-size:.85rem;opacity:.7;margin-top:20px}
+.screener-actions{display:flex;gap:16px;justify-content:center;margin-top:16px;flex-wrap:wrap}
+.btn[disabled]{opacity:.45;cursor:not-allowed;pointer-events:none}
+.result-card{background:var(--white);border:1px solid var(--border-light);border-left:4px solid var(--gold);border-radius:8px;padding:32px 28px;margin:40px auto 0;max-width:760px;box-shadow:var(--shadow-lift)}
+.result-card[hidden]{display:none}
+.crisis-note{border:2px solid var(--gold);background:var(--gold-subtle);border-radius:8px;padding:22px 24px;margin-bottom:24px}
+.crisis-note[hidden]{display:none}
+.crisis-note p{text-align:left;font-size:.95rem}
+.score-line{font-family:var(--serif);font-size:2.4rem;font-weight:700;color:var(--navy);line-height:1.1}
+.band-texts p{margin-top:16px;text-align:left}
+.band-texts p[hidden]{display:none}
+.bands-table{width:100%;max-width:760px;margin:36px auto 0;border-collapse:collapse;font-size:.9rem;background:var(--white);border:1px solid var(--border-light);border-radius:8px;overflow:hidden;box-shadow:var(--shadow-rest)}
+.bands-table th{background:var(--navy);color:var(--white);font-family:var(--sans);font-weight:600;text-align:left;padding:12px 16px;font-size:.82rem;letter-spacing:.05em;text-transform:uppercase}
+.bands-table td{padding:12px 16px;border-top:1px solid var(--border-light);text-align:left}
+.bands-table tr.current-band td{background:var(--gold-subtle);font-weight:600;color:var(--navy)}
+.disclaimer{max-width:760px;margin:48px auto 0;font-size:.85rem;line-height:1.7;opacity:.75;border:1px solid var(--border);border-radius:8px;padding:18px 22px;background:var(--white);text-align:left}
+@media(max-width:1024px){.q-opts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.q-opts{grid-template-columns:minmax(0,1fr)}}
+.content-link{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.tool-wrap{max-width:560px;margin:40px auto 0}
+.safety-note{max-width:560px;margin:28px auto 0;font-size:.88rem;line-height:1.6;color:var(--text);background:var(--gold-subtle);border-left:3px solid var(--gold);padding:12px 16px;border-radius:0 8px 8px 0;text-align:left}
+.breath-options{display:flex;flex-direction:column;gap:12px;margin:28px auto 0;max-width:560px}
+.breath-choice{width:100%;text-align:left;background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:18px 20px;cursor:pointer;box-shadow:var(--shadow-rest);transition:all .2s}
+.breath-choice:hover{border-color:var(--gold);box-shadow:var(--shadow-lift)}
+.breath-choice .tag{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:4px}
+.breath-choice h3{font-size:1.15rem;margin-bottom:6px}
+.breath-choice p{font-size:.88rem;line-height:1.6;opacity:.8;margin-bottom:6px}
+.breath-choice .pattern{font-size:.78rem;color:var(--text);opacity:.6}
+.pacer-wrap{background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:24px 18px 18px;box-shadow:var(--shadow-rest);margin-top:28px}
+.pacer-wrap[hidden]{display:none}
+.breath-canvas{position:relative;width:100%;max-width:320px;aspect-ratio:320/280;margin:0 auto}
+.breath-svg{position:absolute;inset:0;width:100%;height:100%;display:none}
+.breath-svg.active{display:block}
+.breath-readout{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58%;text-align:center;pointer-events:none}
+.breath-readout .phase{font-family:var(--serif);font-style:italic;font-size:1.03rem;line-height:1.25;color:var(--navy);min-height:2.6em;display:flex;align-items:flex-end;justify-content:center}
+.breath-readout .count{font-family:var(--serif);font-size:2.7rem;font-weight:500;line-height:1;margin-top:7px;color:var(--navy)}
+.breath-readout .seconds{font-family:var(--sans);font-size:.68rem;color:var(--text);opacity:.6;letter-spacing:.08em;text-transform:uppercase}
+.pacer-meta{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;font-family:var(--sans);font-size:.72rem;color:var(--text);opacity:.65;letter-spacing:.04em;margin-top:10px;line-height:1.45}
+.pacer-meta > span:first-child{max-width:72%;text-align:left}
+.change-breath{display:block;margin:14px auto 0;background:none;border:0;color:var(--text);opacity:.6;font-family:var(--sans);font-size:.78rem;cursor:pointer;letter-spacing:.03em;text-decoration:underline;text-underline-offset:3px}
+.change-breath:hover{opacity:1}
+@media (prefers-reduced-motion: reduce){.breath-svg{display:none!important}}
+.meter{position:relative;width:100%;max-width:480px;aspect-ratio:1/1;margin:32px auto 0;border-radius:8px;border:1px solid var(--border);overflow:hidden;cursor:crosshair;box-shadow:var(--shadow-rest);background:linear-gradient(135deg,rgba(165,107,98,.28) 0%,rgba(165,107,98,.09) 47%,rgba(138,153,126,.09) 53%,rgba(138,153,126,.27) 100%),linear-gradient(225deg,rgba(187,159,107,.27) 0%,rgba(187,159,107,.08) 47%,rgba(79,103,129,.08) 53%,rgba(79,103,129,.27) 100%),var(--white)}
+.meter:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.meter .axis-x{position:absolute;left:0;right:0;top:50%;height:1px;background:var(--border)}
+.meter .axis-y{position:absolute;top:0;bottom:0;left:50%;width:1px;background:var(--border)}
+.meter .ql{position:absolute;font-family:var(--sans);font-size:.66rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text);opacity:.7;max-width:45%}
+.meter .ql.tl{top:10px;left:12px;text-align:left}.meter .ql.tr{top:10px;right:12px;text-align:right}
+.meter .ql.bl{bottom:10px;left:12px;text-align:left}.meter .ql.br{bottom:10px;right:12px;text-align:right}
+.meter .marker{position:absolute;width:18px;height:18px;border-radius:50%;transform:translate(-50%,-50%);background:var(--navy);border:3px solid var(--white);box-shadow:0 1px 4px rgba(0,0,0,.25);display:none;pointer-events:none}
+.meter-axes-label{display:flex;justify-content:space-between;max-width:480px;margin:10px auto 0;font-family:var(--sans);font-size:.72rem;color:var(--text);opacity:.65;letter-spacing:.04em}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:16px auto 0;max-width:560px}
+.chip{border:1px solid var(--border);border-radius:999px;padding:8px 16px;font-family:var(--sans);font-size:.88rem;background:var(--bg);cursor:pointer;transition:all .15s;color:var(--text)}
+.chip:hover{border-color:var(--gold)}
+.chip.sel{border-color:var(--gold);background:var(--gold-subtle);color:var(--navy);font-weight:600}
+.meter-result{max-width:560px;margin:24px auto 0;background:var(--white);border:1px solid var(--border-light);border-left:4px solid var(--gold);border-radius:8px;padding:22px 24px;text-align:left;box-shadow:var(--shadow-rest)}
+.meter-result[hidden],.meter-step[hidden]{display:none}
+.tool-note{max-width:560px;margin:28px auto 0;font-size:.85rem;opacity:.75;line-height:1.7}
 #focusedBar{display:none;position:fixed;top:0;left:0;right:0;z-index:1100;background:var(--navy);color:var(--gold);font-family:var(--sans);font-size:.82rem;letter-spacing:.01em;min-height:40px;align-items:center;justify-content:center;gap:8px;padding:6px 48px 6px 16px;text-align:center}
 #focusedBar a{color:var(--gold);text-decoration:underline;text-underline-offset:3px;font-weight:600;white-space:nowrap}
 #focusedBar button{position:absolute;right:8px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.7);font-size:1.15rem;line-height:1;padding:8px 10px}
@@ -232,16 +297,32 @@ html.has-banner #focusedBar{display:flex}
 html.has-banner .nav{top:40px}
 html.has-banner body{padding-top:40px}
 @media(max-width:768px){#focusedBar{font-size:.72rem;line-height:1.4;min-height:52px}html.has-banner .nav{top:52px}html.has-banner body{padding-top:52px}}
+.hl-attrib{max-width:680px;margin:18px auto 0;font-size:.88rem;line-height:1.7;opacity:.8;font-style:normal}.hl-attrib a{color:var(--navy);font-weight:600;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px}
+.hl-intro{max-width:720px;margin:28px auto 0;font-size:1rem;line-height:1.8}.hl-intro a{color:var(--navy);font-weight:600;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px}
+.hl-wrap{max-width:720px;margin:40px auto 0}
+.hl-progress{height:6px;border-radius:3px;background:var(--border);overflow:hidden;margin-bottom:8px}.hl-progress span{display:block;height:100%;width:0;background:var(--gold);transition:width .3s ease}
+.hl-count{font-family:var(--sans);font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
+.hl-q{border:0;padding:0;margin:0 0 22px;background:var(--white);border:1px solid var(--border-light);border-left:4px solid var(--gold);border-radius:8px;padding:22px 22px 18px;box-shadow:var(--shadow-rest)}
+.hl-q legend{float:left;width:100%;font-family:var(--serif);font-size:1.25rem;font-weight:600;color:var(--navy);line-height:1.3;margin-bottom:14px}.hl-q legend span{font-family:var(--sans);font-size:.75rem;font-weight:600;letter-spacing:.12em;color:var(--gold);display:block;margin-bottom:6px}
+.hl-opts{display:grid;gap:8px;clear:both}.hl-opts label{display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:center;min-height:48px;padding:12px 14px;border:1px solid var(--border);border-radius:6px;background:var(--bg);cursor:pointer;font-size:.95rem;line-height:1.45;color:var(--text);transition:border-color .2s,background .2s}
+.hl-opts label:has(input:checked){border-color:var(--navy);background:var(--gold-subtle);color:var(--navy);font-weight:600}.hl-opts label:has(input:focus-visible){outline:2px solid var(--gold);outline-offset:2px}
+.hl-opts input{width:20px;height:20px;accent-color:var(--navy);margin:0}
+.hl-result{margin-top:28px;background:var(--white);border:1px solid var(--border-light);border-left:4px solid var(--navy);border-radius:8px;padding:28px 26px;box-shadow:var(--shadow-lift)}.hl-result .label{margin-bottom:8px}.hl-result h3{font-size:clamp(1.4rem,2.2vw,1.8rem);margin-bottom:12px}.hl-result p{font-size:.98rem;line-height:1.75}.hl-result a{color:var(--navy);font-weight:600;text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px}
+.hl-bridge{max-width:720px;margin:36px auto 0;text-align:center;font-size:.98rem}.hl-bridge a{font-weight:600;color:var(--navy);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px}
+.hl-note{max-width:720px;margin:28px auto 0;font-size:.85rem;opacity:.75;line-height:1.7;text-align:center}
+.hl-result[hidden]{display:none}
+@media(max-width:768px){.hl-q{padding:18px 16px 14px}.hl-result{padding:22px 18px}}
+@media(prefers-reduced-motion:reduce){.hl-progress span,.hl-opts label{transition:none}}
 </style>
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "MedicalWebPage",
-  "name": "Free Clinical Screeners",
-  "url": "https://baselinepsychotherapy.com/tests/",
-  "description": "Six free validated mental health screeners (PHQ-9, GAD-7, CBI, WHO-5, DASS-21, TMMS-24) scored instantly in your browser.",
+  "name": "Recovery Half-Life Check",
+  "url": "https://baselinepsychotherapy.com/tests/recovery-half-life/",
+  "description": "An eight-question reflection tool on how long your system takes to return to baseline after demand, created by psychotherapist J.R. Hernandez; not a psychometric test, browser-only.",
   "inLanguage": "en",
-  "lastReviewed": "2026-08-27",
+  "lastReviewed": "2026-09-10",
   "reviewedBy": {
     "@type": "Person",
     "@id": "https://baselinepsychotherapy.com/#jr",
@@ -267,6 +348,12 @@ html.has-banner body{padding-top:40px}
       "position": 2,
       "name": "Free Clinical Screeners",
       "item": "https://baselinepsychotherapy.com/tests/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Recovery Half-Life Check",
+      "item": "https://baselinepsychotherapy.com/tests/recovery-half-life/"
     }
   ]
 }
@@ -277,7 +364,7 @@ html.has-banner body{padding-top:40px}
   "@type": "MedicalBusiness",
   "@id": "https://baselinepsychotherapy.com/#organization",
   "name": "Baseline Psychotherapy",
-  "url": "https://baselinepsychotherapy.com/tests/",
+  "url": "https://baselinepsychotherapy.com/tests/recovery-half-life/",
   "logo": {
     "@type": "ImageObject",
     "url": "https://baselinepsychotherapy.com/LOGO.webp"
@@ -289,17 +376,7 @@ html.has-banner body{padding-top:40px}
   "hasMap": "https://g.page/r/CQd8xXTT59B-EBM"
 }
   </script>
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-   m[i].l=1*new Date();
-   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
-   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-   ym(111712864, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/111712864" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is recovery half-life?","acceptedAnswer":{"@type":"Answer","text":"Recovery half-life is a working concept from this practice, taken from the founder's writing on burnout: the time your system needs after a demand to return to its baseline, to feeling like yourself. The image is borrowed from physics: not how much energy you have, but how long the return takes. When that duration stretches, it is often the earliest visible signal that regulation is under strain."}},{"@type":"Question","name":"How is the Recovery Half-Life Check different from a burnout test?","acceptedAnswer":{"@type":"Answer","text":"It is a reflection tool, not psychometrics. A validated burnout instrument such as the Copenhagen Burnout Inventory (CBI) has been tested against large samples and gives you a scored result with known properties. This check has not been validated: it asks eight honest questions about one variable, recovery time, and returns a reading, not a score. Use it to notice a pattern, and use the CBI for the number."}},{"@type":"Question","name":"What should I do if my recovery is stretching or not completing?","acceptedAnswer":{"@type":"Answer","text":"First, put a number on it: the CBI and the WHO-5 take a few minutes and are validated. Second, treat the trend seriously rather than the label: a stretching recovery is the stage where structured changes to load, sleep, and boundaries work best; a recovery that no longer completes usually needs more than rest. Talking to a professional, here or anywhere, is a reasonable next step in both cases."}},{"@type":"Question","name":"Are my answers to the Half-Life Check private?","acceptedAnswer":{"@type":"Answer","text":"Yes. The check runs in your browser: nothing you select is stored, sent, or seen by anyone, and everything resets when you close the page. There is no account and no record on this site."}}]}</script>
 </head>
 <body>
 <a href="#main" class="skip-nav">Skip to content</a>
@@ -324,7 +401,7 @@ html.has-banner body{padding-top:40px}
       <li><a href="/blog/">Blog</a></li>
       <li><a href="/#contact">Contact</a></li>
       <li class="nav-cta"><a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Get Started</a></li>
-      <li><a href="/es/tests/" style="font-size:.82rem;font-weight:600;color:var(--gold)">ES</a></li>
+      <li><a href="/es/tests/vida-media-recuperacion/" style="font-size:.82rem;font-weight:600;color:var(--gold)">ES</a></li>
     </ul>
     <button class="nav-mobile-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -332,7 +409,7 @@ html.has-banner body{padding-top:40px}
 
 <div class="breadcrumb">
   <div class="container">
-    <a href="/">Home</a> &rsaquo; Free Clinical Screeners
+    <a href="/">Home</a> &rsaquo; <a href="/tests/">Screeners</a> &rsaquo; Recovery Half-Life Check
   </div>
 </div>
 
@@ -340,95 +417,53 @@ html.has-banner body{padding-top:40px}
 <section class="page-hero" id="main">
   <div class="container">
     <div class="page-hero-content fade-up">
-      <span class="kicker">Validated Instruments · Private · Instant</span>
-      <h1>Free Clinical Screeners</h1>
-      <p class="hero-sub">These are the same validated questionnaires used in clinical research and in this practice: not personality quizzes. Each takes ~2 minutes, scores instantly, and tells you honestly what the number means and what it does not.</p>
-      <p class="hero-sub">Two things before you start. First: a screener is a starting point, not a diagnosis; only a clinical evaluation can do that. Second, and it matters here: <strong>nothing you answer leaves your device.</strong> There is no account, no email, no data sent or stored. The calculation happens in your browser and disappears when you close the page.</p>
+      <span class="kicker">Reflection Tool · 8 Questions · ~2 Minutes</span>
+      <h1>Recovery Half-Life Check</h1>
+      <p class="hl-attrib">A reflection tool created by J.R. Hernandez, psychotherapist at Baseline Psychotherapy. Not a psychometric test, and it doesn't pretend to be: for validated instruments, see the <a href="/tests/">screeners</a>.</p>
+      <p class="hl-intro">Recovery has a duration. After a demanding day, a hard week, or a real vacation, your system takes a certain amount of time to return to its baseline: to feeling like you. This check looks at one thing only: whether that duration is stable, stretching, or no longer completing. Eight questions, two minutes. This is a reflection tool from this practice, not a validated clinical instrument: for validated numbers, <a href="/tests/cbi/">the CBI</a> and <a href="/tests/who-5/">WHO-5</a> are one click away.</p>
     </div>
   </div>
 </section>
 
-<!-- SCREENERS -->
-<section class="content-section alt">
+<!-- TOOL -->
+<section class="content-section alt" id="tool">
   <div class="container">
     <div class="section-intro fade-up">
-      <p class="label">Choose a Screener</p>
-      <h2>Six Validated Tests,<br>Scored in Your Browser</h2>
+      <p class="label">The Check</p>
+      <h2>Eight questions about one variable</h2>
+      <p>Pick the answer closest to your last few weeks, not your best week. Your reading appears below as soon as all eight are answered.</p>
     </div>
-    <div class="screener-grid">
-      <a href="/tests/phq-9/" class="related-card fade-up">
-        <h3>PHQ-9</h3>
-        <p class="screener-type">Depression screening</p>
-        <p class="screener-meta">9 questions · ~2 minutes</p>
-        <span class="link">Take the test →</span>
-      </a>
-      <a href="/tests/gad-7/" class="related-card fade-up" style="transition-delay:.06s">
-        <h3>GAD-7</h3>
-        <p class="screener-type">Anxiety screening</p>
-        <p class="screener-meta">7 questions · ~2 minutes</p>
-        <span class="link">Take the test →</span>
-      </a>
-      <a href="/tests/cbi/" class="related-card fade-up" style="transition-delay:.12s">
-        <h3>CBI</h3>
-        <p class="screener-type">Burnout screener</p>
-        <p class="screener-meta">6 questions · ~2 minutes</p>
-        <span class="link">Take the test →</span>
-      </a>
-      <a href="/tests/who-5/" class="related-card fade-up" style="transition-delay:.18s">
-        <h3>WHO-5</h3>
-        <p class="screener-type">Wellbeing index</p>
-        <p class="screener-meta">5 questions · ~1 minute</p>
-        <span class="link">Take the test →</span>
-      </a>
-      <a href="/tests/dass-21/" class="related-card fade-up" style="transition-delay:.24s">
-        <h3>DASS-21</h3>
-        <p class="screener-type">Depression, anxiety and stress</p>
-        <p class="screener-meta">21 questions · ~4 minutes</p>
-        <span class="link">Take the test →</span>
-      </a>
-      <a href="/es/tests/tmms-24/" class="related-card fade-up" style="transition-delay:.3s">
-        <h3>TMMS-24</h3>
-        <p class="screener-type">Emotional intelligence (in Spanish)</p>
-        <p class="screener-meta">24 questions · ~4 minutes</p>
-        <span class="link">Take the test →</span>
-      </a>
+    <div class="hl-wrap fade-up">
+    <div class="hl-progress" role="progressbar" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0" aria-label="0 of 8 answered"><span id="hl-bar"></span></div>
+    <p class="hl-count" id="hl-count" aria-live="polite">0 of 8 answered</p>
+        <fieldset class="hl-q" id="q1"><legend><span>Q1</span>After a normally demanding workday, how long until you feel like yourself again?</legend><div class="hl-opts"><label><input type="radio" name="q1" value="0" onchange="HL.update()"><span>By the same evening</span></label><label><input type="radio" name="q1" value="1" onchange="HL.update()"><span>By the next morning</span></label><label><input type="radio" name="q1" value="2" onchange="HL.update()"><span>It takes a day or two</span></label><label><input type="radio" name="q1" value="3" onchange="HL.update()"><span>I don't fully get there anymore</span></label></div></fieldset>
+    <fieldset class="hl-q" id="q2"><legend><span>Q2</span>What does a normal weekend buy you?</legend><div class="hl-opts"><label><input type="radio" name="q2" value="0" onchange="HL.update()"><span>A full reset: Monday starts clean</span></label><label><input type="radio" name="q2" value="1" onchange="HL.update()"><span>Most of a reset</span></label><label><input type="radio" name="q2" value="2" onchange="HL.update()"><span>Monday feels almost like Friday</span></label><label><input type="radio" name="q2" value="3" onchange="HL.update()"><span>Weekends stopped working a while ago</span></label></div></fieldset>
+    <fieldset class="hl-q" id="q3"><legend><span>Q3</span>Think of your last real vacation (a week or more):</legend><div class="hl-opts"><label><input type="radio" name="q3" value="0" onchange="HL.update()"><span>I came back renewed and it lasted</span></label><label><input type="radio" name="q3" value="1" onchange="HL.update()"><span>It helped, but faded within days</span></label><label><input type="radio" name="q3" value="2" onchange="HL.update()"><span>Three good days, then the full weight returned</span></label><label><input type="radio" name="q3" value="3" onchange="HL.update()"><span>I never really disconnected at all</span></label></div></fieldset>
+    <fieldset class="hl-q" id="q4"><legend><span>Q4</span>When does the exhaustion show up, relative to the demand?</legend><div class="hl-opts"><label><input type="radio" name="q4" value="0" onchange="HL.update()"><span>During it, and it fades after</span></label><label><input type="radio" name="q4" value="1" onchange="HL.update()"><span>Right before it starts</span></label><label><input type="radio" name="q4" value="2" onchange="HL.update()"><span>The night before, the Sunday drop</span></label><label><input type="radio" name="q4" value="3" onchange="HL.update()"><span>It never quite leaves</span></label></div></fieldset>
+    <fieldset class="hl-q" id="q5"><legend><span>Q5</span>Things that used to feel good (dinners, sport, trips):</legend><div class="hl-opts"><label><input type="radio" name="q5" value="0" onchange="HL.update()"><span>Still feel good</span></label><label><input type="radio" name="q5" value="1" onchange="HL.update()"><span>Good, but they take effort</span></label><label><input type="radio" name="q5" value="2" onchange="HL.update()"><span>They feel like items on a list</span></label><label><input type="radio" name="q5" value="3" onchange="HL.update()"><span>I avoid them: no energy left for them</span></label></div></fieldset>
+    <fieldset class="hl-q" id="q6"><legend><span>Q6</span>Sleep:</legend><div class="hl-opts"><label><input type="radio" name="q6" value="0" onchange="HL.update()"><span>I usually wake up restored</span></label><label><input type="radio" name="q6" value="1" onchange="HL.update()"><span>Restored some days</span></label><label><input type="radio" name="q6" value="2" onchange="HL.update()"><span>I sleep enough but wake up tired</span></label><label><input type="radio" name="q6" value="3" onchange="HL.update()"><span>Sleep itself is broken and doesn't restore</span></label></div></fieldset>
+    <fieldset class="hl-q" id="q7"><legend><span>Q7</span>Compared with six months ago, recovering takes:</legend><div class="hl-opts"><label><input type="radio" name="q7" value="0" onchange="HL.update()"><span>The same or less</span></label><label><input type="radio" name="q7" value="1" onchange="HL.update()"><span>A bit longer</span></label><label><input type="radio" name="q7" value="2" onchange="HL.update()"><span>Clearly longer</span></label><label><input type="radio" name="q7" value="3" onchange="HL.update()"><span>I can't remember the last time I felt recovered</span></label></div></fieldset>
+    <fieldset class="hl-q" id="q8"><legend><span>Q8</span>When did you last feel fully at your baseline: rested, present, yourself?</legend><div class="hl-opts"><label><input type="radio" name="q8" value="0" onchange="HL.update()"><span>This week</span></label><label><input type="radio" name="q8" value="1" onchange="HL.update()"><span>A few weeks ago</span></label><label><input type="radio" name="q8" value="2" onchange="HL.update()"><span>Months ago</span></label><label><input type="radio" name="q8" value="3" onchange="HL.update()"><span>I honestly can't remember</span></label></div></fieldset>
+    <div class="hl-result" id="hl-result" hidden role="region" aria-live="polite" aria-labelledby="hl-band"><p class="label">Your reading</p><h3 id="hl-band"></h3><p id="hl-text"></p></div>
+    <p style="text-align:center;margin-top:24px"><button type="button" class="btn btn-outline btn-sm" onclick="HL.reset()">Start over</button></p>
     </div>
-    <p class="fade-up" style="text-align:center;margin-top:48px;font-size:.9rem;opacity:.85">In crisis right now? Do not take a test: go straight to the <a href="/crisis/" class="content-link">crisis resources</a>.</p>
+    <p class="hl-bridge fade-up">If the pattern you see here matches what you live, the <a href="/burnout-therapy/">burnout therapy</a> page explains how sustained dysregulation is treated, and the screeners give you validated numbers.</p>
+    <p class="hl-note fade-up">Nothing you select here leaves your device or is stored: the check resets when you close the page.</p>
   </div>
 </section>
 
-<!-- INTERACTIVE TOOLS -->
-<section class="content-section">
+<!-- FAQ -->
+<section class="content-section" id="faq">
   <div class="container">
     <div class="section-intro fade-up">
-      <p class="label">Beyond the Tests</p>
-      <h2>Interactive Tools</h2>
+      <p class="label">Half-Life Check FAQ</p>
+      <h2>Frequently Asked Questions About<br>the Recovery Half-Life Check</h2>
     </div>
-    <div class="screener-grid">
-      <a href="/tests/breathing/" class="related-card fade-up">
-        <h3>Breathing</h3>
-        <p class="screener-type">Guided regulation exercise</p>
-        <p class="screener-meta">3 patterns · 2–5 minutes</p>
-        <span class="link">Open the tool →</span>
-      </a>
-      <a href="/tests/emotional-meter/" class="related-card fade-up" style="transition-delay:.06s">
-        <h3>Emotional Meter</h3>
-        <p class="screener-type">Name what you feel</p>
-        <p class="screener-meta">~1 minute</p>
-        <span class="link">Open the tool →</span>
-      </a>
-      <a href="/tests/recovery-half-life/" class="related-card fade-up" style="transition-delay:.12s">
-        <h3>Recovery Half-Life Check</h3>
-        <p class="screener-type">How long until you feel like you?</p>
-        <p class="screener-meta">8 questions · ~2 minutes</p>
-        <span class="link">Open the tool →</span>
-      </a>
-      <a href="/tests/thought-record/" class="related-card fade-up" style="transition-delay:.18s">
-        <h3>Thought Record</h3>
-        <p class="screener-type">Separate facts from interpretation</p>
-        <p class="screener-meta">7 steps · ~10 minutes</p>
-        <span class="link">Open the tool →</span>
-      </a>
+    <div class="faq-list">
+      <div class="faq-item fade-up"><button class="faq-question">What is recovery half-life?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Recovery half-life is a working concept from this practice, taken from the founder's writing on burnout: the time your system needs after a demand to return to its baseline, to feeling like yourself. The image is borrowed from physics: not how much energy you have, but how long the return takes. When that duration stretches, it is often the earliest visible signal that regulation is under strain.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-question">How is the Recovery Half-Life Check different from a burnout test?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>It is a reflection tool, not psychometrics. A validated burnout instrument such as the Copenhagen Burnout Inventory (CBI) has been tested against large samples and gives you a scored result with known properties. This check has not been validated: it asks eight honest questions about one variable, recovery time, and returns a reading, not a score. Use it to notice a pattern, and use the CBI for the number.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-question">What should I do if my recovery is stretching or not completing?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>First, put a number on it: the CBI and the WHO-5 take a few minutes and are validated. Second, treat the trend seriously rather than the label: a stretching recovery is the stage where structured changes to load, sleep, and boundaries work best; a recovery that no longer completes usually needs more than rest. Talking to a professional, here or anywhere, is a reasonable next step in both cases.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-question">Are my answers to the Half-Life Check private?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Yes. The check runs in your browser: nothing you select is stored, sent, or seen by anyone, and everything resets when you close the page. There is no account and no record on this site.</p></div></div>
     </div>
   </div>
 </section>
@@ -438,14 +473,14 @@ html.has-banner body{padding-top:40px}
   <div class="container">
     <div class="fade-up">
       <p class="label" style="color:var(--gold);margin-bottom:16px">Get Started</p>
-      <h2>Talk Through What Your Score Means</h2>
-      <p>A number is information, not a conclusion. The first step is a free 15-minute consultation to look at your situation with a professional. No referral needed, no waitlist. You will hear back directly from J.R. Hernandez.</p>
+      <h2>When Rest Stops Doing Its Job</h2>
+      <p>A recovery that no longer completes is a pattern, and patterns are workable. A free 15-minute consultation is a low-stakes way to look at yours. No referral needed, no waitlist.</p>
       <div class="cta-actions">
-        <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20discuss%20my%20screener%20results." class="btn btn-gold" target="_blank" rel="noopener">
+        <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation." class="btn btn-gold" target="_blank" rel="noopener">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.685-1.408A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.607-.798-6.38-2.144l-.29-.222-3.042.914.85-3.117-.234-.299A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
           WhatsApp
         </a>
-        <a onclick="gtag('event','email_click',{event_category:'conversion',event_label:this.href})" href="mailto:jr@baselinepsychotherapy.com?subject=Screener%20results%20inquiry" class="btn btn-outline" style="color:var(--white);border-color:rgba(255,255,255,.3);position:relative;z-index:2">Email</a>
+        <a onclick="gtag('event','email_click',{event_category:'conversion',event_label:this.href})" href="mailto:jr@baselinepsychotherapy.com?subject=Consultation%20inquiry" class="btn btn-outline" style="color:var(--white);border-color:rgba(255,255,255,.3);position:relative;z-index:2">Email</a>
       </div>
       <div class="cta-info">
         <span>Free 15-minute consultation</span>
@@ -497,6 +532,19 @@ html.has-banner body{padding-top:40px}
 </footer>
 
 <script>
+window.HL=(function(){
+var S={"progress": "{n} of 8 answered", "bands": [{"title": "Your system still resets", "html": "Recovery is completing: demand goes up, you come back down, and the return still lands at your baseline. Whatever you are doing to recover, it is working: protect it deliberately rather than by luck. If you want numbers to keep an eye on, <a href=\"/tests/who-5/\">the WHO-5</a> takes one minute."}, {"title": "Your recovery is stretching", "html": "The duration is lengthening: weekends buy less than they did, and the return to baseline is slower or less complete. This is usually the earliest visible signal of a regulation problem, and it is exactly the stage where small structured changes work best. It is not a diagnosis: it is a trend line worth taking seriously. Put a number on it with <a href=\"/tests/cbi/\">the CBI</a> (burnout) and <a href=\"/tests/who-5/\">WHO-5</a> (wellbeing), and if the trend continues, <a href=\"https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation.\" target=\"_blank\" rel=\"noopener\">a free 15-minute conversation</a> is a reasonable next step."}, {"title": "Your recovery is not completing", "html": "By your own answers, rest is no longer returning you to baseline: the exhaustion arrives before the demand, the pleasant things have become tasks, and you cannot remember the last full reset. This pattern is consistent with sustained dysregulation, and the honest news is double: more rest alone is unlikely to fix it, and structured treatment addresses exactly this. This check is not a diagnosis. Take <a href=\"/tests/cbi/\">the CBI</a> and <a href=\"/tests/who-5/\">the WHO-5</a> for validated numbers, and consider talking to a professional: here or anywhere. <a href=\"https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation.\" target=\"_blank\" rel=\"noopener\">The first conversation at this practice is free</a>."}]};
+function el(id){return document.getElementById(id)}
+function answers(){var a=[];for(var i=1;i<=8;i++){var r=document.querySelector('input[name=q'+i+']:checked');a.push(r?parseInt(r.value,10):null)}return a}
+function band(sum){return sum<=8?1:(sum<=15?2:3)}
+function update(){var a=answers(),n=a.filter(function(x){return x!==null}).length;
+el('hl-bar').style.width=(n/8*100)+'%';var pb=el('hl-bar').parentNode;pb.setAttribute('aria-valuenow',n);pb.setAttribute('aria-label',S.progress.replace('{n}',n));el('hl-count').textContent=S.progress.replace('{n}',n);
+var res=el('hl-result');if(n<8){res.hidden=true;return}
+var sum=a.reduce(function(s,x){return s+x},0),b=S.bands[band(sum)-1];el('hl-band').textContent=b.title;el('hl-text').innerHTML=b.html;var was=res.hidden;res.hidden=false;if(was){res.scrollIntoView({behavior:'smooth',block:'nearest'})}}
+return{update:update,band:band,reset:function(){document.querySelectorAll('.hl-q input').forEach(function(x){x.checked=false});update();window.scrollTo({top:el('tool').offsetTop-80})},state:function(){var a=answers();return{answered:a.filter(function(x){return x!==null}).length,band:a.indexOf(null)<0?band(a.reduce(function(s,x){return s+x},0)):null}}};
+})();
+</script>
+<script>
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>20)});
 const navToggle=document.getElementById('navToggle'),navLinks=document.getElementById('navLinks');
@@ -517,7 +565,7 @@ document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
 (function(){var bar=document.getElementById('mobileCTABar');if(!bar)return;var heroGone=false,contactVisible=false;function update(){bar.classList.toggle('hidden',!heroGone||contactVisible)}var hero=document.querySelector('.hero,.page-hero,.article-hero,.pricing-hero');if(hero){new IntersectionObserver(function(e){heroGone=!e[0].isIntersecting;update()},{threshold:0}).observe(hero)}else{heroGone=true;update()}var contact=document.getElementById('contact')||document.getElementById('contacto');if(contact){new IntersectionObserver(function(e){contactVisible=e[0].isIntersecting;update()},{threshold:0.05}).observe(contact)}})();
 </script>
 <div id="cookieBanner" role="dialog" aria-label="Cookie consent">
-  <p>This site uses cookies for analytics (Google Analytics and Microsoft Clarity) to improve your experience. No personal data is sold or shared with advertisers.</p>
+  <p>This site uses cookies for analytics (Google Analytics) to improve your experience. No personal data is sold or shared with advertisers.</p>
   <div class="cb-actions">
     <button class="cb-btn cb-accept" id="cookieAccept">Accept</button>
     <button class="cb-btn cb-decline" id="cookieDecline">Decline</button>
@@ -526,6 +574,7 @@ document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
 <script>
 (function(){var b=document.getElementById('cookieBanner');if(window._cbGet('cookie_consent')){return}b.style.display='flex';function cbSet(v){var d=new Date();d.setTime(d.getTime()+365*864e5);document.cookie='cookie_consent='+v+';expires='+d.toUTCString()+';path=/;SameSite=Lax'}document.getElementById('cookieAccept').onclick=function(){cbSet('accepted');b.style.display='none';window._loadAnalytics()};document.getElementById('cookieDecline').onclick=function(){cbSet('declined');b.style.display='none'}})();
 </script>
+
 
 </body>
 </html>

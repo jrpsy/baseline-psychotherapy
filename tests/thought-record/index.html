@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+  window.dataLayer=window.dataLayer||[];
+  window.gtag=function(){dataLayer.push(arguments)};
+  window._cbGet=function(n){var m=document.cookie.match('(?:^|; )'+n+'=([^;]*)');return m?decodeURIComponent(m[1]):null};
+  window._loadAnalytics=function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-00D52WK9X7';document.head.appendChild(s);window.gtag('js',new Date());window.gtag('config','G-00D52WK9X7')};
+  if(window._cbGet('cookie_consent')==='accepted'){window._loadAnalytics()}
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thought Record: Separate Facts From Interpretation | CBT Tool</title>
+  <meta name="description" content="A free CBT thought record in your browser: situation, emotion 0-10, automatic thought, distortions, evidence, balanced thought, re-rating. Nothing is stored.">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="J.R. Hernandez">
+  <link rel="canonical" href="https://baselinepsychotherapy.com/tests/thought-record/">
+  <link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/tests/thought-record/">
+  <link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/registro-pensamientos/">
+  <link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/tests/thought-record/">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Thought Record: Separate Facts From Interpretation | CBT Tool">
+  <meta property="og:description" content="A free CBT thought record in your browser: situation, emotion 0-10, automatic thought, distortions, evidence, balanced thought, re-rating. Nothing is stored.">
+  <meta property="og:url" content="https://baselinepsychotherapy.com/tests/thought-record/">
+  <meta property="og:site_name" content="Baseline Psychotherapy">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="https://baselinepsychotherapy.com/og-home-en.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/cormorant-garamond-normal.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/dm-sans-normal.woff2" crossorigin>
+  <style>
+@font-face{font-family:'Cormorant Garamond';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/cormorant-garamond-normal.woff2) format('woff2')}
+@font-face{font-family:'Cormorant Garamond';font-style:italic;font-weight:400 500;font-display:swap;src:url(/fonts/cormorant-garamond-italic.woff2) format('woff2')}
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:400 700;font-display:swap;src:url(/fonts/dm-sans-normal.woff2) format('woff2')}
+@font-face{font-family:'DM Sans';font-style:italic;font-weight:400;font-display:swap;src:url(/fonts/dm-sans-italic.woff2) format('woff2')}
+:root{--navy:#14202E;--slate:#1E3A4F;--text:#2B4257;--gold:#C9A84C;--gold-light:#D4B76A;--gold-subtle:rgba(201,168,76,.12);--bg:#FAFBFC;--bg-warm:#F7F5F0;--white:#FFF;--border:#E2E8F0;--border-light:#EDF2F7;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',-apple-system,BlinkMacSystemFont,sans-serif;--max-w:1200px;--section-py:clamp(80px,10vw,140px);--radius:8px;--shadow-rest:0 1px 2px rgba(20,32,46,.04),0 4px 12px rgba(20,32,46,.05);--shadow-lift:0 2px 4px rgba(20,32,46,.05),0 12px 32px rgba(20,32,46,.10);--lift:-3px}
+.skip-nav{position:absolute;top:-100px;left:16px;background:var(--navy);color:var(--white);padding:12px 24px;z-index:2000;border-radius:4px;font-size:.9rem;transition:top .2s}.skip-nav:focus{top:16px}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sans);color:var(--text);background:var(--bg);line-height:1.7;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}a{color:inherit;text-decoration:none}button{cursor:pointer;border:none;background:none;font-family:inherit}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 clamp(20px,4vw,40px)}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--navy);line-height:1.15;font-weight:600}h3{line-height:1.25}h1,h2,h3{text-wrap:balance}
+h1{font-size:clamp(2.4rem,4.5vw,3.6rem);letter-spacing:-.02em}
+h2{font-size:clamp(2rem,3.5vw,2.8rem);letter-spacing:-.01em}
+h3{font-size:clamp(1.3rem,2vw,1.6rem)}
+p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
+.kicker{display:block;font-family:var(--sans);font-size:.78rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.label{font-family:var(--sans);font-size:.75rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;display:block}
+.section-intro{max-width:680px;margin:0 auto;text-align:center}.section-intro p{margin-top:20px;opacity:.85}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;font-family:var(--sans);font-size:.95rem;font-weight:600;border-radius:4px;transition:all .3s ease;letter-spacing:.01em}
+.btn-primary{background:var(--navy);color:var(--white)}@media(hover:hover){.btn-primary:hover{background:var(--slate);transform:translateY(-1px);box-shadow:0 4px 20px rgba(20,32,46,.25)}}
+.btn-gold{background:var(--gold);color:var(--navy)}@media(hover:hover){.btn-gold:hover{background:var(--gold-light);transform:translateY(-1px);box-shadow:0 4px 20px rgba(201,168,76,.3)}}
+.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--navy)}.btn-outline:hover{background:var(--navy);color:var(--white)}
+.btn-sm{padding:12px 24px;font-size:.88rem}
+.btn svg{width:18px;height:18px;transition:transform .3s ease}.btn:hover svg{transform:translateX(3px)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(250,251,252,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid transparent;transition:all .3s ease}
+.nav.scrolled{border-bottom-color:var(--border);box-shadow:0 1px 20px rgba(0,0,0,.04)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 clamp(20px,4vw,40px);display:flex;align-items:center;justify-content:space-between;height:72px}
+.nav-brand{display:flex;align-items:center;gap:14px}
+.nav-brand-logo{width:42px;height:42px;border:2px solid var(--navy);border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.nav-brand-logo img{width:200%;height:200%;object-fit:contain}
+.nav-brand-text{font-family:var(--sans);font-size:.95rem;font-weight:600;color:var(--navy);line-height:1.2}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{font-size:.88rem;font-weight:500;color:var(--text);transition:color .2s;position:relative}
+.nav-links a:hover{color:var(--navy)}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--gold);transition:width .3s ease}
+.nav-links a:hover::after{width:100%}
+.nav-cta{margin-left:8px}.nav-cta .btn{padding:10px 24px;font-size:.85rem;background:var(--navy);color:var(--gold)}.nav-cta .btn:hover{background:var(--slate);color:var(--gold-light)}
+.nav-mobile-toggle{display:none;flex-direction:column;gap:5px;padding:12px;margin:-4px}
+.nav-mobile-toggle span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px;transition:all .3s ease}
+.breadcrumb{padding:88px 0 0;font-size:.82rem;color:var(--text);opacity:.6}
+.breadcrumb a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.page-hero{padding:48px 0 var(--section-py);background:var(--bg);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:-200px;left:50%;transform:translateX(-50%);width:800px;height:600px;background:radial-gradient(circle,var(--gold-subtle) 0%,transparent 70%);pointer-events:none}
+.page-hero-content{position:relative;z-index:2;max-width:800px;margin:0 auto;text-align:center}
+.page-hero h1{margin-bottom:28px;text-align:center}
+.page-hero .hero-sub{font-size:1.05rem;line-height:1.85;margin-bottom:16px;max-width:680px;margin-left:auto;margin-right:auto}
+.page-hero .hero-markers{display:flex;gap:10px;margin-bottom:36px;flex-wrap:wrap;align-items:center;justify-content:center}
+.page-hero .hero-markers span{font-size:.85rem;color:var(--text);opacity:.7;display:flex;align-items:center;gap:10px}
+.page-hero .hero-markers span:not(:last-child)::after{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.page-hero .hero-actions{display:flex;gap:16px;align-items:center;flex-wrap:wrap;justify-content:center}
+.content-section{padding:var(--section-py) 0}
+.content-section.alt{background:var(--bg-warm)}
+.content-narrow{max-width:760px;margin:0 auto;text-align:center}
+.content-narrow h2{margin-bottom:28px;text-align:center}
+.content-narrow .label{text-align:center}
+.content-narrow p{margin-bottom:20px;text-align:left}
+.about-therapist-section{padding:var(--section-py) 0;background:var(--navy);color:var(--white);position:relative;overflow:hidden}
+.about-therapist-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.15;pointer-events:none}
+.about-therapist-content{position:relative;z-index:2;max-width:760px;margin:0 auto;text-align:center}
+.about-therapist-content .label{color:var(--gold);text-align:center}
+.about-therapist-content h2{color:var(--white);margin:16px 0 36px;text-align:center}
+.about-therapist-content h3{color:var(--white);margin-bottom:6px;text-align:center}
+.about-therapist-content .credential-line{font-size:.82rem;color:var(--gold);font-weight:600;margin-bottom:24px;text-align:center}
+.about-therapist-content p{color:rgba(255,255,255,.82);margin-bottom:20px;font-size:1rem;line-height:1.85;text-align:left}
+.about-therapist-content .about-link{font-size:.85rem;font-weight:600;color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.symptoms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.symptom-card{background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:32px 26px;position:relative;overflow:hidden;box-shadow:var(--shadow-rest);transition:all .3s ease}
+@media(hover:hover){.symptom-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift)}}
+.symptom-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--gold)}
+.symptom-card h3{font-size:1.15rem;margin-bottom:12px}
+.symptom-card p{font-size:.9rem;line-height:1.75;opacity:.8}
+.process-steps{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:40px;position:relative}
+.process-steps::before{content:'';position:absolute;top:40px;left:calc(16.66% + 20px);right:calc(16.66% + 20px);height:1px;background:var(--border)}
+.process-step{text-align:center;position:relative}
+.process-step-number{width:80px;height:80px;margin:0 auto 28px;display:flex;align-items:center;justify-content:center;background:var(--white);border:2px solid var(--border);border-radius:50%;font-family:var(--serif);font-size:1.8rem;font-weight:700;color:var(--gold);position:relative;z-index:2;transition:all .3s ease}
+.process-step:hover .process-step-number{border-color:var(--gold);background:var(--gold-subtle)}
+.process-step h3{color:var(--navy);margin-bottom:8px}
+.process-phase{display:inline-block;font-family:var(--sans);font-size:.75rem;font-weight:600;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;margin-bottom:14px}
+.process-step p{font-size:.92rem;line-height:1.75;max-width:340px;margin:0 auto;color:var(--text)}
+.pricing-grid-three{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+.price-card{background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:32px 28px;box-shadow:var(--shadow-rest);transition:all .3s ease;position:relative}
+.price-card:hover{box-shadow:var(--shadow-lift)}
+.price-card.popular{border-color:var(--gold);box-shadow:0 8px 30px rgba(201,168,76,.1);position:relative}
+.price-card.popular::before{content:'Most Popular';position:absolute;top:-1px;right:24px;background:var(--gold);color:var(--navy);font-size:.78rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 14px;border-radius:0 0 6px 6px}
+.price-card h3{font-size:1.2rem;margin-bottom:4px}
+.price-card .format{font-size:.8rem;color:var(--text);opacity:.55;margin-bottom:14px}
+.pricing-amount{display:flex;align-items:baseline;gap:6px;margin:14px 0}
+.pricing-amount .price{font-family:var(--serif);font-size:2rem;font-weight:700;color:var(--navy)}
+.pricing-amount .per{font-size:.82rem;color:var(--text);opacity:.55}
+.price-card>p{font-size:.88rem;margin-bottom:24px;line-height:1.7}
+.price-card .btn{width:100%;justify-content:center}
+.reviews,.reviews-section{padding:var(--section-py) 0;background:var(--navy);position:relative;overflow:hidden}.reviews::after{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:80px;height:3px;background:var(--gold);z-index:3}
+.reviews-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.12;pointer-events:none}
+.reviews .section-intro,.reviews-section .section-intro{position:relative;z-index:2}
+.reviews .section-intro p,.reviews-section .section-intro p{color:rgba(255,255,255,.7)}
+.reviews h2,.reviews-section h2{color:var(--white)}
+.reviews-grid{margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;z-index:2}
+.review-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:8px;padding:32px 28px;backdrop-filter:blur(12px)}
+.review-stars{color:var(--gold);font-size:1rem;margin-bottom:16px;letter-spacing:2px}
+.review-card blockquote{font-size:.92rem;line-height:1.75;color:rgba(255,255,255,.85);margin-bottom:20px;font-style:italic}
+.review-author{font-size:.85rem;font-weight:600;color:var(--white)}
+.review-source{font-size:.78rem;color:rgba(255,255,255,.5)}.review-card{position:relative}.review-card::before{content:'\201C';position:absolute;top:8px;right:20px;font-family:var(--serif);font-size:5rem;line-height:1;color:var(--gold);opacity:.15;pointer-events:none}.review-card.featured{grid-column:span 2}.review-card.featured blockquote{font-size:1.05rem;line-height:1.7}
+.reviews-footer{margin-top:40px;text-align:center;position:relative;z-index:2}
+.reviews-footer a{font-size:.88rem;color:var(--gold);text-decoration:underline;text-underline-offset:4px;transition:color .2s}
+.reviews-footer a:hover{color:var(--gold-light)}
+.faq-list{margin-top:48px;max-width:800px;margin-left:auto;margin-right:auto}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-question{width:100%;text-align:left;padding:24px 0;font-family:var(--sans);font-size:1rem;font-weight:600;color:var(--navy);display:flex;justify-content:space-between;align-items:center;gap:20px;transition:color .2s}
+.faq-question:hover{color:var(--gold)}
+.faq-icon{width:24px;height:24px;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:transform .3s ease}
+.faq-item.active .faq-icon{transform:rotate(45deg)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .4s ease,padding .3s ease}
+.faq-item.active .faq-answer{max-height:1000px;padding-bottom:24px}
+.faq-answer p{font-size:.92rem;opacity:.8;line-height:1.8}.faq-answer p{opacity:0;transform:translateY(-4px);transition:opacity .3s ease .1s,transform .3s ease .1s}.faq-item.active .faq-answer p{opacity:1;transform:none}
+.related-services{padding:60px 0 var(--section-py);background:var(--bg-warm)}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:36px}
+.related-card{background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:28px 24px;box-shadow:var(--shadow-rest);transition:all .3s ease;display:block}
+@media(hover:hover){.related-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lift);border-color:var(--gold)}}
+.related-card h3{font-size:1.1rem;margin-bottom:8px}
+.related-card p{font-size:.85rem;line-height:1.65;opacity:.7;margin-bottom:14px}
+.related-card .link{font-size:.82rem;font-weight:600;color:var(--gold)}
+.cta{padding:var(--section-py) 0;background:var(--navy);text-align:center;color:var(--white);position:relative;overflow:hidden;border-top:3px solid var(--gold)}
+.cta::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:800px;height:400px;background:radial-gradient(ellipse,rgba(201,168,76,.08) 0%,transparent 70%);pointer-events:none}.cta::after{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:80px;height:3px;background:var(--gold);z-index:3}
+.cta h2{color:var(--white);margin-bottom:16px}
+.cta p{color:rgba(255,255,255,.75);max-width:560px;margin:0 auto 40px;font-size:1.05rem}
+.cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta-info{margin-top:40px;display:flex;gap:40px;justify-content:center;flex-wrap:wrap}
+.cta-info span{font-size:.85rem;color:rgba(255,255,255,.5);display:flex;align-items:center;gap:8px}
+.cta-info span::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.footer{border-top:1px solid rgba(255,255,255,.07);padding:48px 0 28px;background:#0C1620;color:rgba(255,255,255,.65)}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:48px;margin-bottom:40px}
+.footer-brand h4{color:var(--white);font-family:var(--sans);font-size:1rem;margin-bottom:12px}
+.footer-brand p{font-size:.85rem;line-height:1.7;color:rgba(255,255,255,.6)}
+.footer h5{color:var(--white);font-family:var(--sans);font-size:.85rem;font-weight:600;margin-bottom:20px;letter-spacing:.05em}
+.footer-links{list-style:none}.footer-links li{margin-bottom:10px}
+.footer-links a{display:inline-block;font-size:.85rem;color:rgba(255,255,255,.65);transition:color .2s,transform .2s}.footer-links a:hover{color:var(--gold);transform:translateX(3px)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.08);padding-top:24px;font-size:.85rem;text-align:center}
+.whatsapp-btn{position:fixed;bottom:28px;right:28px;z-index:900;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,.35);transition:all .3s ease}
+.whatsapp-btn:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(37,211,102,.45)}
+.whatsapp-btn svg{width:30px;height:30px;fill:white}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:2px}
+button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+html.js-anim .fade-up{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
+@media(max-width:768px){
+.mobile-cta-bar{position:fixed;bottom:0;left:0;right:0;z-index:950;background:var(--navy);padding:12px 20px;display:flex;justify-content:center;align-items:center;box-shadow:0 -2px 16px rgba(20,32,46,.18);transform:translateY(0);transition:transform .35s ease}
+.mobile-cta-bar.hidden{transform:translateY(100%)}
+.mobile-cta-bar a{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:380px;padding:14px 24px;background:var(--gold);color:var(--navy);font-family:var(--sans);font-size:.95rem;font-weight:600;border-radius:4px;letter-spacing:.01em;text-decoration:none}
+.mobile-cta-bar a svg{width:18px;height:18px;fill:var(--navy);flex-shrink:0}
+}
+@media(min-width:769px){.mobile-cta-bar{display:none!important}}
+@media(max-width:1024px){.pricing-grid-three{grid-template-columns:1fr}.symptoms-grid{grid-template-columns:repeat(2,1fr)}.process-steps{grid-template-columns:repeat(2,1fr)}.reviews-grid{grid-template-columns:repeat(2,1fr)}.related-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){
+  .nav-links{display:none}.nav-cta{display:none}.nav-mobile-toggle{display:flex}
+  .nav-links.active{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--white);padding:24px;gap:20px;border-bottom:1px solid var(--border);box-shadow:0 8px 30px rgba(0,0,0,.08);max-height:calc(100vh - 72px);overflow-y:auto}
+  .nav-links.active .nav-cta{display:block;margin-left:0;width:100%}
+  .nav-links.active .nav-cta .btn{width:100%;justify-content:center;padding:14px 24px;font-size:.95rem}
+  .symptoms-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr;gap:40px}
+  .process-steps::before{display:none}
+  .reviews-grid{grid-template-columns:1fr}.review-card.featured{grid-column:span 1}
+  .related-grid{grid-template-columns:1fr}
+  .page-hero .hero-actions{flex-direction:column;align-items:center}.page-hero .hero-actions .btn{width:100%;max-width:380px;justify-content:center}
+  .cta-info{flex-direction:column;align-items:center;gap:16px}
+  .footer-grid{grid-template-columns:1fr;gap:32px}.footer-links a{padding:6px 0}.footer-links li{margin-bottom:4px}.footer{padding-bottom:100px}
+}
+  .cta .btn-outline:hover{background:rgba(255,255,255,.12);border-color:var(--white);color:var(--white)}
+#cookieBanner{display:none;position:fixed;bottom:0;left:0;right:0;z-index:960;background:var(--navy);padding:14px clamp(20px,4vw,40px);align-items:center;gap:20px;box-shadow:0 -2px 20px rgba(0,0,0,.25);font-family:var(--sans)}
+#cookieBanner p{margin:0;font-size:.84rem;line-height:1.5;color:rgba(255,255,255,.82);flex:1}
+.cb-actions{display:flex;gap:10px;flex-shrink:0}
+.cb-btn{padding:13px 24px;font-family:var(--sans);font-size:.82rem;font-weight:600;border-radius:4px;cursor:pointer;border:none;transition:all .2s}
+.cb-accept{background:var(--gold);color:var(--navy)}.cb-accept:hover{background:var(--gold-light,#D4B76A)}
+.cb-decline{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,.35)}.cb-decline:hover{border-color:var(--white);background:rgba(255,255,255,.08)}
+@media(max-width:768px){#cookieBanner{flex-direction:column;align-items:flex-start;bottom:76px;gap:12px;padding:10px 16px}.cb-actions{width:100%}.whatsapp-btn{display:none!important}}
+@media(prefers-reduced-motion:reduce){
+  html.js-anim .fade-up{opacity:1;transform:none;transition:none}
+  .marquee-track{animation:none}
+  *{scroll-behavior:auto!important}
+}
+  .has-dropdown{position:relative}.has-dropdown>a{display:inline-flex;align-items:center;gap:6px}.has-dropdown>a .caret{font-size:.6rem;color:var(--gold);transition:transform .25s ease}.dropdown{position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%) translateY(6px);background:var(--navy);border-radius:6px;box-shadow:0 14px 40px rgba(20,32,46,.1);padding:10px 0;min-width:230px;list-style:none;opacity:0;visibility:hidden;transition:all .25s ease;z-index:1001}.dropdown::before{content:'';position:absolute;top:-12px;left:0;right:0;height:12px}.has-dropdown:hover .dropdown,.has-dropdown:focus-within .dropdown{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}.has-dropdown:hover>a .caret{transform:rotate(180deg)}.dropdown a{display:block;padding:10px 22px;font-size:.85rem;color:rgba(255,255,255,.75);white-space:nowrap}.dropdown a::after{display:none}.dropdown a:hover{color:var(--gold);background:rgba(255,255,255,.06)}.nav-links>li>a.current{color:var(--navy);font-weight:600}.nav-links>li>a.current::after{width:100%}@media(max-width:768px){.nav-links.active .dropdown{display:none;position:static;transform:none;opacity:1;visibility:visible;box-shadow:none;border:none;padding:8px 0 0 16px;min-width:0;background:transparent}.nav-links.active .dropdown a{padding:14px 0;color:var(--text)}.nav-links.active .has-dropdown.open .dropdown{display:block}.nav-links.active .has-dropdown.open>a .caret{transform:rotate(180deg)}}
+.btn:active{transform:scale(.985);transition-duration:.1s}
+.related-card:active,.symptom-card:active,.price-card:active{transform:scale(.99);transition-duration:.1s}
+.faq-question:active{color:var(--gold)}
+.content-link,.hero-sub a,.crisis-body a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.crisis-body strong{color:var(--navy)}
+.crisis-body p{margin-bottom:20px;text-align:left}
+.screener{max-width:760px;margin:40px auto 0;counter-reset:q}
+.q-instruction{max-width:760px;margin:36px auto 0;font-weight:600;color:var(--navy);font-size:1.02rem;text-align:left}
+.q-item{border:1px solid var(--border-light);background:var(--white);border-radius:8px;padding:22px 24px;margin-top:16px;box-shadow:var(--shadow-rest);counter-increment:q}
+.q-item legend{float:left;width:100%;padding:0;font-family:var(--sans);font-weight:600;color:var(--navy);font-size:.95rem;line-height:1.5}
+.q-item legend::before{content:counter(q) '. ';color:var(--gold);font-weight:700}
+.q-opts{clear:both;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:14px}
+.q-opt{display:flex;align-items:center;gap:8px;border:1px solid var(--border);border-radius:6px;padding:10px 12px;font-size:.82rem;line-height:1.4;cursor:pointer;transition:all .2s;background:var(--bg);min-width:0;white-space:normal}
+.q-opt span{flex:1 1 auto;min-width:0;white-space:normal;overflow-wrap:break-word}
+.q-opt:hover{border-color:var(--gold)}
+.q-opt:has(input:checked){border-color:var(--gold);background:var(--gold-subtle)}
+.q-opt input{accent-color:var(--gold);flex-shrink:0}
+.q-progress{text-align:center;font-size:.85rem;opacity:.7;margin-top:20px}
+.screener-actions{display:flex;gap:16px;justify-content:center;margin-top:16px;flex-wrap:wrap}
+.btn[disabled]{opacity:.45;cursor:not-allowed;pointer-events:none}
+.result-card{background:var(--white);border:1px solid var(--border-light);border-left:4px solid var(--gold);border-radius:8px;padding:32px 28px;margin:40px auto 0;max-width:760px;box-shadow:var(--shadow-lift)}
+.result-card[hidden]{display:none}
+.crisis-note{border:2px solid var(--gold);background:var(--gold-subtle);border-radius:8px;padding:22px 24px;margin-bottom:24px}
+.crisis-note[hidden]{display:none}
+.crisis-note p{text-align:left;font-size:.95rem}
+.score-line{font-family:var(--serif);font-size:2.4rem;font-weight:700;color:var(--navy);line-height:1.1}
+.band-texts p{margin-top:16px;text-align:left}
+.band-texts p[hidden]{display:none}
+.bands-table{width:100%;max-width:760px;margin:36px auto 0;border-collapse:collapse;font-size:.9rem;background:var(--white);border:1px solid var(--border-light);border-radius:8px;overflow:hidden;box-shadow:var(--shadow-rest)}
+.bands-table th{background:var(--navy);color:var(--white);font-family:var(--sans);font-weight:600;text-align:left;padding:12px 16px;font-size:.82rem;letter-spacing:.05em;text-transform:uppercase}
+.bands-table td{padding:12px 16px;border-top:1px solid var(--border-light);text-align:left}
+.bands-table tr.current-band td{background:var(--gold-subtle);font-weight:600;color:var(--navy)}
+.disclaimer{max-width:760px;margin:48px auto 0;font-size:.85rem;line-height:1.7;opacity:.75;border:1px solid var(--border);border-radius:8px;padding:18px 22px;background:var(--white);text-align:left}
+@media(max-width:1024px){.q-opts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.q-opts{grid-template-columns:minmax(0,1fr)}}
+.content-link{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
+.tool-wrap{max-width:560px;margin:40px auto 0}
+.safety-note{max-width:560px;margin:28px auto 0;font-size:.88rem;line-height:1.6;color:var(--text);background:var(--gold-subtle);border-left:3px solid var(--gold);padding:12px 16px;border-radius:0 8px 8px 0;text-align:left}
+.breath-options{display:flex;flex-direction:column;gap:12px;margin:28px auto 0;max-width:560px}
+.breath-choice{width:100%;text-align:left;background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:18px 20px;cursor:pointer;box-shadow:var(--shadow-rest);transition:all .2s}
+.breath-choice:hover{border-color:var(--gold);box-shadow:var(--shadow-lift)}
+.breath-choice .tag{font-family:var(--sans);font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:4px}
+.breath-choice h3{font-size:1.15rem;margin-bottom:6px}
+.breath-choice p{font-size:.88rem;line-height:1.6;opacity:.8;margin-bottom:6px}
+.breath-choice .pattern{font-size:.78rem;color:var(--text);opacity:.6}
+.pacer-wrap{background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:24px 18px 18px;box-shadow:var(--shadow-rest);margin-top:28px}
+.pacer-wrap[hidden]{display:none}
+.breath-canvas{position:relative;width:100%;max-width:320px;aspect-ratio:320/280;margin:0 auto}
+.breath-svg{position:absolute;inset:0;width:100%;height:100%;display:none}
+.breath-svg.active{display:block}
+.breath-readout{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58%;text-align:center;pointer-events:none}
+.breath-readout .phase{font-family:var(--serif);font-style:italic;font-size:1.03rem;line-height:1.25;color:var(--navy);min-height:2.6em;display:flex;align-items:flex-end;justify-content:center}
+.breath-readout .count{font-family:var(--serif);font-size:2.7rem;font-weight:500;line-height:1;margin-top:7px;color:var(--navy)}
+.breath-readout .seconds{font-family:var(--sans);font-size:.68rem;color:var(--text);opacity:.6;letter-spacing:.08em;text-transform:uppercase}
+.pacer-meta{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;font-family:var(--sans);font-size:.72rem;color:var(--text);opacity:.65;letter-spacing:.04em;margin-top:10px;line-height:1.45}
+.pacer-meta > span:first-child{max-width:72%;text-align:left}
+.change-breath{display:block;margin:14px auto 0;background:none;border:0;color:var(--text);opacity:.6;font-family:var(--sans);font-size:.78rem;cursor:pointer;letter-spacing:.03em;text-decoration:underline;text-underline-offset:3px}
+.change-breath:hover{opacity:1}
+@media (prefers-reduced-motion: reduce){.breath-svg{display:none!important}}
+.meter{position:relative;width:100%;max-width:480px;aspect-ratio:1/1;margin:32px auto 0;border-radius:8px;border:1px solid var(--border);overflow:hidden;cursor:crosshair;box-shadow:var(--shadow-rest);background:linear-gradient(135deg,rgba(165,107,98,.28) 0%,rgba(165,107,98,.09) 47%,rgba(138,153,126,.09) 53%,rgba(138,153,126,.27) 100%),linear-gradient(225deg,rgba(187,159,107,.27) 0%,rgba(187,159,107,.08) 47%,rgba(79,103,129,.08) 53%,rgba(79,103,129,.27) 100%),var(--white)}
+.meter:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.meter .axis-x{position:absolute;left:0;right:0;top:50%;height:1px;background:var(--border)}
+.meter .axis-y{position:absolute;top:0;bottom:0;left:50%;width:1px;background:var(--border)}
+.meter .ql{position:absolute;font-family:var(--sans);font-size:.66rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text);opacity:.7;max-width:45%}
+.meter .ql.tl{top:10px;left:12px;text-align:left}.meter .ql.tr{top:10px;right:12px;text-align:right}
+.meter .ql.bl{bottom:10px;left:12px;text-align:left}.meter .ql.br{bottom:10px;right:12px;text-align:right}
+.meter .marker{position:absolute;width:18px;height:18px;border-radius:50%;transform:translate(-50%,-50%);background:var(--navy);border:3px solid var(--white);box-shadow:0 1px 4px rgba(0,0,0,.25);display:none;pointer-events:none}
+.meter-axes-label{display:flex;justify-content:space-between;max-width:480px;margin:10px auto 0;font-family:var(--sans);font-size:.72rem;color:var(--text);opacity:.65;letter-spacing:.04em}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:16px auto 0;max-width:560px}
+.chip{border:1px solid var(--border);border-radius:999px;padding:8px 16px;font-family:var(--sans);font-size:.88rem;background:var(--bg);cursor:pointer;transition:all .15s;color:var(--text)}
+.chip:hover{border-color:var(--gold)}
+.chip.sel{border-color:var(--gold);background:var(--gold-subtle);color:var(--navy);font-weight:600}
+.meter-result{max-width:560px;margin:24px auto 0;background:var(--white);border:1px solid var(--border-light);border-left:4px solid var(--gold);border-radius:8px;padding:22px 24px;text-align:left;box-shadow:var(--shadow-rest)}
+.meter-result[hidden],.meter-step[hidden]{display:none}
+.tool-note{max-width:560px;margin:28px auto 0;font-size:.85rem;opacity:.75;line-height:1.7}
+#focusedBar{display:none;position:fixed;top:0;left:0;right:0;z-index:1100;background:var(--navy);color:var(--gold);font-family:var(--sans);font-size:.82rem;letter-spacing:.01em;min-height:40px;align-items:center;justify-content:center;gap:8px;padding:6px 48px 6px 16px;text-align:center}
+#focusedBar a{color:var(--gold);text-decoration:underline;text-underline-offset:3px;font-weight:600;white-space:nowrap}
+#focusedBar button{position:absolute;right:8px;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.7);font-size:1.15rem;line-height:1;padding:8px 10px}
+#focusedBar button:hover{color:var(--white)}
+html.has-banner #focusedBar{display:flex}
+html.has-banner .nav{top:40px}
+html.has-banner body{padding-top:40px}
+@media(max-width:768px){#focusedBar{font-size:.72rem;line-height:1.4;min-height:52px}html.has-banner .nav{top:52px}html.has-banner body{padding-top:52px}}
+.tr-wrap{max-width:720px;margin:40px auto 0}
+.tr-progress{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;margin-bottom:10px}.tr-progress span{height:6px;border-radius:3px;background:var(--border)}.tr-progress span.done{background:var(--gold)}.tr-progress span.cur{background:var(--navy)}
+.tr-stepof{font-family:var(--sans);font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+.tr-panel{background:var(--white);border:1px solid var(--border-light);border-left:4px solid var(--gold);border-radius:8px;padding:28px 26px;box-shadow:var(--shadow-rest)}
+.tr-panel h3{font-size:clamp(1.35rem,2vw,1.6rem);margin-bottom:10px}.tr-panel .tr-prompt{font-size:.98rem;margin-bottom:18px}
+.tr-panel textarea,.tr-panel input[type=text]{width:100%;font-family:var(--sans);font-size:1rem;line-height:1.6;color:var(--text);background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:14px 16px;resize:vertical;min-height:120px}
+.tr-panel input[type=text]{min-height:0;height:52px}.tr-panel textarea:focus,.tr-panel input:focus{outline:2px solid var(--gold);outline-offset:2px;border-color:var(--gold)}
+.tr-label{display:block;font-family:var(--sans);font-size:.85rem;font-weight:600;color:var(--navy);margin:14px 0 8px}
+.tr-slider{display:flex;align-items:center;gap:16px;margin-top:6px}.tr-slider input[type=range]{flex:1;height:44px;accent-color:var(--navy);cursor:pointer}.tr-slider output{font-family:var(--serif);font-size:2.2rem;font-weight:600;color:var(--navy);min-width:56px;text-align:center;line-height:1}
+.tr-slider-ends{display:flex;justify-content:space-between;font-size:.78rem;opacity:.7;margin-top:2px}
+.tr-example{margin-top:18px;border-top:1px dashed var(--border);padding-top:12px}.tr-example summary{cursor:pointer;font-family:var(--sans);font-size:.8rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);list-style:none;display:flex;align-items:center;gap:8px}.tr-example summary::-webkit-details-marker{display:none}.tr-example summary::before{content:'+';font-size:1rem;line-height:1}.tr-example[open] summary::before{content:'\2013'}
+.tr-example p{font-size:.92rem;color:var(--text);opacity:.78;margin-top:10px;line-height:1.7;padding-left:14px;border-left:2px solid var(--gold-subtle)}
+.tr-hint{background:var(--bg-warm);border-radius:6px;padding:14px 16px;font-size:.9rem;line-height:1.7;margin-bottom:14px}.tr-hint p+p{margin-top:8px}
+.tr-dist{display:grid;gap:10px;margin-top:6px}.tr-dist label{display:grid;grid-template-columns:24px 1fr;gap:12px;align-items:start;padding:12px 14px;border:1px solid var(--border);border-radius:6px;background:var(--bg);cursor:pointer}.tr-dist label:has(input:checked){border-color:var(--gold);background:var(--gold-subtle)}
+.tr-dist input{width:20px;height:20px;margin-top:3px;accent-color:var(--navy)}.tr-dist b{font-family:var(--sans);font-size:.95rem;color:var(--navy);display:block}.tr-dist small{display:block;font-size:.85rem;line-height:1.55;opacity:.85}.tr-dist small span{opacity:.7}
+.tr-nav{display:flex;justify-content:space-between;gap:12px;margin-top:24px;flex-wrap:wrap}.tr-nav .btn{min-height:48px}.tr-nav .btn[hidden],.tr-panel[hidden],.tr-stepof:empty{display:none}
+.tr-summary dl{display:grid;gap:14px;margin-top:18px}.tr-summary dt{font-family:var(--sans);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}.tr-summary dd{white-space:pre-wrap;font-size:.98rem;line-height:1.7;margin-top:4px}
+.tr-change{display:flex;gap:24px;align-items:baseline;justify-content:center;margin:18px 0 6px;font-family:var(--serif);color:var(--navy)}.tr-change b{font-size:2.4rem;font-weight:600}.tr-change span{font-family:var(--sans);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);display:block}
+.tr-honest{text-align:center;font-size:.95rem;margin-top:8px}.tr-honest.calm{opacity:.85}
+.tr-bridge{max-width:720px;margin:36px auto 0;text-align:center;font-size:.98rem}.tr-bridge a{font-weight:600;color:var(--navy);text-decoration:underline;text-decoration-color:var(--gold);text-underline-offset:3px}
+.tr-note{max-width:720px;margin:28px auto 0;font-size:.85rem;opacity:.75;line-height:1.7;text-align:center}
+@media(max-width:768px){.tr-panel{padding:22px 18px}.tr-nav .btn{flex:1;justify-content:center}.tr-change{gap:16px}}
+@media(prefers-reduced-motion:reduce){.tr-progress span,.tr-dist label{transition:none}}
+</style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalWebPage",
+  "name": "Thought Record",
+  "url": "https://baselinepsychotherapy.com/tests/thought-record/",
+  "description": "A free cognitive-behavioral thought record in seven steps, with a distortion checklist and a local text download, running entirely in your browser.",
+  "inLanguage": "en",
+  "lastReviewed": "2026-09-10",
+  "reviewedBy": {
+    "@type": "Person",
+    "@id": "https://baselinepsychotherapy.com/#jr",
+    "name": "J.R. Hernandez",
+    "jobTitle": "Psychotherapist",
+    "url": "https://baselinepsychotherapy.com"
+  }
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://baselinepsychotherapy.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Free Clinical Screeners",
+      "item": "https://baselinepsychotherapy.com/tests/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Thought Record",
+      "item": "https://baselinepsychotherapy.com/tests/thought-record/"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "@id": "https://baselinepsychotherapy.com/#organization",
+  "name": "Baseline Psychotherapy",
+  "url": "https://baselinepsychotherapy.com/tests/thought-record/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://baselinepsychotherapy.com/LOGO.webp"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "SG"
+  },
+  "hasMap": "https://g.page/r/CQd8xXTT59B-EBM"
+}
+  </script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a thought record and where does it come from?","acceptedAnswer":{"@type":"Answer","text":"A thought record is a structured worksheet from cognitive-behavioral therapy (CBT), developed in the tradition of Aaron Beck's cognitive therapy and refined over decades of clinical use. It walks you through a situation, the emotion it produced, the automatic thought behind it, the evidence on both sides, and a more balanced thought. This version follows that classic structure; the tool is not an invention of this practice."}},{"@type":"Question","name":"Does a thought record work if I do it on my own?","acceptedAnswer":{"@type":"Answer","text":"Yes, for many people it does, and self-guided thought records are a standard part of CBT homework. The skill improves with repetition: the first few feel slow and the balanced thought sounds forced. What self-practice cannot do is spot the pattern behind repeated records, which is where a clinician adds value."}},{"@type":"Question","name":"What if my emotion does not go down after the record?","acceptedAnswer":{"@type":"Answer","text":"That happens, and it is useful information. Sometimes the automatic thought you wrote is not the one carrying the charge, and a second record on a deeper thought helps. Sometimes the emotion fits the facts and the work is to tolerate it rather than argue with it. If emotions stay high across many records, that is a reason to bring them to a session."}},{"@type":"Question","name":"Is what I write in the thought record private?","acceptedAnswer":{"@type":"Answer","text":"Completely. The tool runs in your browser: nothing you type is stored, sent, or seen by anyone, and it disappears when you close the page. If you download your record, the file is generated on your device and saved only where you choose to put it."}}]}</script>
+</head>
+<body>
+<a href="#main" class="skip-nav">Skip to content</a>
+
+<div id="focusedBar" role="region" aria-label="Announcement">
+  <span>New service: Focused Sessions. One topic, a professional clinical consultation, solution-focused. <a href="/pricing/#focused">30 min · $60 →</a></span>
+  <button type="button" aria-label="Dismiss announcement" onclick="document.documentElement.classList.remove('has-banner');try{sessionStorage.setItem('focusedBarClosed','1')}catch(e){}">×</button>
+</div>
+<script>try{if(!sessionStorage.getItem('focusedBarClosed'))document.documentElement.classList.add('has-banner')}catch(e){}</script>
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <div class="nav-brand-logo"><img src="/LOGO.webp" width="520" height="520" alt="Baseline Psychotherapy"></div>
+      <div class="nav-brand-text">Baseline Psychotherapy</div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="/about/">About</a></li>
+      <li class="has-dropdown"><a href="/#services">Services <span class="caret">&#9660;</span></a><ul class="dropdown"><li><a href="/burnout-therapy/">Burnout Therapy</a></li><li><a href="/anxiety-therapy-online/">Anxiety Therapy</a></li><li><a href="/depression-therapy-online/">Depression Therapy</a></li><li><a href="/emotional-regulation-therapy/">Emotional Regulation</a></li><li><a href="/couples-therapy-online/">Couples Therapy</a></li><li><a href="/expat-therapy/">Expat Therapy</a></li></ul></li>
+      <li><a href="/workplace-mental-health-training/">Workshops</a></li>
+      <li><a href="/tests/">Tests</a></li>
+      <li><a href="/pricing/">Pricing</a></li><li><a href="/faq/">FAQ</a></li>
+      <li><a href="/blog/">Blog</a></li>
+      <li><a href="/#contact">Contact</a></li>
+      <li class="nav-cta"><a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Get Started</a></li>
+      <li><a href="/es/tests/registro-pensamientos/" style="font-size:.82rem;font-weight:600;color:var(--gold)">ES</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> &rsaquo; <a href="/tests/">Screeners</a> &rsaquo; Thought Record
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="page-hero" id="main">
+  <div class="container">
+    <div class="page-hero-content fade-up">
+      <span class="kicker">Interactive Tool · CBT · ~10 Minutes</span>
+      <h1>Thought Record</h1>
+      <p class="hero-sub">A thought record is one of the oldest and best-tested tools in cognitive-behavioral therapy: a structured way of writing down what happened, what you felt, what you thought, and what the evidence actually says, so that a reaction can be examined instead of obeyed. This version runs entirely in your browser. Nothing you write is stored or sent anywhere, and when you finish you can download your record as a plain text file that is yours alone.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TOOL -->
+<section class="content-section alt" id="tool">
+  <div class="container">
+    <div class="section-intro fade-up">
+      <p class="label">The Tool</p>
+      <h2>Separate facts from interpretation</h2>
+      <p>Seven steps, one at a time. Each step shows a worked example (a manager, a phone, a presentation) so you can see what the step asks for before you write your own.</p>
+    </div>
+    <div class="tr-wrap fade-up">
+    <div class="tr-progress" id="tr-progress" role="progressbar" aria-valuemin="1" aria-valuemax="7" aria-valuenow="1" aria-label="Step 1 of 7"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+    <p class="tr-stepof" id="tr-stepof" aria-live="polite"></p>
+    <div class="tr-panel" id="p-s1" hidden role="group" aria-labelledby="s1-h"><h3 id="s1-h">The situation</h3><p class="tr-prompt">What happened? Stick to what a camera would have recorded: who, what, where, when. No interpretation yet.</p><label class="tr-label" for="s1-in">The situation</label><textarea id="s1-in" rows="4"></textarea><details class="tr-example"><summary>Example</summary><p>Tuesday, 4:40 pm. I finished presenting the quarterly numbers. My manager looked at her phone twice during the last five minutes and left the room without commenting.</p></details></div>
+    <div class="tr-panel" id="p-s2" hidden role="group" aria-labelledby="s2-h"><h3 id="s2-h">The emotion and its intensity</h3><p class="tr-prompt">Name the emotion in one word and rate how strong it is right now, from 0 (not at all) to 10 (the most intense you can imagine).</p><label class="tr-label" for="s2-word">The emotion and its intensity</label><input type="text" id="s2-word" maxlength="40" autocomplete="off"><label class="tr-label" for="s2-int">0-10</label><div class="tr-slider"><input type="range" id="s2-int" min="0" max="10" step="1" value="5" aria-valuemin="0" aria-valuemax="10" oninput="TR.slide(this,'s2-out')"><output id="s2-out" for="s2-int">5</output></div><div class="tr-slider-ends"><span>0 · not at all</span><span>10 · the most intense</span></div><details class="tr-example"><summary>Example</summary><p>Ashamed, 7.</p></details></div>
+    <div class="tr-panel" id="p-s3" hidden role="group" aria-labelledby="s3-h"><h3 id="s3-h">The automatic thought</h3><p class="tr-prompt">What went through your mind in that moment? Write the thought exactly as it appeared, as a full sentence.</p><label class="tr-label" for="s3-in">The automatic thought</label><textarea id="s3-in" rows="4"></textarea><details class="tr-example"><summary>Example</summary><p>She thinks the presentation was a waste of her time, and she has already decided I am not ready for the promotion.</p></details></div>
+    <div class="tr-panel" id="p-s3b" hidden role="group" aria-labelledby="s3b-h"><h3 id="s3b-h">Does your thought wear one of these disguises? <span class="tr-stepof" style="display:inline;margin:0 0 0 8px;color:var(--text);opacity:.6">Optional</span></h3><p class="tr-prompt">Tick any that fit. This step is optional, but what you mark here sharpens the help in step 5 and travels into your downloaded record.</p><div class="tr-dist" id="s3b-list"><label><input type="checkbox" value="mind" onchange="TR.hint()"><span><b>Mind reading</b><small>Assuming you know what someone else is thinking, without evidence. <span>"She thinks I wasted her time."</span></small></span></label><label><input type="checkbox" value="cata" onchange="TR.hint()"><span><b>Catastrophizing</b><small>Treating the worst possible outcome as the likely one. <span>"This presentation just ended my career here."</span></small></span></label><label><input type="checkbox" value="allnone" onchange="TR.hint()"><span><b>All-or-nothing thinking</b><small>Seeing things in two categories with nothing in between. <span>"If it was not brilliant, it was a failure."</span></small></span></label><label><input type="checkbox" value="overgen" onchange="TR.hint()"><span><b>Overgeneralization</b><small>Turning one event into a permanent rule. <span>"I always freeze in front of senior people."</span></small></span></label><label><input type="checkbox" value="filter" onchange="TR.hint()"><span><b>Mental filter</b><small>Focusing on one negative detail until it colors everything. <span>"All I can see is her looking at her phone."</span></small></span></label><label><input type="checkbox" value="discount" onchange="TR.hint()"><span><b>Discounting the positive</b><small>Deciding that good facts do not count. <span>"She approved the numbers, but that was just routine."</span></small></span></label><label><input type="checkbox" value="fortune" onchange="TR.hint()"><span><b>Fortune telling</b><small>Predicting that things will turn out badly as if it were already known. <span>"She has already decided I am not ready."</span></small></span></label><label><input type="checkbox" value="emo" onchange="TR.hint()"><span><b>Emotional reasoning</b><small>Taking a feeling as proof of a fact. <span>"I feel ashamed, so I must have done something shameful."</span></small></span></label><label><input type="checkbox" value="should" onchange="TR.hint()"><span><b>Should statements</b><small>Rigid rules about how you or others must behave. <span>"A manager should always give feedback right away."</span></small></span></label><label><input type="checkbox" value="personal" onchange="TR.hint()"><span><b>Personalization</b><small>Assuming that other people's behavior is about you. <span>"She left the room because of me."</span></small></span></label><label><input type="checkbox" value="label" onchange="TR.hint()"><span><b>Labeling</b><small>Attaching a global label to yourself or others from one event. <span>"I am an amateur."</span></small></span></label></div><details class="tr-example"><summary>Example</summary><p>Mind reading + fortune telling: the thought claims to know what she thinks now and what she will decide later.</p></details></div>
+    <div class="tr-panel" id="p-s4" hidden role="group" aria-labelledby="s4-h"><h3 id="s4-h">Evidence for the thought</h3><p class="tr-prompt">What facts support the thought? Facts only: the kind you could show someone else.</p><label class="tr-label" for="s4-in">Evidence for the thought</label><textarea id="s4-in" rows="4"></textarea><details class="tr-example"><summary>Example</summary><p>She looked at her phone twice. She left without commenting. Last month she said the deck needed tightening.</p></details></div>
+    <div class="tr-panel" id="p-s5" hidden role="group" aria-labelledby="s5-h"><h3 id="s5-h">Evidence against the thought</h3><p class="tr-prompt">What facts do not fit the thought? What would you notice if you were not already convinced?</p><div class="tr-hint" id="s5-hint" aria-live="polite"></div><label class="tr-label" for="s5-in">Evidence against the thought</label><textarea id="s5-in" rows="4"></textarea><details class="tr-example"><summary>Example</summary><p>She has looked at her phone in every meeting this quarter. She left at 4:45 for a call that was on the shared calendar. She approved the numbers by email that morning. Nobody has said a word about the promotion, in either direction.</p></details></div>
+    <div class="tr-panel" id="p-s6" hidden role="group" aria-labelledby="s6-h"><h3 id="s6-h">The balanced thought</h3><p class="tr-prompt">Write a thought that holds all the evidence at once. Not a positive thought: an accurate one.</p><details class="tr-example" style="margin:0 0 16px;border-top:0;padding-top:0"><summary>Use the formula if it helps</summary><p>It is true that X, and also true that Y.</p></details><label class="tr-label" for="s6-in">The balanced thought</label><textarea id="s6-in" rows="4"></textarea><details class="tr-example"><summary>Example</summary><p>It is true that I do not know what she thought of the presentation, and also true that the evidence points to a busy manager with a call to make, not a verdict on my career. If I want to know, I can ask her.</p></details></div>
+    <div class="tr-panel" id="p-s7" hidden role="group" aria-labelledby="s7-h"><h3 id="s7-h">Rate the emotion again</h3><p class="tr-prompt">Same emotion, same scale, 0 to 10. Answer honestly, not hopefully.</p><p class="tr-label" id="s7-word"></p><div class="tr-slider"><input type="range" id="s7-int" min="0" max="10" step="1" value="5" aria-valuemin="0" aria-valuemax="10" aria-labelledby="s7-h" oninput="TR.slide(this,'s7-out')"><output id="s7-out" for="s7-int">5</output></div><div class="tr-slider-ends"><span>0 · not at all</span><span>10 · the most intense</span></div><details class="tr-example"><summary>Example</summary><p>Ashamed: from 7 to 4.</p></details></div>
+    <div class="tr-panel tr-summary" id="p-sum" hidden role="group" aria-labelledby="sum-h"><h3 id="sum-h">Your record</h3><p class="tr-prompt">Read it once, slowly. Then download it if you want to keep it: the file is created on your device and nowhere else.</p><div id="sum-change"></div><dl id="sum-list"></dl></div>
+    <div class="tr-nav"><button type="button" class="btn btn-outline" id="tr-back" onclick="TR.back()">Back</button><button type="button" class="btn btn-primary" id="tr-next" onclick="TR.next()">Next</button><button type="button" class="btn btn-gold" id="tr-dl" hidden onclick="TR.download()">Download my record</button></div>
+    <p style="text-align:center;margin-top:20px"><button type="button" class="btn btn-outline btn-sm" onclick="TR.reset()">Start over</button></p>
+    </div>
+    <p class="tr-bridge fade-up">This is the practical form of a distinction explored in depth in <a href="/method/">The Baseline Psychotherapy Protocol</a>: separating data from interpretation.</p>
+    <p class="tr-note fade-up">Nothing you write here leaves your device or is stored: the record disappears when you close the page. The download is a plain text file saved only where you choose.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="content-section" id="faq">
+  <div class="container">
+    <div class="section-intro fade-up">
+      <p class="label">Thought Record FAQ</p>
+      <h2>Frequently Asked Questions About<br>the Thought Record</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item fade-up"><button class="faq-question">What is a thought record and where does it come from?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>A thought record is a structured worksheet from cognitive-behavioral therapy (CBT), developed in the tradition of Aaron Beck's cognitive therapy and refined over decades of clinical use. It walks you through a situation, the emotion it produced, the automatic thought behind it, the evidence on both sides, and a more balanced thought. This version follows that classic structure; the tool is not an invention of this practice.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-question">Does a thought record work if I do it on my own?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Yes, for many people it does, and self-guided thought records are a standard part of CBT homework. The skill improves with repetition: the first few feel slow and the balanced thought sounds forced. What self-practice cannot do is spot the pattern behind repeated records, which is where a clinician adds value.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-question">What if my emotion does not go down after the record?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>That happens, and it is useful information. Sometimes the automatic thought you wrote is not the one carrying the charge, and a second record on a deeper thought helps. Sometimes the emotion fits the facts and the work is to tolerate it rather than argue with it. If emotions stay high across many records, that is a reason to bring them to a session.</p></div></div>
+      <div class="faq-item fade-up"><button class="faq-question">Is what I write in the thought record private?<span class="faq-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6"/></svg></span></button><div class="faq-answer"><p>Completely. The tool runs in your browser: nothing you type is stored, sent, or seen by anyone, and it disappears when you close the page. If you download your record, the file is generated on your device and saved only where you choose to put it.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="contact">
+  <div class="container">
+    <div class="fade-up">
+      <p class="label" style="color:var(--gold);margin-bottom:16px">Get Started</p>
+      <h2>When the Record Is Not Enough</h2>
+      <p>If the same thoughts keep returning with the same charge, a record shows you the pattern but does not change it on its own. A free 15-minute consultation is where the pattern meets a clinician. No referral needed, no waitlist.</p>
+      <div class="cta-actions">
+        <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation." class="btn btn-gold" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.612.638l4.685-1.408A11.953 11.953 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.607-.798-6.38-2.144l-.29-.222-3.042.914.85-3.117-.234-.299A9.96 9.96 0 012 12C2 6.486 6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"/></svg>
+          WhatsApp
+        </a>
+        <a onclick="gtag('event','email_click',{event_category:'conversion',event_label:this.href})" href="mailto:jr@baselinepsychotherapy.com?subject=Consultation%20inquiry" class="btn btn-outline" style="color:var(--white);border-color:rgba(255,255,255,.3);position:relative;z-index:2">Email</a>
+      </div>
+      <div class="cta-info">
+        <span>Free 15-minute consultation</span>
+        <span>Online via Google Meet</span>
+        <span>English &amp; Spanish</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>Baseline Psychotherapy</h4>
+        <p>Process-based psychotherapy for burnout, anxiety, depression, emotional regulation, and relationship distress. Born in New York. Supporting expats and professionals worldwide, in English and Spanish, since 2019.</p>
+        <p style="margin-top:12px"><a onclick="gtag('event','email_click',{event_category:'conversion',event_label:this.href})" href="mailto:jr@baselinepsychotherapy.com" style="color:var(--gold);font-size:.82rem">jr@baselinepsychotherapy.com</a></p>
+        <p style="margin-top:8px"><a href="/policies.html" style="color:rgba(255,255,255,.6);font-size:.78rem;text-decoration:underline;text-underline-offset:3px">Service Policies &amp; Refund Notice</a></p><p style="margin-top:4px"><a href="/privacy-policy.html" style="color:rgba(255,255,255,.6);font-size:.78rem;text-decoration:underline;text-underline-offset:3px">Privacy Policy</a></p>
+        <p style="margin-top:4px"><a href="/crisis/" style="color:rgba(255,255,255,.6);font-size:.78rem;text-decoration:underline;text-underline-offset:3px">Crisis Resources</a></p>
+        <p style="margin-top:16px"><a href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation." target="_blank" rel="noopener" style="font-size:.85rem;color:var(--gold);border-bottom:1px solid rgba(201,168,76,.4);padding-bottom:2px;transition:border-color .2s">Book a free consultation →</a></p>
+      </div>
+      <div>
+        <h5>Specializations</h5>
+        <ul class="footer-links">
+          <li><a href="/burnout-therapy/">Burnout Therapy</a></li>
+          <li><a href="/anxiety-therapy-online/">Anxiety Therapy</a></li>
+          <li><a href="/depression-therapy-online/">Depression Therapy</a></li>
+          <li><a href="/emotional-regulation-therapy/">Emotional Regulation</a></li>
+          <li><a href="/couples-therapy-online/">Couples Therapy</a></li>
+          <li><a href="/expat-therapy/">Expat Therapy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Practice</h5>
+        <ul class="footer-links">
+          <li><a href="/about/">About J.R. Hernandez</a></li>
+          <li><a href="/workplace-mental-health-training/">Workshops</a></li>
+          <li><a href="/pricing/">Pricing</a></li>
+          <li><a href="/emotional-intelligence-books/">Books</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2019 Baseline Psychotherapy. All sessions conducted with professional confidentiality and ethical standards. TIN: 20297925</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+window.TR=(function(){
+var S={"back": "Back", "next": "Next", "finish": "See my record", "step_of": "Step {n} of 7", "empty": "(left blank)", "dist_none": "None marked", "before": "Before", "after": "After", "honest": "The goal was never zero: a thought record does not delete emotions, it right-sizes them.", "nomove": "If the number did not move, that is information too: the thought you wrote may not be the one carrying the charge, or the emotion may fit the facts and need tolerating rather than arguing with.", "hint_base": "Ask yourself: what would I say to a friend who had this exact thought? Which facts do not fit it? What has happened before in similar situations?", "hints": {"mind": "Mind reading: what do you actually know about their thoughts, versus assume? What else could their behavior mean?", "cata": "Catastrophizing: what is the most likely outcome, not the worst one? If the worst did happen, what would you actually do next?", "allnone": "All-or-nothing: where does this sit between 0 and 100? What would partial success or partial failure look like?", "fortune": "Fortune telling: how many of your past predictions like this one came true exactly as predicted? What evidence exists about the future right now?"}, "dist": {"mind": "Mind reading", "cata": "Catastrophizing", "allnone": "All-or-nothing thinking", "overgen": "Overgeneralization", "filter": "Mental filter", "discount": "Discounting the positive", "fortune": "Fortune telling", "emo": "Emotional reasoning", "should": "Should statements", "personal": "Personalization", "label": "Labeling"}, "titles": {"s1": "The situation", "s2": "The emotion and its intensity", "s3": "The automatic thought", "s3b": "Does your thought wear one of these disguises?", "s4": "Evidence for the thought", "s5": "Evidence against the thought", "s6": "The balanced thought", "s7": "Rate the emotion again"}, "s3b_title": "Does your thought wear one of these disguises?", "file_title": "THOUGHT RECORD", "file_date": "Date", "file_dist": "Disguises marked (step 3b)", "file_change": "Change", "file_name": "thought-record", "lang": "en"};
+var ORDER=['s1','s2','s3','s3b','s4','s5','s6','s7','sum'],NUM={s1:1,s2:2,s3:3,s3b:3,s4:4,s5:5,s6:6,s7:7,sum:7},i=0;
+function el(id){return document.getElementById(id)}
+function val(id){var e=el(id);return e?e.value.trim():''}
+function checked(){return Array.prototype.slice.call(document.querySelectorAll('#s3b-list input:checked')).map(function(x){return x.value})}
+function show(nofocus){ORDER.forEach(function(id,k){var p=el('p-'+id);if(p)p.hidden=(k!==i)});
+var segs=el('tr-progress').children;for(var k=0;k<segs.length;k++){segs[k].className=k<i?'done':(k===i?'cur':'')}
+el('tr-progress').setAttribute('aria-valuenow',NUM[ORDER[i]]);
+var so=el('tr-stepof');so.textContent=ORDER[i]==='sum'?'':S.step_of.replace('{n}',ORDER[i]==='s3b'?'3b':NUM[ORDER[i]]);
+el('tr-back').hidden=(i===0);el('tr-next').hidden=(ORDER[i]==='sum');el('tr-dl').hidden=(ORDER[i]!=='sum');
+el('tr-next').textContent=(ORDER[i]==='s7')?S.finish:S.next;
+if(ORDER[i]==='s5')hint();if(ORDER[i]==='s7'){el('s7-word').textContent=(val('s2-word')||'')+(val('s2-word')?': ':'')+S.before+' '+val('s2-int')}
+if(ORDER[i]==='sum')summary();
+if(nofocus)return;var p=el('p-'+ORDER[i]);if(p){var f=p.querySelector('h3');if(f){f.setAttribute('tabindex','-1');f.focus({preventScroll:false})}}}
+function hint(){var h=el('s5-hint');if(!h)return;var ks=checked(),out='<p>'+S.hint_base+'</p>';ks.forEach(function(k){if(S.hints[k])out+='<p>'+S.hints[k]+'</p>'});h.innerHTML=out}
+function summary(){var b=parseInt(val('s2-int'),10),a=parseInt(val('s7-int'),10),w=val('s2-word');
+el('sum-change').innerHTML='<div class="tr-change"><div><span>'+S.before+'</span><b>'+b+'</b></div><div><span>'+S.after+'</span><b>'+a+'</b></div></div><p class="tr-honest">'+S.honest+'</p>'+(a>=b?'<p class="tr-honest calm">'+S.nomove+'</p>':'');
+var ks=checked(),dl=el('sum-list'),rows=[['s1',val('s1-in')],['s2',(w||S.empty)+' \u00b7 '+b],['s3',val('s3-in')],['s3b',ks.length?ks.map(function(k){return S.dist[k]}).join(', '):S.dist_none],['s4',val('s4-in')],['s5',val('s5-in')],['s6',val('s6-in')],['s7',(w||S.empty)+' \u00b7 '+a]];
+dl.innerHTML=rows.map(function(r){return '<div><dt>'+(r[0]==='s3b'?'3b':NUM[r[0]])+' \u00b7 '+S.titles[r[0]]+'</dt><dd>'+esc(r[1]||S.empty)+'</dd></div>'}).join('')}
+function esc(t){return String(t).replace(/[&<>]/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[m]})}
+function text(){var b=val('s2-int'),a=val('s7-int'),w=val('s2-word')||S.empty,ks=checked(),d=new Date(),ds=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+var L=[S.file_title,'='.repeat(S.file_title.length),S.file_date+': '+ds,''];
+[['s1',val('s1-in')],['s2',w+' \u00b7 '+b+'/10'],['s3',val('s3-in')],['s4',val('s4-in')],['s5',val('s5-in')],['s6',val('s6-in')],['s7',w+' \u00b7 '+a+'/10']].forEach(function(r){L.push(NUM[r[0]]+'. '+S.titles[r[0]]);L.push(r[1]||S.empty);L.push('');
+if(r[0]==='s3'){L.push('3b. '+S.file_dist);L.push(ks.length?ks.map(function(k){return '- '+S.dist[k]}).join('\n'):S.dist_none);L.push('')}});
+L.push(S.file_change+': '+b+' \u2192 '+a);L.push(S.honest);return L.join('\n')}
+return{next:function(){if(i<ORDER.length-1){i++;show()}},back:function(){if(i>0){i--;show()}},
+slide:function(r,o){el(o).textContent=r.value;r.setAttribute('aria-valuenow',r.value)},hint:hint,
+download:function(){var blob=new Blob([text()],{type:'text/plain;charset=utf-8'}),u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=S.file_name+'-'+new Date().toISOString().slice(0,10)+'.txt';document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){URL.revokeObjectURL(u)},1000)},
+reset:function(){['s1-in','s3-in','s4-in','s5-in','s6-in','s2-word'].forEach(function(id){el(id).value=''});['s2-int','s7-int'].forEach(function(id){el(id).value=5;el(id).setAttribute('aria-valuenow',5)});el('s2-out').textContent='5';el('s7-out').textContent='5';document.querySelectorAll('#s3b-list input').forEach(function(x){x.checked=false});i=0;show();window.scrollTo({top:el('tool').offsetTop-80})},
+state:function(){return{i:i,step:ORDER[i]}},_text:text,_show:show};
+})();
+document.addEventListener('DOMContentLoaded',function(){TR._show(true)});
+</script>
+<script>
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>20)});
+const navToggle=document.getElementById('navToggle'),navLinks=document.getElementById('navLinks');
+navToggle.addEventListener('click',()=>{
+  navLinks.classList.toggle('active');
+  const s=navToggle.querySelectorAll('span');
+  if(navLinks.classList.contains('active')){s[0].style.transform='rotate(45deg) translate(5px,5px)';s[1].style.opacity='0';s[2].style.transform='rotate(-45deg) translate(5px,-5px)'}
+  else{s[0].style.transform='';s[1].style.opacity='';s[2].style.transform=''}
+});
+navLinks.querySelectorAll('a').forEach(l=>{l.addEventListener('click',e=>{const li=l.parentElement;if(li.classList.contains('has-dropdown')&&navLinks.classList.contains('active')){e.preventDefault();li.classList.toggle('open');return}navLinks.classList.remove('active');const s=navToggle.querySelectorAll('span');s[0].style.transform='';s[1].style.opacity='';s[2].style.transform=''})});
+navToggle.addEventListener('click',()=>{navLinks.querySelectorAll('.open').forEach(o=>o.classList.remove('open'))});
+document.querySelectorAll('.faq-question').forEach(b=>{b.addEventListener('click',()=>{const i=b.parentElement,w=i.classList.contains('active');document.querySelectorAll('.faq-item').forEach(x=>x.classList.remove('active'));if(!w)i.classList.add('active')})});
+try{
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');obs.unobserve(x.target)}})},{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+document.documentElement.classList.add('js-anim');
+document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+}catch(e){}
+(function(){var bar=document.getElementById('mobileCTABar');if(!bar)return;var heroGone=false,contactVisible=false;function update(){bar.classList.toggle('hidden',!heroGone||contactVisible)}var hero=document.querySelector('.hero,.page-hero,.article-hero,.pricing-hero');if(hero){new IntersectionObserver(function(e){heroGone=!e[0].isIntersecting;update()},{threshold:0}).observe(hero)}else{heroGone=true;update()}var contact=document.getElementById('contact')||document.getElementById('contacto');if(contact){new IntersectionObserver(function(e){contactVisible=e[0].isIntersecting;update()},{threshold:0.05}).observe(contact)}})();
+</script>
+<div id="cookieBanner" role="dialog" aria-label="Cookie consent">
+  <p>This site uses cookies for analytics (Google Analytics) to improve your experience. No personal data is sold or shared with advertisers.</p>
+  <div class="cb-actions">
+    <button class="cb-btn cb-accept" id="cookieAccept">Accept</button>
+    <button class="cb-btn cb-decline" id="cookieDecline">Decline</button>
+  </div>
+</div>
+<script>
+(function(){var b=document.getElementById('cookieBanner');if(window._cbGet('cookie_consent')){return}b.style.display='flex';function cbSet(v){var d=new Date();d.setTime(d.getTime()+365*864e5);document.cookie='cookie_consent='+v+';expires='+d.toUTCString()+';path=/;SameSite=Lax'}document.getElementById('cookieAccept').onclick=function(){cbSet('accepted');b.style.display='none';window._loadAnalytics()};document.getElementById('cookieDecline').onclick=function(){cbSet('declined');b.style.display='none'}})();
+</script>
+
+
+</body>
+</html>
