@@ -9,7 +9,7 @@ Las dos herramientas se construyen como unidades independientes (script de monta
 | Unidad | Estado |
 |---|---|
 | **Herramienta 2 · Thought Record** | COMPLETA en la rama: par EN/ES, integraciones, suite, render, prueba funcional, segunda auditoría |
-| **Herramienta 1 · Recovery Half-Life Check** | BLOQUEADA por contenido: el comando remite al bloque del estratega (intro, 8 preguntas con opciones a-d, 3 bandas) "provisto en la conversación", pero ese bloque no está en la conversación ni en el repo. Mecánica lista para montarse al recibirlo (ver abajo) |
+| **Herramienta 1 · Recovery Half-Life Check** | COMPLETA en la rama (segundo commit, tras el desbloqueo del contenido): par EN/ES, integraciones, suite, prueba de los 3 caminos, render, segunda auditoría |
 
 ---
 
@@ -80,17 +80,70 @@ Residuos señalados y decisión:
 
 ---
 
-## Herramienta 1 · Recovery Half-Life Check (pendiente de contenido)
+## Herramienta 1 · Recovery Half-Life Check
 
-Diseño listo para montar sobre la misma plantilla en cuanto llegue el bloque del estratega:
-- Páginas /tests/recovery-half-life/ + /es/tests/vida-media-recuperacion/; titles del comando; atribución literal del dueño bajo el título.
-- 8 preguntas con 4 opciones a-d como cards/radios grandes (`fieldset` + `radio`), progreso visible, resultado en la misma página.
-- **Lógica de bandas** (determinista, documentada): a=0, b=1, c=2, d=3; suma 0-24 → banda 1 (0-8) "Your system still resets" · banda 2 (9-15) "Your recovery is stretching" · banda 3 (16-24) "Your recovery is not completing". Sin puntaje visible. Enlaces a /tests/cbi/, /tests/who-5/ y wa.me según el texto de cada banda.
-- FAQs (4): qué es la vida media de recuperación · diferencia con un test de burnout (reflexión vs psicometría; CBI validado) · qué hacer con banda 2 o 3 · privacidad. Schema MedicalWebPage + FAQPage, sin Quiz.
-- Integración: card tercera en los hubs, frase en /burnout-therapy/ y /es/terapia-burnout/ (tras "…that does not happen through rest alone." / "…eso no ocurre solo con descanso."), llms.txt, sitemap → 81. Sin enlace al artículo de LinkedIn; puentes a /burnout-therapy/ y /tests/ (CBI).
+/tests/recovery-half-life/ · /es/tests/vida-media-recuperacion/ — misma plantilla de herramienta y misma técnica de montaje que la Unidad 2 (chrome byte-idéntico, CSS de la plantilla más reglas `.hl-*`).
+
+| | EN | ES |
+|---|---|---|
+| Title | Recovery Half-Life Check: How Long Until You Feel Like You? (59) | Vida media de tu recuperación: ¿cuánto tardas en volver? (56) |
+| Meta description | 157 | 148 |
+| Atribución bajo el H1 | Fórmula literal del dueño, con "screeners" enlazado a /tests/ | Literal ES, enlazado a /es/tests/ |
+| Intro | Texto del dueño verbatim; CBI → /tests/cbi/, WHO-5 → /tests/who-5/ | Espejo natural en tú |
+| Preguntas | 8 preguntas × 4 opciones (a-d) verbatim, en `fieldset`/`legend` con radios grandes (≥48 px) tocables | Espejo natural en tú, mismo orden |
+| Bandas | 3 textos del dueño verbatim con sus enlaces (WHO-5 · CBI + WHO-5 + wa.me · CBI + WHO-5 + wa.me) | Espejo |
+| Schema | MedicalWebPage (lastReviewed 2026-09-10, reviewedBy #jr) · BreadcrumbList · MedicalBusiness · FAQPage (4). Sin Quiz | idem |
+
+**Lógica de bandas (determinista, documentada)**: a=0, b=1, c=2, d=3; suma de las 8 respuestas 0-24 → banda 1 (0-8) "Your system still resets" · banda 2 (9-15) "Your recovery is stretching" · banda 3 (16-24) "Your recovery is not completing". Sin puntaje visible: solo el título de la banda y su texto. El resultado aparece en la misma página, bajo las preguntas, en cuanto se responden las ocho (región aria-live, scroll suave hasta él); barra de progreso `role="progressbar"` y contador "n of 8 answered". "Start over" desmarca todo y oculta el resultado.
+
+**FAQs (4)**: qué es la vida media de recuperación (concepto de esta práctica, de los escritos del fundador) · en qué se diferencia de un test de burnout (reflexión vs psicometría; CBI validado) · qué hacer en banda 2 o 3 · privacidad.
+
+**Puentes**: sin enlace al artículo de LinkedIn; puente bajo la herramienta a /burnout-therapy/ (ES /es/terapia-burnout/) y a los screeners; CBI y WHO-5 enlazados desde intro y bandas; CTA estándar wa.me.
+
+**Reglas de interactivas**: Clarity 0 · Metrika 0 · GA solo tras consentimiento · script HL sin localStorage, sessionStorage, fetch, XHR, beacon ni WebSocket · sin `<form>` · auditoría de red en ejecución (carga + camino completo): único host `localhost:8000`. Criterio de interactivas: 15 → **19** páginas de tests sin Clarity/Metrika (15 previas + 4 nuevas).
+
+### Prueba de lógica (Chrome headless, EN y ES, 1280 y 375)
+
+| Camino sintético (valores a-d como 0-3) | Suma | Banda esperada | Resultado |
+|---|---|---|---|
+| a a b a a b a a | 2 | 1 | "Your system still resets" · enlace WHO-5 |
+| b b c b c b c b | 11 | 2 | "Your recovery is stretching" · CBI, WHO-5, wa.me |
+| c d d c d d c d | 21 | 3 | "Your recovery is not completing" · CBI, WHO-5, wa.me |
+| b×8 | 8 | 1 (umbral superior) | banda 1 |
+| b×7 + c | 9 | 2 (umbral inferior) | banda 2 |
+| c×7 + b | 15 | 2 (umbral superior) | banda 2 |
+| c×8 | 16 | 3 (umbral inferior) | banda 3 |
+
+Además: `HL.band` en 0, 8, 9, 15, 16, 24 → 1, 1, 2, 2, 3, 3 · con 3 respuestas el resultado sigue oculto y el contador marca "3 of 8 answered" (barra 37,5 %) · sin dígitos de puntuación en el texto del resultado · reset deja 0 marcadas y resultado oculto · imágenes completas, sin overflow, H1 libre, opciones de 48 px de alto mínimo.
+
+### Integración (unidad Half-Life)
+1. Hubs /tests/ y /es/tests/: card tercera (tras el Medidor Emocional, antes del Thought Record), `transition-delay:.12s`, patrón existente.
+2. /burnout-therapy/ y /es/terapia-burnout/: frase añadida al final del párrafo "…that does not happen through rest alone." / "…eso no ocurre solo con descanso." con enlace al Check.
+3. llms.txt: línea EN y ES (qué es, autoría de J.R. Hernandez, tres lecturas, explícitamente no psicométrico, CBI y WHO-5 como validados).
+4. sitemap.xml: 79 → **81** `<loc>`; lastmod 2026-09-10 en las dos URLs nuevas y en las dos páginas de burnout.
+
+### Suite global (84 HTML)
+JSON-LD 0 errores · em dashes 0 · `<em>` 0 · hrefs e imágenes 0 rotos · FAQ **254** (246 + 8; objetivo del comando cumplido), 0 duplicadas · schema=visible 8/8 por página · hreflang recíproco · blockquotes 154 · wa.me 521.
+
+### Segunda auditoría (agente independiente, solo lectura)
+
+Veredicto: **CONFORME 12/12** (identidad y hreflang · atribución literal bajo el H1 · copy EN verbatim (intro, 8 preguntas, 32 opciones, 3 bandas con sus enlaces) · lógica de bandas ejecutada en Node: 1 en 0-8, 2 en 9-15, 3 en 16-24, sin suma visible, progreso y reset correctos · reglas de interactivas · accesibilidad · 4 JSON-LD sin Quiz y schema=visible · sin LinkedIn, puentes a burnout y screeners · reglas de sitio y 254 FAQ sin duplicados · integraciones acotadas · paridad de plantilla · calidad ES).
+
+Residuos señalados y decisión:
+- Numeración "Q1…Q8" en las leyendas ES: cambiada a "P1…P8".
+- `HL.state()` exponía la suma por consola (no renderizada): retirada; ahora devuelve solo respondidas y banda.
+- Opciones ES en masculino ("Volví renovado", "despertar recuperado"): estilo de la casa en el espejo natural; decisión del dueño si quiere forma neutra.
+- lastReviewed en las páginas de burnout: la clave no existe en esas páginas (no tienen MedicalWebPage), solo se actualiza su lastmod en el sitemap.
+- Hallazgo PREEXISTENTE ajeno a esta ronda: en tests/index.html la card del TMMS-24 enlaza a /es/tests/tmms-24/ (URL ES) desde el hub EN. No se toca aquí ("nada más se toca"); queda anotado para un fix aparte.
+
+## Separación limpia entre unidades
+
+Cada unidad vive en su propio commit de `f4e-review` y toca archivos compartidos (hubs, llms.txt, sitemap.xml) en líneas disjuntas. Si el dueño descarta una unidad, se revierte su commit (o se eliminan sus dos páginas, su card, su frase contextual, sus dos líneas de llms.txt y sus dos bloques de sitemap) sin afectar a la otra.
 
 ## Vista previa
 
+- http://localhost:8000/tests/recovery-half-life/
+- http://localhost:8000/es/tests/vida-media-recuperacion/
 - http://localhost:8000/tests/thought-record/
 - http://localhost:8000/es/tests/registro-pensamientos/
 - http://localhost:8000/tests/
