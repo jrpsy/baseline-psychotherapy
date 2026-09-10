@@ -22,6 +22,7 @@ Credentials of J.R. Hernandez (full profile: https://baselinepsychotherapy.com/a
 - [FAQ](https://baselinepsychotherapy.com/faq/): Common questions about online therapy
 - [Free Clinical Screeners](https://baselinepsychotherapy.com/tests/): Free validated clinical screeners (PHQ-9, GAD-7, CBI, WHO-5, DASS-21, TMMS-24) in English and Spanish, private, browser-only
 - [Interactive Regulation Tools](https://baselinepsychotherapy.com/tests/breathing/): Guided breathing pacer and emotional meter, free and browser-only, in English and Spanish
+- [Thought Record](https://baselinepsychotherapy.com/tests/thought-record/): a classic cognitive-behavioral therapy (CBT) thought record in seven steps (situation, emotion 0-10, automatic thought, optional checklist of 11 cognitive distortions, evidence for and against, balanced thought, re-rating) with a local plain-text download; browser-only, nothing stored or sent
 - [Psychotherapist in Yerevan](https://baselinepsychotherapy.com/yerevan/): Online and in-person sessions in Yerevan, Armenia, by appointment and availability, in English and Spanish
 
 ## Servicios (Español)
@@ -40,6 +41,7 @@ Credentials of J.R. Hernandez (full profile: https://baselinepsychotherapy.com/a
 - [Preguntas Frecuentes](https://baselinepsychotherapy.com/es/preguntas-frecuentes/)
 - [Tests Clínicos Gratuitos](https://baselinepsychotherapy.com/es/tests/): Seis screeners validados (PHQ-9, GAD-7, CBI, WHO-5, DASS-21, TMMS-24), privados, solo en el navegador
 - [Herramientas de Regulación](https://baselinepsychotherapy.com/es/tests/respiracion/): Respiración guiada y medidor emocional, gratis y solo en el navegador
+- [Registro de Pensamientos](https://baselinepsychotherapy.com/es/tests/registro-pensamientos/): registro de pensamientos clásico de la terapia cognitivo-conductual (TCC) en siete pasos (situación, emoción 0-10, pensamiento automático, lista opcional de 11 distorsiones cognitivas, evidencia a favor y en contra, pensamiento equilibrado, re-medición) con descarga local en texto; solo en el navegador, nada se guarda ni se envía
 - [Psicoterapeuta en Ereván](https://baselinepsychotherapy.com/es/yerevan/): Sesiones online y presenciales en Ereván, Armenia, con cita previa y según disponibilidad
 
 ## Blog

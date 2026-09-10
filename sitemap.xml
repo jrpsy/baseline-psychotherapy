@@ -150,7 +150,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/method/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/metodo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/method/"/>
-    <lastmod>2026-09-09</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -159,7 +159,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/method/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/metodo/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/method/"/>
-    <lastmod>2026-09-09</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -486,7 +486,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/tests/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/tests/"/>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -495,7 +495,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/tests/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/tests/"/>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -628,6 +628,24 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/medidor-emocional/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/tests/emotional-meter/"/>
     <lastmod>2026-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baselinepsychotherapy.com/tests/thought-record/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/tests/thought-record/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/registro-pensamientos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/tests/thought-record/"/>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baselinepsychotherapy.com/es/tests/registro-pensamientos/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/tests/thought-record/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/registro-pensamientos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/tests/thought-record/"/>
+    <lastmod>2026-09-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
