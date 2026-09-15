@@ -297,6 +297,7 @@ html.has-banner #focusedBar{display:flex}
 html.has-banner .nav{top:40px}
 html.has-banner body{padding-top:40px}
 @media(max-width:768px){#focusedBar{font-size:.72rem;line-height:1.4;min-height:52px}html.has-banner .nav{top:52px}html.has-banner body{padding-top:52px}}
+.bridge-cta{margin-top:26px;padding-top:20px;border-top:1px solid var(--border-light);text-align:left}.bridge-cta p{font-size:.95rem;line-height:1.7;margin:0 0 12px;opacity:.9}.bridge-cta .btn{color:var(--navy);text-decoration:none;border-color:var(--navy)}.bridge-cta .btn:hover{color:var(--white);background:var(--navy)}
 </style>
   <script type="application/ld+json">
 {
@@ -429,6 +430,9 @@ html.has-banner body{padding-top:40px}
       <div class="chips" id="chips"></div>
     </div>
     <div class="meter-result" id="meter-result" hidden></div>
+    <div class="meter-result" id="meter-bridge" hidden>
+      <div class="bridge-cta"><p>Tu resultado es un punto de partida, no un veredicto. Si quieres darle sentido con un profesional, la primera conversación es gratuita: 15 minutos, honesta, sin compromiso.</p><a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hola%20J.R.%2C%20me%20gustar%C3%ADa%20reservar%20una%20consulta%20gratuita%20de%2015%20minutos." class="btn btn-outline btn-sm" target="_blank" rel="noopener">Reserva una conversación gratuita de 15 minutos →</a></div>
+    </div>
     <p style="text-align:center;margin-top:24px"><button type="button" class="btn btn-outline btn-sm" onclick="meterReset()">Empezar de nuevo</button></p>
     <p class="tool-note fade-up" style="text-align:center">Nada de lo que marques aquí sale de tu dispositivo ni se guarda: el medidor se reinicia al cerrar la página.</p>
   </div>
@@ -517,8 +521,8 @@ b.onclick=function(){w.querySelectorAll('.chip').forEach(function(c){c.classList
 w.appendChild(b)})}
 function showResult(){var pleasant=st.quadrant.charAt(1)==='p';
 el('meter-result').innerHTML=(pleasant?FRAME_P:FRAME_U).replace('{w}',st.word);
-el('meter-result').hidden=false}
-window.meterReset=function(){st={x:null,y:null,quadrant:null,word:null,wordIdx:null};el('meter-marker').style.display='none';el('meter-words').hidden=true;el('meter-result').hidden=true;el('chips').innerHTML=''};
+el('meter-result').hidden=false;el('meter-bridge').hidden=false}
+window.meterReset=function(){st={x:null,y:null,quadrant:null,word:null,wordIdx:null};el('meter-marker').style.display='none';el('meter-words').hidden=true;el('meter-result').hidden=true;el('meter-bridge').hidden=true;el('chips').innerHTML=''};
 })();
 </script>
 <script>

@@ -486,7 +486,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/tests/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/tests/"/>
-    <lastmod>2026-09-10</lastmod>
+    <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -592,6 +592,12 @@
   <url>
     <loc>https://baselinepsychotherapy.com/es/tests/tmms-24/</loc>
     <lastmod>2026-09-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://baselinepsychotherapy.com/tests/emotional-intelligence/</loc>
+    <lastmod>2026-09-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
