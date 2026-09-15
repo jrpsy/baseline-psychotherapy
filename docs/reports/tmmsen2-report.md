@@ -16,13 +16,13 @@ Texto usado: la Tabla 1 de S1 (columna de ítems). Numeración: la del cuerpo de
 |---|---|---|---|---|
 | 1 | I try to think good thoughts no matter how badly I feel. | Repair | no | S1 cuerpo (Repair) |
 | 2 | People would be better off if they felt less and thought more. | Attention | sí | S1 cuerpo; "felt less" |
-| 3 | I don't think it's worth paying attention to your emotions or moods. | Attention | sí | S1 cuerpo; "don't" |
-| 4 | I don't usually care much about what I'm feeling. | Attention | sí | S1 cuerpo; "don't" |
-| 5 | Sometimes I can't tell what my feelings are. | Clarity | sí | S1 cuerpo; "can't" |
+| 3 | I don’t think it’s worth paying attention to your emotions or moods. | Attention | sí | S1 cuerpo; "don't" |
+| 4 | I don’t usually care much about what I’m feeling. | Attention | sí | S1 cuerpo; "don't" |
+| 5 | Sometimes I can’t tell what my feelings are. | Clarity | sí | S1 cuerpo; "can't" |
 | 6 | I am rarely confused about how I feel. | Clarity | no | S1 cuerpo |
 | 7 | Feelings give direction to life. | Attention | no | recuento S5 (13 - 10 = 3 ítems de Attention entre los cinco no clasificados en S1) |
 | 8 | Although I am sometimes sad, I have a mostly optimistic outlook. | Repair | no | S1 cuerpo |
-| 9 | When I am upset I realize that the "good things in life" are illusions. | Repair | sí | recuento S5 (6 - 5 = 1); "illusions" |
+| 9 | When I am upset I realize that the “good things in life” are illusions. | Repair | sí | recuento S5 (6 - 5 = 1); "illusions" |
 | 10 | I believe in acting from the heart. | Attention | no | recuento S5 |
 | 11 | I can never tell how I feel. | Clarity | sí | S1 cuerpo; "never" |
 | 12 | The best way for me to handle my feelings is to experience them to the fullest. | Attention | no | recuento S5 |
@@ -35,8 +35,8 @@ Texto usado: la Tabla 1 de S1 (columna de ítems). Numeración: la del cuerpo de
 | 19 | Although I am sometimes happy, I have a mostly pessimistic outlook. | Repair | sí | S1 cuerpo; "pessimistic" |
 | 20 | I feel at ease about my emotions. | Clarity | no | S1 cuerpo |
 | 21 | I pay a lot of attention to how I feel. | Attention | no | S1 cuerpo |
-| 22 | I can't make sense out of my feelings. | Clarity | sí | S1 cuerpo; "can't" |
-| 23 | I don't pay much attention to my feelings. | Attention | sí | S1 cuerpo; "don't" |
+| 22 | I can’t make sense out of my feelings. | Clarity | sí | S1 cuerpo; "can't" |
+| 23 | I don’t pay much attention to my feelings. | Attention | sí | S1 cuerpo; "don't" |
 | 24 | I often think about my feelings. | Attention | no | S1 cuerpo |
 | 25 | I am usually very clear about my feelings. | Clarity | no | S1 cuerpo |
 | 26 | No matter how badly I feel, I try to think about pleasant things. | Repair | no | S1 cuerpo |
