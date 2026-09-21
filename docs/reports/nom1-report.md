@@ -18,7 +18,7 @@ Fecha: 2026-09-21 · Base: `cb44815` (main) · Rama: `nom1-review` · Estado: vi
 | Schema | BreadcrumbList (3) · BlogPosting (author @id #jr, datePublished 2026-09-21, inLanguage en) · FAQPage (4) | idem, inLanguage es |
 
 Decisiones documentadas:
-- **Imagen del hero**: no se proveyó asset; se reutiliza `blog-online-therapy.webp` (portátil, cuaderno y taza en una mesa junto a una ventana, 1200×675) con alt veraz propio; og:image y BlogPosting.image apuntan a la misma; sustituible cuando el dueño aporte una imagen del post.
+- **Imagen del hero**: pre-merge el dueño aportó `~/Desktop/Nomad.png` (1672×941), recortada al 5:3 de la serie (1568×941, sin reescalar hacia arriba) como `blog-therapy-digital-nomads.webp` (q82); hero con atributos 1200×720, og:image 1200×720, twitter:image y BlogPosting.image en ambos artículos; alt EN "Person working on a laptop by a window at dusk, travel backpack nearby" / ES espejo. La imagen provisional del blog quedó sustituida.
 - **Blog-cta y CTA final**: textos propios, redactados para no duplicar los del par de Londres ni los de expat-burnout.
 - **Blockquote**: el del dueño, único en el cuerpo; guardarraíl de blockquotes 154 → 156.
 
@@ -51,7 +51,7 @@ Render (Chrome headless): EN y ES a 1280 y 375, imágenes completas, sin overflo
 Veredicto: **CONFORME 9/9** (head y byline · cuerpo EN verbatim contra los anclajes del brief: H2, apertura, cuatro mecanismos, blockquote único, cinco enlaces, cierre y FAQ · ES nativa en tú con las señales de búsqueda y sus enlaces ES · cifras canon $120 y "más de 21 países", sin contradicciones · 3 JSON-LD y schema=visible 8/8 por página, 266 FAQ sin duplicados · 0 shingles de 13 palabras frente a expat-burnout y burnout-therapy · paridad byte-idéntica con la plantilla salvo conmutador · reglas de sitio y blockquotes 156 · integraciones acotadas a los 6 archivos).
 
 Residuos señalados y decisión:
-- FAQ 3 EN, "a stress system that stops switching off: but the nomad version hides better": construcción con dos puntos consecutivos; es texto final del dueño, se respeta (en ES se usó punto y seguido). Queda anotado para la ronda del dueño.
+- FAQ 3 EN: por indicación del estratega pre-merge, "identical: a stress system that stops switching off: but" pasa a "identical (a stress system that stops switching off), but" en visible y schema; la ES ya usaba punto y seguido, sin cambio.
 - "$60" aparece por el banner de anuncio del sitio (PR-1), no por el artículo.
 - El texto fuente del dueño no está en el repo; el cotejo verbatim se hizo contra los anclajes del comando.
 
