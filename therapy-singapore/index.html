@@ -113,6 +113,22 @@ html.has-banner #focusedBar{display:flex}
 html.has-banner .nav{top:40px}
 html.has-banner body{padding-top:40px}
 @media(max-width:768px){#focusedBar{font-size:.72rem;line-height:1.4;min-height:52px}html.has-banner .nav{top:52px}html.has-banner body{padding-top:52px}}
+/* HERO */
+.hero{padding-top:72px;min-height:92vh;display:flex;align-items:center;background:var(--bg);position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,var(--gold-subtle) 0%,transparent 70%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px,6vw,80px);align-items:center}
+.hero-content{position:relative;z-index:2}
+.hero h1{margin-bottom:28px}
+.hero-sub{font-size:1rem;line-height:1.8;color:var(--text);margin-bottom:16px;padding-left:20px;border-left:2px solid var(--gold);max-width:54ch}
+.hero-markers{display:flex;gap:10px;margin-bottom:40px;flex-wrap:wrap;align-items:center}
+.hero-markers>span{font-size:.85rem;color:var(--text);opacity:.7;display:flex;align-items:center;gap:10px}
+.hero-markers>span:not(:last-child)::after{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0}
+.hero-markers>span:first-child::before{display:none}
+.hero-actions{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.hero-image{position:relative;display:flex;justify-content:center}
+.hero-image-frame{position:relative;width:100%;max-width:460px;aspect-ratio:4/5;border-radius:8px;overflow:hidden;background:var(--border-light);box-shadow:0 1px 2px rgba(20,32,46,.05),0 8px 24px rgba(20,32,46,.08),0 24px 64px rgba(20,32,46,.10)}
+.hero-image-frame img{width:100%;height:100%;object-fit:cover}
+.hero-image-accent{position:absolute;bottom:-16px;right:-16px;width:120px;height:120px;border:2px solid var(--gold);border-radius:8px;z-index:-1}
 /* ABOUT */
 .about{padding:var(--section-py) 0;background:var(--navy);color:var(--white);position:relative;overflow:hidden}
 .about-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.15;pointer-events:none}
@@ -135,6 +151,9 @@ html.has-banner body{padding-top:40px}
 .credential-detail{max-height:0;overflow:hidden;transition:max-height .4s ease,opacity .3s ease;opacity:0}
 .credential-card.open .credential-detail{max-height:400px;opacity:1}
 .credential-detail p{font-size:.85rem;color:rgba(255,255,255,.7);margin:16px 0 0;line-height:1.75}
+@media(prefers-reduced-motion:no-preference){.hero-image-frame img{animation:heroZoom 18s ease-out forwards;transform-origin:center 30%}@keyframes heroZoom{from{transform:scale(1.06)}to{transform:scale(1)}}}
+@media(max-width:1024px){.hero-grid{grid-template-columns:1fr;gap:48px}.hero-image-frame{max-width:340px;margin:0 auto}.hero{min-height:auto;padding-top:120px;padding-bottom:60px}.credentials{grid-template-columns:1fr}}
+@media(max-width:768px){.hero-actions{flex-direction:column;align-items:flex-start}.hero-actions .btn{width:100%;justify-content:center}}
 
 .content-narrow a,.faq-answer a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
 </style>
@@ -300,14 +319,31 @@ html.has-banner body{padding-top:40px}
 <nav class="nav" id="nav"><div class="nav-inner"><a href="/" class="nav-brand"><div class="nav-brand-logo"><img src="/LOGO.webp" width="520" height="520" alt="Baseline Psychotherapy"></div><div class="nav-brand-text">Baseline Psychotherapy</div></a><ul class="nav-links" id="navLinks"><li><a href="/about/">About</a></li><li class="has-dropdown"><a href="/#services" class="current">Services <span class="caret">&#9660;</span></a><ul class="dropdown"><li><a href="/burnout-therapy/">Burnout Therapy</a></li><li><a href="/anxiety-therapy-online/">Anxiety Therapy</a></li><li><a href="/depression-therapy-online/">Depression Therapy</a></li><li><a href="/emotional-regulation-therapy/">Emotional Regulation</a></li><li><a href="/couples-therapy-online/">Couples Therapy</a></li><li><a href="/expat-therapy/">Expat Therapy</a></li></ul></li><li><a href="/workplace-mental-health-training/">Workshops</a></li><li><a href="/tests/">Tests</a></li><li><a href="/pricing/">Pricing</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/blog/">Blog</a></li><li><a href="/#contact">Contact</a></li><li class="nav-cta"><a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Get Started</a></li><li><a href="/es/terapia-singapur/" style="font-size:.82rem;font-weight:600;color:var(--gold)">ES</a></li></ul><button class="nav-mobile-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button></div></nav>
 <div class="breadcrumb"><div class="container"><a href="/">Home</a> &rsaquo; Therapy in Singapore</div></div>
 
-<section class="page-hero" id="main"><div class="container"><div class="page-hero-content fade-up">
-  <span class="kicker">Singapore · Online · English &amp; Spanish</span>
-  <h1>Psychotherapist in Singapore, online</h1>
-  <p class="hero-sub">Burnout &amp; mood disorders specialist · Sessions in English and Spanish · Evening and weekend slots, Singapore time</p>
-  <div class="hero-markers" style="margin-top:0"><span style="color:var(--gold);opacity:1"><a href="https://share.google/dQE0CvnGhGx0mbjZq" target="_blank" rel="noopener" style="display:contents;color:inherit;text-decoration:none">★★★★★ 5/5 on Google Reviews</a></span></div>
-  <div class="hero-actions"><a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation." target="_blank" rel="noopener" class="btn btn-primary">Book a free 15-minute consultation <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div>
-  <div class="hero-markers" style="margin-top:0"><span>I answer personally within 24 hours.</span></div>
-</div></div></section>
+<section class="hero" id="main">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content fade-up">
+        <span class="kicker">Singapore · Online · English &amp; Spanish</span>
+        <h1>Psychotherapist in Singapore, online</h1>
+        <p class="hero-sub">Burnout and mood disorders specialist working online with professionals and expats in Singapore. Structured, evidence-based therapy in English and Spanish, with evening and weekend slots on Singapore time, and a first session that can usually happen within the week.</p>
+        <div class="hero-markers">
+          <span>Online · Singapore time slots</span><span>English &amp; Spanish</span><span style="opacity:1"><span style="color:var(--gold)" aria-hidden="true">★</span><span style="color:var(--text);opacity:.7"><a href="https://share.google/dQE0CvnGhGx0mbjZq" target="_blank" rel="noopener" style="color:inherit;text-decoration:none">5.0 · Google Reviews</a></span></span>
+        </div>
+        <div class="hero-actions">
+          <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation." target="_blank" rel="noopener" class="btn btn-gold">Book a free 15-minute consultation <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+          <a href="/#process" class="btn btn-outline btn-sm">How it works</a>
+          <span style="flex-basis:100%;font-size:.85rem;color:var(--text);opacity:.7">I answer personally within 24 hours.</span>
+        </div>
+      </div>
+      <div class="hero-image fade-up" style="transition-delay:.15s">
+        <div class="hero-image-frame">
+          <img src="/HERO.webp" alt="J.R. Hernandez, psychotherapist and burnout specialist offering online therapy worldwide" loading="eager" fetchpriority="high" width="460" height="575">
+        </div>
+        <div class="hero-image-accent"></div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="about" id="about">
   <div class="about-bg" style="background-image:url('/ABOUT_BG.webp')"></div>
