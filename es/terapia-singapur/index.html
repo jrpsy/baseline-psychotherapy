@@ -113,13 +113,30 @@ html.has-banner #focusedBar{display:flex}
 html.has-banner .nav{top:40px}
 html.has-banner body{padding-top:40px}
 @media(max-width:768px){#focusedBar{font-size:.72rem;line-height:1.4;min-height:52px}html.has-banner .nav{top:52px}html.has-banner body{padding-top:52px}}
+/* ABOUT */
+.about{padding:var(--section-py) 0;background:var(--navy);color:var(--white);position:relative;overflow:hidden}
+.about-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:.15;pointer-events:none}
+.about-content{position:relative;z-index:2;max-width:760px;margin:0 auto;text-align:center}
+.about .label{color:var(--gold);text-align:center}
+.about h2{color:var(--white);margin:16px 0 36px}
+.about p{color:rgba(255,255,255,.82);margin-bottom:20px;font-size:1rem;line-height:1.85;text-align:left}
+.about-spanish{margin-top:32px;padding:20px 24px;background:rgba(201,168,76,.1);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;text-align:left;transition:background .2s}
+.about-spanish:hover{background:rgba(201,168,76,.18)}
+.about-spanish p{font-size:.92rem;color:rgba(255,255,255,.75);margin:0}
+.about-spanish strong{color:var(--gold)}
+.credentials{margin-top:48px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.credential-card{padding:24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);transition:background .3s;cursor:pointer;text-align:left}
+.credential-card:hover{background:rgba(255,255,255,.08)}
+.credential-card-header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.credential-card h4{color:var(--white);font-family:var(--sans);font-size:.88rem;font-weight:600;margin-bottom:4px}
+.credential-card .credential-subtitle{font-size:.82rem;color:rgba(255,255,255,.55);margin:0;line-height:1.5}
+.credential-toggle{color:var(--gold);font-size:1.2rem;flex-shrink:0;transition:transform .3s ease;line-height:1}
+.credential-card.open .credential-toggle{transform:rotate(45deg)}
+.credential-detail{max-height:0;overflow:hidden;transition:max-height .4s ease,opacity .3s ease;opacity:0}
+.credential-card.open .credential-detail{max-height:400px;opacity:1}
+.credential-detail p{font-size:.85rem;color:rgba(255,255,255,.7);margin:16px 0 0;line-height:1.75}
 
-.sg-hero{display:grid;grid-template-columns:240px 1fr;gap:44px;align-items:center;text-align:left;max-width:1040px;margin:0 auto}.sg-hero .page-hero h1,.sg-hero h1{text-align:left;margin-bottom:18px}
-.sg-photo{width:240px;border-radius:8px;overflow:hidden;box-shadow:var(--shadow-lift)}.sg-photo img{width:100%;height:auto;display:block}
-.sg-hero .hero-sub{margin-left:0;text-align:left}.sg-hero .hero-actions{justify-content:flex-start}.sg-micro{font-size:.85rem;opacity:.75;margin-top:10px}
-.sg-trust{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 28px;max-width:1040px;margin:36px auto 0;padding:18px 24px;border-top:1px solid var(--border-light);border-bottom:1px solid var(--border-light);font-family:var(--sans);font-size:.85rem;color:var(--text)}.sg-trust span{display:flex;align-items:center;gap:10px}.sg-trust span:not(:last-child)::after{content:'';width:5px;height:5px;border-radius:50%;background:var(--gold)}
-.sg-prose{max-width:760px;margin:0 auto}.sg-prose p{margin-bottom:20px;font-size:1.02rem;line-height:1.8}.sg-prose a,.faq-answer a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}.sg-prose .label{margin-bottom:12px}.sg-prose h2{margin-bottom:22px}
-@media(max-width:768px){.sg-hero{grid-template-columns:1fr;text-align:center;gap:24px}.sg-hero h1,.sg-hero .hero-sub{text-align:center}.sg-photo{width:180px;margin:0 auto}.sg-hero .hero-actions{justify-content:center}.sg-trust{margin-top:28px;justify-content:flex-start;text-align:left}.sg-trust span:not(:last-child)::after{display:none}}
+.content-narrow a,.faq-answer a{color:var(--gold);text-decoration:underline;text-underline-offset:3px}
 </style>
   <script type="application/ld+json">
 {
@@ -291,45 +308,186 @@ html.has-banner body{padding-top:40px}
 <nav class="nav" id="nav"><div class="nav-inner"><a href="/es/" class="nav-brand"><div class="nav-brand-logo"><img src="/LOGO.webp" width="520" height="520" alt="Baseline Psychotherapy"></div><div class="nav-brand-text">Baseline Psychotherapy</div></a><ul class="nav-links" id="navLinks"><li><a href="/es/sobre-mi/">Sobre mí</a></li><li class="has-dropdown"><a href="/es/#servicios" class="current">Servicios <span class="caret">&#9660;</span></a><ul class="dropdown"><li><a href="/es/terapia-burnout/">Terapia de Burnout</a></li><li><a href="/es/terapia-ansiedad/">Terapia de Ansiedad</a></li><li><a href="/es/terapia-depresion/">Terapia de Depresión</a></li><li><a href="/es/regulacion-emocional/">Regulación Emocional</a></li><li><a href="/es/terapia-parejas/">Terapia de Pareja</a></li><li><a href="/es/terapia-expatriados/">Terapia para Expatriados</a></li></ul></li><li><a href="/es/formacion-salud-mental-laboral/">Talleres</a></li><li><a href="/es/tests/">Tests</a></li><li><a href="/es/precios/">Precios</a></li><li><a href="/es/preguntas-frecuentes/">Preguntas</a></li><li><a href="/es/blog/">Blog</a></li><li><a href="/es/#contacto">Contacto</a></li><li class="nav-cta"><a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hola%20J.R.%2C%20me%20gustar%C3%ADa%20reservar%20una%20consulta%20gratuita%20de%2015%20minutos." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Comenzar</a></li><li><a href="/therapy-singapore/" style="font-size:.82rem;font-weight:600;color:var(--gold)">EN</a></li></ul><button class="nav-mobile-toggle" id="navToggle" aria-label="Menú"><span></span><span></span><span></span></button></div></nav>
 <div class="breadcrumb"><div class="container"><a href="/es/">Inicio</a> &rsaquo; Terapia en Singapur</div></div>
 
-<section class="page-hero" id="main"><div class="container"><div class="sg-hero fade-up">
-  <div class="sg-photo"><img src="/HERO.webp" alt="J.R. Hernandez, psicoterapeuta, trabajando online con clientes en Singapur" width="460" height="575" loading="eager" fetchpriority="high"></div>
-  <div>
+<section class="page-hero" id="main"><div class="container"><div class="page-hero-content fade-up">
   <span class="kicker">Singapur · Online · Español e Inglés</span>
   <h1>Psicólogo español en Singapur, online</h1>
   <p class="hero-sub">Especialista en burnout y trastornos del estado de ánimo · Sesiones en español e inglés · Horarios de tarde y fin de semana, hora de Singapur</p>
+  <div class="hero-markers" style="margin-top:0"><span style="color:var(--gold);opacity:1"><a href="https://share.google/dQE0CvnGhGx0mbjZq" target="_blank" rel="noopener" style="display:contents;color:inherit;text-decoration:none">★★★★★ 5/5 en Google Reviews</a></span></div>
   <div class="hero-actions"><a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hola%20J.R.%2C%20me%20gustar%C3%ADa%20reservar%20una%20consulta%20gratuita%20de%2015%20minutos." target="_blank" rel="noopener" class="btn btn-primary">Reserva una consulta gratuita de 15 minutos <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a></div>
-  <p class="sg-micro">Respondo personalmente en menos de 24 horas.</p>
-  </div>
-</div>
-<div class="sg-trust fade-up"><span>Neurociencia Médica, Duke University School of Medicine</span><span>Especialización APA en Ansiedad y Trastornos del Estado de Ánimo</span><span>Autor de El Protocolo Baseline Psychotherapy</span><span>Clientes en más de 21 países desde 2019</span></div>
-</div></section>
+  <div class="hero-markers" style="margin-top:0"><span>Respondo personalmente en menos de 24 horas.</span></div>
+</div></div></section>
 
-<section class="content-section alt"><div class="container"><div class="sg-prose fade-up">
+<section class="about" id="about">
+  <div class="about-bg" style="background-image:url('/ABOUT_BG.webp')"></div>
+  <div class="container">
+    <div class="about-content fade-up">
+      <p class="label">Sobre mí</p>
+      <h2>J.R. Hernandez, Psicoterapeuta y Especialista en Burnout</h2>
+      <p>Fundé Baseline Psychotherapy en Nueva York, en 2019, tras una década viviendo en seis países en tres continentes: Venezuela, Chile, Francia, Estados Unidos, Singapur, Rusia. La reinvención, el agotamiento invisible, el duelo que cargas mientras aparentas competencia, he navegado todo eso. Construí esta práctica para profesionales, expatriados y personas de alto rendimiento cuyo burnout va más allá de lo que unas vacaciones pueden resolver. El trabajo está basado en evidencia, es transcultural y se fundamenta en la neurociencia y la investigación en inteligencia emocional. Mi formación clínica, detallada abajo, garantiza que la intervención apunte al mecanismo, no solo a los síntomas.</p>
+      <div class="credentials">
+        <div class="credential-card" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+          <div class="credential-card-header">
+            <div>
+              <h4>Diploma Profesional en Psicoterapia</h4>
+              <p class="credential-subtitle">The School of Positive Psychology of Singapore</p>
+            </div>
+            <span class="credential-toggle">+</span>
+          </div>
+          <div class="credential-detail">
+            <p>Diploma Profesional en Psicoterapia (PDP), The School of Positive Psychology of Singapore. Esta es la base clínica de cómo cada caso avanza desde el primer contacto hasta el cambio medible. La formación está fundamentada e informada por la evidencia que prioriza la estructura: qué mantiene el problema, qué habilidades específicas lo modificarán y cómo registrar si la intervención está funcionando. Da forma a cómo se organizan las sesiones, cómo se usa la relación terapéutica como herramienta y cómo los clientes desarrollan la capacidad de actuar de manera diferente en las situaciones que los llevaron a consulta. Aquí es donde se origina el enfoque de evaluación-primero y seguimiento de resultados.</p>
+          </div>
+        </div>
+        <div class="credential-card" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+          <div class="credential-card-header">
+            <div>
+              <h4>Neurociencia Médica</h4>
+              <p class="credential-subtitle">Duke University School of Medicine</p>
+            </div>
+            <span class="credential-toggle">+</span>
+          </div>
+          <div class="credential-detail">
+            <p>Neurociencia Médica, Duke University School of Medicine. Una base de neurociencias a nivel médico que tiende el puente entre la mente y el cuerpo en el trabajo clínico. Esta formación cubre cómo el sistema nervioso central organiza la atención, la activación, la emoción y la recuperación, y qué ocurre cuando esos sistemas están bajo tensión sostenida. Es la base para la dimensión integradora y somática de esta consulta: comprender por qué el burnout es neurofisiológico, por qué la ansiedad vive en el cuerpo antes de llegar a la mente y por qué la alteración del sueño, la fatiga cognitiva y la reactividad emocional están conectadas a nivel de circuitos neurales.</p>
+          </div>
+        </div>
+        <div class="credential-card" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+          <div class="credential-card-header">
+            <div>
+              <h4>Ansiedad y Trastornos del Ánimo</h4>
+              <p class="credential-subtitle">American Psychological Association (APA)</p>
+            </div>
+            <span class="credential-toggle">+</span>
+          </div>
+          <div class="credential-detail">
+            <p>Especialización en Trastornos de Ansiedad y del Estado de Ánimo, American Psychological Association (APA). Una especialización en los diagnósticos y perfiles clínicos de los trastornos de ansiedad, los trastornos del estado de ánimo y condiciones relacionadas. Esta credencial respalda la capacidad de distinguir entre condiciones que frecuentemente se superponen en su presentación: el burnout de la depresión clínica, la ansiedad primaria de la activación por estrés, y la inestabilidad del estado de ánimo de la desregulación emocional. En la práctica, agudiza la fase de evaluación, asegurando que la intervención apunte a la condición correcta desde el inicio, no solo al síntoma más visible.</p>
+          </div>
+        </div>
+        <div class="credential-card" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+          <div class="credential-card-header">
+            <div>
+              <h4>Medicina Integrativa</h4>
+              <p class="credential-subtitle">University of Minnesota</p>
+            </div>
+            <span class="credential-toggle">+</span>
+          </div>
+          <div class="credential-detail">
+            <p>Especialización en Medicina Integrativa, University of Minnesota. La consulta incorpora enfoques complementarios donde la evidencia los respalda, como adjuntos que abordan mecanismos junto a la psicoterapia estándar. Esta especialización proporciona el marco clínico para esa toma de decisiones: cómo evaluar si una terapia específica es adecuada para un caso, valorar su base de evidencia, informar al cliente sobre beneficios y resultados esperados, y medir si produjo el efecto previsto. La imaginación guiada y el mindfulness (cubiertos en profundidad en este programa) se encuentran entre las herramientas con mayor respaldo evidencial para regular descendentemente el sistema nervioso en el burnout y el estrés crónico, y su integración en la fase de intervención de esta consulta tiene sus raíces en esa formación.</p>
+          </div>
+        </div>
+        <div class="credential-card" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+          <div class="credential-card-header">
+            <div>
+              <h4>Telesalud</h4>
+              <p class="credential-subtitle">Duke University</p>
+            </div>
+            <span class="credential-toggle">+</span>
+          </div>
+          <div class="credential-detail">
+            <p>Especialización en Telesalud, Duke University. Ofrecer psicoterapia online requiere competencia clínica en evaluación remota, interacción estructurada por video y la capacidad de realizar evaluaciones que habitualmente dependen de la presencia física. Esta especialización cubre los fundamentos clínicos de la atención por telesalud: preparación adecuada de las sesiones, comunicación centrada en el paciente y las habilidades de evaluación neurológica necesarias para identificar presentaciones cognitivas y fisiológicas a través de la pantalla. El componente de examen neurológico es directamente relevante para esta consulta: cuando un cliente presenta niebla cognitiva, fatiga o alteraciones del sueño, la capacidad de detectar contribuyentes neurológicos de forma remota y sistemática añade una capa de precisión clínica que enriquece la evaluación psicológica.</p>
+          </div>
+        </div>
+<div class="credential-card" role="button" tabindex="0" aria-expanded="false" onclick="this.classList.toggle('open');this.setAttribute('aria-expanded',this.classList.contains('open'))" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">
+          <div class="credential-card-header">
+            <div>
+              <h4>Máster en Inteligencia Emocional</h4>
+              <p class="credential-subtitle">Instituto de Estudios Psicológicos de España</p>
+            </div>
+            <span class="credential-toggle">+</span>
+          </div>
+          <div class="credential-detail">
+            <p>Máster en Inteligencia Emocional y Desarrollo Personal, Instituto de Estudios Psicológicos de España (ISEP). Un posgrado en la ciencia de las emociones: cómo se generan, cómo se desregulan y cómo pueden trabajarse sistemáticamente en terapia. Esta es la base para la intervención centrada en emociones en el burnout, la ansiedad y la depresión. Respalda la capacidad de rastrear los patrones emocionales hasta su fuente neurofisiológica (activación, valoración, desencadenantes relacionales) e intervenir en el nivel correcto. Cuando un cliente está atrapado en reactividad emocional, apagón o desbordamiento crónico, esta formación informa cómo se mapea, comprende y cambia ese patrón, contribuyendo a la prevención de recaídas.</p>
+          </div>
+        </div>
+              </div>
+      <div class="about-spanish" onclick="window.location.href='/'" style="cursor:pointer">
+        <p><strong>Also available in English.</strong> Online sessions for English speakers worldwide.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="content-section alt"><div class="container"><div class="content-narrow fade-up">
     <p class="label">Qué trato</p>
     <h2>Terapia en español para burnout, ansiedad y depresión</h2>
     <p>Trabajo con los problemas que una vida de alto rendimiento produce y esconde: el burnout que el descanso ya no arregla, la ansiedad que gobierna el día desde abajo, la depresión que convive con un funcionamiento impecable y una regulación emocional que se ha ido erosionando sin ruido. Mi consulta es especializada, no generalista: cada caso empieza con una evaluación clínica estructurada, la intervención apunta al mecanismo que mantiene el problema y el progreso se mide sesión a sesión en términos observables.</p>
     <p>Si quieres el cuadro clínico completo de cada área, tengo páginas propias sobre <a href="/es/terapia-burnout/">terapia para burnout</a>, <a href="/es/terapia-ansiedad/">terapia para ansiedad</a>, <a href="/es/terapia-depresion/">terapia para depresión</a> y <a href="/es/regulacion-emocional/">regulación emocional</a>. Todo funciona igual desde Singapur: online, con estructura y en el idioma en el que piensas.</p>
 </div></div></section>
-<section class="content-section"><div class="container"><div class="sg-prose fade-up">
+<section class="content-section"><div class="container"><div class="content-narrow fade-up">
     <p class="label">Precios</p>
     <h2>¿Cuánto cuesta un psicólogo en Singapur?</h2>
     <p>La terapia privada en Singapur suele costar entre 150 y 250 dólares de Singapur o más por sesión, y muchas consultas no publican sus tarifas. Las mías son públicas por norma: una sesión estructurada de 60 minutos cuesta 120 USD (unos 155 dólares de Singapur), y los paquetes para el trabajo continuado están en la <a href="/es/precios/">página de precios</a>. La primera conversación es gratuita: 15 minutos, online y honesta, incluida la respuesta honesta si lo que necesitas no soy yo. Si estás comparando opciones, mi <a href="/es/blog/costo-terapia-singapur/">guía sobre lo que cuesta la terapia en Singapur</a> desglosa lo que cobra el mercado y por qué.</p>
 </div></div></section>
-<section class="content-section alt"><div class="container"><div class="sg-prose fade-up">
+<section class="content-section alt"><div class="container"><div class="content-narrow fade-up">
     <p class="label">Disponibilidad</p>
     <h2>Empieza esta semana, sin lista de espera</h2>
     <p>La mayoría de las consultas privadas de Singapur trabajan con lista de espera. La mía funciona de otra manera: reservo huecos de tarde (de 7 a 10 de la noche, hora de Singapur) y disponibilidad en fin de semana justo porque las agendas exigentes son mi especialidad, y una primera sesión suele caber dentro de la misma semana. Para empezar bastan tres líneas por WhatsApp: qué está pasando, desde cuándo y qué has probado ya. No hace falta llegar con nada ordenado.</p>
 </div></div></section>
-<section class="content-section"><div class="container"><div class="sg-prose fade-up">
+<section class="content-section"><div class="container"><div class="content-narrow fade-up">
     <p class="label">Expatriados</p>
     <h2>Un expatriado que atiende expatriados</h2>
     <p>Construí esta consulta siendo expatriado, a lo largo de seis países, y la mezcla particular de Singapur me resulta terreno conocido: la cultura del rendimiento, la identidad que vive en un portátil, el agotamiento que se esconde detrás de un buen paquete y la distancia de todos los que te conocían antes de tu cargo. Entre los hispanohablantes de Singapur veo tres historias que se repiten: la pareja profesional que se trasladó por un contrato, el cónyuge que acompañó ese traslado y se quedó sin rol propio, y el directivo de multinacional que cuenta en inglés su jornada y en español lo que le pasa de verdad. La terapia profunda ocurre en el idioma en el que piensas, no en el que usas para trabajar. Si esa es tu situación, mi página sobre <a href="/es/terapia-expatriados/">terapia para expatriados</a> y mi artículo sobre el <a href="/es/blog/burnout-expatriados/">burnout en expatriados</a> profundizan en ello. La terapia individual es el núcleo de mi consulta; también trabajo con <a href="/es/terapia-parejas/">parejas</a> que cargan con la tensión que la vida internacional pone sobre la relación.</p>
 </div></div></section>
-<section class="content-section alt"><div class="container"><div class="sg-prose fade-up">
+<section class="content-section alt"><div class="container"><div class="content-narrow fade-up">
     <p class="label">Método</p>
     <h2>Un método publicado y medible</h2>
     <p>Mi trabajo clínico se apoya en el Protocolo Baseline Psychotherapy, el método basado en procesos que creé y <a href="/es/metodo/">publiqué como manual</a>: leer el cuerpo antes que la historia, separar lo que pasó de lo que la mente añadió y regular sin exigir que el malestar desaparezca. Puedes leer exactamente cómo trabajo antes de escribirme. El progreso en mi consulta no es una sensación: es una línea de tendencia que los dos podemos ver.</p>
 </div></div></section>
+
+<section class="reviews">
+  <div class="reviews-bg" style="background-image:url('/REVIEW_BG.webp')"></div>
+  <div class="container">
+    <div class="section-intro fade-up">
+      <p class="label" style="color:var(--gold)">Opiniones de Clientes</p>
+      <h2>Reseñas de Psicoterapia Online</h2>
+      <p>Clientes que llegaron buscando estructura, claridad y un terapeuta dispuesto a ser directo sobre lo que el trabajo requiere y lo que produce.</p>
+    </div>
+    <div class="reviews-aggregate fade-up" style="display:flex;align-items:center;gap:16px;justify-content:center;margin-top:32px"><a href="https://share.google/dQE0CvnGhGx0mbjZq" target="_blank" rel="noopener" style="display:contents;color:inherit;text-decoration:none"><span style="font-family:var(--serif);font-size:3.2rem;font-weight:700;color:var(--gold);line-height:1">5.0</span><div><div class="review-stars" style="margin-bottom:2px">★★★★★</div><span style="font-size:.82rem;color:rgba(255,255,255,.6)">22 Reseñas en Google</span></div></a></div>
+    <div class="reviews-grid">
+      <div class="review-card featured fade-up">
+        <div class="review-stars">★★★★★</div>
+        <blockquote>"Me invitó a un espacio seguro donde pude expresar las emociones complejas que he estado viviendo durante esta etapa difícil. Es profesional pero también un amigo de confianza, cercano, abierto y sin juicios, lo cual me hizo sentir seguro al confiar en él. A través de preguntas guiadas, me ayudó a explorar por qué veo ciertas situaciones desde determinadas perspectivas. Después de la sesión, me envió un resumen de todo lo tratado, con recomendaciones para ganar claridad e identificar la causa raíz real de mis dificultades."</blockquote>
+        <p class="review-author">Chrys Chua</p><p class="review-source">Google Reviews</p>
+      </div>
+      <div class="review-card fade-up" style="transition-delay:.06s">
+        <div class="review-stars">★★★★★</div>
+        <blockquote>"Muy profesional, se tomó el tiempo de escucharme y orientarme para afrontar las preocupaciones que me generaban ansiedad y estrés. Me ayudó a identificar y poner en palabras esos pensamientos intrusivos que afectaban mi paz mental y mi salud mental."</blockquote>
+        <p class="review-author">Julia Herrera</p><p class="review-source">Google Reviews</p>
+      </div>
+      <div class="review-card fade-up" style="transition-delay:.12s">
+        <div class="review-stars">★★★★★</div>
+        <blockquote>"Visité a este consejero en Singapur por recomendación y me gustó tanto su forma de trabajar que sigo haciendo terapia online con él incluso después de haber dejado el país."</blockquote>
+        <p class="review-author">Venny Sanjaya</p><p class="review-source">Google Reviews</p>
+      </div>
+      <div class="review-card fade-up" style="transition-delay:.18s">
+        <div class="review-stars">★★★★★</div>
+        <blockquote>"Ha sido uno de los viajes de autodescubrimiento más enriquecedores que he tenido. Al principio era reacio a hacer sesiones online, pero después de un par de sesiones lo encontré incluso más cómodo que las sesiones presenciales."</blockquote>
+        <p class="review-author">David Bruzual</p><p class="review-source">Google Reviews</p>
+      </div>
+      <div class="review-card fade-up" style="transition-delay:.24s">
+        <div class="review-stars">★★★★★</div>
+        <blockquote>"Hace unos años trabajé con él cuando estaba lidiando con problemas de ansiedad... Recientemente volví con él después de terminar una relación de una década, y me ayudó a entender mejor mis emociones, procesar la situación de una manera más saludable y enfocarme en lo que puedo controlar."</blockquote>
+        <p class="review-author">Thefilmrco</p><p class="review-source">Google Reviews</p>
+      </div>
+      <div class="review-card fade-up" style="transition-delay:.3s">
+        <div class="review-stars">★★★★★</div>
+        <blockquote>"He hecho terapia antes, tanto en Singapur como en el extranjero, y puedo decir que mi experiencia con JR es, con diferencia, la mejor que he tenido. Su enfoque terapéutico es muy práctico, sus métodos realmente me ayudaron a mejorar y a registrar mi progreso y ver lo lejos que llegué."</blockquote>
+        <p class="review-author">Anna Vergés</p><p class="review-source">Google Reviews</p>
+      </div>
+      <div class="review-card fade-up" style="transition-delay:.36s">
+        <div class="review-stars">★★★★★</div>
+        <blockquote>"El mejor terapeuta que he tenido. Siempre disponible, comprensivo y perspicaz, con un sentido del humor que hace que incluso las conversaciones difíciles se sientan cómodas. Como alguien de diferentes contextos culturales, valoro lo comprendido y respetado que me siento durante nuestras sesiones."</blockquote>
+        <p class="review-author">K Siana</p><p class="review-source">Google Reviews</p>
+      </div>
+      <div class="review-card fade-up" style="transition-delay:.42s">
+        <div class="review-stars">★★★★★</div>
+        <blockquote>"Me ha ayudado a entender por qué me comporto como lo hago y cómo lidiar con ello. Hemos trabajado el burnout laboral, mejorado mis relaciones y profundizado en un verdadero autodescubrimiento. Siempre te encuentra donde estás y mantiene las cosas avanzando en la dirección correcta."</blockquote>
+        <p class="review-author">Diego Atoche</p><p class="review-source">Google Reviews</p>
+      </div>
+    </div>
+    <div class="reviews-footer fade-up">
+      <a href="https://g.page/r/CQd8xXTT59B-EBM/review" target="_blank" rel="noopener">Deja tu reseña</a>
+    </div>
+  </div>
+</section>
 
 <!-- FAQ -->
 <section class="content-section" id="faq"><div class="container">
