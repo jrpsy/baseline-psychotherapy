@@ -117,6 +117,8 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 .price-card.dark .per{color:rgba(255,255,255,.5)}
 .price-card.dark .price-fmt{color:rgba(255,255,255,.55)}
 .price-card.dark:hover{box-shadow:0 12px 40px rgba(20,32,46,.28)}
+.price-card.popular{border-color:var(--gold)}
+.price-card.popular::before{content:'Most Popular';position:absolute;top:-1px;right:20px;background:var(--gold);color:var(--navy);font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 13px;border-radius:0 0 6px 6px}
 
 /* SLIDING SCALE */
 .sliding-scale{margin:56px auto 0;max-width:840px;background:var(--gold-subtle);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;padding:28px 34px}
@@ -430,7 +432,7 @@ html.has-banner body{padding-top:40px}
         <a href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20I%27d%20like%20to%20book%20a%20free%2015-minute%20consultation%20for%20couples%20therapy." target="_blank" rel="noopener" class="btn btn-primary">Get Started</a>
       </div>
 
-      <div class="price-card dark fade-up" style="transition-delay:.15s">
+      <div class="price-card dark popular fade-up" style="transition-delay:.15s">
         <h3>Monthly 1:1 Plan</h3>
         <p class="price-desc">Weekly individual sessions with priority scheduling, written summary after every session, and consultation by text.</p>
         <div class="price-amount"><span class="price">$430</span><span class="per">USD / month</span></div>
