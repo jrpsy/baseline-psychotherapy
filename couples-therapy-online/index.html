@@ -178,7 +178,7 @@ p{font-size:clamp(.95rem,1.1vw,1.05rem);line-height:1.75;color:var(--text)}
 button:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 html.js-anim .fade-up{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
 html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
-@media(max-width:768px){
+@media(max-width:768px){.clinical-work div[style*="grid-template-columns"]{grid-template-columns:1fr!important}
 .mobile-cta-bar{position:fixed;bottom:0;left:0;right:0;z-index:950;background:var(--navy);padding:12px 20px;display:flex;justify-content:center;align-items:center;box-shadow:0 -2px 16px rgba(20,32,46,.18);transform:translateY(0);transition:transform .35s ease}
 .mobile-cta-bar.hidden{transform:translateY(100%)}
 .mobile-cta-bar a{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;max-width:380px;padding:14px 24px;background:var(--gold);color:var(--navy);font-family:var(--sans);font-size:.95rem;font-weight:600;border-radius:4px;letter-spacing:.01em;text-decoration:none}
@@ -373,9 +373,9 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
   <div class="container">
     <div class="page-hero-content fade-up">
       <span class="kicker">Specialist · Bilingual · Structured</span>
-      <h1>Online Couples Therapy:<br>English, Spanish, or Both</h1>
+      <h1>Bilingual Couples Therapy Online:<br>English, Spanish, or Both</h1>
       <p class="hero-sub">One of you thinks in Spanish. The other argues in English. In therapy, that matters more than most couples expect. Here, each of you speaks in whichever language you need, switching when it helps, even mid-sentence. I follow both of you, so no one falls behind trying to organize their thoughts in a language that is not their first.</p>
-      <p class="hero-sub">Online couples therapy with a specialist means both partners in the same session, with a therapist who maintains structured neutrality and works with the pattern: pursue and withdraw, criticize and defend, escalate and shut down. The problem is not a lack of love, it is the pattern, and patterns can be changed.</p>
+      <p class="hero-sub">Online couples therapy with a specialist means both partners in the same session, with a therapist who maintains structured neutrality and works with the pattern: pursue and withdraw, criticize and defend, escalate and shut down. The problem is not a lack of love, it is the pattern, and patterns can be changed. Both partners can join from different locations, and you can both be on the free 15-minute call. I answer every message personally within 24 hours.</p>
       <div class="hero-markers">
         <span>Online &amp; Worldwide</span><span>English, Spanish, or Both</span><span>Structured &amp; Neutral</span>
       </div>
@@ -443,18 +443,40 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
     </div>
   </div>
 </section>
-<!-- WHY COUPLES THERAPY -->
+<!-- COUPLES CASE STUDIES -->
+<section class="clinical-work" style="padding:var(--section-py) 0;background:var(--navy);position:relative;overflow:hidden">
+  <div class="container">
+    <div class="section-intro fade-up">
+      <p class="label" style="color:var(--gold);text-align:center">From the Practice</p>
+      <h2 style="color:var(--white)">Couples Case Studies</h2>
+      <p style="color:rgba(255,255,255,.6)">Anonymized, composite cases from the practice. Details have been altered to protect confidentiality: each profile is representative of real clinical work with couples. Each case required a different formulation, a different intervention, and a different path.</p>
+    </div>
+    <div style="margin-top:48px;display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:32px 28px" class="fade-up">
+        <p style="font-size:.82rem;font-weight:600;color:var(--gold);margin-bottom:16px;letter-spacing:.02em">Venezuelan and American · New York · Emotional distance</p>
+        <p style="font-size:.9rem;line-height:1.75;color:rgba(255,255,255,.72)">They arrived describing themselves as roommates. One partner's demanding job had absorbed the hours and the attention the relationship used to run on, and the other had stopped asking, not out of indifference but out of the fatigue of asking. Assessment found no broken trust and no established conflict pattern: a progressive withdrawal that both had adapted to as normal. The work rebuilt emotional availability under real conditions, with the job still demanding, rather than waiting for a calmer season that was not coming. They recovered the connection, and both learned to signal disconnection and repair it before it compounds.</p>
+      </div>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:32px 28px;transition-delay:.08s" class="fade-up">
+        <p style="font-size:.82rem;font-weight:600;color:var(--gold);margin-bottom:16px;letter-spacing:.02em">Russian and Spanish · Dubai · Broken trust</p>
+        <p style="font-size:.9rem;line-height:1.75;color:rgba(255,255,255,.72)">A breach of trust had left fear, pain, and a need for control that was straining every exchange. The first phase stabilized the injury: naming what had been broken and what repair would require, before any attempt to explain. Only then could both partners reconstruct what had actually happened, which turned out to be a misunderstanding sustained by months of silence. The resentment resolved and the chapter closed. They chose to continue the work on the cultural differences between them, which still surface under stress and are now addressed as a pattern rather than as a verdict on the relationship.</p>
+      </div>
+      <div style="background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:8px;padding:32px 28px;transition-delay:.16s" class="fade-up">
+        <p style="font-size:.82rem;font-weight:600;color:var(--gold);margin-bottom:16px;letter-spacing:.02em">Chilean and Singaporean · Australia and Singapore · Long-distance decision</p>
+        <p style="font-size:.9rem;line-height:1.75;color:rgba(255,255,255,.72)">A relationship across two countries and a decision neither could make: whether to close the distance or to end it. She feared committing and following him to Singapore at the cost of her work and stability in Australia; his business and his future were there. Rather than negotiating the move, the work explored the origin of the fear and what each of them needed in order to trust the relationship with a decision of that size. The bond became secure before the logistics did. They moved to Singapore together, progressively, from a decision made with clarity rather than under pressure.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COUPLES ACROSS BORDERS -->
 <section class="content-section">
   <div class="container">
     <div class="content-narrow fade-up">
-      <p class="label">Why Couples Therapy Works</p>
-      <h2>Why Do Relationship Problems<br>Not Resolve on Their Own?</h2>
-      <p><strong>Relationship patterns are self-reinforcing.</strong> Each partner's protective strategy (pursuing, withdrawing, criticizing, defending) triggers the other's protective strategy in return. The more one partner pushes for connection, the more the other retreats. The more one withdraws, the more the other escalates. Without a third perspective that can identify the cycle and interrupt it in real time, both partners remain locked in a dynamic that each one is simultaneously sustaining and suffering from.</p>
-      <p><strong>Individual insight is necessary but insufficient.</strong> Many couples understand their dynamic intellectually. They can describe the pattern, name the triggers, and recognize when they are in it. But understanding a pattern and being able to change it during emotional activation are different capacities. Couples therapy provides the structured environment where both partners can practice different responses under clinical guidance, in real time, while the old pattern is active. That is where lasting change happens.</p>
-      <p><strong>Effective couples therapy works with the system, not with individuals.</strong> The therapist does not take sides or assign blame. The focus is on the interaction cycle itself: how it starts, what each partner's role in it is, what emotional needs are beneath the surface behavior, and how both partners can change their contribution to the pattern. Communication repair, de-escalation skills, and emotional accessibility are built through practice within the session and reinforced between sessions.</p>
-    </div>
-    <div class="fade-up" style="text-align:center;margin-top:40px">
-      <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20we%27d%20like%20to%20book%20a%20free%2015-minute%20consultation%20about%20couples%20therapy." target="_blank" rel="noopener" class="btn btn-primary">Start with a Free 15-Min Consultation <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+      <p class="label">Couples Across Borders</p>
+      <h2>Can Couples Therapy Work<br>When We Live in Different Countries?</h2>
+      <p><strong>Yes.</strong> Online couples therapy does not require both partners in the same room, or in the same country. Each of you joins the secure video session from wherever you are, and the structure of the work is identical: both present, one shared clinical picture, and a therapist who follows the pattern between you rather than either side of it. For long-distance couples, this is often the first time the relationship itself has been given a dedicated space, instead of a call squeezed between two time zones.</p>
+      <p><strong>Distance brings its own dynamics.</strong> Conversations that happen mostly in writing, decisions about who moves and who stays, a commitment that keeps being postponed because the next step feels irreversible. These are workable clinical questions. The aim is not to decide for you whether to close the distance, but to understand what is driving the fear or the hesitation, so that the decision is made from clarity rather than from pressure.</p>
+      <p>Sessions are scheduled around both partners' time zones, and the practice works this way with couples across Asia, Europe, the Middle East, and the Americas. When one partner is bilingual and the other is not, each speaks the language that carries what they mean, and nothing is lost in the gap.</p>
     </div>
   </div>
 </section>
@@ -478,6 +500,49 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
       <p><strong>Professional Diploma in Psychotherapy, PDP (The School of Positive Psychology of Singapore):</strong> the clinical structure for facilitating couples sessions, managing dual perspectives, and building measurable change in relational patterns.</p>
       <a href="/about/" class="about-link">Full credentials and background →</a>
       <div style="margin-top:28px"><a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20we%27d%20like%20to%20book%20a%20free%2015-minute%20consultation%20about%20couples%20therapy." target="_blank" rel="noopener" class="btn btn-gold btn-sm">Free 15-Min Consultation</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY COUPLES THERAPY -->
+<section class="content-section">
+  <div class="container">
+    <div class="content-narrow fade-up">
+      <p class="label">Why Couples Therapy Works</p>
+      <h2>Why Do Relationship Problems<br>Not Resolve on Their Own?</h2>
+      <p><strong>Relationship patterns are self-reinforcing.</strong> Each partner's protective strategy (pursuing, withdrawing, criticizing, defending) triggers the other's protective strategy in return. The more one partner pushes for connection, the more the other retreats. The more one withdraws, the more the other escalates. Without a third perspective that can identify the cycle and interrupt it in real time, both partners remain locked in a dynamic that each one is simultaneously sustaining and suffering from.</p>
+      <p><strong>Individual insight is necessary but insufficient.</strong> Many couples understand their dynamic intellectually. They can describe the pattern, name the triggers, and recognize when they are in it. But understanding a pattern and being able to change it during emotional activation are different capacities. Couples therapy provides the structured environment where both partners can practice different responses under clinical guidance, in real time, while the old pattern is active. That is where lasting change happens.</p>
+      <p><strong>Effective couples therapy works with the system, not with individuals.</strong> The therapist does not take sides or assign blame. The focus is on the interaction cycle itself: how it starts, what each partner's role in it is, what emotional needs are beneath the surface behavior, and how both partners can change their contribution to the pattern. Communication repair, de-escalation skills, and emotional accessibility are built through practice within the session and reinforced between sessions.</p>
+    </div>
+    <div class="fade-up" style="text-align:center;margin-top:40px">
+      <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20we%27d%20like%20to%20book%20a%20free%2015-minute%20consultation%20about%20couples%20therapy." target="_blank" rel="noopener" class="btn btn-primary">Start with a Free 15-Min Consultation <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="content-section alt" id="pricing">
+  <div class="container">
+    <div class="section-intro fade-up">
+      <p class="label">Couples Therapy Cost</p>
+      <h2>How Much Does Couples Therapy Cost?</h2>
+      <p>What therapy costs depends on the specialist's training and the level of clinical involvement behind each session. At Baseline Psychotherapy, couples sessions are 90 minutes (longer than individual sessions to allow both partners adequate time). Every session includes clinical preparation, the structured session via secure video, and a written summary for both partners. Fees reflect this level of clinical involvement.</p>
+    </div>
+    <div class="pricing-grid-two">
+      <div class="price-card fade-up">
+        <h3>Couples Session</h3>
+        <p class="format">Online via Google Meet · 90 min</p>
+        <div class="pricing-amount"><span class="price">$170</span><span class="per">USD / session</span></div>
+        <p>A structured 90-minute session for both partners. Assessment-driven, clinically facilitated, and designed to produce measurable change in the interaction pattern from the first appointment.</p>
+        <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20we%27d%20like%20to%20book%20a%20couples%20therapy%20session." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
+      <div class="price-card popular fade-up" style="transition-delay:.06s">
+        <h3>Monthly Couples Plan</h3>
+        <p class="format">4 sessions / month · 90 min each</p>
+        <div class="pricing-amount"><span class="price">$620</span><span class="per">USD / month · $155/session</span></div>
+        <p>Weekly couples sessions with priority scheduling and written session summaries for both partners. Built for couples in active intervention who benefit from consistent weekly structure. Billed monthly, in advance.</p>
+        <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20we%27re%20interested%20in%20the%20Monthly%20Couples%20Plan." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Get Started</a>
+      </div>
     </div>
   </div>
 </section>
@@ -512,33 +577,6 @@ html.js-anim .fade-up.visible{opacity:1;transform:translateY(0)}
     </div>
     <div class="fade-up" style="text-align:center;margin-top:48px">
       <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20we%27d%20like%20to%20discuss%20couples%20therapy%20and%20how%20the%20process%20works." target="_blank" rel="noopener" class="btn btn-primary">Book Your Free Consultation <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section class="content-section alt" id="pricing">
-  <div class="container">
-    <div class="section-intro fade-up">
-      <p class="label">Couples Therapy Cost</p>
-      <h2>How Much Does Couples Therapy Cost?</h2>
-      <p>What therapy costs depends on the specialist's training and the level of clinical involvement behind each session. At Baseline Psychotherapy, couples sessions are 90 minutes (longer than individual sessions to allow both partners adequate time). Every session includes clinical preparation, the structured session via secure video, and a written summary for both partners. Fees reflect this level of clinical involvement.</p>
-    </div>
-    <div class="pricing-grid-two">
-      <div class="price-card fade-up">
-        <h3>Couples Session</h3>
-        <p class="format">Online via Google Meet · 90 min</p>
-        <div class="pricing-amount"><span class="price">$170</span><span class="per">USD / session</span></div>
-        <p>A structured 90-minute session for both partners. Assessment-driven, clinically facilitated, and designed to produce measurable change in the interaction pattern from the first appointment.</p>
-        <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20we%27d%20like%20to%20book%20a%20couples%20therapy%20session." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Get Started</a>
-      </div>
-      <div class="price-card popular fade-up" style="transition-delay:.06s">
-        <h3>Monthly Couples Plan</h3>
-        <p class="format">4 sessions / month · 90 min each</p>
-        <div class="pricing-amount"><span class="price">$620</span><span class="per">USD / month · $155/session</span></div>
-        <p>Weekly couples sessions with priority scheduling and written session summaries for both partners. Built for couples in active intervention who benefit from consistent weekly structure. Billed monthly, in advance.</p>
-        <a onclick="gtag('event','whatsapp_click',{event_category:'conversion',event_label:this.href})" href="https://wa.me/6593729100?text=Hi%20J.R.%2C%20we%27re%20interested%20in%20the%20Monthly%20Couples%20Plan." target="_blank" rel="noopener" class="btn btn-primary btn-sm">Get Started</a>
-      </div>
     </div>
   </div>
 </section>
