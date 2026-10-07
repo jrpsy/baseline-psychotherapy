@@ -15,6 +15,8 @@
   <meta name="robots" content="index, follow">
   <meta name="author" content="J.R. Hernandez">
   <link rel="canonical" href="https://baselinepsychotherapy.com/es/tests/tmms-24/">
+  <link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/tests/tmms-24/">
+  <link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/es/tests/tmms-24/">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <meta property="og:type" content="website">
@@ -821,7 +823,7 @@ document.querySelectorAll('.bands-table td[data-dim]').forEach(function(td){td.c
 </script>
 <script>
 const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>20)});
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>20)},{passive:true});
 const navToggle=document.getElementById('navToggle'),navLinks=document.getElementById('navLinks');
 navToggle.addEventListener('click',()=>{
   navLinks.classList.toggle('active');
