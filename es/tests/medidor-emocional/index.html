@@ -517,7 +517,7 @@ window.meterReset=function(){st={x:null,y:null,quadrant:null,word:null,wordIdx:n
 </script>
 <script>
 const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>20)});
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>20)},{passive:true});
 const navToggle=document.getElementById('navToggle'),navLinks=document.getElementById('navLinks');
 navToggle.addEventListener('click',()=>{
   navLinks.classList.toggle('active');

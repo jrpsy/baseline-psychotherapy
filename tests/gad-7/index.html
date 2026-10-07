@@ -604,7 +604,7 @@ document.querySelectorAll('.bands-table tr[data-band]').forEach(function(r){r.cl
 </script>
 <script>
 const nav=document.getElementById('nav');
-window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>20)});
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>20)},{passive:true});
 const navToggle=document.getElementById('navToggle'),navLinks=document.getElementById('navLinks');
 navToggle.addEventListener('click',()=>{
   navLinks.classList.toggle('active');
