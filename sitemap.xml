@@ -290,6 +290,13 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://baselinepsychotherapy.com/blog/expat-depression/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/blog/expat-depression/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/blog/depresion-expatriados/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/blog/expat-depression/"/>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
     <loc>https://baselinepsychotherapy.com/blog/choose-psychotherapist-singapore/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/blog/choose-psychotherapist-singapore/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/blog/elegir-psicoterapeuta-singapur/"/>
@@ -315,6 +322,13 @@
     <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baselinepsychotherapy.com/es/blog/depresion-expatriados/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/blog/expat-depression/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/blog/depresion-expatriados/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/blog/expat-depression/"/>
+    <lastmod>2026-10-05</lastmod>
   </url>
   <url>
     <loc>https://baselinepsychotherapy.com/es/blog/elegir-psicoterapeuta-singapur/</loc>
