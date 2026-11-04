@@ -204,7 +204,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/blog/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/blog/"/>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -213,7 +213,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/blog/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/blog/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/blog/"/>
-    <lastmod>2026-10-19</lastmod>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -746,7 +746,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/blog/therapy-cost-singapore/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/blog/costo-terapia-singapur/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/blog/therapy-cost-singapore/"/>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -755,7 +755,25 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/blog/therapy-cost-singapore/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/blog/costo-terapia-singapur/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/blog/therapy-cost-singapore/"/>
-    <lastmod>2026-10-24</lastmod>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baselinepsychotherapy.com/blog/couples-therapy-cost-singapore/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/blog/couples-therapy-cost-singapore/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/blog/costo-terapia-pareja-singapur/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/blog/couples-therapy-cost-singapore/"/>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://baselinepsychotherapy.com/es/blog/costo-terapia-pareja-singapur/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://baselinepsychotherapy.com/blog/couples-therapy-cost-singapore/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://baselinepsychotherapy.com/es/blog/costo-terapia-pareja-singapur/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://baselinepsychotherapy.com/blog/couples-therapy-cost-singapore/"/>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
